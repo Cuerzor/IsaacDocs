@@ -1,46 +1,46 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] Example Project
+# [教程] 示例项目
 ----
 
-## An Example Mod
+## 示例MOD
 
-To make a new mod, create a new subdirectory in the following directory:
+要制作新的mod，请在以下目录中创建一个新的子目录：
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods
 ```
 
-(This corresponds to your Steam installation directory. If you have the game installed to a custom location, then the path might be different.)
+（这与您的Steam安装目录相对应。如果您将游戏安装到自定义位置，那么路径可能会有所不同。）
 
-Name the subdirectory after the name of your mod. For example:
+使用你的mod名称命名子目录。例如：
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods\customTears
 ```
 
-Next, create a new `main.lua` file in the newly created folder. This file will contain Lua code, which will tell the game how your mod should respond to in-game events.
+接下来，在新创建的文件夹中创建一个新的`main.lua`文件。这个文件将包含Lua代码，它将告诉游戏你的mod应该如何响应游戏中的事件。
 
-The following is an example mod that always changes the player's tears to have a slowing effect and have the Dark Matter visual look:
+以下是一个示例mod，它会改变玩家的泪弹，使其能够减速敌人，并具有暗物质的视觉效果：
 
 ```lua
--- Register the mod, which grants the ability to add code that correspond to in-game events (i.e. "callbacks").
+-- 注册mod，它可以添加与游戏中事件相对应的代码（即“回调”）。
 local mod = RegisterMod("Custom Tears", 1)
 
 local function postFireTear(_, tear)
-  -- Add a slowing effect to the tear using the "binary or" operator.
+  -- 使用“二进制或”操作符为泪弹添加减速效果。
   tear.TearFlags = tear.TearFlags | TearFlags.TEAR_SLOW
 
-  -- Change the appearance of the tear. (The "variant" of the tear is used by the game to decide how to draw it.)
+  -- 更改泪弹的外观。（泪弹的“Variant”被游戏用来决定如何绘制外观。）
   tear:ChangeVariant(TearVariant.DARK_MATTER)
 end
 
- -- Specify that the "onTear" function should be executed whenever the player fires a tear.
+ -- 指定当玩家发射泪弹时，应执行“onTear”函数。
 mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, postFireTear)
 ```
 
-From here, you can change the code to do whatever you want. In short, you will have to subscribe to the appropriate callbacks (in order to run code at the specific times that you want). And then you will have to use the appropriate API methods (to change things in-game corresponding to what you want to do).
+从这里，您可以更改代码以执行任何您想要的操作。简而言之，您必须添加适当的回调（以便在所需的特定事件内运行代码），然后必须使用适当的API方法（根据你想要做的事情，改变游戏中的事物）。
 
-Start by browsing the docs for the `ModCallbacks` enum to learn what all the different callback options are. Then, browse through the rest of the API documentation to get a feel for what kinds of things are possible to read and change.
+首先浏览`ModCallbacks`枚举的文档，了解所有不同的回调选项是什么。然后，浏览API文档的其余部分，了解哪些内容可以读取和更改。

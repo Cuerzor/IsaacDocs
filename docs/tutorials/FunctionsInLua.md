@@ -1,82 +1,81 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] Functions in Lua
+# [教程] Lua中的函数
 ----
 
-First, see the the [example project tutorial](ExampleProject.md).
+首先，请见[示例项目教程](ExampleProject.md)。
 
-## Local Functions
+## 局部函数
 
-The most basic type of function in Lua is a local function. For example, here is a repeat of the code in the example project tutorial:
+Lua中最基本的函数类型是局部函数。例如，以下是“示例项目”教程中的代码：
 
 ```lua
 local mod = RegisterMod("My Custom Tears", 1)
 
 local function postFireTear(_, tear)
-  -- Mod code
+  -- MOD代码
 end
 
 mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, postFireTear)
 ```
 
-One potentially strange thing about this code is that we are denoting the first argument of the function as `_`.
+关于这段代码，一个潜在的奇怪之处是，我们将函数的第一个参数表示为`_`。
 
-Conventionally, unused arguments are prefixed by an underscore, like `_foo`. By naming the argument `_` without any other annotation, it is a flag to the reader that says we are completely ignoring this variable and it has no purpose.
+按照惯例，未使用的参数以下划线为前缀，如`_foo`。通过在没有任何其他注释的情况下将自变量命名为`_`，这对读者来说是一个标志，表明我们完全忽略了这个变量，它没有任何目的。
 
-The reason that our local function needs a "blank" first argument in the first place is that the C++ code that handles the callback invokes the provided function with a colon operator. Colon operators are [covered in the Lua manual](https://www.lua.org/pil/16.html). Basically, the colon is syntactic sugar for calling the function with an `self` parameter, which contains the module that the function is located in.
+我们的本地函数需要一个“空白”的第一个参数的原因是，处理回调的C++代码使用“冒号运算符”调用所提供的函数。冒号运算符[在Lua手册中有介绍](https://www.lua.org/pil/16.html)。基本上，冒号是用`self`参数调用函数的语法糖，该参数包含函数所在的模块。
 
-In the case of our local function, there is no module, because it's just a plain, standalone local function. So, the first argument would always be equal to nil in this case.
+在我们使用本地函数的情况下，没有模块，因为它只是一个简单的、独立的本地函数。因此，在这种情况下，第一个自变量总是等于nil。
 
-Let's take a look at what a module-function would look like.
+让我们来看看模块函数是什么样子的。
 
-## Module Functions
+## 模块函数
 
-The object that is returned from the `RegisterMod` function is a Lua table. Since it is a table, we can put arbitrary functions inside of the table:
+从`RegisterMod`函数返回的对象是一个Lua表。由于它是一个表，我们可以在表中放入任意函数：
 
 ```lua
 local mod = RegisterMod("My Custom Tears", 1)
 
 function mod.postFireTear(_, tear)
-  -- Mod code
+  -- MOD代码
 end
 
 mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, myMod.postFireTear)
 ```
+在这里，“postFireTear”函数现在是“myMod”Lua表的一部分。我们用句点来表示连接。此代码将以与本地函数相同的方式工作。
 
-Here, the "postFireTear" function is now a part of the "myMod" Lua table. We use a period to denote the connection. This code will work in an identical way to the local function.
-
-We can also use the colon operator when declaring the function:
+在声明函数时，我们还可以使用冒号运算符：
 
 ```lua
 local mod = RegisterMod("My Custom Tears", 1)
 
 function mod:postFireTear(tear)
-  -- Mod code
+  -- MOD代码
 end
 
 mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, myMod.postFireTear)
 ```
 
-In this code, the colon operator specifies that the first argument of the function is really `self`, and the second argument is really `tear`, even though it isn't explicitly written that way. Like before, it will work in an identical way to the local function.
+在这段代码中，冒号运算符指定函数的第一个参数实际上是“self”，第二个参数实际上为“tear”，尽管它没有明确地这样写。和以前一样，它将以与本地函数相同的方式工作。
 
-Also note that we don't use the colon operator when adding the callback, because we need to pass a reference to the function, not invoke it.
+还要注意，在添加回调时（AddCallback），我们不使用冒号运算符，因为我们需要传递对函数的引用，而不是调用它。
 
-In Lua, functions are often part of modules, so calling them with a colon operator is considered to be standard.
+在Lua中，函数通常是模块的一部分，因此使用冒号运算符调用它们被认为是标准的。
 
-## Anonymous Functions
+## 匿名函数
 
-A third way to specify the callback function would be to use an anonymous function, which is simply a function without a name:
+指定回调函数的第三种方法是使用匿名函数，它是一个没有名称的函数：
 
 ```lua
 local mod = RegisterMod("My Custom Tears", 1)
 
 mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear)
-  -- Mod code
+  -- MOD代码
 end)
 ```
 
-This function only exists inside of the scope of the AddCallback invocation, meaning that it can't be referenced or invoked from anywhere else. Like before, it will work in an identical way to the local function.
+这个函数只存在于AddCallback调用的范围内，这意味着不能从其他任何地方引用或调用它。和以前一样，它将以与本地函数相同的方式工作。
 
-Anonymous functions are useful in that they are easy to type. You can use them for really short functions that have an obvious meaning.
+匿名函数很有用，因为它们很容易键入。您可以将它们用于具有明显意义的非常简短的函数。
