@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="Isaac.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="KColor.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>ItemPool - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-itempool" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              ItemPool
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -2869,11 +2851,170 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ItemPool.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ItemPool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ItemPool.html" class="md-nav__link md-nav__link--active">
         ItemPool
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addbibleupgrade" class="md-nav__link">
+    Add·Bible·Upgrade ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addroomblacklist" class="md-nav__link">
+    Add·Room·Blacklist ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forceaddpilleffect" class="md-nav__link">
+    Force·Add·Pill·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcard" class="md-nav__link">
+    Get·Card ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectible" class="md-nav__link">
+    Get·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpool" class="md-nav__link">
+    Get·Last·Pool ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpill" class="md-nav__link">
+    Get·Pill ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpilleffect" class="md-nav__link">
+    Get·Pill·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpoolforroom" class="md-nav__link">
+    Get·Pool·For·Room ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinket" class="md-nav__link">
+    Get·Trinket ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifypill" class="md-nav__link">
+    Identify·Pill ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ispillidentified" class="md-nav__link">
+    Is·Pill·Identified ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removecollectible" class="md-nav__link">
+    Remove·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetrinket" class="md-nav__link">
+    Remove·Trinket ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetroomblacklist" class="md-nav__link">
+    Reset·Room·Blacklist ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resettrinkets" class="md-nav__link">
+    Reset·Trinkets ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4510,139 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addbibleupgrade" class="md-nav__link">
+    Add·Bible·Upgrade ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addroomblacklist" class="md-nav__link">
+    Add·Room·Blacklist ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forceaddpilleffect" class="md-nav__link">
+    Force·Add·Pill·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcard" class="md-nav__link">
+    Get·Card ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectible" class="md-nav__link">
+    Get·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpool" class="md-nav__link">
+    Get·Last·Pool ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpill" class="md-nav__link">
+    Get·Pill ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpilleffect" class="md-nav__link">
+    Get·Pill·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpoolforroom" class="md-nav__link">
+    Get·Pool·For·Room ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinket" class="md-nav__link">
+    Get·Trinket ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifypill" class="md-nav__link">
+    Identify·Pill ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ispillidentified" class="md-nav__link">
+    Is·Pill·Identified ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removecollectible" class="md-nav__link">
+    Remove·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetrinket" class="md-nav__link">
+    Remove·Trinket ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetroomblacklist" class="md-nav__link">
+    Reset·Room·Blacklist ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resettrinkets" class="md-nav__link">
+    Reset·Trinkets ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4656,112 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-itempool">Class "ItemPool"<a class="headerlink" href="#class-itempool" title="Permanent link">⚓︎</a></h1>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>You can get this class by using the following function:</p>
+<ul>
+<li><a href="Game.html#getitempool">Game:GetItemPool()</a></li>
+</ul>
+<details class="example" open="open">
+<summary>Example Code</summary>
+<p><code>Game():GetItemPool()</code></p>
+</details>
+</details>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Functions" id="addbibleupgrade">Add·Bible·Upgrade ()<a class="headerlink" href="#addbibleupgrade" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addbibleupgrade-int-add-itempooltype-pooltype">void AddBibleUpgrade ( int Add, <a href="enums/ItemPoolType.html">ItemPoolType</a> PoolType )<a class="headerlink" href="#void-addbibleupgrade-int-add-itempooltype-pooltype" title="Permanent link">⚓︎</a></h4>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Functions" id="addroomblacklist">Add·Room·Blacklist ()<a class="headerlink" href="#addroomblacklist" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addroomblacklist-collectibletype-item">void AddRoomBlacklist ( <a href="enums/CollectibleType.html">CollectibleType</a> Item )<a class="headerlink" href="#void-addroomblacklist-collectibletype-item" title="Permanent link">⚓︎</a></h4>
+<p>Adds a given item to the blacklist. This item can no longer be chosen from itempools while the player is inside the current room. This effectively prevents the item from appearing.</p>
+<p>When the player changes the room, the Blacklist gets reset.</p>
+<hr />
+<h3 aria-label="Functions" id="forceaddpilleffect">Force·Add·Pill·Effect ()<a class="headerlink" href="#forceaddpilleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="pillcolor-forceaddpilleffect-pilleffect-id"><a href="enums/PillColor.html">PillColor</a> ForceAddPillEffect ( <a href="enums/PillEffect.html">PillEffect</a> ID )<a class="headerlink" href="#pillcolor-forceaddpilleffect-pilleffect-id" title="Permanent link">⚓︎</a></h4>
+<p>Forces a pill effect to be in the pool, usually for challenges, returns PillColor for that effect.</p>
+<hr />
+<h3 aria-label="Functions" id="getcard">Get·Card ()<a class="headerlink" href="#getcard" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="card-getcard-int-seed-boolean-playing-boolean-rune-boolean-onlyrunes"><a href="enums/Card.html">Card</a> GetCard ( int Seed, boolean Playing, boolean Rune, boolean OnlyRunes )<a class="headerlink" href="#card-getcard-int-seed-boolean-playing-boolean-rune-boolean-onlyrunes" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getcollectible">Get·Collectible ()<a class="headerlink" href="#getcollectible" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="collectibletype-getcollectible-itempooltype-pooltype-boolean-decrease-false-int-seed-random-collectibletype-defaultitem-collectibletypecollectible_null"><a href="enums/CollectibleType.html">CollectibleType</a> GetCollectible ( <a href="enums/ItemPoolType.html">ItemPoolType</a> PoolType, boolean Decrease = false, int Seed = Random(), <a href="enums/CollectibleType.html">CollectibleType</a> DefaultItem = CollectibleType.COLLECTIBLE_NULL )<a class="headerlink" href="#collectibletype-getcollectible-itempooltype-pooltype-boolean-decrease-false-int-seed-random-collectibletype-defaultitem-collectibletypecollectible_null" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getlastpool">Get·Last·Pool ()<a class="headerlink" href="#getlastpool" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="itempooltype-getlastpool"><a href="enums/ItemPoolType.html">ItemPoolType</a> GetLastPool ( )<a class="headerlink" href="#itempooltype-getlastpool" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getpill">Get·Pill ()<a class="headerlink" href="#getpill" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="pillcolor-getpill-int-seed"><a href="enums/PillColor.html">PillColor</a> GetPill ( int Seed )<a class="headerlink" href="#pillcolor-getpill-int-seed" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getpilleffect">Get·Pill·Effect ()<a class="headerlink" href="#getpilleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="pilleffect-getpilleffect-pillcolor-pillcolor-entityplayer-player-nil"><a href="enums/PillEffect.html">PillEffect</a> GetPillEffect ( <a href="enums/PillColor.html">PillColor</a> PillColor, <a href="EntityPlayer.html">EntityPlayer</a> Player = nil )<a class="headerlink" href="#pilleffect-getpilleffect-pillcolor-pillcolor-entityplayer-player-nil" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getpoolforroom">Get·Pool·For·Room ()<a class="headerlink" href="#getpoolforroom" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="itempooltype-getpoolforroom-roomtype-roomtype-int-seed"><a href="enums/ItemPoolType.html">ItemPoolType</a> GetPoolForRoom ( <a href="enums/RoomType.html">RoomType</a> RoomType, int Seed )<a class="headerlink" href="#itempooltype-getpoolforroom-roomtype-roomtype-int-seed" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="gettrinket">Get·Trinket ()<a class="headerlink" href="#gettrinket" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="trinkettype-gettrinket-boolean-dontadvancerng-false"><a href="enums/TrinketType.html">TrinketType</a> GetTrinket ( boolean DontAdvanceRNG = false )<a class="headerlink" href="#trinkettype-gettrinket-boolean-dontadvancerng-false" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="identifypill">Identify·Pill ()<a class="headerlink" href="#identifypill" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-identifypill-pillcolor-pillcolor">void IdentifyPill ( <a href="enums/PillColor.html">PillColor</a> PillColor )<a class="headerlink" href="#void-identifypill-pillcolor-pillcolor" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="ispillidentified">Is·Pill·Identified ()<a class="headerlink" href="#ispillidentified" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-ispillidentified-pillcolor-pillcolor">boolean IsPillIdentified ( <a href="enums/PillColor.html">PillColor</a> PillColor )<a class="headerlink" href="#boolean-ispillidentified-pillcolor-pillcolor" title="Permanent link">⚓︎</a></h4>
+<p>Once the player takes PHD, Virgo, or False PHD, this method will always return true, even if the player has not already seen or used the pill on the run thus far. (This is because this method dictates when the "???" text should be shown as the pill description, and these collectibles will always show the "revealed" text.)</p>
+<hr />
+<h3 aria-label="Functions" id="removecollectible">Remove·Collectible ()<a class="headerlink" href="#removecollectible" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-removecollectible-collectibletype-collectible">boolean RemoveCollectible ( <a href="enums/CollectibleType.html">CollectibleType</a> Collectible )<a class="headerlink" href="#boolean-removecollectible-collectibletype-collectible" title="Permanent link">⚓︎</a></h4>
+<p>Removes a collectible from the itempool. Returns true if given item did exist in the pool before.</p>
+<hr />
+<h3 aria-label="Functions" id="removetrinket">Remove·Trinket ()<a class="headerlink" href="#removetrinket" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-removetrinket-trinkettype-trinket">boolean RemoveTrinket ( <a href="enums/TrinketType.html">TrinketType</a> Trinket )<a class="headerlink" href="#boolean-removetrinket-trinkettype-trinket" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="resetroomblacklist">Reset·Room·Blacklist ()<a class="headerlink" href="#resetroomblacklist" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-resetroomblacklist">void ResetRoomBlacklist ( )<a class="headerlink" href="#void-resetroomblacklist" title="Permanent link">⚓︎</a></h4>
+<p>Clears the current item black list.</p>
+<p>When the player changes the room, this function gets called automatically.</p>
+<hr />
+<h3 aria-label="Functions" id="resettrinkets">Reset·Trinkets ()<a class="headerlink" href="#resettrinkets" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-resettrinkets">void ResetTrinkets ( )<a class="headerlink" href="#void-resettrinkets" title="Permanent link">⚓︎</a></h4>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
       
     
   </small>

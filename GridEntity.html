@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="Game.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="GridEntityDoor.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>GridEntity - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-gridentity" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              GridEntity
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -2563,14 +2545,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" checked>
       
       
       
@@ -2579,7 +2563,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
           GridEntity
@@ -2590,11 +2574,260 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="GridEntity.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GridEntity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="GridEntity.html" class="md-nav__link md-nav__link--active">
         GridEntity
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-diagram" class="md-nav__link">
+    Class Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destroy" class="md-nav__link">
+    Destroy ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgridindex" class="md-nav__link">
+    Get·Grid·Index ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrng" class="md-nav__link">
+    Get·RNG ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsavestate" class="md-nav__link">
+    Get·Save·State ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsprite" class="md-nav__link">
+    Get·Sprite ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettype" class="md-nav__link">
+    Get·Type ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvariant" class="md-nav__link">
+    Get·Variant ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hurt" class="md-nav__link">
+    Hurt ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    Init ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postinit" class="md-nav__link">
+    Post·Init ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render" class="md-nav__link">
+    Render ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settype" class="md-nav__link">
+    Set·Type ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvariant" class="md-nav__link">
+    Set·Variant ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todoor" class="md-nav__link">
+    To·Door ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topit" class="md-nav__link">
+    To·Pit ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topoop" class="md-nav__link">
+    To·Poop ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topressureplate" class="md-nav__link">
+    To·Pressure·Plate ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torock" class="md-nav__link">
+    To·Rock ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tospikes" class="md-nav__link">
+    To·Spikes ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#totnt" class="md-nav__link">
+    To·TNT ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collisionclass" class="md-nav__link">
+    Collision·Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desc" class="md-nav__link">
+    Desc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vardata" class="md-nav__link">
+    Var·Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4602,229 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-diagram" class="md-nav__link">
+    Class Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destroy" class="md-nav__link">
+    Destroy ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgridindex" class="md-nav__link">
+    Get·Grid·Index ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrng" class="md-nav__link">
+    Get·RNG ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsavestate" class="md-nav__link">
+    Get·Save·State ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsprite" class="md-nav__link">
+    Get·Sprite ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettype" class="md-nav__link">
+    Get·Type ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvariant" class="md-nav__link">
+    Get·Variant ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hurt" class="md-nav__link">
+    Hurt ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    Init ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postinit" class="md-nav__link">
+    Post·Init ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render" class="md-nav__link">
+    Render ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settype" class="md-nav__link">
+    Set·Type ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvariant" class="md-nav__link">
+    Set·Variant ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todoor" class="md-nav__link">
+    To·Door ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topit" class="md-nav__link">
+    To·Pit ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topoop" class="md-nav__link">
+    To·Poop ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topressureplate" class="md-nav__link">
+    To·Pressure·Plate ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torock" class="md-nav__link">
+    To·Rock ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tospikes" class="md-nav__link">
+    To·Spikes ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#totnt" class="md-nav__link">
+    To·TNT ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collisionclass" class="md-nav__link">
+    Collision·Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desc" class="md-nav__link">
+    Desc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vardata" class="md-nav__link">
+    Var·Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4838,249 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-gridentity">Class "GridEntity"<a class="headerlink" href="#class-gridentity" title="Permanent link">⚓︎</a></h1>
+<h2 id="class-diagram">Class Diagram<a class="headerlink" href="#class-diagram" title="Permanent link">⚓︎</a></h2>
+<div class="mermaidDiagram">
+<pre class="mermaid"><code>    classDiagram
+    class GridEntity:::diagramCurrentPage
+    class GridEntityDoor
+    class GridEntityPit
+    class GridEntityPoop
+    class GridEntityPressurePlate
+    class GridEntityRock
+    class GridEntitySpikes
+    class GridEntityTNT
+    GridEntity &lt;|-- GridEntityDoor
+    GridEntity &lt;|-- GridEntityPit
+    GridEntity &lt;|-- GridEntityPoop
+    GridEntity &lt;|-- GridEntityPressurePlate
+    GridEntity &lt;|-- GridEntityRock
+    GridEntity &lt;|-- GridEntitySpikes
+    GridEntity &lt;|-- GridEntityTNT
+    link GridEntity "GridEntity.html" "Go to page for 'GridEntity' class"
+    link GridEntityDoor "GridEntityDoor.html" "Go to page for 'GridEntityDoor' class"
+    link GridEntityPit "GridEntityPit.html" "Go to page for 'GridEntityPit' class"
+    link GridEntityPoop "GridEntityPoop.html" "Go to page for 'GridEntityPoop' class"
+    link GridEntityPressurePlate "GridEntityPressurePlate.html" "Go to page for 'GridEntityPressurePlate' class"
+    link GridEntityRock "GridEntityRock.html" "Go to page for 'GridEntityRock' class"
+    link GridEntitySpikes "GridEntitySpikes.html" "Go to page for 'GridEntitySpikes' class"
+    link GridEntityTNT "GridEntityTNT.html" "Go to page for 'GridEntityTNT' class"</code></pre>
+</div>
+
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Functions" id="destroy">Destroy ()<a class="headerlink" href="#destroy" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-destroy-boolean-immediate">boolean Destroy ( boolean Immediate )<a class="headerlink" href="#boolean-destroy-boolean-immediate" title="Permanent link">⚓︎</a></h4>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Functions" id="getgridindex">Get·Grid·Index ()<a class="headerlink" href="#getgridindex" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-getgridindex">int GetGridIndex ( )<a class="headerlink" href="#int-getgridindex" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getrng">Get·RNG ()<a class="headerlink" href="#getrng" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="rng-getrng"><a href="RNG.html">RNG</a> GetRNG ( )<a class="headerlink" href="#rng-getrng" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getsavestate">Get·Save·State ()<a class="headerlink" href="#getsavestate" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="gridentitydesc-getsavestate"><a href="GridEntityDesc.html">GridEntityDesc</a> GetSaveState ( )<a class="headerlink" href="#gridentitydesc-getsavestate" title="Permanent link">⚓︎</a></h4>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Both the <a href="#desc">Desc</a> property and the <a href="#getsavestate">GetSaveState()</a> method return the exact same <a href="GridEntityDesc.html">GridEntityDesc</a> object. The game devs advise to use <a href="#getsavestate">GetSaveState()</a> instead of <a href="#desc">Desc</a>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="getsprite">Get·Sprite ()<a class="headerlink" href="#getsprite" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="sprite-getsprite"><a href="Sprite.html">Sprite</a> GetSprite ( )<a class="headerlink" href="#sprite-getsprite" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="gettype">Get·Type ()<a class="headerlink" href="#gettype" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="gridentitytype-gettype"><a href="enums/GridEntityType.html">GridEntityType</a> GetType ( )<a class="headerlink" href="#gridentitytype-gettype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getvariant">Get·Variant ()<a class="headerlink" href="#getvariant" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-getvariant">int GetVariant ( )<a class="headerlink" href="#int-getvariant" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="hurt">Hurt ()<a class="headerlink" href="#hurt" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hurt-int-damage">boolean Hurt ( int Damage )<a class="headerlink" href="#boolean-hurt-int-damage" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="init">Init ()<a class="headerlink" href="#init" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-init-int-seed">void Init ( int Seed )<a class="headerlink" href="#void-init-int-seed" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="postinit">Post·Init ()<a class="headerlink" href="#postinit" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-postinit">void PostInit ( )<a class="headerlink" href="#void-postinit" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="render">Render ()<a class="headerlink" href="#render" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-render-vector-offset">void Render ( <a href="Vector.html">Vector</a> Offset )<a class="headerlink" href="#void-render-vector-offset" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="settype">Set·Type ()<a class="headerlink" href="#settype" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-settype-gridentitytype-type">void SetType ( <a href="enums/GridEntityType.html">GridEntityType</a> Type )<a class="headerlink" href="#void-settype-gridentitytype-type" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="setvariant">Set·Variant ()<a class="headerlink" href="#setvariant" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-setvariant-int-variant">void SetVariant ( int Variant )<a class="headerlink" href="#void-setvariant-int-variant" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="todoor">To·Door ()<a class="headerlink" href="#todoor" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentitydoor-todoor"><a href="GridEntityDoor.html">GridEntityDoor</a> ToDoor ( )<a class="headerlink" href="#gridentitydoor-todoor" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="topit">To·Pit ()<a class="headerlink" href="#topit" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentitypit-topit"><a href="GridEntityPit.html">GridEntityPit</a> ToPit ( )<a class="headerlink" href="#gridentitypit-topit" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="topoop">To·Poop ()<a class="headerlink" href="#topoop" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentitypoop-topoop"><a href="GridEntityPoop.html">GridEntityPoop</a> ToPoop ( )<a class="headerlink" href="#gridentitypoop-topoop" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="topressureplate">To·Pressure·Plate ()<a class="headerlink" href="#topressureplate" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentitypressureplate-topressureplate"><a href="GridEntityPressurePlate.html">GridEntityPressurePlate</a> ToPressurePlate ( )<a class="headerlink" href="#gridentitypressureplate-topressureplate" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="torock">To·Rock ()<a class="headerlink" href="#torock" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentityrock-torock"><a href="GridEntityRock.html">GridEntityRock</a> ToRock ( )<a class="headerlink" href="#gridentityrock-torock" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="tospikes">To·Spikes ()<a class="headerlink" href="#tospikes" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentityspikes-tospikes"><a href="GridEntitySpikes.html">GridEntitySpikes</a> ToSpikes ( )<a class="headerlink" href="#gridentityspikes-tospikes" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="totnt">To·TNT ()<a class="headerlink" href="#totnt" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" data-altreturn="nil" id="gridentitytnt-totnt"><a href="GridEntityTNT.html">GridEntityTNT</a> ToTNT ( )<a class="headerlink" href="#gridentitytnt-totnt" title="Permanent link">⚓︎</a></h4>
+<details class="note" open="open">
+<summary>Return behavior</summary>
+<p>If the conversion is not successful, this function returns <code>nil</code>.</p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="update">Update ()<a class="headerlink" href="#update" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-update">void Update ( )<a class="headerlink" href="#void-update" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="collisionclass">Collision·Class<a class="headerlink" href="#collisionclass" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="gridcollisionclass-collisionclass"><a href="enums/GridCollisionClass.html">GridCollisionClass</a> CollisionClass<a class="headerlink" href="#gridcollisionclass-collisionclass" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="desc">Desc<a class="headerlink" href="#desc" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="gridentitydesc-desc"><a href="GridEntityDesc.html">GridEntityDesc</a> Desc<a class="headerlink" href="#gridentitydesc-desc" title="Permanent link">⚓︎</a></h4>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Both the <a href="#desc">Desc</a> property and the <a href="#getsavestate">GetSaveState()</a> method return the exact same <a href="GridEntityDesc.html">GridEntityDesc</a> object. The game devs advise to use <a href="#getsavestate">GetSaveState()</a> instead of <a href="#desc">Desc</a>.</p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="position">Position<a class="headerlink" href="#position" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-vector-position">const <a href="Vector.html">Vector</a> Position<a class="headerlink" href="#const-vector-position" title="Permanent link">⚓︎</a></h4>
+<p>Returns the position of the grid cell's center point</p>
+<hr />
+<h3 aria-label="Variables" id="state">State<a class="headerlink" href="#state" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-state">int State<a class="headerlink" href="#int-state" title="Permanent link">⚓︎</a></h4>
+<p>Used for various different usecases.</p>
+<details class="- example">
+<summary>Example States</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Rocks with state = 2 are destroyed rocks (The rubble is the rock basically)
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Variables" id="vardata">Var·Data<a class="headerlink" href="#vardata" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-vardata">int VarData<a class="headerlink" href="#int-vardata" title="Permanent link">⚓︎</a></h4>
+<p>A Variable that stores some entity-specific data. The content can have completely different effects for different GridEntities.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<p>This code spawns a functioning Void Portal into the center of the room. This will teleport you to the floor "The Void" and will have the same appearance as the vanilla portal:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- From: https://github.com/IsaacScript/isaac-typescript-definitions/blob/main/typings/unofficial/enumsGridEntityVariants.d.ts</span>
+<span class="kd">local</span> <span class="n">TrapdoorVariant</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">NORMAL</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="n">VOID_PORTAL</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">local</span> <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">();</span>
+<span class="kd">local</span> <span class="n">room</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetRoom</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">centerPos</span> <span class="o">=</span> <span class="n">room</span><span class="p">:</span><span class="n">GetCenterPos</span><span class="p">()</span>
+
+<span class="c1">-- By default, this will spawn a normal trapdoor, even though we specify the Void Portal variant</span>
+<span class="kd">local</span> <span class="n">voidPortal</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GridSpawn</span><span class="p">(</span><span class="n">GridEntityType</span><span class="p">.</span><span class="n">GRID_TRAPDOOR</span><span class="p">,</span> <span class="n">TrapdoorVariant</span><span class="p">.</span><span class="n">VOID_PORTAL</span><span class="p">,</span> <span class="n">centerPos</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+
+<span class="c1">-- Set the destination to The Void and apply the pulse effect shader</span>
+<span class="n">voidPortal</span><span class="p">.</span><span class="n">VarData</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1">-- Replace the spritesheet to make it look like a Void Portal</span>
+<span class="kd">local</span> <span class="n">sprite</span> <span class="o">=</span> <span class="n">portalEntity</span><span class="p">:</span><span class="n">GetSprite</span><span class="p">()</span>
+<span class="n">sprite</span><span class="p">:</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;gfx/grid/voidtrapdoor.anm2&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
       
     
   </small>

@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="RoomConfig_Entry.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="RoomConfig_Spawn.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>Room - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-roomconfigroom" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              Room
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -3071,14 +3053,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_32" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_32" checked>
       
       
       
@@ -3087,7 +3071,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_32_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_32_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_32">
           <span class="md-nav__icon md-icon"></span>
           RoomConfig
@@ -3112,11 +3096,170 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="RoomConfig_Room.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Room
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="RoomConfig_Room.html" class="md-nav__link md-nav__link--active">
         Room
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doors" class="md-nav__link">
+    Doors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    Height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialweight" class="md-nav__link">
+    Initial·Weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#originalvariant" class="md-nav__link">
+    Original·Variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawncount" class="md-nav__link">
+    Spawn·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawns" class="md-nav__link">
+    Spawns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stageid" class="md-nav__link">
+    Stage·ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtype" class="md-nav__link">
+    Subtype
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variant" class="md-nav__link">
+    Variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight" class="md-nav__link">
+    Weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width" class="md-nav__link">
+    Width
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4512,139 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doors" class="md-nav__link">
+    Doors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    Height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialweight" class="md-nav__link">
+    Initial·Weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#originalvariant" class="md-nav__link">
+    Original·Variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawncount" class="md-nav__link">
+    Spawn·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawns" class="md-nav__link">
+    Spawns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stageid" class="md-nav__link">
+    Stage·ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtype" class="md-nav__link">
+    Subtype
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variant" class="md-nav__link">
+    Variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight" class="md-nav__link">
+    Weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width" class="md-nav__link">
+    Width
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4658,370 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-roomconfigroom">Class "RoomConfigRoom"<a class="headerlink" href="#class-roomconfigroom" title="Permanent link">⚓︎</a></h1>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>You can get this class by using the following functions:</p>
+<ul>
+<li><a href="RoomDescriptor.html#data">RoomDescriptor.Data</a></li>
+<li><a href="RoomDescriptor.html#overridedata">RoomDescriptor.OverrideData</a></li>
+</ul>
+<details class="example" open="open">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">level</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetLevel</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">roomDescriptor</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoomDesc</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">roomConfigRoom</span> <span class="o">=</span> <span class="n">roomDescriptor</span><span class="p">.</span><span class="n">Data</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="difficulty">Difficulty<a class="headerlink" href="#difficulty" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-difficulty-difficulty">const <a href="enums/Difficulty.html">Difficulty</a> Difficulty<a class="headerlink" href="#const-difficulty-difficulty" title="Permanent link">⚓︎</a></h4>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Variables" id="doors">Doors<a class="headerlink" href="#doors" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-doors">const int Doors<a class="headerlink" href="#const-int-doors" title="Permanent link">⚓︎</a></h4>
+<p>Returns a bit mask of the positions of valid door positions in this room. It is  a combination of bit flags of the DoorSlotFlag enum, which is defined as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enum</span> <span class="n">DoorSlotFlag</span> <span class="p">{</span>
+  <span class="n">LEFT0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">LEFT0</span><span class="p">,</span>
+  <span class="n">UP0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">UP0</span><span class="p">,</span>
+  <span class="n">RIGHT0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">RIGHT0</span><span class="p">,</span>
+  <span class="n">DOWN0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">DOWN0</span><span class="p">,</span>
+  <span class="n">LEFT1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">LEFT1</span><span class="p">,</span>
+  <span class="n">UP1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">UP1</span><span class="p">,</span>
+  <span class="n">RIGHT1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">RIGHT1</span><span class="p">,</span>
+  <span class="n">DOWN1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">DoorSlot</span><span class="p">.</span><span class="n">DOWN1</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 aria-label="Variables" id="height">Height<a class="headerlink" href="#height" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-height">const int Height<a class="headerlink" href="#const-int-height" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="initialweight">Initial·Weight<a class="headerlink" href="#initialweight" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-float-initialweight">const float InitialWeight<a class="headerlink" href="#const-float-initialweight" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-userdata-mode">const userdata Mode<a class="headerlink" href="#const-userdata-mode" title="Permanent link">⚓︎</a></h4>
+<details class="bug" open="open">
+<summary>Bug</summary>
+<p>This variable is broken and returns userdata.</p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="name">Name<a class="headerlink" href="#name" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-string-name">const string Name<a class="headerlink" href="#const-string-name" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="originalvariant">Original·Variant<a class="headerlink" href="#originalvariant" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-originalvariant">int OriginalVariant<a class="headerlink" href="#int-originalvariant" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="shape">Shape<a class="headerlink" href="#shape" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-roomshape-shape">const <a href="enums/RoomShape.html">RoomShape</a> Shape<a class="headerlink" href="#const-roomshape-shape" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="spawncount">Spawn·Count<a class="headerlink" href="#spawncount" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-spawncount">const int SpawnCount<a class="headerlink" href="#const-int-spawncount" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="spawns">Spawns<a class="headerlink" href="#spawns" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-roomconfigspawns-spawns">const <a href="CppContainer_ArrayProxy_RoomConfigSpawns.html">RoomConfigSpawns</a> Spawns<a class="headerlink" href="#const-roomconfigspawns-spawns" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="stageid">Stage·ID<a class="headerlink" href="#stageid" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-stageid">const int StageID<a class="headerlink" href="#const-int-stageid" title="Permanent link">⚓︎</a></h4>
+<p>The ID of the stage the room was designed for.</p>
+<details class="- note">
+<summary>Stage IDs (corresponds to IDs in stages.xml)</summary>
+<table>
+<thead>
+<tr>
+<th align="left">DLC</th>
+<th align="left">ID</th>
+<th align="left">Stage</th>
+<th align="left">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">0</td>
+<td align="left">Special Rooms</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">1</td>
+<td align="left">Basement</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">2</td>
+<td align="left">Cellar</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">3</td>
+<td align="left">Burning Basement</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">4</td>
+<td align="left">Caves</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">5</td>
+<td align="left">Catacombs</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">6</td>
+<td align="left">Flooded Caves</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">7</td>
+<td align="left">Depths</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">8</td>
+<td align="left">Necropolis</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">9</td>
+<td align="left">Dank Depths</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">10</td>
+<td align="left">Womb</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">11</td>
+<td align="left">Utero</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">12</td>
+<td align="left">Scarred Womb</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">13</td>
+<td align="left">Blue Womb</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">14</td>
+<td align="left">Sheol</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">15</td>
+<td align="left">Cathedral</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">16</td>
+<td align="left">Dark Room</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">17</td>
+<td align="left">Chest</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">18</td>
+<td align="left">Greed Special Rooms</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">19</td>
+<td align="left">Greed Basement</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">20</td>
+<td align="left">Greed Caves</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">21</td>
+<td align="left">Greed Depths</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">22</td>
+<td align="left">Greed Womb</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abp tooltip badge" href="#"> </a></td>
+<td align="left">23</td>
+<td align="left">Greed Sheol</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">24</td>
+<td align="left">The Shop</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">25</td>
+<td align="left">Ultra Greed</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="abrep tooltip badge" href="#"> </a></td>
+<td align="left">26</td>
+<td align="left">The Void</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">27</td>
+<td align="left">Downpour</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">28</td>
+<td align="left">Dross</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">29</td>
+<td align="left">Mines</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">30</td>
+<td align="left">Ashpit</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">31</td>
+<td align="left">Mausoleum</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">32</td>
+<td align="left">Gehenna</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">33</td>
+<td align="left">Corpse</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">35</td>
+<td align="left">Home</td>
+<td align="left">The Stage ID of 34 does not exist.</td>
+</tr>
+<tr>
+<td align="left"><a class="rep tooltip badge" href="#"> </a></td>
+<td align="left">36</td>
+<td align="left">Backwards</td>
+<td align="left">These rooms are used during the Ascent.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h3 aria-label="Variables" id="subtype">Subtype<a class="headerlink" href="#subtype" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-subtype">const int Subtype<a class="headerlink" href="#const-int-subtype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="type">Type<a class="headerlink" href="#type" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-roomtype-type">const <a href="enums/RoomType.html">RoomType</a> Type<a class="headerlink" href="#const-roomtype-type" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="variant">Variant<a class="headerlink" href="#variant" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-variant">const int Variant<a class="headerlink" href="#const-int-variant" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="weight">Weight<a class="headerlink" href="#weight" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-float-weight">const float Weight<a class="headerlink" href="#const-float-weight" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="width">Width<a class="headerlink" href="#width" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-int-width">const int Width<a class="headerlink" href="#const-int-width" title="Permanent link">⚓︎</a></h4>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
       
     
   </small>

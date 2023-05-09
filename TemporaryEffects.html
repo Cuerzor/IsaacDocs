@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="TemporaryEffect.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="Vector.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>TemporaryEffects - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-temporaryeffects" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              TemporaryEffects
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -3245,11 +3227,177 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="TemporaryEffects.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TemporaryEffects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="TemporaryEffects.html" class="md-nav__link md-nav__link--active">
         TemporaryEffects
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addcollectibleeffect" class="md-nav__link">
+    Add·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addnulleffect" class="md-nav__link">
+    Add·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addtrinketeffect" class="md-nav__link">
+    Add·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleareffects" class="md-nav__link">
+    Clear·Effects ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectibleeffect" class="md-nav__link">
+    Get·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectibleeffectnum" class="md-nav__link">
+    Get·Collectible·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geteffectslist" class="md-nav__link">
+    Get·Effects·List ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnulleffect" class="md-nav__link">
+    Get·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnulleffectnum" class="md-nav__link">
+    Get·Null·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinketeffect" class="md-nav__link">
+    Get·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinketeffectnum" class="md-nav__link">
+    Get·Trinket·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascollectibleeffect" class="md-nav__link">
+    Has·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasnulleffect" class="md-nav__link">
+    Has·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastrinketeffect" class="md-nav__link">
+    Has·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removecollectibleeffect" class="md-nav__link">
+    Remove·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removenulleffect" class="md-nav__link">
+    Remove·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetrinketeffect" class="md-nav__link">
+    Remove·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4517,146 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addcollectibleeffect" class="md-nav__link">
+    Add·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addnulleffect" class="md-nav__link">
+    Add·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addtrinketeffect" class="md-nav__link">
+    Add·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleareffects" class="md-nav__link">
+    Clear·Effects ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectibleeffect" class="md-nav__link">
+    Get·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollectibleeffectnum" class="md-nav__link">
+    Get·Collectible·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geteffectslist" class="md-nav__link">
+    Get·Effects·List ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnulleffect" class="md-nav__link">
+    Get·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnulleffectnum" class="md-nav__link">
+    Get·Null·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinketeffect" class="md-nav__link">
+    Get·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettrinketeffectnum" class="md-nav__link">
+    Get·Trinket·Effect·Num ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascollectibleeffect" class="md-nav__link">
+    Has·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasnulleffect" class="md-nav__link">
+    Has·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastrinketeffect" class="md-nav__link">
+    Has·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removecollectibleeffect" class="md-nav__link">
+    Remove·Collectible·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removenulleffect" class="md-nav__link">
+    Remove·Null·Effect ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetrinketeffect" class="md-nav__link">
+    Remove·Trinket·Effect ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4670,313 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-temporaryeffects">Class "TemporaryEffects"<a class="headerlink" href="#class-temporaryeffects" title="Permanent link">⚓︎</a></h1>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>You can get this class by using the following function:</p>
+<ul>
+<li><a href="EntityPlayer.html#geteffects">EntityPlayer:GetEffects()</a></li>
+</ul>
+<details class="example" open="open">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">player</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">tempEffects</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Functions" id="addcollectibleeffect">Add·Collectible·Effect ()<a class="headerlink" href="#addcollectibleeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addcollectibleeffect-collectibletype-collectibletype-boolean-addcostume-true-int-count-1">void AddCollectibleEffect ( <a href="enums/CollectibleType.html">CollectibleType</a> CollectibleType, boolean AddCostume = true, int Count = 1 )<a class="headerlink" href="#void-addcollectibleeffect-collectibletype-collectibletype-boolean-addcostume-true-int-count-1" title="Permanent link">⚓︎</a></h4>
+<p>Adds the CollectibleEffect associated with a given item. If the passed item's CollectibleEffect is marked to have a cooldown or be persistent in items.xml, this will be respected.</p>
+<details class="info" open="open">
+<summary>Misinformation</summary>
+<p>TemporaryEffects, despite their names, are not and were never intended to be fake or temporary copies of items. Notably every single active item automatically grants its CollectibleEffect on use, and this is often closely tied to its effect; CollectibleEffects can therefore be visuallised more as an item's state. For example in passive items:</p>
+<ul>
+<li>Holy Mantle utilises its CollectibleEffect to track how many shield charges the player currently has.</li>
+<li>Most familiar items can have their familiar granted via their CollectibleEffect.</li>
+<li>Whore of Babylon and Crown of Light grant their CollectibleEffects while activated.</li>
+</ul>
+<p>Some items can have their effects granted invisibly through the use of their CollectibleEffect, oftentimes this is because another item pre-repentance wished to invoke its effect (such as Monster Manual). Many post-repentance items use real fake copies of items for this purpose, but adding these is not supported by the API and some such as Hemoptysis and Berserk! still use CollectibleEffects for their cooldowns. You should not assume that any given item will work as a TemporaryEffect the same as it does when actually obtained.</p>
+<details class="- info">
+<summary>Supported Items</summary>
+<p>Passive items with notable CollectibleEffects (excluding quest items).</p>
+<ul>
+<li>Sad Onion</li>
+<li>Inner Eye</li>
+<li>Spoon Bender</li>
+<li>My Reflection</li>
+<li>Number One</li>
+<li>Brother Bobby</li>
+<li>Magic Mushroom</li>
+<li>The Virus</li>
+<li>Roid Rage</li>
+<li>Transcendence</li>
+<li>Mom's Underwear</li>
+<li>Mom's Heels</li>
+<li>Mom's Lipstick</li>
+<li>Mom's Eye</li>
+<li>Distant Admiration</li>
+<li>Sister Maggy</li>
+<li>Growth Hormones</li>
+<li>Mini Mush</li>
+<li>Cube of Meat (all levels)</li>
+<li>Little Chubby</li>
+<li>Sack of Pennies</li>
+<li>Robo-Baby</li>
+<li>Little Chad</li>
+<li>The Relic</li>
+<li>Little Gish</li>
+<li>Little Steven</li>
+<li>The Wafer</li>
+<li>Mom's Contacts</li>
+<li>Guardian Angel</li>
+<li>Demon Baby</li>
+<li>Mom's Knife</li>
+<li>Ouija Board</li>
+<li>Dead Bird (spawns the bird without having to get hit)</li>
+<li>Brimstone</li>
+<li>Odd Mushroom (Thin)</li>
+<li>Odd Mushroom (Large)</li>
+<li>Whore of Babylon (grants the effect without having to be at half a heart or less)</li>
+<li>Forever Alone</li>
+<li>Bomb Bag</li>
+<li>Speed Ball</li>
+<li>Bum Friend</li>
+<li>Tough Love</li>
+<li>Peeper (only gives the familiar)</li>
+<li>Ghost Baby</li>
+<li>Harlequin Baby</li>
+<li>Daddy Longlegs</li>
+<li>Sacrificial Dagger</li>
+<li>Rainbow Baby</li>
+<li>Holy Water</li>
+<li>Guppy's Hairball</li>
+<li>Abel</li>
+<li>Mom's Key</li>
+<li>Mom's Eyeshadow</li>
+<li>Iron Bar</li>
+<li>The Guillotine</li>
+<li>Ball of Bandages (all levels)</li>
+<li>Anemic (grants the creep trail without having to get hit)</li>
+<li>Mom's Wig</li>
+<li>Mom's Perfume</li>
+<li>Death's Touch</li>
+<li>Experimental Treatment (stat changes are seeded per room)</li>
+<li>20/20 (no damage down)</li>
+<li>Hive Mind</li>
+<li>Fire Mind</li>
+<li>Dark Matter</li>
+<li>Proptosis</li>
+<li>Smart Fly</li>
+<li>Dry Baby</li>
+<li>Juciy Sack</li>
+<li>Robo-Baby 2.0</li>
+<li>Rotten Baby</li>
+<li>Headless Baby</li>
+<li>Leech</li>
+<li>Mystery Sack</li>
+<li>BBF</li>
+<li>Bob's Brain</li>
+<li>Best Bud (grants the familiar witout having to get hit)</li>
+<li>Lil Brimstone</li>
+<li>Lil Haunt</li>
+<li>Dark Bum</li>
+<li>Big Fan</li>
+<li>Sissy Longlegs</li>
+<li>Punching Bag</li>
+<li>Leo</li>
+<li>Holy Mantle</li>
+<li>Mysterious Liquid</li>
+<li>Gemini</li>
+<li>Cain's Other Eye</li>
+<li>???'s Only Friend</li>
+<li>Samson's Chains</li>
+<li>Mongo Baby</li>
+<li>Blue Cap</li>
+<li>Synthoil</li>
+<li>Mom's Pearls</li>
+<li>The Wiz</li>
+<li>Incubus</li>
+<li>Fate's Reward</li>
+<li>Lil Chest</li>
+<li>Sworn Protector</li>
+<li>Friend Zone</li>
+<li>Lost Fly</li>
+<li>Charged Baby</li>
+<li>Holy Light</li>
+<li>Lil Gurdy</li>
+<li>Bumbo</li>
+<li>Censer</li>
+<li>Key Bum</li>
+<li>Rune Bag</li>
+<li>Seraphim</li>
+<li>Tractor Beam (only grants a tears up)</li>
+<li>God's Flesh</li>
+<li>Spider Mod</li>
+<li>Farting Baby</li>
+<li>Empty Vessel (grants flight even with red hearts; shield doesn't trigger)</li>
+<li>Lusty Blood (each count of the effect increases damage; doesn't increase with kills)</li>
+<li>Crown of Light (only gives range up and shot speed down, doesn't go away when hit)</li>
+<li>Succubus</li>
+<li>Fruit Cake</li>
+<li>Obsessed Fan</li>
+<li>Head of the Keeper</li>
+<li>Papa Fly</li>
+<li>Multidimensional Baby</li>
+<li>Lil Loki</li>
+<li>Milk! (grants a tears up instead of the familiar)</li>
+<li>Dark Prince's Crown (grants its effect as if it was active no matter your health)</li>
+<li>Finger!</li>
+<li>Shade</li>
+<li>Depression</li>
+<li>Hushy</li>
+<li>Lil Monstro</li>
+<li>King Baby</li>
+<li>Big Chubby</li>
+<li>Acid Baby</li>
+<li>Yo Listen!</li>
+<li>Adrenaline</li>
+<li>Euthanasia</li>
+<li>Camo Undies</li>
+<li>Sack of Sacks</li>
+<li>Mom's Razor</li>
+<li>Bloodshot Eye</li>
+<li>Angry Fly</li>
+<li>Buddy in a Box</li>
+<li>Lil Delirium</li>
+<li>7 Seals</li>
+<li>Angelic Prism</li>
+<li>Lil Spewer</li>
+<li>Mystery Egg</li>
+<li>Slipped Rib</li>
+<li>Hallowed Ground</li>
+<li>Pointy Rib</li>
+<li>Jaw Bone</li>
+<li>Blood Puppy</li>
+<li>Paschal Candle (each count of the effect increases tears; doesn't give the familiar)</li>
+<li>Eye of the Occult (doesn't change any stats)</li>
+<li>Intruder (doesn't release the spider on hit)</li>
+<li>Psy Fly</li>
+<li>Mars (immediately causes the dash effect)</li>
+<li>Uranus</li>
+<li>Boiled Baby</li>
+<li>Freezer Baby</li>
+<li>Bird Cage (spawns the bird without having to get hit)</li>
+<li>Lil Dumpy</li>
+<li>Bot Fly</li>
+<li>Tinytoma</li>
+<li>Fruity Plum</li>
+<li>Cube Baby</li>
+<li>Astral Projection (turns you into the ghost that gets a free hit + flight)</li>
+<li>Lil Abaddon</li>
+<li>Lil Portal</li>
+<li>Worm Friend</li>
+<li>Innner Child (permanently grants speed and size down as if you just revived)</li>
+<li>Twisted Pair</li>
+<li>Mom's Ring</li>
+</ul>
+</details>
+</details>
+<details class="- example">
+<summary>Example Code</summary>
+<p>This code applies the effect and costume of the item "Sad Onion" to the player.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">player</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">()</span>
+<span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">():</span><span class="n">AddCollectibleEffect</span><span class="p">(</span><span class="n">CollectibleType</span><span class="p">.</span><span class="n">COLLECTIBLE_SAD_ONION</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Functions" id="addnulleffect">Add·Null·Effect ()<a class="headerlink" href="#addnulleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addnulleffect-itemconfignullitemid-nullid-boolean-addcostume-true-int-count-1">void AddNullEffect ( <a href="ItemConfig_Item.html">ItemConfigNullItemID</a> NullId, boolean AddCostume = true, int Count = 1 )<a class="headerlink" href="#void-addnulleffect-itemconfignullitemid-nullid-boolean-addcostume-true-int-count-1" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="addtrinketeffect">Add·Trinket·Effect ()<a class="headerlink" href="#addtrinketeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addtrinketeffect-trinkettype-trinkettype-boolean-addcostume-true-int-count-1">void AddTrinketEffect ( <a href="enums/TrinketType.html">TrinketType</a> TrinketType, boolean AddCostume = true, int Count = 1 )<a class="headerlink" href="#void-addtrinketeffect-trinkettype-trinkettype-boolean-addcostume-true-int-count-1" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="cleareffects">Clear·Effects ()<a class="headerlink" href="#cleareffects" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-cleareffects">void ClearEffects ( )<a class="headerlink" href="#void-cleareffects" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getcollectibleeffect">Get·Collectible·Effect ()<a class="headerlink" href="#getcollectibleeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="const-temporaryeffect-getcollectibleeffect-collectibletype-collectibletype">const <a href="TemporaryEffect.html">TemporaryEffect</a> GetCollectibleEffect ( <a href="enums/CollectibleType.html">CollectibleType</a> CollectibleType )<a class="headerlink" href="#const-temporaryeffect-getcollectibleeffect-collectibletype-collectibletype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getcollectibleeffectnum">Get·Collectible·Effect·Num ()<a class="headerlink" href="#getcollectibleeffectnum" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-getcollectibleeffectnum-collectibletype-collectibletype">int GetCollectibleEffectNum ( <a href="enums/CollectibleType.html">CollectibleType</a> CollectibleType )<a class="headerlink" href="#int-getcollectibleeffectnum-collectibletype-collectibletype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="geteffectslist">Get·Effects·List ()<a class="headerlink" href="#geteffectslist" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="const-effectlist-geteffectslist">const <a href="CppContainer_Vector_EffectList.html">EffectList</a> GetEffectsList ( )<a class="headerlink" href="#const-effectlist-geteffectslist" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getnulleffect">Get·Null·Effect ()<a class="headerlink" href="#getnulleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="const-temporaryeffect-getnulleffect-itemconfignullitemid-nullid">const <a href="TemporaryEffect.html">TemporaryEffect</a> GetNullEffect ( <a href="ItemConfig_Item.html">ItemConfigNullItemID</a> NullId )<a class="headerlink" href="#const-temporaryeffect-getnulleffect-itemconfignullitemid-nullid" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getnulleffectnum">Get·Null·Effect·Num ()<a class="headerlink" href="#getnulleffectnum" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-getnulleffectnum-itemconfignullitemid-nullid">int GetNullEffectNum ( <a href="ItemConfig_Item.html">ItemConfigNullItemID</a> NullId )<a class="headerlink" href="#int-getnulleffectnum-itemconfignullitemid-nullid" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="gettrinketeffect">Get·Trinket·Effect ()<a class="headerlink" href="#gettrinketeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="const-temporaryeffect-gettrinketeffect-trinkettype-trinkettype">const <a href="TemporaryEffect.html">TemporaryEffect</a> GetTrinketEffect ( <a href="enums/TrinketType.html">TrinketType</a> TrinketType )<a class="headerlink" href="#const-temporaryeffect-gettrinketeffect-trinkettype-trinkettype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="gettrinketeffectnum">Get·Trinket·Effect·Num ()<a class="headerlink" href="#gettrinketeffectnum" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-gettrinketeffectnum-trinkettype-trinkettype">int GetTrinketEffectNum ( <a href="enums/TrinketType.html">TrinketType</a> TrinketType )<a class="headerlink" href="#int-gettrinketeffectnum-trinkettype-trinkettype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="hascollectibleeffect">Has·Collectible·Effect ()<a class="headerlink" href="#hascollectibleeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hascollectibleeffect-collectibletype-collectibletype">boolean HasCollectibleEffect ( <a href="enums/CollectibleType.html">CollectibleType</a> CollectibleType )<a class="headerlink" href="#boolean-hascollectibleeffect-collectibletype-collectibletype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="hasnulleffect">Has·Null·Effect ()<a class="headerlink" href="#hasnulleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hasnulleffect-itemconfignullitemid-nullid">boolean HasNullEffect ( <a href="ItemConfig_Item.html">ItemConfigNullItemID</a> NullId )<a class="headerlink" href="#boolean-hasnulleffect-itemconfignullitemid-nullid" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="hastrinketeffect">Has·Trinket·Effect ()<a class="headerlink" href="#hastrinketeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hastrinketeffect-trinkettype-trinkettype">boolean HasTrinketEffect ( <a href="enums/TrinketType.html">TrinketType</a> TrinketType )<a class="headerlink" href="#boolean-hastrinketeffect-trinkettype-trinkettype" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="removecollectibleeffect">Remove·Collectible·Effect ()<a class="headerlink" href="#removecollectibleeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-removecollectibleeffect-collectibletype-collectibletype-int-count-1">void RemoveCollectibleEffect ( <a href="enums/CollectibleType.html">CollectibleType</a> CollectibleType, int Count = 1 )<a class="headerlink" href="#void-removecollectibleeffect-collectibletype-collectibletype-int-count-1" title="Permanent link">⚓︎</a></h4>
+<p>Count = -1 removes all instances of the effect</p>
+<hr />
+<h3 aria-label="Functions" id="removenulleffect">Remove·Null·Effect ()<a class="headerlink" href="#removenulleffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-removenulleffect-itemconfignullitemid-nullid-int-count-1">void RemoveNullEffect ( <a href="ItemConfig_Item.html">ItemConfigNullItemID</a> NullId, int Count = 1 )<a class="headerlink" href="#void-removenulleffect-itemconfignullitemid-nullid-int-count-1" title="Permanent link">⚓︎</a></h4>
+<p>Count = -1 removes all instances of the effect</p>
+<hr />
+<h3 aria-label="Functions" id="removetrinketeffect">Remove·Trinket·Effect ()<a class="headerlink" href="#removetrinketeffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-removetrinketeffect-trinkettype-trinkettype-int-count-1">void RemoveTrinketEffect ( <a href="enums/TrinketType.html">TrinketType</a> TrinketType, int Count = 1 )<a class="headerlink" href="#void-removetrinketeffect-trinkettype-trinkettype-int-count-1" title="Permanent link">⚓︎</a></h4>
+<p>Count = -1 removes all instances of the effect</p>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 30, 2023</span>
       
     
   </small>

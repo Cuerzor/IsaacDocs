@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="EntityFamiliar.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="EntityLaser.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>EntityKnife - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-entityknife" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              EntityKnife
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -2319,14 +2301,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
       
       
       
@@ -2335,7 +2319,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
           Entity
@@ -2402,11 +2386,204 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="EntityKnife.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          EntityKnife
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="EntityKnife.html" class="md-nav__link md-nav__link--active">
         EntityKnife
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-diagram" class="md-nav__link">
+    Class Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addtearflags" class="md-nav__link">
+    Add·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleartearflags" class="md-nav__link">
+    Clear·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getknifedistance" class="md-nav__link">
+    Get·Knife·Distance ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getknifevelocity" class="md-nav__link">
+    Get·Knife·Velocity ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrenderz" class="md-nav__link">
+    Get·Render·Z ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastearflags" class="md-nav__link">
+    Has·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isflying" class="md-nav__link">
+    Is·Flying ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpathfollowspeed" class="md-nav__link">
+    Set·Path·Follow·Speed ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot" class="md-nav__link">
+    Shoot ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge" class="md-nav__link">
+    Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxdistance" class="md-nav__link">
+    Max·Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathfollowspeed" class="md-nav__link">
+    Path·Follow·Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathoffset" class="md-nav__link">
+    Path·Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotationoffset" class="md-nav__link">
+    Rotation·Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tearflags" class="md-nav__link">
+    Tear·Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4546,173 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-diagram" class="md-nav__link">
+    Class Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addtearflags" class="md-nav__link">
+    Add·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleartearflags" class="md-nav__link">
+    Clear·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getknifedistance" class="md-nav__link">
+    Get·Knife·Distance ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getknifevelocity" class="md-nav__link">
+    Get·Knife·Velocity ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrenderz" class="md-nav__link">
+    Get·Render·Z ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastearflags" class="md-nav__link">
+    Has·Tear·Flags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isflying" class="md-nav__link">
+    Is·Flying ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpathfollowspeed" class="md-nav__link">
+    Set·Path·Follow·Speed ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoot" class="md-nav__link">
+    Shoot ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge" class="md-nav__link">
+    Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxdistance" class="md-nav__link">
+    Max·Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathfollowspeed" class="md-nav__link">
+    Path·Follow·Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathoffset" class="md-nav__link">
+    Path·Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotationoffset" class="md-nav__link">
+    Rotation·Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tearflags" class="md-nav__link">
+    Tear·Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4726,141 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-entityknife">Class "EntityKnife"<a class="headerlink" href="#class-entityknife" title="Permanent link">⚓︎</a></h1>
+<h2 id="class-diagram">Class Diagram<a class="headerlink" href="#class-diagram" title="Permanent link">⚓︎</a></h2>
+<div class="mermaidDiagram">
+<pre class="mermaid"><code>    classDiagram
+    class Entity:::diagramCurrentPage
+    class EntityBomb
+    class EntityEffect
+    class EntityFamiliar
+    class EntityKnife
+    class EntityLaser
+    class EntityNPC
+    class EntityPickup
+    class EntityPlayer
+    class EntityProjectile
+    class EntityTear
+    Entity &lt;|-- EntityBomb
+    Entity &lt;|-- EntityEffect
+    Entity &lt;|-- EntityFamiliar
+    Entity &lt;|-- EntityKnife
+    Entity &lt;|-- EntityLaser
+    Entity &lt;|-- EntityNPC
+    Entity &lt;|-- EntityPickup
+    Entity &lt;|-- EntityPlayer
+    Entity &lt;|-- EntityProjectile
+    Entity &lt;|-- EntityTear
+    link Entity "Entity.html" "Go to page for 'Entity' class"
+    link EntityBomb "EntityBomb.html" "Go to page for 'EntityBomb' class"
+    link EntityEffect "EntityEffect.html" "Go to page for 'EntityEffect' class"
+    link EntityFamiliar "EntityFamiliar.html" "Go to page for 'EntityFamiliar' class"
+    link EntityKnife "EntityKnife.html" "Go to page for 'EntityKnife' class"
+    link EntityLaser "EntityLaser.html" "Go to page for 'EntityLaser' class"
+    link EntityNPC "EntityNPC.html" "Go to page for 'EntityNPC' class"
+    link EntityPickup "EntityPickup.html" "Go to page for 'EntityPickup' class"
+    link EntityPlayer "EntityPlayer.html" "Go to page for 'EntityPlayer' class"
+    link EntityProjectile "EntityProjectile.html" "Go to page for 'EntityProjectile' class"
+    link EntityTear "EntityTear.html" "Go to page for 'EntityTear' class"</code></pre>
+</div>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Functions" id="addtearflags">Add·Tear·Flags ()<a class="headerlink" href="#addtearflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-addtearflags-tearflags-flags">void AddTearFlags ( <a href="enums/TearFlags.html">TearFlags</a> Flags )<a class="headerlink" href="#void-addtearflags-tearflags-flags" title="Permanent link">⚓︎</a></h4>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Functions" id="cleartearflags">Clear·Tear·Flags ()<a class="headerlink" href="#cleartearflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-cleartearflags-tearflags-flags">void ClearTearFlags ( <a href="enums/TearFlags.html">TearFlags</a> Flags )<a class="headerlink" href="#void-cleartearflags-tearflags-flags" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getknifedistance">Get·Knife·Distance ()<a class="headerlink" href="#getknifedistance" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-getknifedistance">float GetKnifeDistance ( )<a class="headerlink" href="#float-getknifedistance" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getknifevelocity">Get·Knife·Velocity ()<a class="headerlink" href="#getknifevelocity" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-getknifevelocity">float GetKnifeVelocity ( )<a class="headerlink" href="#float-getknifevelocity" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="getrenderz">Get·Render·Z ()<a class="headerlink" href="#getrenderz" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="int-getrenderz">int GetRenderZ ( )<a class="headerlink" href="#int-getrenderz" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="hastearflags">Has·Tear·Flags ()<a class="headerlink" href="#hastearflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hastearflags-tearflags-flags">boolean HasTearFlags ( <a href="enums/TearFlags.html">TearFlags</a> Flags )<a class="headerlink" href="#boolean-hastearflags-tearflags-flags" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="isflying">Is·Flying ()<a class="headerlink" href="#isflying" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-isflying">boolean IsFlying ( )<a class="headerlink" href="#boolean-isflying" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="reset">Reset ()<a class="headerlink" href="#reset" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-reset">void Reset ( )<a class="headerlink" href="#void-reset" title="Permanent link">⚓︎</a></h4>
+<p>Used for master knifes, to get back to player.</p>
+<hr />
+<h3 aria-label="Functions" id="setpathfollowspeed">Set·Path·Follow·Speed ()<a class="headerlink" href="#setpathfollowspeed" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-setpathfollowspeed-float-speed">void SetPathFollowSpeed ( float Speed )<a class="headerlink" href="#void-setpathfollowspeed-float-speed" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="shoot">Shoot ()<a class="headerlink" href="#shoot" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-shoot-float-charge-float-range">void Shoot ( float Charge, float Range )<a class="headerlink" href="#void-shoot-float-charge-float-range" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="charge">Charge<a class="headerlink" href="#charge" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-charge">float Charge<a class="headerlink" href="#float-charge" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="maxdistance">Max·Distance<a class="headerlink" href="#maxdistance" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-maxdistance">float MaxDistance<a class="headerlink" href="#float-maxdistance" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="pathfollowspeed">Path·Follow·Speed<a class="headerlink" href="#pathfollowspeed" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-pathfollowspeed">float PathFollowSpeed<a class="headerlink" href="#float-pathfollowspeed" title="Permanent link">⚓︎</a></h4>
+<p>Unit speed of path moving knifes.</p>
+<hr />
+<h3 aria-label="Variables" id="pathoffset">Path·Offset<a class="headerlink" href="#pathoffset" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-pathoffset">float PathOffset<a class="headerlink" href="#float-pathoffset" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="rotation">Rotation<a class="headerlink" href="#rotation" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-rotation">float Rotation<a class="headerlink" href="#float-rotation" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="rotationoffset">Rotation·Offset<a class="headerlink" href="#rotationoffset" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-rotationoffset">float RotationOffset<a class="headerlink" href="#float-rotationoffset" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-scale">float Scale<a class="headerlink" href="#float-scale" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="tearflags">Tear·Flags<a class="headerlink" href="#tearflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="tearflags-tearflags"><a href="enums/TearFlags.html">TearFlags</a> TearFlags<a class="headerlink" href="#tearflags-tearflags" title="Permanent link">⚓︎</a></h4>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
       
     
   </small>

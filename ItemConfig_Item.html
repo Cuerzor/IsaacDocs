@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="ItemConfig_Costume.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="ItemConfig_PillEffect.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>ItemConfig - Item - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-itemconfigitem" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              ItemConfig - Item
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -2737,14 +2719,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" checked>
       
       
       
@@ -2753,7 +2737,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_18">
           <span class="md-nav__icon md-icon"></span>
           ItemConfig
@@ -2806,11 +2790,323 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ItemConfig_Item.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ItemConfig - Item
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ItemConfig_Item.html" class="md-nav__link md-nav__link--active">
         ItemConfig - Item
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hastags" class="md-nav__link">
+    Has·Tags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isavailable" class="md-nav__link">
+    Is·Available ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iscollectible" class="md-nav__link">
+    Is·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isnull" class="md-nav__link">
+    Is·Null ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istrinket" class="md-nav__link">
+    Is·Trinket ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#achievementid" class="md-nav__link">
+    Achievement·ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addblackhearts" class="md-nav__link">
+    Add·Black·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addbombs" class="md-nav__link">
+    Add·Bombs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcoins" class="md-nav__link">
+    Add·Coins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcostumeonpickup" class="md-nav__link">
+    Add·Costume·On·Pickup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addhearts" class="md-nav__link">
+    Add·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addkeys" class="md-nav__link">
+    Add·Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addmaxhearts" class="md-nav__link">
+    Add·Max·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addsoulhearts" class="md-nav__link">
+    Add·Soul·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheflags" class="md-nav__link">
+    Cache·Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chargetype" class="md-nav__link">
+    Charge·Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleareffectsonremove" class="md-nav__link">
+    Clear·Effects·On·Remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costume" class="md-nav__link">
+    Costume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#craftingquality" class="md-nav__link">
+    CraftingQuality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devilprice" class="md-nav__link">
+    Devil·Price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discharged" class="md-nav__link">
+    Discharged
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gfxfilename" class="md-nav__link">
+    Gfx·File·Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden" class="md-nav__link">
+    Hidden
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initcharge" class="md-nav__link">
+    Init·Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxcharges" class="md-nav__link">
+    Max·Charges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxcooldown" class="md-nav__link">
+    Max·Cooldown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passivecache" class="md-nav__link">
+    Passive·Cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistenteffect" class="md-nav__link">
+    Persistent·Effect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality" class="md-nav__link">
+    Quality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopprice" class="md-nav__link">
+    Shop·Price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special" class="md-nav__link">
+    Special
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4665,292 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hastags" class="md-nav__link">
+    Has·Tags ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isavailable" class="md-nav__link">
+    Is·Available ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iscollectible" class="md-nav__link">
+    Is·Collectible ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isnull" class="md-nav__link">
+    Is·Null ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istrinket" class="md-nav__link">
+    Is·Trinket ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#achievementid" class="md-nav__link">
+    Achievement·ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addblackhearts" class="md-nav__link">
+    Add·Black·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addbombs" class="md-nav__link">
+    Add·Bombs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcoins" class="md-nav__link">
+    Add·Coins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcostumeonpickup" class="md-nav__link">
+    Add·Costume·On·Pickup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addhearts" class="md-nav__link">
+    Add·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addkeys" class="md-nav__link">
+    Add·Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addmaxhearts" class="md-nav__link">
+    Add·Max·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addsoulhearts" class="md-nav__link">
+    Add·Soul·Hearts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheflags" class="md-nav__link">
+    Cache·Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chargetype" class="md-nav__link">
+    Charge·Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleareffectsonremove" class="md-nav__link">
+    Clear·Effects·On·Remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costume" class="md-nav__link">
+    Costume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#craftingquality" class="md-nav__link">
+    CraftingQuality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devilprice" class="md-nav__link">
+    Devil·Price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discharged" class="md-nav__link">
+    Discharged
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gfxfilename" class="md-nav__link">
+    Gfx·File·Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden" class="md-nav__link">
+    Hidden
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initcharge" class="md-nav__link">
+    Init·Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxcharges" class="md-nav__link">
+    Max·Charges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxcooldown" class="md-nav__link">
+    Max·Cooldown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passivecache" class="md-nav__link">
+    Passive·Cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistenteffect" class="md-nav__link">
+    Persistent·Effect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality" class="md-nav__link">
+    Quality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopprice" class="md-nav__link">
+    Shop·Price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special" class="md-nav__link">
+    Special
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4964,241 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-itemconfigitem">Class "ItemConfigItem"<a class="headerlink" href="#class-itemconfigitem" title="Permanent link">⚓︎</a></h1>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Functions" id="hastags">Has·Tags ()<a class="headerlink" href="#hastags" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-hastags-int-tags">boolean HasTags ( int Tags )<a class="headerlink" href="#boolean-hastags-int-tags" title="Permanent link">⚓︎</a></h4>
+<p>Returns true or false, depending on whether or not the item has the given <a href="enums/ItemConfig.html">tag</a>.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<p>Returns if The Sad Onion has the tag "Bob" (for the Bob transformation)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Isaac</span><span class="p">.</span><span class="n">GetItemConfig</span><span class="p">():</span><span class="n">GetCollectible</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span><span class="n">HasTags</span><span class="p">(</span><span class="n">ItemConfig</span><span class="p">.</span><span class="n">TAG_BOB</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="isavailable">Is·Available ()<a class="headerlink" href="#isavailable" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-isavailable">boolean IsAvailable ( )<a class="headerlink" href="#boolean-isavailable" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Functions" id="iscollectible">Is·Collectible ()<a class="headerlink" href="#iscollectible" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-iscollectible">boolean IsCollectible ( )<a class="headerlink" href="#boolean-iscollectible" title="Permanent link">⚓︎</a></h4>
+<p>Returns if the item is a collectible.</p>
+<hr />
+<h3 aria-label="Functions" id="isnull">Is·Null ()<a class="headerlink" href="#isnull" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-isnull">boolean IsNull ( )<a class="headerlink" href="#boolean-isnull" title="Permanent link">⚓︎</a></h4>
+<p>Returns if the item is null.</p>
+<hr />
+<h3 aria-label="Functions" id="istrinket">Is·Trinket ()<a class="headerlink" href="#istrinket" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="boolean-istrinket">boolean IsTrinket ( )<a class="headerlink" href="#boolean-istrinket" title="Permanent link">⚓︎</a></h4>
+<p>Returns if the item is a trinket.</p>
+<hr />
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="achievementid">Achievement·ID<a class="headerlink" href="#achievementid" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-achievementid">int AchievementID<a class="headerlink" href="#int-achievementid" title="Permanent link">⚓︎</a></h4>
+<p>Returns the ID of the achievement that unlocks the item. Returns <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> if the item is unlocked by default.</p>
+<hr />
+<h3 aria-label="Variables" id="addblackhearts">Add·Black·Hearts<a class="headerlink" href="#addblackhearts" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addblackhearts">int AddBlackHearts<a class="headerlink" href="#int-addblackhearts" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of black hearts the item adds to the player. 1 unit is one half black heart.</p>
+<hr />
+<h3 aria-label="Variables" id="addbombs">Add·Bombs<a class="headerlink" href="#addbombs" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addbombs">int AddBombs<a class="headerlink" href="#int-addbombs" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of bombs the item adds to the player.</p>
+<hr />
+<h3 aria-label="Variables" id="addcoins">Add·Coins<a class="headerlink" href="#addcoins" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addcoins">int AddCoins<a class="headerlink" href="#int-addcoins" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of coins the item adds to the player.</p>
+<hr />
+<h3 aria-label="Variables" id="addcostumeonpickup">Add·Costume·On·Pickup<a class="headerlink" href="#addcostumeonpickup" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-addcostumeonpickup">boolean AddCostumeOnPickup<a class="headerlink" href="#boolean-addcostumeonpickup" title="Permanent link">⚓︎</a></h4>
+<p>Returns whether or not the item adds its costume on pickup.</p>
+<hr />
+<h3 aria-label="Variables" id="addhearts">Add·Hearts<a class="headerlink" href="#addhearts" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addhearts">int AddHearts<a class="headerlink" href="#int-addhearts" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of red hearts the item heals the player by. 1 unit is one half red heart.</p>
+<hr />
+<h3 aria-label="Variables" id="addkeys">Add·Keys<a class="headerlink" href="#addkeys" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addkeys">int AddKeys<a class="headerlink" href="#int-addkeys" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of keys the item adds to the player.</p>
+<hr />
+<h3 aria-label="Variables" id="addmaxhearts">Add·Max·Hearts<a class="headerlink" href="#addmaxhearts" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addmaxhearts">int AddMaxHearts<a class="headerlink" href="#int-addmaxhearts" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of empty heart containters the item adds to the player. 1 unit is one half red heart.</p>
+<hr />
+<h3 aria-label="Variables" id="addsoulhearts">Add·Soul·Hearts<a class="headerlink" href="#addsoulhearts" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-addsoulhearts">int AddSoulHearts<a class="headerlink" href="#int-addsoulhearts" title="Permanent link">⚓︎</a></h4>
+<p>Returns the number of soul hearts the item adds to the player. 1 unit is one half soul heart.</p>
+<hr />
+<h3 aria-label="Variables" id="cacheflags">Cache·Flags<a class="headerlink" href="#cacheflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-cacheflags">int CacheFlags<a class="headerlink" href="#int-cacheflags" title="Permanent link">⚓︎</a></h4>
+<p>Returns the <a href="enums/CacheFlag.html">CacheFlags</a> set by the item.</p>
+<hr />
+<h3 aria-label="Variables" id="chargetype">Charge·Type<a class="headerlink" href="#chargetype" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-chargetype">int ChargeType<a class="headerlink" href="#int-chargetype" title="Permanent link">⚓︎</a></h4>
+<p>The ChargeType of the item, shown in <a href="xml/items.html">items.xml</a>. If the item has no defined ChargeType, it will return <code class="highlight"><span class="mi">0</span></code></p>
+<details class="- note">
+<summary>Charge Types</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">0</span><span class="p">:</span> <span class="n">Normal</span>
+<span class="mi">1</span><span class="p">:</span> <span class="n">Timed</span>
+<span class="mi">2</span><span class="p">:</span> <span class="n">Special</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Variables" id="cleareffectsonremove">Clear·Effects·On·Remove<a class="headerlink" href="#cleareffectsonremove" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-cleareffectsonremove">boolean ClearEffectsOnRemove<a class="headerlink" href="#boolean-cleareffectsonremove" title="Permanent link">⚓︎</a></h4>
+<p>Returns whether or not the item's effects should be removed when the item is removed.</p>
+<hr />
+<h3 aria-label="Variables" id="costume">Costume<a class="headerlink" href="#costume" title="Permanent link">⚓︎</a></h3>
+<p><a class="const tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="const-costume-costume">const <a href="ItemConfig_Costume.html">Costume</a> Costume<a class="headerlink" href="#const-costume-costume" title="Permanent link">⚓︎</a></h4>
+<p>Returns the costume given to the player by the item.</p>
+<hr />
+<h3 aria-label="Variables" id="craftingquality">CraftingQuality<a class="headerlink" href="#craftingquality" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-craftingquality">int CraftingQuality<a class="headerlink" href="#int-craftingquality" title="Permanent link">⚓︎</a></h4>
+<p>The item's quality for the Bag of Crafting algorithm. Possible values are -1, 0, 1, 2, 3, and 4. A value of -1 indicates that the item is disabled from being craftable.</p>
+<hr />
+<h3 aria-label="Variables" id="description">Description<a class="headerlink" href="#description" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="string-description">string Description<a class="headerlink" href="#string-description" title="Permanent link">⚓︎</a></h4>
+<p>Returns the item's description.</p>
+<details class="- warning">
+<summary>Warning</summary>
+<p>In Repentance, returns "#[ITEM_DESCRIPTION]" rather than the item's ingame description. (i.e. The Sad Onion will return #THE_SAD_ONION_DESCRIPTION)</p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="devilprice">Devil·Price<a class="headerlink" href="#devilprice" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-devilprice">int DevilPrice<a class="headerlink" href="#int-devilprice" title="Permanent link">⚓︎</a></h4>
+<p>Returns the amount of hearts an item would cost at a devil deal. 1 unit is a full red heart.
+Any item that is not marked with a devil price will return <code class="highlight"><span class="mi">1</span></code></p>
+<details class="- example">
+<summary>Example Code</summary>
+<p>Returns the number of hearts brimstone would cost at a devil deal.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Isaac</span><span class="p">.</span><span class="n">GetItemConfig</span><span class="p">():</span><span class="n">GetCollectible</span><span class="p">(</span><span class="mi">118</span><span class="p">).</span><span class="n">DevilPrice</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="discharged">Discharged<a class="headerlink" href="#discharged" title="Permanent link">⚓︎</a></h3>
+<p><a class="abp tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-discharged">boolean Discharged<a class="headerlink" href="#boolean-discharged" title="Permanent link">⚓︎</a></h4>
+<p>This attribute got removed with Repentance.</p>
+<hr />
+<h3 aria-label="Variables" id="gfxfilename">Gfx·File·Name<a class="headerlink" href="#gfxfilename" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="string-gfxfilename">string GfxFileName<a class="headerlink" href="#string-gfxfilename" title="Permanent link">⚓︎</a></h4>
+<p>Returns the path to the item's GFX.</p>
+<hr />
+<h3 aria-label="Variables" id="hidden">Hidden<a class="headerlink" href="#hidden" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-hidden">boolean Hidden<a class="headerlink" href="#boolean-hidden" title="Permanent link">⚓︎</a></h4>
+<p>Returns if the item can appear in Death Certificate area. If <code class="highlight"><span class="kc">true</span></code> the item will not appear.</p>
+<hr />
+<h3 aria-label="Variables" id="id">ID<a class="headerlink" href="#id" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-id">int ID<a class="headerlink" href="#int-id" title="Permanent link">⚓︎</a></h4>
+<p>Returns the item's ID.</p>
+<hr />
+<h3 aria-label="Variables" id="initcharge">Init·Charge<a class="headerlink" href="#initcharge" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-initcharge">int InitCharge<a class="headerlink" href="#int-initcharge" title="Permanent link">⚓︎</a></h4>
+<p>Returns how much charge the item should have when picked up. <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> indicates the item is fully charged when collected.</p>
+<hr />
+<h3 aria-label="Variables" id="maxcharges">Max·Charges<a class="headerlink" href="#maxcharges" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-maxcharges">int MaxCharges<a class="headerlink" href="#int-maxcharges" title="Permanent link">⚓︎</a></h4>
+<p>The maximum number of charges an active item could have.</p>
+<hr />
+<h3 aria-label="Variables" id="maxcooldown">Max·Cooldown<a class="headerlink" href="#maxcooldown" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-maxcooldown">int MaxCooldown<a class="headerlink" href="#int-maxcooldown" title="Permanent link">⚓︎</a></h4>
+<p>Returns how many frames an active item's CollectibleEffect should last.</p>
+<hr />
+<h3 aria-label="Variables" id="name">Name<a class="headerlink" href="#name" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="string-name">string Name<a class="headerlink" href="#string-name" title="Permanent link">⚓︎</a></h4>
+<p>Returns the item's name.</p>
+<details class="- warning">
+<summary>Warning</summary>
+<p>In Repentance, returns "#[ITEM_NAME]" rather than the item's ingame name. (i.e. The Sad Onion will return #THE_SAD_ONION_NAME)</p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="passivecache">Passive·Cache<a class="headerlink" href="#passivecache" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-passivecache">boolean PassiveCache<a class="headerlink" href="#boolean-passivecache" title="Permanent link">⚓︎</a></h4>
+<p>Whether or not a cache evaluation is called when the item is picked up. (used in item's like "Mom's Box")</p>
+<hr />
+<h3 aria-label="Variables" id="persistenteffect">Persistent·Effect<a class="headerlink" href="#persistenteffect" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-persistenteffect">boolean PersistentEffect<a class="headerlink" href="#boolean-persistenteffect" title="Permanent link">⚓︎</a></h4>
+<p>Returns whether or not an active item's CollectibleEffect should persist between rooms. Any item without this set will return <code class="highlight"><span class="kc">false</span></code>.</p>
+<hr />
+<h3 aria-label="Variables" id="quality">Quality<a class="headerlink" href="#quality" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-quality">int Quality<a class="headerlink" href="#int-quality" title="Permanent link">⚓︎</a></h4>
+<p>Returns the item's quality. Possible values are 0, 1, 2, 3, 4.</p>
+<hr />
+<h3 aria-label="Variables" id="shopprice">Shop·Price<a class="headerlink" href="#shopprice" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-shopprice">int ShopPrice<a class="headerlink" href="#int-shopprice" title="Permanent link">⚓︎</a></h4>
+<p>Returns the cost of the item at a shop. Returns <code class="highlight"><span class="mi">15</span></code> if the item has no defined price in <a href="xml/items.html">items.xml</a>.</p>
+<hr />
+<h3 aria-label="Variables" id="special">Special<a class="headerlink" href="#special" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-special">boolean Special<a class="headerlink" href="#boolean-special" title="Permanent link">⚓︎</a></h4>
+<p>For the special collectible reroll system. (not applicable in Repentance)</p>
+<hr />
+<h3 aria-label="Variables" id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-tags">int Tags<a class="headerlink" href="#int-tags" title="Permanent link">⚓︎</a></h4>
+<p>Returns the tags of the item.</p>
+<hr />
+<h3 aria-label="Variables" id="type">Type<a class="headerlink" href="#type" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="itemtype-type"><a href="enums/ItemType.html">ItemType</a> Type<a class="headerlink" href="#itemtype-type" title="Permanent link">⚓︎</a></h4>
+<p>The item's <a href="enums/ItemType.html">ItemType</a>.</p>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2022</span>
       
     
   </small>

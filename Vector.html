@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="TemporaryEffects.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="entities/Overview.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>Vector - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-vector" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              Vector
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -3259,11 +3241,299 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Vector.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vector
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Vector.html" class="md-nav__link md-nav__link--active">
         Vector
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    Vector ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vectorzero" class="md-nav__link">
+    Vector.Zero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectorone" class="md-nav__link">
+    Vector.One
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__add" class="md-nav__link">
+    __add ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__div" class="md-nav__link">
+    __div ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__mul" class="md-nav__link">
+    __mul ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__sub" class="md-nav__link">
+    __sub ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__unm" class="md-nav__link">
+    __unm ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clamp" class="md-nav__link">
+    Clamp ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clamped" class="md-nav__link">
+    Clamped ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross" class="md-nav__link">
+    Cross ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distancesquared" class="md-nav__link">
+    Distance·Squared ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot" class="md-nav__link">
+    Dot ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fromangle" class="md-nav__link">
+    From·Angle ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getangledegrees" class="md-nav__link">
+    Get·Angle·Degrees ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length" class="md-nav__link">
+    Length ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lengthsquared" class="md-nav__link">
+    Length·Squared ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lerp" class="md-nav__link">
+    Lerp ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalize" class="md-nav__link">
+    Normalize ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalized" class="md-nav__link">
+    Normalized ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize" class="md-nav__link">
+    Resize ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resized" class="md-nav__link">
+    Resized ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotated" class="md-nav__link">
+    Rotated ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__tostring" class="md-nav__link">
+    __tostring ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y" class="md-nav__link">
+    Y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4639,268 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    Vector ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vectorzero" class="md-nav__link">
+    Vector.Zero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectorone" class="md-nav__link">
+    Vector.One
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__add" class="md-nav__link">
+    __add ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__div" class="md-nav__link">
+    __div ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__mul" class="md-nav__link">
+    __mul ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__sub" class="md-nav__link">
+    __sub ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__unm" class="md-nav__link">
+    __unm ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clamp" class="md-nav__link">
+    Clamp ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clamped" class="md-nav__link">
+    Clamped ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross" class="md-nav__link">
+    Cross ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distancesquared" class="md-nav__link">
+    Distance·Squared ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot" class="md-nav__link">
+    Dot ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fromangle" class="md-nav__link">
+    From·Angle ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getangledegrees" class="md-nav__link">
+    Get·Angle·Degrees ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#length" class="md-nav__link">
+    Length ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lengthsquared" class="md-nav__link">
+    Length·Squared ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lerp" class="md-nav__link">
+    Lerp ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalize" class="md-nav__link">
+    Normalize ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalized" class="md-nav__link">
+    Normalized ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize" class="md-nav__link">
+    Resize ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resized" class="md-nav__link">
+    Resized ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotated" class="md-nav__link">
+    Rotated ()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__tostring" class="md-nav__link">
+    __tostring ()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y" class="md-nav__link">
+    Y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4914,268 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#globals" class="md-tag">Globals</a>
+      
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-vector">Class "Vector"<a class="headerlink" href="#class-vector" title="Permanent link">⚓︎</a></h1>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Constructors" id="vector">Vector ()<a class="headerlink" href="#vector" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Constructors" class="copyable" id="vector-vector-float-float"><a href="Vector.html">Vector</a> Vector ( float , float )<a class="headerlink" href="#vector-vector-float-float" title="Permanent link">⚓︎</a></h4>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h2 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Constants" id="vectorzero">Vector.Zero<a class="headerlink" href="#vectorzero" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<hr />
+<h3 aria-label="Constants" id="vectorone">Vector.One<a class="headerlink" href="#vectorone" title="Permanent link">⚓︎</a></h3>
+<p><a class="rep tooltip badge" href="#"> </a></p>
+<hr />
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Operators" id="__add">__add ()<a class="headerlink" href="#__add" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Operators" class="copyable" id="vector-__add-vector-right"><a href="Vector.html">Vector</a> __add ( <a href="Vector.html">Vector</a> Right )<a class="headerlink" href="#vector-__add-vector-right" title="Permanent link">⚓︎</a></h4>
+<p>Defines the Addition of two Vector objects using the <code>+</code> operator.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">vec1</span><span class="o">+</span><span class="n">vec2</span> <span class="c1">-- result equals Vector(7,4) now</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Operators" id="__div">__div ()<a class="headerlink" href="#__div" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Operators" class="copyable" id="vector-__div-float-modifier"><a href="Vector.html">Vector</a> __div ( float Modifier )<a class="headerlink" href="#vector-__div-float-modifier" title="Permanent link">⚓︎</a></h4>
+<p>Defines the Division of two Vector objects using the <code>/</code> operator.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">vec1</span><span class="o">/</span><span class="n">vec2</span> <span class="c1">-- result equals Vector(3,1) now</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Operators" id="__mul">__mul ()<a class="headerlink" href="#__mul" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Operators" class="copyable" id="vector-__mul-float-modifier"><a href="Vector.html">Vector</a> __mul ( float Modifier )<a class="headerlink" href="#vector-__mul-float-modifier" title="Permanent link">⚓︎</a></h4>
+<p>Defines the Multiplication of two Vector objects using the <code>*</code> operator.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">vec1</span><span class="o">*</span><span class="n">vec2</span> <span class="c1">-- result equals Vector(10,9) now</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Operators" id="__sub">__sub ()<a class="headerlink" href="#__sub" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Operators" class="copyable" id="vector-__sub-vector-right"><a href="Vector.html">Vector</a> __sub ( <a href="Vector.html">Vector</a> Right )<a class="headerlink" href="#vector-__sub-vector-right" title="Permanent link">⚓︎</a></h4>
+<p>Defines the Subtraction of two Vector objects using the <code>-</code> operator.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">vec1</span><span class="o">-</span><span class="n">vec2</span> <span class="c1">-- result equals Vector(-3,-2) now</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Operators" id="__unm">__unm ()<a class="headerlink" href="#__unm" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Operators" class="copyable" id="vector-__unm-vector-right"><a href="Vector.html">Vector</a> __unm ( <a href="Vector.html">Vector</a> Right )<a class="headerlink" href="#vector-__unm-vector-right" title="Permanent link">⚓︎</a></h4>
+<p>Defines the inversion of a Vector object using the <code>-</code> operator.</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="n">vec1</span> <span class="c1">-- result equals Vector(-2,-1) now</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Functions" id="clamp">Clamp ()<a class="headerlink" href="#clamp" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-clamp-float-minx-float-miny-float-maxx-float-maxy">void Clamp ( float MinX, float MinY, float MaxX, float MaxY )<a class="headerlink" href="#void-clamp-float-minx-float-miny-float-maxx-float-maxy" title="Permanent link">⚓︎</a></h4>
+<p>Clamps the vector based on left, top, right, bottom boundings. Doesn't keep direction</p>
+<hr />
+<h3 aria-label="Functions" id="clamped">Clamped ()<a class="headerlink" href="#clamped" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="vector-clamped-float-minx-float-miny-float-maxx-float-maxy"><a href="Vector.html">Vector</a> Clamped ( float MinX, float MinY, float MaxX, float MaxY )<a class="headerlink" href="#vector-clamped-float-minx-float-miny-float-maxx-float-maxy" title="Permanent link">⚓︎</a></h4>
+<p>Returns a clamped version of the vector.</p>
+<hr />
+<h3 aria-label="Functions" id="cross">Cross ()<a class="headerlink" href="#cross" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-cross-vector-second">float Cross ( <a href="Vector.html">Vector</a> second )<a class="headerlink" href="#float-cross-vector-second" title="Permanent link">⚓︎</a></h4>
+<p>Cross product this is the 2x2 matrix determinant or the resulting z value for their 3D versions with z=0</p>
+<hr />
+<h3 aria-label="Functions" id="distance">Distance ()<a class="headerlink" href="#distance" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-distance-vector-first-vector-second">float Distance ( <a href="Vector.html">Vector</a> first, <a href="Vector.html">Vector</a> second )<a class="headerlink" href="#float-distance-vector-first-vector-second" title="Permanent link">⚓︎</a></h4>
+<p>Returns distance between two vectors</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">sqtDist</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span><span class="n">Distance</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="c1">--sqtDist = 2</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Functions" id="distancesquared">Distance·Squared ()<a class="headerlink" href="#distancesquared" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-distancesquared-vector-first-vector-second">float DistanceSquared ( <a href="Vector.html">Vector</a> first, <a href="Vector.html">Vector</a> second )<a class="headerlink" href="#float-distancesquared-vector-first-vector-second" title="Permanent link">⚓︎</a></h4>
+<p>Returns squared distance between two vectors</p>
+<details class="- example">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">sqtDist</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span><span class="n">DistanceSquared</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="c1">--sqtDist = 4</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 aria-label="Functions" id="dot">Dot ()<a class="headerlink" href="#dot" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-dot-vector-second">float Dot ( <a href="Vector.html">Vector</a> second )<a class="headerlink" href="#float-dot-vector-second" title="Permanent link">⚓︎</a></h4>
+<p>Dot product</p>
+<hr />
+<h3 aria-label="Functions" id="fromangle">From·Angle ()<a class="headerlink" href="#fromangle" title="Permanent link">⚓︎</a></h3>
+<p><a class="static tooltip badge" href="#"> </a> <a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="static-vector-fromangle-float-angledegrees">static <a href="Vector.html">Vector</a> FromAngle ( float AngleDegrees )<a class="headerlink" href="#static-vector-fromangle-float-angledegrees" title="Permanent link">⚓︎</a></h4>
+<p>Build a <a href="Vector.html">Vector</a> from an angle, returns a normalized vector. Angle 0 will result in (1, 0). Angle 90 will result in (0, 1).</p>
+<details class="- example">
+<summary>Example Code</summary>
+<p>This code returns a vector that has a 45 degree angle
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">.</span><span class="n">FromAngle</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span> <span class="c1">--vec is now Vector(0.70711,0.70711)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="getangledegrees">Get·Angle·Degrees ()<a class="headerlink" href="#getangledegrees" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-getangledegrees">float GetAngleDegrees ( )<a class="headerlink" href="#float-getangledegrees" title="Permanent link">⚓︎</a></h4>
+<p>Returns the angle the vector is facing. The vector (1, 0) will be at 0 degrees. The vector (0, 1) will be at 90 degrees.</p>
+<p>Practically, this means:</p>
+<ul>
+<li>Right: 0</li>
+<li>Up: -90</li>
+<li>Left: 180</li>
+<li>Down: 90</li>
+</ul>
+<details class="- example">
+<summary>Example Code</summary>
+<p>This code returns the angle between two positions.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">v1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">-- has angle 0.0</span>
+<span class="kd">local</span> <span class="n">v2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">-- has angle 90.0</span>
+<span class="kd">local</span> <span class="n">v3</span> <span class="o">=</span> <span class="n">v2</span><span class="o">-</span><span class="n">v1</span> <span class="c1">-- subtraction of 2 points is a vector connecting the two points</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v3</span><span class="p">:</span><span class="n">GetAngleDegrees</span><span class="p">())</span> <span class="c1">-- prints 45.0</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="length">Length ()<a class="headerlink" href="#length" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-length">float Length ( )<a class="headerlink" href="#float-length" title="Permanent link">⚓︎</a></h4>
+<p>Returns the length of the vector</p>
+<hr />
+<h3 aria-label="Functions" id="lengthsquared">Length·Squared ()<a class="headerlink" href="#lengthsquared" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="float-lengthsquared">float LengthSquared ( )<a class="headerlink" href="#float-lengthsquared" title="Permanent link">⚓︎</a></h4>
+<p>Returns the length squared of the vector</p>
+<hr />
+<h3 aria-label="Functions" id="lerp">Lerp ()<a class="headerlink" href="#lerp" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="vector-lerp-vector-first-vector-second-float-t"><a href="Vector.html">Vector</a> Lerp ( <a href="Vector.html">Vector</a> first, <a href="Vector.html">Vector</a> second, float t )<a class="headerlink" href="#vector-lerp-vector-first-vector-second-float-t" title="Permanent link">⚓︎</a></h4>
+<p>Linear interpolation between two vectors. For t = 0 it returns the first Vector, for t = 1 it returns the second.</p>
+<details class="- example">
+<summary>Alternate Function example</summary>
+<p>This function does the same as Lerp, but will not alter the input vectors.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">function</span> <span class="nf">Lerp</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">,</span> <span class="n">percent</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">vec1</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="n">vec2</span> <span class="o">*</span> <span class="n">percent</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<details class="- example">
+<summary>Example Code</summary>
+<p>This code will make v1 the vector 50% in between v1 and v2
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">v1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">v2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">v1</span><span class="p">:</span><span class="n">Lerp</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">-- v1 equals  Vector(0.5,0.5)  now</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<hr />
+<h3 aria-label="Functions" id="normalize">Normalize ()<a class="headerlink" href="#normalize" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-normalize">void Normalize ( )<a class="headerlink" href="#void-normalize" title="Permanent link">⚓︎</a></h4>
+<p>Normalizes this vector, effectively making its length equal 1.</p>
+<hr />
+<h3 aria-label="Functions" id="normalized">Normalized ()<a class="headerlink" href="#normalized" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="vector-normalized"><a href="Vector.html">Vector</a> Normalized ( )<a class="headerlink" href="#vector-normalized" title="Permanent link">⚓︎</a></h4>
+<p>Returns a normalized version of this vector, effectively making its length equal 1.</p>
+<hr />
+<h3 aria-label="Functions" id="resize">Resize ()<a class="headerlink" href="#resize" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-resize-float-newlength">void Resize ( float NewLength )<a class="headerlink" href="#void-resize-float-newlength" title="Permanent link">⚓︎</a></h4>
+<p>Resizes the vector length.</p>
+<hr />
+<h3 aria-label="Functions" id="resized">Resized ()<a class="headerlink" href="#resized" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="vector-resized-float-newlength"><a href="Vector.html">Vector</a> Resized ( float NewLength )<a class="headerlink" href="#vector-resized-float-newlength" title="Permanent link">⚓︎</a></h4>
+<p>Returns a resized version of the vector.</p>
+<hr />
+<h3 aria-label="Functions" id="rotated">Rotated ()<a class="headerlink" href="#rotated" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="vector-rotated-float-angledegrees"><a href="Vector.html">Vector</a> Rotated ( float AngleDegrees )<a class="headerlink" href="#vector-rotated-float-angledegrees" title="Permanent link">⚓︎</a></h4>
+<p>Returns a rotated version of the vector by AngleDegrees</p>
+<hr />
+<h3 aria-label="Functions" id="__tostring">__tostring ()<a class="headerlink" href="#__tostring" title="Permanent link">⚓︎</a></h3>
+<p><a class="tooltip badge" href="#"> </a> <a class="rep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Functions" class="copyable" id="void-__tostring">void __tostring ( )<a class="headerlink" href="#void-__tostring" title="Permanent link">⚓︎</a></h4>
+<p><a href="Vector.html">Vector</a> objects can be cast to a string object, which returns information about this object in the following format:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Vector(X,Y)
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="x">X<a class="headerlink" href="#x" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-x">float X<a class="headerlink" href="#float-x" title="Permanent link">⚓︎</a></h4>
+<p>Components of vector.</p>
+<hr />
+<h3 aria-label="Variables" id="y">Y<a class="headerlink" href="#y" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="float-y">float Y<a class="headerlink" href="#float-y" title="Permanent link">⚓︎</a></h4>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2023</span>
       
     
   </small>

@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="RoomConfig_Spawn.html">
       
       
-        <link rel="next" href="PLACEHOLDER.html">
+        <link rel="next" href="RNG.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>主页 - 以撒的结合: Lua API文档</title>
+        <title>RoomDescriptor - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-api" class="md-skip">
+        <a href="#class-roomdescriptor" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              RoomDescriptor
             
           </span>
         </div>
@@ -445,17 +445,9 @@
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -495,21 +487,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         主页
       </a>
-      
     </li>
   
 
@@ -3147,11 +3129,233 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="RoomDescriptor.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          RoomDescriptor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="RoomDescriptor.html" class="md-nav__link md-nav__link--active">
         RoomDescriptor
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alloweddoors" class="md-nav__link">
+    Allowed·Doors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awardseed" class="md-nav__link">
+    Award·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challengedone" class="md-nav__link">
+    Challenge·Done
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    Clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearcount" class="md-nav__link">
+    Clear·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decorationseed" class="md-nav__link">
+    Decoration·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliriumdistance" class="md-nav__link">
+    Delirium·Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayflags" class="md-nav__link">
+    Display·Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridindex" class="md-nav__link">
+    Grid·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haswater" class="md-nav__link">
+    Has·Water
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listindex" class="md-nav__link">
+    List·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noreward" class="md-nav__link">
+    No·Reward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overridedata" class="md-nav__link">
+    Override·Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitscount" class="md-nav__link">
+    Pits·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poopcount" class="md-nav__link">
+    Poop·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressureplatestriggered" class="md-nav__link">
+    Pressure·Plates·Triggered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sacrificedone" class="md-nav__link">
+    Sacrifice·Done
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safegridindex" class="md-nav__link">
+    Safe·Grid·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopitemdiscountidx" class="md-nav__link">
+    Shop·Item·Discount·Idx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopitemidx" class="md-nav__link">
+    Shop·Item·Idx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawnseed" class="md-nav__link">
+    Spawn·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surpriseminiboss" class="md-nav__link">
+    Surprise·Miniboss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visitedcount" class="md-nav__link">
+    Visited·Count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4369,6 +4573,202 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alloweddoors" class="md-nav__link">
+    Allowed·Doors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awardseed" class="md-nav__link">
+    Award·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challengedone" class="md-nav__link">
+    Challenge·Done
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    Clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearcount" class="md-nav__link">
+    Clear·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decorationseed" class="md-nav__link">
+    Decoration·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliriumdistance" class="md-nav__link">
+    Delirium·Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayflags" class="md-nav__link">
+    Display·Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridindex" class="md-nav__link">
+    Grid·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haswater" class="md-nav__link">
+    Has·Water
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listindex" class="md-nav__link">
+    List·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noreward" class="md-nav__link">
+    No·Reward
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overridedata" class="md-nav__link">
+    Override·Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitscount" class="md-nav__link">
+    Pits·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poopcount" class="md-nav__link">
+    Poop·Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressureplatestriggered" class="md-nav__link">
+    Pressure·Plates·Triggered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sacrificedone" class="md-nav__link">
+    Sacrifice·Done
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safegridindex" class="md-nav__link">
+    Safe·Grid·Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopitemdiscountidx" class="md-nav__link">
+    Shop·Item·Discount·Idx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shopitemidx" class="md-nav__link">
+    Shop·Item·Idx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawnseed" class="md-nav__link">
+    Spawn·Seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surpriseminiboss" class="md-nav__link">
+    Surprise·Miniboss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visitedcount" class="md-nav__link">
+    Visited·Count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4382,26 +4782,291 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="tags.html#class" class="md-tag">Class</a>
+      
+    
+  </nav>
+
 
 
   
   
 
 
-<h1 id="lua-api">以撒的结合：忏悔Lua API文档<a class="headerlink" href="#lua-api" title="Permanent link">⚓︎</a></h1>
+<h1 id="class-roomdescriptor">Class "RoomDescriptor"<a class="headerlink" href="#class-roomdescriptor" title="Permanent link">⚓︎</a></h1>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>You can get this class by using the following functions:</p>
+<ul>
+<li><a href="Level.html#getcurrentroomdesc">Level:GetCurrentRoomDesc()</a></li>
+<li><a href="Level.html#getlastroomdesc">Level:GetLastRoomDesc()</a></li>
+<li><a href="Level.html#getroombyidx">Level:GetRoomByIdx()</a></li>
+</ul>
+<details class="example" open="open">
+<summary>Example Code</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">level</span> <span class="o">=</span> <span class="n">Game</span><span class="p">():</span><span class="n">GetLevel</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">roomDescriptor</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoomDesc</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">⚓︎</a></h2>
+<h3 aria-label="Variables" id="alloweddoors">Allowed·Doors<a class="headerlink" href="#alloweddoors" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="doorset-alloweddoors">DoorSet AllowedDoors<a class="headerlink" href="#doorset-alloweddoors" title="Permanent link">⚓︎</a></h4>
+<p>Contains data swapped just on load (in cases like minibosses, or other such events)</p>
+<details class="bug" open="open">
+<summary>Bug</summary>
+<p>This variable contains userdata and is therefore not useable.</p>
+</details>
 <hr />
-<p>本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API提供的功能提供了附加信息和代码示例。</p>
-<p>该项目源于wofsauge的英文文档 <strong><a href="https://github.com/wofsauge/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你想帮忙协助该项目，考虑访问 <strong><a href="https://github.com/58115310/IsaacDocs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github Project</a></strong></p>
-<p>如果你对制作MOD有任何疑问，请访问官方Discord：</p>
-<p><strong><a href="https://discord.gg/isaac"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official BoI Discord-Server</a></strong> or <strong><a href="https://discord.gg/KbevtvgD4z"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg></span> Official Modding Of Isaac Discord-Server</a></strong></p>
+<h3 aria-label="Variables" id="awardseed">Award·Seed<a class="headerlink" href="#awardseed" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-awardseed">int AwardSeed<a class="headerlink" href="#int-awardseed" title="Permanent link">⚓︎</a></h4>
+<p>used to spawn clear awards (normal, miniboss, boss rooms) and initialize shop items (shop, devil rooms)</p>
+<hr />
+<h3 aria-label="Variables" id="challengedone">Challenge·Done<a class="headerlink" href="#challengedone" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-challengedone">boolean ChallengeDone<a class="headerlink" href="#boolean-challengedone" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="clear">Clear<a class="headerlink" href="#clear" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-clear">boolean Clear<a class="headerlink" href="#boolean-clear" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="clearcount">Clear·Count<a class="headerlink" href="#clearcount" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-clearcount">int ClearCount<a class="headerlink" href="#int-clearcount" title="Permanent link">⚓︎</a></h4>
+<p>room is clear, don't spawn enemies when visiting</p>
+<hr />
+<h3 aria-label="Variables" id="data">Data<a class="headerlink" href="#data" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="roomconfigroom-data"><a href="RoomConfig_Room.html">RoomConfigRoom</a> Data<a class="headerlink" href="#roomconfigroom-data" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="decorationseed">Decoration·Seed<a class="headerlink" href="#decorationseed" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-decorationseed">int DecorationSeed<a class="headerlink" href="#int-decorationseed" title="Permanent link">⚓︎</a></h4>
+<p>used for cosmetic stuff like backdrops, room decorations, shopkeeper skins</p>
+<hr />
+<h3 aria-label="Variables" id="deliriumdistance">Delirium·Distance<a class="headerlink" href="#deliriumdistance" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-deliriumdistance">int DeliriumDistance<a class="headerlink" href="#int-deliriumdistance" title="Permanent link">⚓︎</a></h4>
+<p>Helper for The Void stage, holds the distance to the Delirium boss in room nr.</p>
+<hr />
+<h3 aria-label="Variables" id="displayflags">Display·Flags<a class="headerlink" href="#displayflags" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-displayflags">int DisplayFlags<a class="headerlink" href="#int-displayflags" title="Permanent link">⚓︎</a></h4>
+<p>Indicates what is visible on the minimap.
+<strong>Display Flags (bitwise):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="c1">-- Invisible</span>
+<span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="c1">-- Visible</span>
+<span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="c1">-- Room Shadow</span>
+<span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="c1">-- Show Icon</span>
+</code></pre></div></td></tr></table></div></p>
+<details class="- example">
+<summary>Examples</summary>
+<p>The flags are hard to interpret, but here are some examples:</p>
+<p><strong>000</strong> = invisible, this is how most rooms start</p>
+<p><strong>101</strong> = standard room visibility, this includes rooms that are adjacent and you haven't actively visited. This will usually show icons.</p>
+<p><strong>011</strong> = secret room, locked rooms, sac rooms pre-entry*</p>
+<p><strong>111</strong> = 011 rooms after entry, but also the rooms directly adjacent to them* (applied after entry)</p>
+<p>* If you have Spelunker Hat, bit 1 is completely unused. All special rooms will have the normal behavior of either 000 or 101. This is unique to Spelunker Hat; mapping items follow the normal rules.</p>
+</details>
+<details class="quote" open="open">
+<summary>Quote from User 'Budj'</summary>
+<p>From this my best guess is that bits 1 and 2 are special rendering (display) flags that may have more meaning down below.</p>
+<p>The important bit for using them is minding that they're used differently mostly for special rooms.</p>
+<p>As far as I've seen, 001 is completely unused.
+010, 100, and 110 may be used for compass or blue map, I don't remember. I think they use 100.</p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-flags">int Flags<a class="headerlink" href="#int-flags" title="Permanent link">⚓︎</a></h4>
+<p>The RoomDescriptor flags for the room.</p>
+<hr />
+<h3 aria-label="Variables" id="gridindex">Grid·Index<a class="headerlink" href="#gridindex" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-gridindex">int GridIndex<a class="headerlink" href="#int-gridindex" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>For a 1x1 room, this is equal to the 1x1 grid index of the room.</li>
+<li>For a room bigger than a 1x1 room, this is equal to the top left 1x1 quadrant.</li>
+<li>For <code>RoomType.ROOMSHAPE_LTL</code> rooms (i.e. rooms that look like a "J"), this is equal to the 1x1 quadrant where the gap in the room is. In other words, it is a 1x1 quadrant that is not actually contained within the room.</li>
+<li>Note that <strong>this value is different</strong> than the value returned by <code>Level:GetCurrentRoomIndex()</code>. (That function returns the 1x1 quadrant that the room was entered in.)</li>
+<li>Data structures that store data per room should use <code>ListIndex</code> as a key instead of <code>GridIndex</code>, since the former is unique across different dimensions.</li>
+</ul>
+<details class="- note">
+<summary>Notes</summary>
+<p><img alt="Room Grid indices" src="images/infographics/RoomGridIndices.png" /></p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="haswater">Has·Water<a class="headerlink" href="#haswater" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-haswater">boolean HasWater<a class="headerlink" href="#boolean-haswater" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="listindex">List·Index<a class="headerlink" href="#listindex" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-listindex">int ListIndex<a class="headerlink" href="#int-listindex" title="Permanent link">⚓︎</a></h4>
+<p>The index for this room corresponding to the <code>Level.GetRooms().Get()</code> method. In other words, this is equal to the order that the room was created by the floor generation algorithm.</p>
+<p>Use this as an index for data structures that store data per room, since it is unique across different dimensions.</p>
+<hr />
+<h3 aria-label="Variables" id="noreward">No·Reward<a class="headerlink" href="#noreward" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-noreward">boolean NoReward<a class="headerlink" href="#boolean-noreward" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="overridedata">Override·Data<a class="headerlink" href="#overridedata" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="roomconfigroom-overridedata"><a href="RoomConfig_Room.html">RoomConfigRoom</a> OverrideData<a class="headerlink" href="#roomconfigroom-overridedata" title="Permanent link">⚓︎</a></h4>
+<p>The room variant is in Data. Because Room::Init uses a mix of data, one from level layout and one from replacement data like minibosses, we need to hold the new room data somewhere.</p>
+<hr />
+<h3 aria-label="Variables" id="pitscount">Pits·Count<a class="headerlink" href="#pitscount" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-pitscount">int PitsCount<a class="headerlink" href="#int-pitscount" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="poopcount">Poop·Count<a class="headerlink" href="#poopcount" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-poopcount">int PoopCount<a class="headerlink" href="#int-poopcount" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="pressureplatestriggered">Pressure·Plates·Triggered<a class="headerlink" href="#pressureplatestriggered" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-pressureplatestriggered">boolean PressurePlatesTriggered<a class="headerlink" href="#boolean-pressureplatestriggered" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="sacrificedone">Sacrifice·Done<a class="headerlink" href="#sacrificedone" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-sacrificedone">boolean SacrificeDone<a class="headerlink" href="#boolean-sacrificedone" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="safegridindex">Safe·Grid·Index<a class="headerlink" href="#safegridindex" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-safegridindex">int SafeGridIndex<a class="headerlink" href="#int-safegridindex" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>For a 1x1 room, this is equal to the 1x1 grid index of the room.</li>
+<li>For a room bigger than a 1x1 room, this is equal to the top left 1x1 quadrant.</li>
+<li>For <code>RoomType.ROOMSHAPE_LTL</code> rooms (i.e. rooms that look like a "J"), this is equal to the top right 1x1 quadrant.</li>
+<li>Note that <strong>this value is different</strong> than the value returned by <code>Level:GetCurrentRoomIndex()</code>. (That function returns the 1x1 quadrant that the room was entered in.)</li>
+<li>Data structures that store data per room should use <code>ListIndex</code> as a key instead of <code>SafeGridIndex</code>, since the former is unique across different dimensions.</li>
+</ul>
+<details class="- note">
+<summary>Notes</summary>
+<p><img alt="Room Grid indices" src="images/infographics/RoomGridIndices.png" /></p>
+</details>
+<hr />
+<h3 aria-label="Variables" id="shopitemdiscountidx">Shop·Item·Discount·Idx<a class="headerlink" href="#shopitemdiscountidx" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-shopitemdiscountidx">int ShopItemDiscountIdx<a class="headerlink" href="#int-shopitemdiscountidx" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>The index that denotes which shop item(s) will be discounted.</li>
+<li>Can be a value from -1 to 7.</li>
+<li>All items in the room with this ShopItemId will be affected by the discount.<ul>
+<li>This is noticeable when there are more than 8 shop items in a room.</li>
+</ul>
+</li>
+<li>A value of -1 means there is no discounted item.</li>
+<li>This value is unaffected by Steam Sale.</li>
+<li>Defaults to -1 in non-shop rooms.</li>
+<li>Can be modified by accessing the writable version of the RoomDescriptor like this:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">level</span> <span class="o">=</span> <span class="n">Game</span><span class="p">():</span><span class="n">GetLevel</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">room</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoom</span><span class="p">()</span>
+
+<span class="c1">-- this returns a writable RoomDescriptor for the current Room.</span>
+<span class="kd">local</span> <span class="n">writableRoomDesc</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetRoomByIdx</span><span class="p">(</span><span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoomIndex</span><span class="p">())</span>
+
+<span class="c1">-- Sets the current Room&#39;s ShopItemDiscountIdx to 0.</span>
+<span class="c1">-- All items with ShopItemId 0 will be discounted.</span>
+<span class="n">writableRoomDesc</span><span class="p">.</span><span class="n">ShopItemDiscountIdx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">-- update the Room using Update() to have the change take effect.</span>
+<span class="n">room</span><span class="p">:</span><span class="n">Update</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 aria-label="Variables" id="shopitemidx">Shop·Item·Idx<a class="headerlink" href="#shopitemidx" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-shopitemidx">int ShopItemIdx<a class="headerlink" href="#int-shopitemidx" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>The ShopItemId value of the next shop item to add to the room.<ul>
+<li>If this is set to 1 in a Room and another shop item is created, the new item will have a ShopItemId of 1, and the Room's ShopItemIdx will then be 2.</li>
+</ul>
+</li>
+<li>Can be used as the total number of items in the shop, up to 7 items.</li>
+<li>Can be a value between 0 and 7.</li>
+<li>For every 8 items in a shop, this value resets itself to 0.<ul>
+<li>For example, if a custom shop has 9 items, the 1st and 9th items will share the same ShopItemId of 0, and the RoomDescriptor ShopItemIdx value will be 1.</li>
+</ul>
+</li>
+<li>Defaults to -1 in non-shop rooms.</li>
+<li>Can be modified by accessing the writable version of the RoomDescriptor like this:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">level</span> <span class="o">=</span> <span class="n">Game</span><span class="p">():</span><span class="n">GetLevel</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">room</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoom</span><span class="p">()</span>
+
+<span class="c1">-- this returns a writable RoomDescriptor for the current Room.</span>
+<span class="kd">local</span> <span class="n">writableRoomDesc</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetRoomByIdx</span><span class="p">(</span><span class="n">level</span><span class="p">:</span><span class="n">GetCurrentRoomIndex</span><span class="p">())</span>
+
+<span class="c1">-- Sets the current Room&#39;s ShopItemIdx to 0.</span>
+<span class="n">writableRoomDesc</span><span class="p">.</span><span class="n">ShopItemIdx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">-- update the Room using Update() to have the change take effect.</span>
+<span class="n">room</span><span class="p">:</span><span class="n">Update</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<details class="- note">
+<summary>Notes</summary>
+<ul>
+<li>In the image below, each item's ShopItemId is written underneath it.</li>
+<li>Notice how all items that share a ShopItemId have the same PickupVariant, but aren't identical.</li>
+<li>ShopItemDiscountIdx is 2, so all shop items with a ShopItemId of 2 are on sale.</li>
+<li>After all items are created, the ShopItemIdx for this room is 0.
+<img alt="ShopItemIdx Example" src="images/shopItemIdxDiagram.png" /></li>
+</ul>
+</details>
+<hr />
+<h3 aria-label="Variables" id="spawnseed">Spawn·Seed<a class="headerlink" href="#spawnseed" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-spawnseed">int SpawnSeed<a class="headerlink" href="#int-spawnseed" title="Permanent link">⚓︎</a></h4>
+<p>used to spawn entities at room load and initialize enemy drop seeds</p>
+<hr />
+<h3 aria-label="Variables" id="surpriseminiboss">Surprise·Miniboss<a class="headerlink" href="#surpriseminiboss" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="boolean-surpriseminiboss">boolean SurpriseMiniboss<a class="headerlink" href="#boolean-surpriseminiboss" title="Permanent link">⚓︎</a></h4>
+<hr />
+<h3 aria-label="Variables" id="visitedcount">Visited·Count<a class="headerlink" href="#visitedcount" title="Permanent link">⚓︎</a></h3>
+<p><a class="abrep tooltip badge" href="#"> </a></p>
+<h4 aria-label="Variables" class="copyable" id="int-visitedcount">int VisitedCount<a class="headerlink" href="#int-visitedcount" title="Permanent link">⚓︎</a></h4>
+<p>how often the room has been visited</p>
+<hr />
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
       
     
   </small>
