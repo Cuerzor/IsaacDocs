@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-example-project" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -3417,8 +3417,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-example-mod" class="md-nav__link">
-    An Example Mod
+  <a href="#mod" class="md-nav__link">
+    示例MOD
   </a>
   
 </li>
@@ -4399,8 +4399,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-example-mod" class="md-nav__link">
-    An Example Mod
+  <a href="#mod" class="md-nav__link">
+    示例MOD
   </a>
   
 </li>
@@ -4424,7 +4424,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4435,18 +4435,18 @@
   
 
 
-<h1 id="tutorial-example-project">[Tutorial] Example Project<a class="headerlink" href="#tutorial-example-project" title="Permanent link">⚓︎</a></h1>
+<h1 id="_1">[教程] 示例项目<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
 <hr />
-<h2 id="an-example-mod">An Example Mod<a class="headerlink" href="#an-example-mod" title="Permanent link">⚓︎</a></h2>
-<p>To make a new mod, create a new subdirectory in the following directory:</p>
+<h2 id="mod">示例MOD<a class="headerlink" href="#mod" title="Permanent link">⚓︎</a></h2>
+<p>要制作新的mod，请在以下目录中创建一个新的子目录：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods
 </code></pre></div></td></tr></table></div>
-<p>(This corresponds to your Steam installation directory. If you have the game installed to a custom location, then the path might be different.)</p>
-<p>Name the subdirectory after the name of your mod. For example:</p>
+<p>（这与您的Steam安装目录相对应。如果您将游戏安装到自定义位置，那么路径可能会有所不同。）</p>
+<p>使用你的mod名称命名子目录。例如：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\mods\customTears
 </code></pre></div></td></tr></table></div>
-<p>Next, create a new <code>main.lua</code> file in the newly created folder. This file will contain Lua code, which will tell the game how your mod should respond to in-game events.</p>
-<p>The following is an example mod that always changes the player's tears to have a slowing effect and have the Dark Matter visual look:</p>
+<p>接下来，在新创建的文件夹中创建一个新的<code>main.lua</code>文件。这个文件将包含Lua代码，它将告诉游戏你的mod应该如何响应游戏中的事件。</p>
+<p>以下是一个示例mod，它会改变玩家的泪弹，使其能够减速敌人，并具有暗物质的视觉效果：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4459,29 +4459,29 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- Register the mod, which grants the ability to add code that correspond to in-game events (i.e. &quot;callbacks&quot;).</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- 注册mod，它可以添加与游戏中事件相对应的代码（即“回调”）。</span>
 <span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">postFireTear</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- Add a slowing effect to the tear using the &quot;binary or&quot; operator.</span>
+  <span class="c1">-- 使用“二进制或”操作符为泪弹添加减速效果。</span>
   <span class="n">tear</span><span class="p">.</span><span class="n">TearFlags</span> <span class="o">=</span> <span class="n">tear</span><span class="p">.</span><span class="n">TearFlags</span> <span class="o">|</span> <span class="n">TearFlags</span><span class="p">.</span><span class="n">TEAR_SLOW</span>
 
-  <span class="c1">-- Change the appearance of the tear. (The &quot;variant&quot; of the tear is used by the game to decide how to draw it.)</span>
+  <span class="c1">-- 更改泪弹的外观。（泪弹的“Variant”被游戏用来决定如何绘制外观。）</span>
   <span class="n">tear</span><span class="p">:</span><span class="n">ChangeVariant</span><span class="p">(</span><span class="n">TearVariant</span><span class="p">.</span><span class="n">DARK_MATTER</span><span class="p">)</span>
 <span class="kr">end</span>
 
- <span class="c1">-- Specify that the &quot;onTear&quot; function should be executed whenever the player fires a tear.</span>
+ <span class="c1">-- 指定当玩家发射泪弹时，应执行“onTear”函数。</span>
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>From here, you can change the code to do whatever you want. In short, you will have to subscribe to the appropriate callbacks (in order to run code at the specific times that you want). And then you will have to use the appropriate API methods (to change things in-game corresponding to what you want to do).</p>
-<p>Start by browsing the docs for the <code>ModCallbacks</code> enum to learn what all the different callback options are. Then, browse through the rest of the API documentation to get a feel for what kinds of things are possible to read and change.</p>
+<p>从这里，您可以更改代码以执行任何您想要的操作。简而言之，您必须添加适当的回调（以便在所需的特定事件内运行代码），然后必须使用适当的API方法（根据你想要做的事情，改变游戏中的事物）。</p>
+<p>首先浏览<code>ModCallbacks</code>枚举的文档，了解所有不同的回调选项是什么。然后，浏览API文档的其余部分，了解哪些内容可以读取和更改。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
       
     
   </small>

@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-functions-in-lua" class="md-skip">
+        <a href="#lua" class="md-skip">
           Skip to content
         </a>
       
@@ -3431,22 +3431,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-functions" class="md-nav__link">
-    Local Functions
+  <a href="#_1" class="md-nav__link">
+    局部函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#module-functions" class="md-nav__link">
-    Module Functions
+  <a href="#_2" class="md-nav__link">
+    模块函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    Anonymous Functions
+  <a href="#_3" class="md-nav__link">
+    匿名函数
   </a>
   
 </li>
@@ -4413,22 +4413,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-functions" class="md-nav__link">
-    Local Functions
+  <a href="#_1" class="md-nav__link">
+    局部函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#module-functions" class="md-nav__link">
-    Module Functions
+  <a href="#_2" class="md-nav__link">
+    模块函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    Anonymous Functions
+  <a href="#_3" class="md-nav__link">
+    匿名函数
   </a>
   
 </li>
@@ -4452,7 +4452,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4463,11 +4463,11 @@
   
 
 
-<h1 id="tutorial-functions-in-lua">[Tutorial] Functions in Lua<a class="headerlink" href="#tutorial-functions-in-lua" title="Permanent link">⚓︎</a></h1>
+<h1 id="lua">[教程] Lua中的函数<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h1>
 <hr />
-<p>First, see the the <a href="ExampleProject.html">example project tutorial</a>.</p>
-<h2 id="local-functions">Local Functions<a class="headerlink" href="#local-functions" title="Permanent link">⚓︎</a></h2>
-<p>The most basic type of function in Lua is a local function. For example, here is a repeat of the code in the example project tutorial:</p>
+<p>首先，请见<a href="ExampleProject.html">示例项目教程</a>。</p>
+<h2 id="_1">局部函数<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p>Lua中最基本的函数类型是局部函数。例如，以下是“示例项目”教程中的代码：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4477,19 +4477,19 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">postFireTear</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- Mod code</span>
+  <span class="c1">-- MOD代码</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>One potentially strange thing about this code is that we are denoting the first argument of the function as <code>_</code>.</p>
-<p>Conventionally, unused arguments are prefixed by an underscore, like <code>_foo</code>. By naming the argument <code>_</code> without any other annotation, it is a flag to the reader that says we are completely ignoring this variable and it has no purpose.</p>
-<p>The reason that our local function needs a "blank" first argument in the first place is that the C++ code that handles the callback invokes the provided function with a colon operator. Colon operators are <a href="https://www.lua.org/pil/16.html">covered in the Lua manual</a>. Basically, the colon is syntactic sugar for calling the function with an <code>self</code> parameter, which contains the module that the function is located in.</p>
-<p>In the case of our local function, there is no module, because it's just a plain, standalone local function. So, the first argument would always be equal to nil in this case.</p>
-<p>Let's take a look at what a module-function would look like.</p>
-<h2 id="module-functions">Module Functions<a class="headerlink" href="#module-functions" title="Permanent link">⚓︎</a></h2>
-<p>The object that is returned from the <code>RegisterMod</code> function is a Lua table. Since it is a table, we can put arbitrary functions inside of the table:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p>关于这段代码，一个潜在的奇怪之处是，我们将函数的第一个参数表示为<code>_</code>。</p>
+<p>按照惯例，未使用的参数以下划线为前缀，如<code>_foo</code>。通过在没有任何其他注释的情况下将自变量命名为<code>_</code>，这对读者来说是一个标志，表明我们完全忽略了这个变量，它没有任何目的。</p>
+<p>我们的本地函数需要一个“空白”的第一个参数的原因是，处理回调的C++代码使用“冒号运算符”调用所提供的函数。冒号运算符<a href="https://www.lua.org/pil/16.html">在Lua手册中有介绍</a>。基本上，冒号是用<code>self</code>参数调用函数的语法糖，该参数包含函数所在的模块。</p>
+<p>在我们使用本地函数的情况下，没有模块，因为它只是一个简单的、独立的本地函数。因此，在这种情况下，第一个自变量总是等于nil。</p>
+<p>让我们来看看模块函数是什么样子的。</p>
+<h2 id="_2">模块函数<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>从<code>RegisterMod</code>函数返回的对象是一个Lua表。由于它是一个表，我们可以在表中放入任意函数：</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4498,13 +4498,13 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">.</span><span class="nf">postFireTear</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- Mod code</span>
+  <span class="c1">-- MOD代码</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">myMod</span><span class="p">.</span><span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Here, the "postFireTear" function is now a part of the "myMod" Lua table. We use a period to denote the connection. This code will work in an identical way to the local function.</p>
-<p>We can also use the colon operator when declaring the function:</p>
+在这里，“postFireTear”函数现在是“myMod”Lua表的一部分。我们用句点来表示连接。此代码将以与本地函数相同的方式工作。</p>
+<p>在声明函数时，我们还可以使用冒号运算符：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4514,16 +4514,16 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">postFireTear</span><span class="p">(</span><span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- Mod code</span>
+  <span class="c1">-- MOD代码</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">myMod</span><span class="p">.</span><span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>In this code, the colon operator specifies that the first argument of the function is really <code>self</code>, and the second argument is really <code>tear</code>, even though it isn't explicitly written that way. Like before, it will work in an identical way to the local function.</p>
-<p>Also note that we don't use the colon operator when adding the callback, because we need to pass a reference to the function, not invoke it.</p>
-<p>In Lua, functions are often part of modules, so calling them with a colon operator is considered to be standard.</p>
-<h2 id="anonymous-functions">Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">⚓︎</a></h2>
-<p>A third way to specify the callback function would be to use an anonymous function, which is simply a function without a name:</p>
+<p>在这段代码中，冒号运算符指定函数的第一个参数实际上是“self”，第二个参数实际上为“tear”，尽管它没有明确地这样写。和以前一样，它将以与本地函数相同的方式工作。</p>
+<p>还要注意，在添加回调时（AddCallback），我们不使用冒号运算符，因为我们需要传递对函数的引用，而不是调用它。</p>
+<p>在Lua中，函数通常是模块的一部分，因此使用冒号运算符调用它们被认为是标准的。</p>
+<h2 id="_3">匿名函数<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<p>指定回调函数的第三种方法是使用匿名函数，它是一个没有名称的函数：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4531,18 +4531,18 @@
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- Mod code</span>
+  <span class="c1">-- MOD代码</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>This function only exists inside of the scope of the AddCallback invocation, meaning that it can't be referenced or invoked from anywhere else. Like before, it will work in an identical way to the local function.</p>
-<p>Anonymous functions are useful in that they are easy to type. You can use them for really short functions that have an obvious meaning.</p>
+<p>这个函数只存在于AddCallback调用的范围内，这意味着不能从其他任何地方引用或调用它。和以前一样，它将以与本地函数相同的方式工作。</p>
+<p>匿名函数很有用，因为它们很容易键入。您可以将它们用于具有明显意义的非常简短的函数。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
       
     
   </small>
