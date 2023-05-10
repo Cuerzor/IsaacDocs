@@ -202,9 +202,9 @@ nav:
     - 教程:
         - "示例项目": tutorials/ExampleProject.md
         - "Lua中的函数": tutorials/FunctionsInLua.md
-        - "数学和Lua提示": tutorials/MathAndLuaTips.md
+        - "数学和Lua技巧": tutorials/MathAndLuaTips.md
         - "不使用Lua添加道具外观": tutorials/AddingCostumesWithoutLUA.md
-        - "使用ZeroBrane Studio调试": tutorials/ZeroBraneStudio.md
+        - "使用ZeroBrane Studio进行调试": tutorials/ZeroBraneStudio.md
         - "控制台": tutorials/DebugConsole.md
         - "使用额外的.lua文件": tutorials/Using-Additional-Lua-Files.md
         - "使用标准库": tutorials/Standard-Library.md

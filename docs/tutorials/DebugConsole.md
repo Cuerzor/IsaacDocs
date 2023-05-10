@@ -1,53 +1,55 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] DebugConsole
+# [教程] 控制台
 
-## Prerequisites
+## 前提条件
 
-To access the debug console, you must have the `EnableDebugConsole` option enabled in your options.ini file. By default, this is located at:
+要访问调试控制台，您必须在 options.ini 文件中启用 `EnableDebugConsole` 选项。默认情况下，该文件位于：
 
 ```
 C:\Users\%USERNAME%\Documents\My Games\Binding of Isaac Repentance\options.ini
 ```
 
-(Make sure the game is closed when you edit this file.)
+（编辑此文件时请确保游戏已关闭。）
 
-## Enabling
+## 启用
 
-**To show the console**, while in a run press the grave (`) or tilde (~) key. On most English keyboard layouts, it should be below Esc.
+**显示控制台**，在游戏中按下 `~` 或 ` 键。在大多数英语键盘布局中，该键应该在 Esc 键下面。
 
-|Language|Keyboard|Key|
+|语言|键盘|按键|
 |--- |--- |--- |
-|English (US)|QWERTY|` or ~|
-|English (UK)|QWERTY|' or @|
-|French|AZERTY|ù|
-|German|QWERTZ|ö|
-|Spanish|QWERTY|ñ|
-|Italian|QWERTY|>|
-|Danish|QWERTY|æ|
-|Portuguese|QWERTY|ç|
+|英语（美国）|QWERTY|` 或 ~|
+|英语（英国）|QWERTY|' 或 @|
+|法语|AZERTY|ù|
+|德语|QWERTZ|ö|
+|西班牙语|QWERTY|ñ|
+|意大利语|QWERTY|>|
+|丹麦语|QWERTY|æ|
+|葡萄牙语|QWERTY|ç|
 
-## Hiding
+## 隐藏
 
-**To hide the console**, just hit Enter without typing anything. **Beware of spoilers!** You can easily learn things accidentally via the debug console that you might have wanted to learn from regular gameplay!
+**隐藏控制台**，只需按 Enter 而不输入任何内容。**请注意剧透！** 您可能会在调试控制台中意外了解到您本想通过常规游戏过程中认识的内容！
 
-## Description
+## 描述
 
-The debug console is a feature of Isaac that's been around since Rebirth, but until AB+ it's only been enabled in developer builds. Now modders can finally unleash its power! It can be a big time saver for testing your changes during development of mods.
+调试控制台是自从《重生》以来就一直存在于《以撒》中的功能，但在 AB+ 版本之前，它只在开发版本中启用。现在，modder们终于可以释放它的力量了！它可以大大节省在 mod 开发期间测试您的更改所需的时间。
 
-The debug console is not completely stable, so if you enter commands like numbers outside certain ranges, it may crash. Some of the crashes are documented below, but there are likely others.
+调试控制台不是完全稳定的，因此，如果输入的命令超出某些范围的数字，则可能会导致崩溃。下面列出了一些崩溃的情况，但可能还有其他情况。
 
-If you're testing a specific item or item combo, it's useful to enter your commands and then exit and continue so your items are reloaded when you continue and you don't need to keep retyping the same command. Also, try the clipboard! You can paste multiple commands at once or copy the last few commands you entered using the copy command.
+如果您正在测试特定的道具或道具组合，输入您的命令然后退出并继续游戏是有用的，因为当您继续时，您的道具会重新加载，您无需再次输入相同的命令。此外，试试使用剪贴板！您可以一次性粘贴多个命令或使用复制命令复制您输入的最后几个命令。
 
-Some commands that are still in the game aren't listed here since they're only useful for Nicalis developers, or are no longer useful. For instance, the achievement and eggs commands unlock stuff in your game save, but saving your persistent data is disabled when mods are turned on.
+游戏中仍然存在一些未列在此处的命令，因为它们只对 Nicalis 开发人员有用，或者已不再有用。例如，achievement和eggs命令将解锁您的游戏存档中的内容。（achievement已在忏悔被删除）
 
-## Commands
+## 命令
 
 ### **spawn**
 
-Syntax:
+生成一个实体。
+
+语法：
 ```
 spawn mega maw
 spawn 20
@@ -55,15 +57,18 @@ spawn 10.1
 spawn 10.2.0.4
 ```
 
-Very similar names are incredibly common among entities, so you'll likely need to type the name to figure out the number, then delete it and type the number manually. The decimal syntax lets you specify:
+实体之间有相似的名称是很常见的一件事情，因此您可能需要输入名称然后查找编号，然后手动删除内容并输入编号。小数点允许指定：
 
 ```
-Type.Variant.Subtype.Champion
+类型.变体.子类型.精英
 ```
-`spawn 10.2.0.4` will get you a gaper(10)'s flaming variant(.2) with a blue champion type(.4).
+`spawn 10.2.0.4` 将会得到一个裂口尸（编号为10）的燃烧变种（编号为.2），带有蓝色精英类型（编号为.4）。
 
 ### **goto**
-Syntax:
+
+移动到一个地图之外的额外房间。
+
+语法：
 ```
 goto s.boss.1010
 goto s.error.21
@@ -71,79 +76,88 @@ goto d.10
 goto x.boss.1
 goto 9 5 1
 ```
-`s` is for special room types, `d` is for normal room types, and `x` is for special room types which is packed inside of floor file. The rooms will be different depending on what floor you're on, so `goto d.10` will take you to a different room on stage 1 than it will on stage 3.
+`s` 是特殊房间类型，`d` 是普通房间类型，而 `x` 是打包在地图文件中的特殊房间类型。房间将根据所在的楼层而不同，因此 `goto d.10` 将在第一层和第三层进入到不同的房间。
 
 ### **stage**
-Syntax:
+
+移动到同一个种子的另一层。
+
+语法：
 ```
 stage 1
 stage 10a
 stage 3b
 ```
 
-Move to another floor on the same seed. You can use this to skip ahead to a later floor, go backwards to an earlier floor, or reset the current floor by entering the current floor's id. Entering nonexistent floors can crash the game.
+您可以使用它来跳到后面的楼层，返回到早期的楼层，或通过输入当前楼层的id来重置当前楼层。输入不存在的楼层可能会导致游戏崩溃。
 
 ### **gridspawn**
-Syntax:
+
+在房间的随机位置生成给定ID的网格实体。
+
+语法：
 ```
-gridspawn 1000    -- Spawns Rock
-gridspawn 1494    -- Spawns Rainbow Poop
-gridspawn 9000    -- Spawns Trap Door
-gridspawn 9000.1  -- Spawns Void Portal
-gridspawn 9100    -- Spawns Staircase
+gridspawn 1000    -- 生成岩石
+gridspawn 1494    -- 生成彩虹便便
+gridspawn 9000    -- 生成陷阱门
+gridspawn 9000.1  -- 生成虚空传送门
+gridspawn 9100    -- 生成楼梯
 ```
 
-Spawns the grid entity with the given ID at a random place in the room. For some reason it doesn't always do something, possibly because of failing to overwrite other grid entities or trying to spawn outside the room or something. Pits won't look right until you leave the room and come back.
+由于无法覆盖其他网格实体或尝试在房间外生成，不总是能正常生效。沟壑
+不会正确显示，离开房间再回来可以使其正常显示。
 
 ### **debug**
-Various cheats that are useful for testing. Some of the ones not listed here are obsolete, not very useful, or possibly broken. Here are the ones that are still useful.
+这是一些有用的测试作弊码，一些未在此处列出的作弊码可能已过时、无用或有问题。以下是仍然有用的作弊码。
 
-**debug 3** Complete invincibility
+**debug 3** 完全无敌。
 
-**debug 4** +40 damage. Good with Soy Milk.
+**debug 4** +40 伤害。与豆奶一起使用效果很好。所有饰品变为金饰品。
 
-**debug 5** Displays text at the bottom of the screen about the current room
+**debug 5** 在屏幕底部显示关于当前房间的文本。
 
-**debug 6** Draws circles on the screen that represent an entity's damage hitbox. The color of the circle depends on the collision of the entity
+**debug 6** 在屏幕上画出代表实体伤害击中框的圆圈。圆圈的颜色取决于实体的碰撞。
 
-|Collision|Color|
+|碰撞|颜色|
 |--- |--- |
-|None|Nothing|
-|Player Only|Orange|
-|Player Objects|Pink|
-|Enemies|Green|
-|All|Red|
-|Debug Shapes|Yellow|
-|Unknown Collision|Black|
+|无|无|
+|仅玩家|橙色|
+|仅玩家物体（玩家、泪弹、跟班等）|粉色|
+|仅敌人|绿色|
+|全部|红色|
+|调试形状|黄色|
+|未知碰撞|黑色|
 
-**debug 7** Display damage values, similar to the Spider Mod item
+**debug 7** 显示伤害值，类似于蜘蛛模组道具。
 
-**debug 8** Your active item always has max charge.
+**debug 8** 主动道具始终满充能。
 
-**debug 9** Your luck is very high, so luck-based random events like random tear effects happen more often.
+**debug 9** +50 运气，因此像随机泪弹效果之类的基于运气的随机事件更容易发生。
 
-**debug 10** All enemies take rapid damage at all times, so rooms are usually cleared in under a second.
+**debug 10** 所有敌人快速受到伤害，所以房间在通常不到一秒钟内就被清理。
 
-**debug 12** Displays held collectibles and temporary collectible effects
+**debug 12** 显示持有的道具和临时道具效果
 
-**debug 13** Draws dotted circles on the screen that represent an entity's grid collision hitbox. The color of the circle depends on the grid collision of the entity. The number of dots depends on the `numGridCollisionPoint` variable set for the entity
+**debug 13** 在屏幕上画出代表实体网格碰撞框的点圆圈。圆圈的颜色取决于实体的网格碰撞类型。点的数量取决于为实体设置的`numGridCollisionPoint`属性。
 
-|Collision|Color|
+|碰撞|颜色|
 |--- |--- |
-|None|Nothing|
-|Walls X|Dark Red|
-|Walls Y|Dark Green|
-|Walls|Yellow|
-|Bullet|Orange|
-|Ground|Red|
-|No Pits|Cyan|
-|Pits Only|Light Purple|
-|Unknown Collision|Black|
+|无|无|
+|水平墙|深红|
+|垂直墙|深绿|
+|任意墙|黄色|
+|子弹移动|橙色|
+|地面移动|红色|
+|除了坑以外的障碍物|青色|
+|坑内移动|浅紫|
+|未知碰撞|黑色|
 
 ### **giveitem**
-####  aliases: `g`
+#### 别名：`g`
 
-Item and trinket syntax:
+给予角色道具、饰品、卡牌或胶囊。
+
+道具和饰品的语法：
 ```
 giveitem dr. fetus
 giveitem c15
@@ -153,26 +167,45 @@ giveitem ipec
 g mutant sp
 g soy milk
 ```
-Name collisions are somewhat common among items, so you'll likely need to type the name to figure out the number, then delete it and type the number manually. For items, use "c15" to give the item by number instead of name. For trinkets numbers, use "t15" Notice how it can autocomplete if you don't type the full name. It doesn't work with some odd item names like "<3" so you'll have to figure out the collectible number and use "c15" instead.
+道具名称之间的冲突比较常见，因此您可能需要输入名称以找出编号，然后手动删除并输入编号。
 
-Pill syntax:
+对于道具，使用“c15”而不是名称来给出道具编号。
+
+对于饰品，使用“t15”。
+
+请注意，如果您没有输入完整名称，则它可以自动补全。对于一些奇怪的道具名称（例如“<3”），它无法工作，因此您必须找出可收集编号并使用“c15”。
+
+使用大写的T而非小写的t代替饰品编号的开头字母，可以给予金饰品。
+
+胶囊语法：
 ```
 giveitem p0
 g p22
 ```
 
-Card syntax:
+卡牌语法：
 ```
 giveitem k1
 g k45
 ```
 
-Unfortunately you can't type pills or cards by name, so you have to figure out the number. You can give yourself pills even if that pill's effect is not in the rotation. It won't subsequently appear in rotation afterwards.
+不幸的是，您无法通过名称输入胶囊或卡牌，因此您必须找出编号。
+
+即使胶囊效果不在本局游戏中，您仍然可以给自己胶囊。之后它会在本局游戏中覆盖之前的胶囊。
+
+使用大写的P而非小写的p代替胶囊编号的开头字母，可以给予大胶囊。
+
+### **giveitem2**
+#### 别名：`g2`
+
+与`giveitem`相同，但用于以扫。
 
 ### **remove**
-####  aliases: `r`
+#### 别名：`r`
 
-Syntax:
+移除角色的道具、饰品、卡牌或胶囊。
+
+语法：
 ```
 remove t53
 remove soy milk
@@ -182,31 +215,32 @@ r experi
 remove *
 ```
 
-`remove *` is a special version of the command that should remove all items.
+`remove *` 是该命令的一个特殊版本，会删除所有道具、饰品、卡牌、胶囊各一份。
 
 ### **costumetest**
 
-Syntax:
+使角色获得一些完全随机的外观，而不需要相关的道具。
+
+语法：
 ```
 costumetest
 costumetest 33
 ```
-Gives Isaac a number of totally random costumes, without having the associated items.
 
 ### **restart**
-Same as holding R. Resets the game back to the beginning of a new run. Adding a number to the end will restart you as a specific character.
+与按住R键相同。将游戏重置回新游戏的开头。在末尾添加一个数字将以特定角色重新开始。
 
-Syntax:
+语法：
 ```
 restart
 restart 1
 ```
-The first command will restart you as your current character, the latter will restart you as Magdalene. Numbers at the end can range from 0 - 40. Any number outside of this range will crash your game.
+第一条命令将以当前角色重新开始，后者将以抹大拉重新开始。末尾的数字可以在0-40范围内。超出此范围的任何数字都会使游戏崩溃。
 
 ### **listcollectibles**
-Prints a list of all items in your possession, and how many of each.
+打印出角色拥有的所有道具以及每种道具的数量。
 
-Syntax:
+语法：
 ```
 g c1
 repeat 4
@@ -214,12 +248,13 @@ g c2
 listcollectibles
 ```
 
-This will print "The Sad Onion:5,The Inner Eye:1"
-
+这将打印出"The Sad Onion:5,The Inner Eye:1"。
 
 ### **repeat**
 
-Syntax:
+重复上一个命令N次。
+
+语法：
 ```
 spawn 10
 repeat 50
@@ -228,130 +263,172 @@ repeat 100
 repeat 100
 ```
 
-The commands above will spawn one, then fifty gapers, and then give you one MEAT! and then two hundred more MEAT!s. repeat looks back up the previous console command. The last one that wasn't a repeat command is re-entered as many times as requested. You can use this to give yourself tons of items or spawn tons of enemies. Exercise restraint! Remember that an extreme number of repetitions of some commands might crash the game or leave it hanging for a long time.
+上面的命令将生成一个皱眉裂口尸，然后再生成50个皱眉裂口尸；给你一个生肉！，然后再给你200个生肉！。
+
+repeat会检测上一个控制台命令。不是repeat命令的最后一个命令将根据请求的次数重新输入，可以使用此功能为自己提供大量道具或生成大量敌人。
+
+请谨慎使用！记住，某些命令的极端重复次数可能会导致游戏崩溃或未响应很长时间。
 
 ### **clearseeds**
-Removes all easter egg effects from the current run.
+
+清除当前游戏中的所有彩蛋种子效果。
 
 ### **seed**
 
-Syntax:
+重新设置本局游戏的种子。
+
+语法：
 ```
 seed GGGG GGGG
 seed T1MM AY48
 ```
-It's much easier just to exit to the character select and type the seed the normal way. Easter egg seeds won't work. It's case-sensitive (uppercase only) and doesn't replace "i" with "1," etc.
+最好还是退出到角色选择界面，按照正常方式输入种子。彩蛋种子无效。
+
+种子大小写敏感（仅大写），不会将 "i" 替换为 "1" 等。
 
 ### **challenge**
 
-Syntax:
+以给定ID的挑战上以随机种子开始新的游戏。
+
+语法：
 ```
 challenge 20
 ```
 
-Starts a new run on a random seed on the given challenge number. Numbers greater than the number of challenges included in the base game will cause the game to crash.
+如果数字大于基本游戏中包含的挑战数量，则会导致游戏崩溃。
 
 ### **combo**
 
-Syntax:
+使角色获得某个道具池中指定数量的随机道具。
+
+语法：
 ```
 combo 0.69
 ```
 
-Gives you an item combo, taking 69 random items from the specified item pool (in this case, 0 is the treasure room item pool).
+本例中，从宝藏房道具池中给予 69 个随机道具。
 
 ### **macro**
-####  aliases: `m`
+#### 别名：`m`
 
-Syntax:
+语法：
 ```
 macro mom
 macro hud
 m bigchest
 ```
 
-This command wasn't designed for general consumption, as macros can only be added in C++ code. Sorry! If there's enough demand we can consider adding a similar feature for modder access. It just pastes a bunch of hardcoded console commands one after another using an abbrevition that's quick to type. You can use the clipboard to similar effect.
+这个命令并不是为了一般用户而设计的，因为宏只能在 C++ 代码中添加。抱歉！如果有足够的需求，我们可以考虑为模组制作者添加类似的功能。它只是使用缩写将一堆硬编码的控制台命令依次粘贴在一起。你也可以使用剪贴板来达到类似的效果。
 
 ### **playsfx**
 
-Syntax:
+播放指定id的音效。
+
+语法：
 ```
 playsfx 1
 playsfx 1 0.5
 ```
-
-Plays the specified sound effect id. Pitch can be specified in the second argument.
+第二个参数可以指定音高。
 
 ### **curse**
 
-Syntax:
+获得诅咒。
+
+语法：
 ```
 curse 2
 curse 16
 curse 127
 ```
 
-Set a value corresponding to a sum of the desired curses. Darkness (1) + Labyrinth (2) + Lost (4) + Unknown (8) + Cursed (16) + Maze (32) + Blind (64) + Giant (128) = 255 The stage or reseed commands are useful after adding curse of the labyrinth to force the floor to be re-generated.
+需要输入一个值，这个值对应于所需诅咒号码的总和。黑暗（1）+迷宫（2）+迷途（4）+未知（8）+诅咒（16）+混乱（32）+致盲（64）+大房间（128）= 255。
+
+在添加了迷宫诅咒后，stage或reseed命令可用于强制重新生成楼层。
 
 ### **reseed**
-Generates a new layout for the current floor with a new floor seed. This floor will no longer match other people playing the same seed.
+
+使用新的楼层种子生成当前层的新布局。该层将不再匹配其他玩家使用相同的种子所见到的层。
 
 ### **copy**
-Copies the last three console commands to your clipboard. Paste one or more commands with ctrl+v, or command+v on mac.
+
+将最后N个控制台命令复制到剪贴板。
+
+语法：
+```
+copy 1
+copy 2
+copy 3
+```
+使用Ctrl+V或Mac上的Command+V粘贴一个或多个命令。
 
 ### **clear**
-Clears the console. Useful for video recording purposes or if you want to dispose of incriminating evidence.
+
+清除控制台内容。这对于视频录制或者想要处理证据的情况很有用。
 
 ### **lua**
-Examples:
+#### 别名：`l`
+
+直接运行一行Lua代码。
+
+例子：
 ```
 lua print("Hello World!")
 
 l for _,v in pairs(Isaac.GetRoomEntities()) do if v:IsVulnerableEnemy() then print(v.HitPoints.."/"..v.MaxHitPoints) end end
 ```
-Directly runs a line of Lua code. The first example simply prints "Hello World!" to the console, while the second prints the current HP and max HP of every vulnerable enemy in the room.
+第一个示例只是将“Hello World！”打印到控制台，而第二个示例打印房间中每个非无敌敌人的当前HP和最大HP。
 
 ### **luarun**
-Examples:
+
+接受一个 lua 文件的路径并立即运行它。
+
+示例：
 ```
 luarun /full_path/hello.lua
 luarun relative_path/hello.lua
 ```
-
-Takes a path to a lua file and runs it immediately. Paths are relative to the folder where the game is installed.
+路径相对于游戏安装的文件夹。
 
 ### **luamod**
-Examples:
+
+接受一个模组文件夹的名称并运行其中的 main.lua。
+
+示例：
 ```
 luamod mygreatmod
 ```
-Takes a mod folder name and runs the main.lua for it. This can be used to reload a mod without relaunching the game.
+这可以用于重新加载模组而无需重新启动游戏。
 
 ### **luarun**
-Reports memory usage for Lua
+报告 Lua 的内存使用情况。
 
 ### **metro**
-Examples:
+
+修改使用节拍器时所选择的道具。
+
+示例：
 ```
 metro c1
 ```
-This guarantees the next item chosen when using Metronome.
 
 ### **delirious**
-Examples:
+
+修改使用精神错乱时所选择的头目。
+
+示例：
 ```
 delirious 1
 ```
-This guarantees the next boss chosen when using Delirious.
 
 ### **restock**
-Rerolls item pedestals and shop items in the current room.
+重新生成当前房间的底座道具和商店商品。
 
 ### **rewind**
-Makes the game forget about the changes in current room and teleports Isaac back to previous room. (Glowing Hourglass-like effect)
+使游戏忘记当前房间中的更改并将角色传送回上一个房间。（类似发光沙漏的效果）
 
 ## **testbosspool**
-Prints a list of boss names and percentage chance (100%=10000) for current floor.
+打印当前层中头目名称和百分比几率（100%=10000）的列表。
 
 ## **reloadwisps**
-Reloads wisps spawned by Book of Virtues and locusts spawned by Abyss.
+重新加载由美德之书生成的灵火和由无底坑生成的蝗虫。
