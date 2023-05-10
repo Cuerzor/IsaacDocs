@@ -1,8 +1,8 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] Writing screen shaders
+# [教程] 编写屏幕着色器
 
 ## Example Shaders:
 * Tilt Shift Shader by im_tem: [https://steamcommunity.com/sharedfiles/filedetails/?id=2524003926](https://steamcommunity.com/sharedfiles/filedetails/?id=2524003926)

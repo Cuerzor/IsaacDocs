@@ -1,17 +1,17 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] Debugging with ZeroBrane Studio
+# [教程] 使用ZeroBrane Studio进行调试
 
-Debuggers are very valuable tools to diagnose problems with your code when you don't know exactly what your program is doing! You can get by with simple debug print statements, but some things are easier to track down with a debugger.
+调试器是一种非常有价值的工具，当你不知道你的程序在做什么时，可以用它来诊断代码问题！你可以通过简单的调试打印语句来完成，但有些问题使用调试器会更容易跟踪。
 
-1.  Download and install ZeroBrane Studio for your platform of choice.
-2.  Add `--luadebug` to your launch options for Isaac on Steam. Properties > General > Set Launch Options. The debugger will not work without this command line option.
-3.  In Zerobrane, Open your Lua file. Go to the Project menu > Project Directory > Set from Current File. Project > Start debugger server. You may get a popup to allow ZeroBrane to have network access.
-4.  Add this line at the top of your main.lua file: `StartDebug()`
-5.  Start the game. The game will freeze up when the debugger triggers an automatic breakpoint.
+1. 下载并安装适用于您平台的ZeroBrane Studio。
+2. 在Steam上为以撒添加 `--luadebug` 到启动选项。属性 > 通用 > 启动选项。没有这个命令行选项，调试器将无法使用。
+3. 在ZeroBrane中，打开您的Lua文件。进入项目菜单 > 项目目录 > 从当前文件设置。项目 > 启动调试器服务器。您可能会看到一个弹出窗口询问是否允许ZeroBrane访问网络。
+4. 在main.lua文件顶部添加此行： `StartDebug()`
+5. 启动游戏。当调试器触发自动断点时，游戏会冻结。
 
-Now you can hit the green arrow button to continue execution. Check the ZeroBrane documentation if you need help with its debugging features.
+现在您可以点击绿色箭头按钮继续执行。如果需要ZeroBrane的调试功能，请参阅其文档。
 
-We strongly advise disabling `--luadebug` after you're done if you don't need access to the debug features!
+如果不需要访问调试功能的话，强烈建议在完成调试后禁用 `--luadebug`！
