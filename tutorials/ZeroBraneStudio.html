@@ -19,7 +19,7 @@
     
     
       
-        <title>使用ZeroBrane Studio调试 - 以撒的结合: Lua API文档</title>
+        <title>使用ZeroBrane Studio进行调试 - 以撒的结合: Lua API文档</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-debugging-with-zerobrane-studio" class="md-skip">
+        <a href="#zerobrane-studio" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用ZeroBrane Studio调试
+              使用ZeroBrane Studio进行调试
             
           </span>
         </div>
@@ -3412,7 +3412,7 @@
   
     <li class="md-nav__item">
       <a href="MathAndLuaTips.html" class="md-nav__link">
-        数学和Lua提示
+        数学和Lua技巧
       </a>
     </li>
   
@@ -3449,7 +3449,7 @@
       
       
       <a href="ZeroBraneStudio.html" class="md-nav__link md-nav__link--active">
-        使用ZeroBrane Studio调试
+        使用ZeroBrane Studio进行调试
       </a>
       
     </li>
@@ -4378,7 +4378,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4389,24 +4389,24 @@
   
 
 
-<h1 id="tutorial-debugging-with-zerobrane-studio">[Tutorial] Debugging with ZeroBrane Studio<a class="headerlink" href="#tutorial-debugging-with-zerobrane-studio" title="Permanent link">⚓︎</a></h1>
-<p>Debuggers are very valuable tools to diagnose problems with your code when you don't know exactly what your program is doing! You can get by with simple debug print statements, but some things are easier to track down with a debugger.</p>
+<h1 id="zerobrane-studio">[教程]使用ZeroBrane Studio进行调试<a class="headerlink" href="#zerobrane-studio" title="Permanent link">⚓︎</a></h1>
+<p>调试器是一种非常有价值的工具，当你不知道你的程序在做什么时，可以用它来诊断代码问题！你可以通过简单的调试打印语句来完成，但有些问题使用调试器会更容易跟踪。</p>
 <ol>
-<li>Download and install ZeroBrane Studio for your platform of choice.</li>
-<li>Add <code>--luadebug</code> to your launch options for Isaac on Steam. Properties &gt; General &gt; Set Launch Options. The debugger will not work without this command line option.</li>
-<li>In Zerobrane, Open your Lua file. Go to the Project menu &gt; Project Directory &gt; Set from Current File. Project &gt; Start debugger server. You may get a popup to allow ZeroBrane to have network access.</li>
-<li>Add this line at the top of your main.lua file: <code>StartDebug()</code></li>
-<li>Start the game. The game will freeze up when the debugger triggers an automatic breakpoint.</li>
+<li>下载并安装适用于您平台的ZeroBrane Studio。</li>
+<li>在Steam上为以撒添加 <code>--luadebug</code> 到启动选项。属性 &gt; 通用 &gt; 启动选项。没有这个命令行选项，调试器将无法使用。</li>
+<li>在ZeroBrane中，打开您的Lua文件。进入项目菜单 &gt; 项目目录 &gt; 从当前文件设置。项目 &gt; 启动调试器服务器。您可能会看到一个弹出窗口询问是否允许ZeroBrane访问网络。</li>
+<li>在main.lua文件顶部添加此行： <code>StartDebug()</code></li>
+<li>启动游戏。当调试器触发自动断点时，游戏会冻结。</li>
 </ol>
-<p>Now you can hit the green arrow button to continue execution. Check the ZeroBrane documentation if you need help with its debugging features.</p>
-<p>We strongly advise disabling <code>--luadebug</code> after you're done if you don't need access to the debug features!</p>
+<p>现在您可以点击绿色箭头按钮继续执行。如果需要ZeroBrane的调试功能，请参阅其文档。</p>
+<p>如果不需要访问调试功能的话，强烈建议在完成调试后禁用 <code>--luadebug</code>！</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
       
     
   </small>

@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-adding-costumes-to-items-without-lua" class="md-skip">
+        <a href="#lua" class="md-skip">
           Skip to content
         </a>
       
@@ -3412,7 +3412,7 @@
   
     <li class="md-nav__item">
       <a href="MathAndLuaTips.html" class="md-nav__link">
-        数学和Lua提示
+        数学和Lua技巧
       </a>
     </li>
   
@@ -3459,30 +3459,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-costume-types" class="md-nav__link">
-    Default costume types
+  <a href="#_2" class="md-nav__link">
+    默认的外观类型
   </a>
   
-    <nav class="md-nav" aria-label="Default costume types">
+    <nav class="md-nav" aria-label="默认的外观类型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defining-items" class="md-nav__link">
-    Defining items
+  <a href="#_3" class="md-nav__link">
+    定义道具
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#defining-the-costumes" class="md-nav__link">
-    Defining the costumes
+  <a href="#_4" class="md-nav__link">
+    定义外观
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#effects-of-the-item-type-to-the-costume" class="md-nav__link">
-    Effects of the item type to the costume:
+  <a href="#_5" class="md-nav__link">
+    道具类型对外观的影响：
   </a>
   
 </li>
@@ -3493,11 +3493,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-nullcostumes" class="md-nav__link">
-    Adding Nullcostumes
+  <a href="#null" class="md-nav__link">
+    添加Null外观
   </a>
   
-    <nav class="md-nav" aria-label="Adding Nullcostumes">
+    <nav class="md-nav" aria-label="添加Null外观">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3535,7 +3535,7 @@
   
     <li class="md-nav__item">
       <a href="ZeroBraneStudio.html" class="md-nav__link">
-        使用ZeroBrane Studio调试
+        使用ZeroBrane Studio进行调试
       </a>
     </li>
   
@@ -4453,30 +4453,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-costume-types" class="md-nav__link">
-    Default costume types
+  <a href="#_2" class="md-nav__link">
+    默认的外观类型
   </a>
   
-    <nav class="md-nav" aria-label="Default costume types">
+    <nav class="md-nav" aria-label="默认的外观类型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defining-items" class="md-nav__link">
-    Defining items
+  <a href="#_3" class="md-nav__link">
+    定义道具
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#defining-the-costumes" class="md-nav__link">
-    Defining the costumes
+  <a href="#_4" class="md-nav__link">
+    定义外观
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#effects-of-the-item-type-to-the-costume" class="md-nav__link">
-    Effects of the item type to the costume:
+  <a href="#_5" class="md-nav__link">
+    道具类型对外观的影响：
   </a>
   
 </li>
@@ -4487,11 +4487,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-nullcostumes" class="md-nav__link">
-    Adding Nullcostumes
+  <a href="#null" class="md-nav__link">
+    添加Null外观
   </a>
   
-    <nav class="md-nav" aria-label="Adding Nullcostumes">
+    <nav class="md-nav" aria-label="添加Null外观">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4532,7 +4532,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4543,13 +4543,13 @@
   
 
 
-<h1 id="tutorial-adding-costumes-to-items-without-lua">[Tutorial] Adding Costumes to items without LUA<a class="headerlink" href="#tutorial-adding-costumes-to-items-without-lua" title="Permanent link">⚓︎</a></h1>
-<h4 id="example-mod-code-can-be-found-here"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> Example mod &amp; code can be found here:<a class="headerlink" href="#example-mod-code-can-be-found-here" title="Permanent link">⚓︎</a></h4>
-<p><a href="../customData/costumes%20examplemod.zip">→ Download the example mod for this Tutorial ←</a></p>
-<h2 id="default-costume-types">Default costume types<a class="headerlink" href="#default-costume-types" title="Permanent link">⚓︎</a></h2>
-<h3 id="defining-items">Defining items<a class="headerlink" href="#defining-items" title="Permanent link">⚓︎</a></h3>
-<p>Before adding a costume to an item or trinket, we first need to define items. This can be done by creating an empty <strong>"items.xml"</strong> file in your mods <strong>"content"</strong> folder. If that folder does not exist already, create it.</p>
-<p>Then add the desired amount of items to your items.xml file. It could then look like this:
+<h1 id="lua">[教程] 在不使用LUA的情况下为道具添加外观<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h1>
+<h4 id="_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 您可以在此处找到示例模组和代码：<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h4>
+<p><a href="../customData/costumes%20examplemod.zip">→ 下载本教程的示例模组 ←</a></p>
+<h2 id="_2">默认的外观类型<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h3 id="_3">定义道具<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
+<p>在为道具或饰品添加外观之前，我们需要先定义道具。可以在您的模组的“content”文件夹中创建一个空的<strong>“items.xml”</strong>文件来完成这个步骤。如果该文件夹尚不存在，请创建它。</p>
+<p>然后在您的items.xml文件中添加所需数量的道具。它可能会像这样：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4557,18 +4557,18 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;items</span><span class="w"> </span><span class="na">gfxroot=</span><span class="s">&quot;gfx/items/&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 1&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some passive item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_1.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;active</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 2&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some active item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_2.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 999&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some passive item but high ID&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_999.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;familiar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 3&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some familiar item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_3.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;trinket</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 4&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some trinket&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_4.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具1&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个被动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_1.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;active</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具2&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个主动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_2.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具999&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个高ID被动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_999.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;familiar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试跟班3&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个跟班&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_3.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;trinket</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试饰品4&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个饰品&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_4.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/items&gt;</span>
 </code></pre></div></td></tr></table></div>
-Note that we also defined IDs for each item. <strong>Those IDs are used to assign the Items to their costume!</strong></p>
-<p>IDs located in a "content/items.xml" file are only locally used by the mod. They dont affect other mods and will <strong>NOT</strong> override existing vanilla items! They will also not define their ingame ID!</p>
-<h3 id="defining-the-costumes">Defining the costumes<a class="headerlink" href="#defining-the-costumes" title="Permanent link">⚓︎</a></h3>
-<p>Now that we defined some items, we now define our costumes in a <strong>"costumes2.xml"</strong> file.</p>
-<p><strong>IMPORTANT:</strong> The costume ID and costume Type must be equal to the item id and item type!
+请注意，我们还为每个道具定义了ID。<strong>这些ID用于将道具分配到它们的外观中！</strong></p>
+<p>在“content/items.xml”文件中找到的ID仅由模组在本地使用。它们不会影响其他模组，也不会覆盖现有的原版道具！它们也不会定义它们在游戏内的ID！</p>
+<h3 id="_4">定义外观<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
+<p>现在我们已经定义了一些道具，我们可以在<strong>“costumes2.xml”</strong>文件中定义我们的外观。</p>
+<p><strong>重要提示：</strong>外观ID和外观类型必须等于道具ID和道具类型！
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4577,7 +4577,7 @@ Note that we also defined IDs for each item. <strong>Those IDs are used to assig
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;costumes</span><span class="w"> </span><span class="na">anm2root=</span><span class="s">&quot;gfx/&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="cm">&lt;!-- Load order is top to bottom. It is NOT based on the id --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- 载入顺序是从上到下。不是基于ID --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_1.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;passive&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_2.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;active&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_999.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;passive&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
@@ -4585,53 +4585,53 @@ Note that we also defined IDs for each item. <strong>Those IDs are used to assig
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_4.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;trinket&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/costumes&gt;</span>
 </code></pre></div></td></tr></table></div></p>
-<h3 id="effects-of-the-item-type-to-the-costume">Effects of the item type to the costume:<a class="headerlink" href="#effects-of-the-item-type-to-the-costume" title="Permanent link">⚓︎</a></h3>
+<h3 id="_5">道具类型对外观的影响：<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
 <tr>
-<th>Itemtype</th>
-<th>Effect</th>
+<th>道具类型</th>
+<th>影响</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>passive</strong></td>
-<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the item is removed.</td>
+<td><strong>被动(passive)</strong></td>
+<td>当拾取动画播放完毕时，外观会被添加。当道具被移除时，外观会被移除。</td>
 </tr>
 <tr>
-<td><strong>active</strong></td>
-<td>Costume gets added when the item is used. It gets removed when you change the room.</td>
+<td><strong>主动(active)</strong></td>
+<td>当道具被使用时，外观会被添加。当你改变房间时，外观会被移除。</td>
 </tr>
 <tr>
-<td><strong>trinket</strong></td>
-<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the trinket is removed.</td>
+<td><strong>饰品(trinket)</strong></td>
+<td>当拾取动画播放完毕时，外观会被添加。当饰品被移除时，外观会被移除。</td>
 </tr>
 <tr>
-<td><strong>familiar</strong></td>
-<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the item is removed.</td>
+<td><strong>跟班(familiar)</strong></td>
+<td>当拾取动画播放完毕时，外观会被添加。当道具被移除时，外观会被移除。</td>
 </tr>
 </tbody>
 </table>
-<h4 id="further-informations">Further Informations:<a class="headerlink" href="#further-informations" title="Permanent link">⚓︎</a></h4>
+<h4 id="_6">更多信息：<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
 <ul>
-<li>If a costumeID can't be associated with an itemid, the game crashes.</li>
-<li><strong>Transformations</strong> still must be added using the Null Costume method (LUA-based)</li>
-<li>Costumes of type <strong>none</strong> actually have a null item associated with it. These Nullcostumes can be added using LUA.</li>
+<li>如果一个外观ID不能与一个道具ID相关联，游戏将崩溃。</li>
+<li>类型为<strong>none</strong>的外观实际上与一个Null道具相关联。这些Null外观可以使用LUA添加。</li>
+<li><strong>套装</strong>仍然必须使用Null外观方法（基于LUA）添加。</li>
 </ul>
 <hr />
-<h2 id="adding-nullcostumes">Adding Nullcostumes<a class="headerlink" href="#adding-nullcostumes" title="Permanent link">⚓︎</a></h2>
-<p>Nullcostumes are costumes that dont have an actual item attached to them. Therefore, they can be used to add temporary costumes like for example Transformations.</p>
-<p>The following code adds a nullcostume to the player in two different ways. Choose the one that fits your neededs.</p>
-<h3 class="subHeader example_code" id="costumes2xml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> costumes2.xml<a class="headerlink" href="#costumes2xml" title="Permanent link">⚓︎</a></h3>
-<p>Define a null costume in the "costumes2.xml" file by setting the type to "none". DONT set an ID!
+<h2 id="null">添加Null外观<a class="headerlink" href="#null" title="Permanent link">⚓︎</a></h2>
+<p>Null外观是没有实际道具附加的外观。因此，它们可以用于添加临时外观，例如套装。</p>
+<p>以下代码以两种不同的方式向玩家添加Null外观。选择适合你需要的方式。</p>
+<h3 id="costumes2xml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> costumes2.xml<a class="headerlink" href="#costumes2xml" title="Permanent link">⚓︎</a></h3>
+<p>在“costumes2.xml”文件中，通过将类型设置为“none”来定义一个Null外观。不要设置ID！</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;costumes</span><span class="w"> </span><span class="na">anm2root=</span><span class="s">&quot;gfx/&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/some_null_costume.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;none&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/costumes&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-<h3 class="subHeader example_code" id="mainlua"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> main.lua<a class="headerlink" href="#mainlua" title="Permanent link">⚓︎</a></h3>
-<p>Get the automatically generated CostumeID of the null-Costume, and then apply it to the player</p>
+</code></pre></div></td></tr></table></div>
+<h3 id="mainlua"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> main.lua<a class="headerlink" href="#mainlua" title="Permanent link">⚓︎</a></h3>
+<p>获取Null外观的自动生成的ID，然后将其应用于玩家。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4655,40 +4655,39 @@ Note that we also defined IDs for each item. <strong>Those IDs are used to assig
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- get the internal costumeID</span>
-    <span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetCostumeIdByPath</span><span class="p">(</span><span class="s2">&quot;gfx/characters/some_null_costume.anm2&quot;</span><span class="p">)</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- 获取内部外观ID</span>
+<span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetCostumeIdByPath</span><span class="p">(</span><span class="s2">&quot;gfx/characters/some_null_costume.anm2&quot;</span><span class="p">)</span>
 
-<span class="c1">-- adding a nullcostume using &quot;AddNullCostume&quot; (persistent till its removed / run is restarted)</span>
+<span class="c1">-- 使用 &quot;AddNullCostume&quot; 添加一个 Null外观（永久，直到其被移除或重新开始一局游戏）</span>
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">myFunction1</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding null costume&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;添加Null外观&quot;</span><span class="p">)</span>
     <span class="kr">if</span><span class="p">(</span><span class="n">somethingHappend</span><span class="p">)</span> <span class="kr">then</span>
         <span class="n">player</span><span class="p">:</span><span class="n">AddNullCostume</span> <span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span>
     <span class="kr">end</span>
-    <span class="c1">-- removing the null costume</span>
+    <span class="c1">-- 移除Null外观</span>
     <span class="kr">if</span><span class="p">(</span><span class="n">somethingDifferentHappend</span><span class="p">)</span> <span class="kr">then</span>
         <span class="n">player</span><span class="p">:</span><span class="n">TryRemoveNullCostume</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span>
     <span class="kr">end</span>
 <span class="kr">end</span>
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_PLAYER_UPDATE</span><span class="p">,</span> <span class="n">mod</span><span class="p">.</span><span class="n">myFunction1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="c1">-- adding a nullcostume using &quot;NullEffects&quot; (persists for current room and gets removed afterwards)</span>
+<span class="c1">-- 使用 &quot;NullEffects&quot; 添加一个 Nullcostume（在当前房间中持续存在，然后被移除）</span>
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">myFunction2</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
     <span class="kr">if</span> <span class="ow">not</span> <span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">():</span><span class="n">HasNullEffect</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span> <span class="kr">then</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding null costume&quot;</span><span class="p">)</span> <span class="c1">-- will get triggered everytime the room is changed</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;添加Null外观&quot;</span><span class="p">)</span> <span class="c1">--每次更换房间时都会触发</span>
         <span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">():</span><span class="n">AddNullEffect</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
     <span class="kr">end</span>
 <span class="kr">end</span>
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_PLAYER_UPDATE</span><span class="p">,</span> <span class="n">mod</span><span class="p">.</span><span class="n">myFunction2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<hr />
-<p>Special thanks to <em><strong>Piber20</strong></em> and <em><strong>JSG</strong></em> for figuring out these methods!</p>
+<p>特别感谢 <em><strong>Piber20</strong></em> 和 <em><strong>JSG</strong></em> 找出这些方法！</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
       
     
   </small>
