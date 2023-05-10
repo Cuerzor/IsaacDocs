@@ -19,7 +19,7 @@
     
     
       
-        <title>Lua中的函数 - 以撒的结合: Lua API文档</title>
+        <title>Functions in Lua - BoI: Lua API Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua" class="md-skip">
+        <a href="#tutorial-functions-in-lua" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-header__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-header__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -140,13 +140,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            以撒的结合: Lua API文档
+            BoI: Lua API Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lua中的函数
+              Functions in Lua
             
           </span>
         </div>
@@ -190,13 +190,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/./" hreflang="en" class="md-select__link">
+                  <a href="/site/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/site/de/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -248,13 +248,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
       </div>
@@ -280,7 +280,7 @@
 
   <li class="md-tabs__item">
     <a href="../index.html" class="md-tabs__link">
-      主页
+      Home
     </a>
   </li>
 
@@ -295,7 +295,7 @@
   
     <li class="md-tabs__item">
       <a href="../index.html" class="md-tabs__link">
-        文档
+        Docs
       </a>
     </li>
   
@@ -311,7 +311,7 @@
   
     <li class="md-tabs__item">
       <a href="../entities/Overview.html" class="md-tabs__link">
-        实体
+        Entities
       </a>
     </li>
   
@@ -329,7 +329,7 @@
   
     <li class="md-tabs__item">
       <a href="ExampleProject.html" class="md-tabs__link md-tabs__link--active">
-        教程
+        Tutorials
       </a>
     </li>
   
@@ -345,7 +345,7 @@
   
     <li class="md-tabs__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-tabs__link">
-        XML
+        XMLs
       </a>
     </li>
   
@@ -361,7 +361,7 @@
   
     <li class="md-tabs__item">
       <a href="../faq/faq.html" class="md-tabs__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -377,7 +377,7 @@
   
     <li class="md-tabs__item">
       <a href="Tools.html" class="md-tabs__link">
-        工具
+        Tools
       </a>
     </li>
   
@@ -390,7 +390,7 @@
 
   <li class="md-tabs__item">
     <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-tabs__link">
-      漏洞
+      Bugs
     </a>
   </li>
 
@@ -402,7 +402,7 @@
 
   <li class="md-tabs__item">
     <a href="../tags.html" class="md-tabs__link">
-      标签
+      Tags
     </a>
   </li>
 
@@ -414,7 +414,7 @@
 
   <li class="md-tabs__item">
     <a href="https://www.lua.org/manual/5.3/" class="md-tabs__link">
-      Lua 5.3文档
+      Lua 5.3 Docs
     </a>
   </li>
 
@@ -440,23 +440,23 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-nav__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-nav__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    以撒的结合: Lua API文档
+    BoI: Lua API Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
     </div>
@@ -472,7 +472,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -496,14 +496,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          文档
+          Docs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          文档
+          Docs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -514,7 +514,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -537,14 +537,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          上次访问
+          Last visited
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          上次访问
+          Last visited
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -711,14 +711,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-          常用页面
+          Frequently used
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          常用页面
+          Frequently used
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -871,14 +871,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-          枚举
+          Enums
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          枚举
+          Enums
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2016,7 +2016,7 @@
   
     <li class="md-nav__item">
       <a href="../Globals.html" class="md-nav__link">
-        全局变量
+        Globals
       </a>
     </li>
   
@@ -2030,7 +2030,7 @@
   
     <li class="md-nav__item">
       <a href="../GlobalFunctions.html" class="md-nav__link">
-        全局函数
+        Global Functions
       </a>
     </li>
   
@@ -2081,14 +2081,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
-          C++容器
+          CppContainer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_9">
           <span class="md-nav__icon md-icon"></span>
-          C++容器
+          CppContainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3299,14 +3299,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          实体
+          Entities
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          实体
+          Entities
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3317,7 +3317,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/Overview.html" class="md-nav__link">
-        概述
+        Overview
       </a>
     </li>
   
@@ -3331,7 +3331,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/EntityData.html" class="md-nav__link">
-        实体数据
+        Entity Data
       </a>
     </li>
   
@@ -3345,7 +3345,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/FissureSpawner.html" class="md-nav__link">
-        骷髅鱼生成器
+        Fissure Spawner
       </a>
     </li>
   
@@ -3359,7 +3359,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/SpikeBallChain.html" class="md-nav__link">
-        链球
+        Ball & Chain
       </a>
     </li>
   
@@ -3392,14 +3392,14 @@
       
       
         <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          教程
+          Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          教程
+          Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3410,7 +3410,7 @@
   
     <li class="md-nav__item">
       <a href="ExampleProject.html" class="md-nav__link">
-        示例项目
+        Example Project
       </a>
     </li>
   
@@ -3433,12 +3433,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Lua中的函数
+          Functions in Lua
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="FunctionsInLua.html" class="md-nav__link md-nav__link--active">
-        Lua中的函数
+        Functions in Lua
       </a>
       
         
@@ -3457,22 +3457,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    局部函数
+  <a href="#local-functions" class="md-nav__link">
+    Local Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    模块函数
+  <a href="#module-functions" class="md-nav__link">
+    Module Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    匿名函数
+  <a href="#anonymous-functions" class="md-nav__link">
+    Anonymous Functions
   </a>
   
 </li>
@@ -3493,7 +3493,7 @@
   
     <li class="md-nav__item">
       <a href="MathAndLuaTips.html" class="md-nav__link">
-        数学和Lua技巧
+        Math and Lua Tips
       </a>
     </li>
   
@@ -3507,7 +3507,7 @@
   
     <li class="md-nav__item">
       <a href="AddingCostumesWithoutLUA.html" class="md-nav__link">
-        不使用Lua添加道具外观
+        Adding Costumes to items without LUA
       </a>
     </li>
   
@@ -3521,7 +3521,7 @@
   
     <li class="md-nav__item">
       <a href="ZeroBraneStudio.html" class="md-nav__link">
-        使用ZeroBrane Studio进行调试
+        Debugging with ZeroBrane Studio
       </a>
     </li>
   
@@ -3535,7 +3535,7 @@
   
     <li class="md-nav__item">
       <a href="DebugConsole.html" class="md-nav__link">
-        控制台
+        Debug Console
       </a>
     </li>
   
@@ -3549,7 +3549,7 @@
   
     <li class="md-nav__item">
       <a href="Using-Additional-Lua-Files.html" class="md-nav__link">
-        使用额外的.lua文件
+        Using additional .lua Files
       </a>
     </li>
   
@@ -3563,7 +3563,7 @@
   
     <li class="md-nav__item">
       <a href="Standard-Library.html" class="md-nav__link">
-        使用标准库
+        Using the standard library
       </a>
     </li>
   
@@ -3577,7 +3577,7 @@
   
     <li class="md-nav__item">
       <a href="Writingscreenshaders.html" class="md-nav__link">
-        编写屏幕着色器
+        Writing screen shaders
       </a>
     </li>
   
@@ -3591,7 +3591,7 @@
   
     <li class="md-nav__item">
       <a href="Tutorial-Rendertext.html" class="md-nav__link">
-        渲染文本
+        Render text
       </a>
     </li>
   
@@ -3605,7 +3605,7 @@
   
     <li class="md-nav__item">
       <a href="directories-and-save-files.html" class="md-nav__link">
-        目录和存档文件
+        Directories and save files
       </a>
     </li>
   
@@ -3619,7 +3619,7 @@
   
     <li class="md-nav__item">
       <a href="mod-organization.html" class="md-nav__link">
-        组织Mod
+        Mod Organization
       </a>
     </li>
   
@@ -3633,7 +3633,7 @@
   
     <li class="md-nav__item">
       <a href="storing-data.html" class="md-nav__link">
-        储存数据
+        Storing Data
       </a>
     </li>
   
@@ -3647,7 +3647,7 @@
   
     <li class="md-nav__item">
       <a href="CustomCallbacks.html" class="md-nav__link">
-        自定义回调
+        Custom Callbacks
       </a>
     </li>
   
@@ -3678,14 +3678,14 @@
       
       
         <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          XML
+          XMLs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          XML
+          XMLs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3696,7 +3696,7 @@
   
     <li class="md-nav__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-nav__link">
-        XML概述
+        XML Overview
       </a>
     </li>
   
@@ -4231,14 +4231,14 @@
       
       
         <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          常见问题
+          FAQ
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          常见问题
+          FAQ
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4249,7 +4249,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/faq.html" class="md-nav__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -4263,7 +4263,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/interactive_FAQ.html" class="md-nav__link">
-        交互式问答
+        interactive FAQ
       </a>
     </li>
   
@@ -4294,14 +4294,14 @@
       
       
         <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          工具
+          Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          工具
+          Tools
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4312,7 +4312,7 @@
   
     <li class="md-nav__item">
       <a href="Tools.html" class="md-nav__link">
-        工具概览
+        Tools Overview
       </a>
     </li>
   
@@ -4326,7 +4326,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_XMLValidator.html" class="md-nav__link">
-        XML验证器
+        XML Validator
       </a>
     </li>
   
@@ -4340,7 +4340,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_AnimationEditor.html" class="md-nav__link">
-        动画编辑器
+        Animation Editor
       </a>
     </li>
   
@@ -4354,7 +4354,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_ItemPoolEditor.html" class="md-nav__link">
-        道具池编辑器
+        Itempool Editor
       </a>
     </li>
   
@@ -4376,7 +4376,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-nav__link">
-        漏洞
+        Bugs
       </a>
     </li>
   
@@ -4391,7 +4391,7 @@
   
     <li class="md-nav__item">
       <a href="../tags.html" class="md-nav__link">
-        标签
+        Tags
       </a>
     </li>
   
@@ -4406,7 +4406,7 @@
   
     <li class="md-nav__item">
       <a href="https://www.lua.org/manual/5.3/" class="md-nav__link">
-        Lua 5.3文档
+        Lua 5.3 Docs
       </a>
     </li>
   
@@ -4439,22 +4439,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    局部函数
+  <a href="#local-functions" class="md-nav__link">
+    Local Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    模块函数
+  <a href="#module-functions" class="md-nav__link">
+    Module Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    匿名函数
+  <a href="#anonymous-functions" class="md-nav__link">
+    Anonymous Functions
   </a>
   
 </li>
@@ -4478,7 +4478,7 @@
     
       
       
-        <a href="../tags.html#" class="md-tag">教程</a>
+        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
       
     
   </nav>
@@ -4489,11 +4489,11 @@
   
 
 
-<h1 id="lua">[教程] Lua中的函数<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h1>
+<h1 id="tutorial-functions-in-lua">[Tutorial] Functions in Lua<a class="headerlink" href="#tutorial-functions-in-lua" title="Permanent link">⚓︎</a></h1>
 <hr />
-<p>首先，请见<a href="ExampleProject.html">示例项目教程</a>。</p>
-<h2 id="_1">局部函数<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
-<p>Lua中最基本的函数类型是局部函数。例如，以下是“示例项目”教程中的代码：</p>
+<p>First, see the the <a href="ExampleProject.html">example project tutorial</a>.</p>
+<h2 id="local-functions">Local Functions<a class="headerlink" href="#local-functions" title="Permanent link">⚓︎</a></h2>
+<p>The most basic type of function in Lua is a local function. For example, here is a repeat of the code in the example project tutorial:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4503,19 +4503,19 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">postFireTear</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- MOD代码</span>
+  <span class="c1">-- Mod code</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>关于这段代码，一个潜在的奇怪之处是，我们将函数的第一个参数表示为<code>_</code>。</p>
-<p>按照惯例，未使用的参数以下划线为前缀，如<code>_foo</code>。通过在没有任何其他注释的情况下将自变量命名为<code>_</code>，这对读者来说是一个标志，表明我们完全忽略了这个变量，它没有任何目的。</p>
-<p>我们的本地函数需要一个“空白”的第一个参数的原因是，处理回调的C++代码使用“冒号运算符”调用所提供的函数。冒号运算符<a href="https://www.lua.org/pil/16.html">在Lua手册中有介绍</a>。基本上，冒号是用<code>self</code>参数调用函数的语法糖，该参数包含函数所在的模块。</p>
-<p>在我们使用本地函数的情况下，没有模块，因为它只是一个简单的、独立的本地函数。因此，在这种情况下，第一个自变量总是等于nil。</p>
-<p>让我们来看看模块函数是什么样子的。</p>
-<h2 id="_2">模块函数<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<p>从<code>RegisterMod</code>函数返回的对象是一个Lua表。由于它是一个表，我们可以在表中放入任意函数：</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p>One potentially strange thing about this code is that we are denoting the first argument of the function as <code>_</code>.</p>
+<p>Conventionally, unused arguments are prefixed by an underscore, like <code>_foo</code>. By naming the argument <code>_</code> without any other annotation, it is a flag to the reader that says we are completely ignoring this variable and it has no purpose.</p>
+<p>The reason that our local function needs a "blank" first argument in the first place is that the C++ code that handles the callback invokes the provided function with a colon operator. Colon operators are <a href="https://www.lua.org/pil/16.html">covered in the Lua manual</a>. Basically, the colon is syntactic sugar for calling the function with an <code>self</code> parameter, which contains the module that the function is located in.</p>
+<p>In the case of our local function, there is no module, because it's just a plain, standalone local function. So, the first argument would always be equal to nil in this case.</p>
+<p>Let's take a look at what a module-function would look like.</p>
+<h2 id="module-functions">Module Functions<a class="headerlink" href="#module-functions" title="Permanent link">⚓︎</a></h2>
+<p>The object that is returned from the <code>RegisterMod</code> function is a Lua table. Since it is a table, we can put arbitrary functions inside of the table:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4524,13 +4524,13 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">.</span><span class="nf">postFireTear</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- MOD代码</span>
+  <span class="c1">-- Mod code</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">myMod</span><span class="p">.</span><span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-在这里，“postFireTear”函数现在是“myMod”Lua表的一部分。我们用句点来表示连接。此代码将以与本地函数相同的方式工作。</p>
-<p>在声明函数时，我们还可以使用冒号运算符：</p>
+<p>Here, the "postFireTear" function is now a part of the "myMod" Lua table. We use a period to denote the connection. This code will work in an identical way to the local function.</p>
+<p>We can also use the colon operator when declaring the function:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4540,16 +4540,16 @@
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">postFireTear</span><span class="p">(</span><span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- MOD代码</span>
+  <span class="c1">-- Mod code</span>
 <span class="kr">end</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="n">myMod</span><span class="p">.</span><span class="n">postFireTear</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>在这段代码中，冒号运算符指定函数的第一个参数实际上是“self”，第二个参数实际上为“tear”，尽管它没有明确地这样写。和以前一样，它将以与本地函数相同的方式工作。</p>
-<p>还要注意，在添加回调时（AddCallback），我们不使用冒号运算符，因为我们需要传递对函数的引用，而不是调用它。</p>
-<p>在Lua中，函数通常是模块的一部分，因此使用冒号运算符调用它们被认为是标准的。</p>
-<h2 id="_3">匿名函数<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
-<p>指定回调函数的第三种方法是使用匿名函数，它是一个没有名称的函数：</p>
+<p>In this code, the colon operator specifies that the first argument of the function is really <code>self</code>, and the second argument is really <code>tear</code>, even though it isn't explicitly written that way. Like before, it will work in an identical way to the local function.</p>
+<p>Also note that we don't use the colon operator when adding the callback, because we need to pass a reference to the function, not invoke it.</p>
+<p>In Lua, functions are often part of modules, so calling them with a colon operator is considered to be standard.</p>
+<h2 id="anonymous-functions">Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">⚓︎</a></h2>
+<p>A third way to specify the callback function would be to use an anonymous function, which is simply a function without a name:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4557,18 +4557,18 @@
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="s2">&quot;My Custom Tears&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_FIRE_TEAR</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">tear</span><span class="p">)</span>
-  <span class="c1">-- MOD代码</span>
+  <span class="c1">-- Mod code</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>这个函数只存在于AddCallback调用的范围内，这意味着不能从其他任何地方引用或调用它。和以前一样，它将以与本地函数相同的方式工作。</p>
-<p>匿名函数很有用，因为它们很容易键入。您可以将它们用于具有明显意义的非常简短的函数。</p>
+<p>This function only exists inside of the scope of the AddCallback invocation, meaning that it can't be referenced or invoked from anywhere else. Like before, it will work in an identical way to the local function.</p>
+<p>Anonymous functions are useful in that they are easy to type. You can use them for really short functions that have an obvious meaning.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
       
     
   </small>
@@ -4613,7 +4613,7 @@
     
     
     
-    <a href="https://github.com/cuerzor/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
+    <a href="https://github.com/wofsauge/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   

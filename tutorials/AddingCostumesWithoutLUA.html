@@ -19,7 +19,7 @@
     
     
       
-        <title>不使用Lua添加道具外观 - 以撒的结合: Lua API文档</title>
+        <title>Adding Costumes to items without LUA - BoI: Lua API Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua" class="md-skip">
+        <a href="#tutorial-adding-costumes-to-items-without-lua" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-header__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-header__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -140,13 +140,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            以撒的结合: Lua API文档
+            BoI: Lua API Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              不使用Lua添加道具外观
+              Adding Costumes to items without LUA
             
           </span>
         </div>
@@ -190,13 +190,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/./" hreflang="en" class="md-select__link">
+                  <a href="/site/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/site/de/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -248,13 +248,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
       </div>
@@ -280,7 +280,7 @@
 
   <li class="md-tabs__item">
     <a href="../index.html" class="md-tabs__link">
-      主页
+      Home
     </a>
   </li>
 
@@ -295,7 +295,7 @@
   
     <li class="md-tabs__item">
       <a href="../index.html" class="md-tabs__link">
-        文档
+        Docs
       </a>
     </li>
   
@@ -311,7 +311,7 @@
   
     <li class="md-tabs__item">
       <a href="../entities/Overview.html" class="md-tabs__link">
-        实体
+        Entities
       </a>
     </li>
   
@@ -329,7 +329,7 @@
   
     <li class="md-tabs__item">
       <a href="ExampleProject.html" class="md-tabs__link md-tabs__link--active">
-        教程
+        Tutorials
       </a>
     </li>
   
@@ -345,7 +345,7 @@
   
     <li class="md-tabs__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-tabs__link">
-        XML
+        XMLs
       </a>
     </li>
   
@@ -361,7 +361,7 @@
   
     <li class="md-tabs__item">
       <a href="../faq/faq.html" class="md-tabs__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -377,7 +377,7 @@
   
     <li class="md-tabs__item">
       <a href="Tools.html" class="md-tabs__link">
-        工具
+        Tools
       </a>
     </li>
   
@@ -390,7 +390,7 @@
 
   <li class="md-tabs__item">
     <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-tabs__link">
-      漏洞
+      Bugs
     </a>
   </li>
 
@@ -402,7 +402,7 @@
 
   <li class="md-tabs__item">
     <a href="../tags.html" class="md-tabs__link">
-      标签
+      Tags
     </a>
   </li>
 
@@ -414,7 +414,7 @@
 
   <li class="md-tabs__item">
     <a href="https://www.lua.org/manual/5.3/" class="md-tabs__link">
-      Lua 5.3文档
+      Lua 5.3 Docs
     </a>
   </li>
 
@@ -440,23 +440,23 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-nav__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-nav__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    以撒的结合: Lua API文档
+    BoI: Lua API Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
     </div>
@@ -472,7 +472,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -496,14 +496,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          文档
+          Docs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          文档
+          Docs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -514,7 +514,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -537,14 +537,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          上次访问
+          Last visited
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          上次访问
+          Last visited
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -711,14 +711,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-          常用页面
+          Frequently used
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          常用页面
+          Frequently used
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -871,14 +871,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-          枚举
+          Enums
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          枚举
+          Enums
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2016,7 +2016,7 @@
   
     <li class="md-nav__item">
       <a href="../Globals.html" class="md-nav__link">
-        全局变量
+        Globals
       </a>
     </li>
   
@@ -2030,7 +2030,7 @@
   
     <li class="md-nav__item">
       <a href="../GlobalFunctions.html" class="md-nav__link">
-        全局函数
+        Global Functions
       </a>
     </li>
   
@@ -2081,14 +2081,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
-          C++容器
+          CppContainer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_9">
           <span class="md-nav__icon md-icon"></span>
-          C++容器
+          CppContainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3299,14 +3299,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          实体
+          Entities
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          实体
+          Entities
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3317,7 +3317,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/Overview.html" class="md-nav__link">
-        概述
+        Overview
       </a>
     </li>
   
@@ -3331,7 +3331,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/EntityData.html" class="md-nav__link">
-        实体数据
+        Entity Data
       </a>
     </li>
   
@@ -3345,7 +3345,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/FissureSpawner.html" class="md-nav__link">
-        骷髅鱼生成器
+        Fissure Spawner
       </a>
     </li>
   
@@ -3359,7 +3359,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/SpikeBallChain.html" class="md-nav__link">
-        链球
+        Ball & Chain
       </a>
     </li>
   
@@ -3392,14 +3392,14 @@
       
       
         <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          教程
+          Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          教程
+          Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3410,7 +3410,7 @@
   
     <li class="md-nav__item">
       <a href="ExampleProject.html" class="md-nav__link">
-        示例项目
+        Example Project
       </a>
     </li>
   
@@ -3424,7 +3424,7 @@
   
     <li class="md-nav__item">
       <a href="FunctionsInLua.html" class="md-nav__link">
-        Lua中的函数
+        Functions in Lua
       </a>
     </li>
   
@@ -3438,7 +3438,7 @@
   
     <li class="md-nav__item">
       <a href="MathAndLuaTips.html" class="md-nav__link">
-        数学和Lua技巧
+        Math and Lua Tips
       </a>
     </li>
   
@@ -3461,12 +3461,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          不使用Lua添加道具外观
+          Adding Costumes to items without LUA
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="AddingCostumesWithoutLUA.html" class="md-nav__link md-nav__link--active">
-        不使用Lua添加道具外观
+        Adding Costumes to items without LUA
       </a>
       
         
@@ -3485,30 +3485,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    默认的外观类型
+  <a href="#default-costume-types" class="md-nav__link">
+    Default costume types
   </a>
   
-    <nav class="md-nav" aria-label="默认的外观类型">
+    <nav class="md-nav" aria-label="Default costume types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    定义道具
+  <a href="#defining-items" class="md-nav__link">
+    Defining items
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    定义外观
+  <a href="#defining-the-costumes" class="md-nav__link">
+    Defining the costumes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    道具类型对外观的影响：
+  <a href="#effects-of-the-item-type-to-the-costume" class="md-nav__link">
+    Effects of the item type to the costume:
   </a>
   
 </li>
@@ -3519,11 +3519,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#null" class="md-nav__link">
-    添加Null外观
+  <a href="#adding-nullcostumes" class="md-nav__link">
+    Adding Nullcostumes
   </a>
   
-    <nav class="md-nav" aria-label="添加Null外观">
+    <nav class="md-nav" aria-label="Adding Nullcostumes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3561,7 +3561,7 @@
   
     <li class="md-nav__item">
       <a href="ZeroBraneStudio.html" class="md-nav__link">
-        使用ZeroBrane Studio进行调试
+        Debugging with ZeroBrane Studio
       </a>
     </li>
   
@@ -3575,7 +3575,7 @@
   
     <li class="md-nav__item">
       <a href="DebugConsole.html" class="md-nav__link">
-        控制台
+        Debug Console
       </a>
     </li>
   
@@ -3589,7 +3589,7 @@
   
     <li class="md-nav__item">
       <a href="Using-Additional-Lua-Files.html" class="md-nav__link">
-        使用额外的.lua文件
+        Using additional .lua Files
       </a>
     </li>
   
@@ -3603,7 +3603,7 @@
   
     <li class="md-nav__item">
       <a href="Standard-Library.html" class="md-nav__link">
-        使用标准库
+        Using the standard library
       </a>
     </li>
   
@@ -3617,7 +3617,7 @@
   
     <li class="md-nav__item">
       <a href="Writingscreenshaders.html" class="md-nav__link">
-        编写屏幕着色器
+        Writing screen shaders
       </a>
     </li>
   
@@ -3631,7 +3631,7 @@
   
     <li class="md-nav__item">
       <a href="Tutorial-Rendertext.html" class="md-nav__link">
-        渲染文本
+        Render text
       </a>
     </li>
   
@@ -3645,7 +3645,7 @@
   
     <li class="md-nav__item">
       <a href="directories-and-save-files.html" class="md-nav__link">
-        目录和存档文件
+        Directories and save files
       </a>
     </li>
   
@@ -3659,7 +3659,7 @@
   
     <li class="md-nav__item">
       <a href="mod-organization.html" class="md-nav__link">
-        组织Mod
+        Mod Organization
       </a>
     </li>
   
@@ -3673,7 +3673,7 @@
   
     <li class="md-nav__item">
       <a href="storing-data.html" class="md-nav__link">
-        储存数据
+        Storing Data
       </a>
     </li>
   
@@ -3687,7 +3687,7 @@
   
     <li class="md-nav__item">
       <a href="CustomCallbacks.html" class="md-nav__link">
-        自定义回调
+        Custom Callbacks
       </a>
     </li>
   
@@ -3718,14 +3718,14 @@
       
       
         <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          XML
+          XMLs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          XML
+          XMLs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3736,7 +3736,7 @@
   
     <li class="md-nav__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-nav__link">
-        XML概述
+        XML Overview
       </a>
     </li>
   
@@ -4271,14 +4271,14 @@
       
       
         <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          常见问题
+          FAQ
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          常见问题
+          FAQ
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4289,7 +4289,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/faq.html" class="md-nav__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -4303,7 +4303,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/interactive_FAQ.html" class="md-nav__link">
-        交互式问答
+        interactive FAQ
       </a>
     </li>
   
@@ -4334,14 +4334,14 @@
       
       
         <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          工具
+          Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          工具
+          Tools
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4352,7 +4352,7 @@
   
     <li class="md-nav__item">
       <a href="Tools.html" class="md-nav__link">
-        工具概览
+        Tools Overview
       </a>
     </li>
   
@@ -4366,7 +4366,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_XMLValidator.html" class="md-nav__link">
-        XML验证器
+        XML Validator
       </a>
     </li>
   
@@ -4380,7 +4380,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_AnimationEditor.html" class="md-nav__link">
-        动画编辑器
+        Animation Editor
       </a>
     </li>
   
@@ -4394,7 +4394,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_ItemPoolEditor.html" class="md-nav__link">
-        道具池编辑器
+        Itempool Editor
       </a>
     </li>
   
@@ -4416,7 +4416,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-nav__link">
-        漏洞
+        Bugs
       </a>
     </li>
   
@@ -4431,7 +4431,7 @@
   
     <li class="md-nav__item">
       <a href="../tags.html" class="md-nav__link">
-        标签
+        Tags
       </a>
     </li>
   
@@ -4446,7 +4446,7 @@
   
     <li class="md-nav__item">
       <a href="https://www.lua.org/manual/5.3/" class="md-nav__link">
-        Lua 5.3文档
+        Lua 5.3 Docs
       </a>
     </li>
   
@@ -4479,30 +4479,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    默认的外观类型
+  <a href="#default-costume-types" class="md-nav__link">
+    Default costume types
   </a>
   
-    <nav class="md-nav" aria-label="默认的外观类型">
+    <nav class="md-nav" aria-label="Default costume types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    定义道具
+  <a href="#defining-items" class="md-nav__link">
+    Defining items
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    定义外观
+  <a href="#defining-the-costumes" class="md-nav__link">
+    Defining the costumes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    道具类型对外观的影响：
+  <a href="#effects-of-the-item-type-to-the-costume" class="md-nav__link">
+    Effects of the item type to the costume:
   </a>
   
 </li>
@@ -4513,11 +4513,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#null" class="md-nav__link">
-    添加Null外观
+  <a href="#adding-nullcostumes" class="md-nav__link">
+    Adding Nullcostumes
   </a>
   
-    <nav class="md-nav" aria-label="添加Null外观">
+    <nav class="md-nav" aria-label="Adding Nullcostumes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4558,7 +4558,7 @@
     
       
       
-        <a href="../tags.html#" class="md-tag">教程</a>
+        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
       
     
   </nav>
@@ -4569,13 +4569,13 @@
   
 
 
-<h1 id="lua">[教程] 在不使用LUA的情况下为道具添加外观<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h1>
-<h4 id="_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 您可以在此处找到示例模组和代码：<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h4>
-<p><a href="../customData/costumes%20examplemod.zip">→ 下载本教程的示例模组 ←</a></p>
-<h2 id="_2">默认的外观类型<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<h3 id="_3">定义道具<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
-<p>在为道具或饰品添加外观之前，我们需要先定义道具。可以在您的模组的“content”文件夹中创建一个空的<strong>“items.xml”</strong>文件来完成这个步骤。如果该文件夹尚不存在，请创建它。</p>
-<p>然后在您的items.xml文件中添加所需数量的道具。它可能会像这样：
+<h1 id="tutorial-adding-costumes-to-items-without-lua">[Tutorial] Adding Costumes to items without LUA<a class="headerlink" href="#tutorial-adding-costumes-to-items-without-lua" title="Permanent link">⚓︎</a></h1>
+<h4 id="example-mod-code-can-be-found-here"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> Example mod &amp; code can be found here:<a class="headerlink" href="#example-mod-code-can-be-found-here" title="Permanent link">⚓︎</a></h4>
+<p><a href="../customData/costumes%20examplemod.zip">→ Download the example mod for this Tutorial ←</a></p>
+<h2 id="default-costume-types">Default costume types<a class="headerlink" href="#default-costume-types" title="Permanent link">⚓︎</a></h2>
+<h3 id="defining-items">Defining items<a class="headerlink" href="#defining-items" title="Permanent link">⚓︎</a></h3>
+<p>Before adding a costume to an item or trinket, we first need to define items. This can be done by creating an empty <strong>"items.xml"</strong> file in your mods <strong>"content"</strong> folder. If that folder does not exist already, create it.</p>
+<p>Then add the desired amount of items to your items.xml file. It could then look like this:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4583,18 +4583,18 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;items</span><span class="w"> </span><span class="na">gfxroot=</span><span class="s">&quot;gfx/items/&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具1&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个被动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_1.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;active</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具2&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个主动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_2.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试道具999&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个高ID被动道具&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_999.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;familiar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试跟班3&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个跟班&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_3.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;trinket</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;测试饰品4&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;某个饰品&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_4.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 1&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some passive item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_1.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;active</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 2&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some active item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_2.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;passive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 999&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some passive item but high ID&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_999.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;familiar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 3&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some familiar item&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_3.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;trinket</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;test item 4&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;Some trinket&quot;</span><span class="w"> </span><span class="na">gfx=</span><span class="s">&quot;testitem_4.png&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/items&gt;</span>
 </code></pre></div></td></tr></table></div>
-请注意，我们还为每个道具定义了ID。<strong>这些ID用于将道具分配到它们的外观中！</strong></p>
-<p>在“content/items.xml”文件中找到的ID仅由模组在本地使用。它们不会影响其他模组，也不会覆盖现有的原版道具！它们也不会定义它们在游戏内的ID！</p>
-<h3 id="_4">定义外观<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
-<p>现在我们已经定义了一些道具，我们可以在<strong>“costumes2.xml”</strong>文件中定义我们的外观。</p>
-<p><strong>重要提示：</strong>外观ID和外观类型必须等于道具ID和道具类型！
+Note that we also defined IDs for each item. <strong>Those IDs are used to assign the Items to their costume!</strong></p>
+<p>IDs located in a "content/items.xml" file are only locally used by the mod. They dont affect other mods and will <strong>NOT</strong> override existing vanilla items! They will also not define their ingame ID!</p>
+<h3 id="defining-the-costumes">Defining the costumes<a class="headerlink" href="#defining-the-costumes" title="Permanent link">⚓︎</a></h3>
+<p>Now that we defined some items, we now define our costumes in a <strong>"costumes2.xml"</strong> file.</p>
+<p><strong>IMPORTANT:</strong> The costume ID and costume Type must be equal to the item id and item type!
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4603,7 +4603,7 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;costumes</span><span class="w"> </span><span class="na">anm2root=</span><span class="s">&quot;gfx/&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="cm">&lt;!-- 载入顺序是从上到下。不是基于ID --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Load order is top to bottom. It is NOT based on the id --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_1.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;passive&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_2.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;active&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;999&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_999.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;passive&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
@@ -4611,53 +4611,53 @@
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/test_costume_4.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;trinket&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/costumes&gt;</span>
 </code></pre></div></td></tr></table></div></p>
-<h3 id="_5">道具类型对外观的影响：<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h3>
+<h3 id="effects-of-the-item-type-to-the-costume">Effects of the item type to the costume:<a class="headerlink" href="#effects-of-the-item-type-to-the-costume" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
 <tr>
-<th>道具类型</th>
-<th>影响</th>
+<th>Itemtype</th>
+<th>Effect</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>被动(passive)</strong></td>
-<td>当拾取动画播放完毕时，外观会被添加。当道具被移除时，外观会被移除。</td>
+<td><strong>passive</strong></td>
+<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the item is removed.</td>
 </tr>
 <tr>
-<td><strong>主动(active)</strong></td>
-<td>当道具被使用时，外观会被添加。当你改变房间时，外观会被移除。</td>
+<td><strong>active</strong></td>
+<td>Costume gets added when the item is used. It gets removed when you change the room.</td>
 </tr>
 <tr>
-<td><strong>饰品(trinket)</strong></td>
-<td>当拾取动画播放完毕时，外观会被添加。当饰品被移除时，外观会被移除。</td>
+<td><strong>trinket</strong></td>
+<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the trinket is removed.</td>
 </tr>
 <tr>
-<td><strong>跟班(familiar)</strong></td>
-<td>当拾取动画播放完毕时，外观会被添加。当道具被移除时，外观会被移除。</td>
+<td><strong>familiar</strong></td>
+<td>Costume gets added when the pickup animation is finished playing. Costumes gets removed, when the item is removed.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="_6">更多信息：<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
+<h4 id="further-informations">Further Informations:<a class="headerlink" href="#further-informations" title="Permanent link">⚓︎</a></h4>
 <ul>
-<li>如果一个外观ID不能与一个道具ID相关联，游戏将崩溃。</li>
-<li>类型为<strong>none</strong>的外观实际上与一个Null道具相关联。这些Null外观可以使用LUA添加。</li>
-<li><strong>套装</strong>仍然必须使用Null外观方法（基于LUA）添加。</li>
+<li>If a costumeID can't be associated with an itemid, the game crashes.</li>
+<li><strong>Transformations</strong> still must be added using the Null Costume method (LUA-based)</li>
+<li>Costumes of type <strong>none</strong> actually have a null item associated with it. These Nullcostumes can be added using LUA.</li>
 </ul>
 <hr />
-<h2 id="null">添加Null外观<a class="headerlink" href="#null" title="Permanent link">⚓︎</a></h2>
-<p>Null外观是没有实际道具附加的外观。因此，它们可以用于添加临时外观，例如套装。</p>
-<p>以下代码以两种不同的方式向玩家添加Null外观。选择适合你需要的方式。</p>
-<h3 id="costumes2xml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> costumes2.xml<a class="headerlink" href="#costumes2xml" title="Permanent link">⚓︎</a></h3>
-<p>在“costumes2.xml”文件中，通过将类型设置为“none”来定义一个Null外观。不要设置ID！</p>
+<h2 id="adding-nullcostumes">Adding Nullcostumes<a class="headerlink" href="#adding-nullcostumes" title="Permanent link">⚓︎</a></h2>
+<p>Nullcostumes are costumes that dont have an actual item attached to them. Therefore, they can be used to add temporary costumes like for example Transformations.</p>
+<p>The following code adds a nullcostume to the player in two different ways. Choose the one that fits your neededs.</p>
+<h3 class="subHeader example_code" id="costumes2xml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> costumes2.xml<a class="headerlink" href="#costumes2xml" title="Permanent link">⚓︎</a></h3>
+<p>Define a null costume in the "costumes2.xml" file by setting the type to "none". DONT set an ID!
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;costumes</span><span class="w"> </span><span class="na">anm2root=</span><span class="s">&quot;gfx/&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;costume</span><span class="w"> </span><span class="na">anm2path=</span><span class="s">&quot;characters/some_null_costume.anm2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;none&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/costumes&gt;</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="mainlua"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> main.lua<a class="headerlink" href="#mainlua" title="Permanent link">⚓︎</a></h3>
-<p>获取Null外观的自动生成的ID，然后将其应用于玩家。</p>
+</code></pre></div></td></tr></table></div></p>
+<h3 class="subHeader example_code" id="mainlua"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> main.lua<a class="headerlink" href="#mainlua" title="Permanent link">⚓︎</a></h3>
+<p>Get the automatically generated CostumeID of the null-Costume, and then apply it to the player</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4681,39 +4681,40 @@
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- 获取内部外观ID</span>
-<span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetCostumeIdByPath</span><span class="p">(</span><span class="s2">&quot;gfx/characters/some_null_costume.anm2&quot;</span><span class="p">)</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- get the internal costumeID</span>
+    <span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetCostumeIdByPath</span><span class="p">(</span><span class="s2">&quot;gfx/characters/some_null_costume.anm2&quot;</span><span class="p">)</span>
 
-<span class="c1">-- 使用 &quot;AddNullCostume&quot; 添加一个 Null外观（永久，直到其被移除或重新开始一局游戏）</span>
+<span class="c1">-- adding a nullcostume using &quot;AddNullCostume&quot; (persistent till its removed / run is restarted)</span>
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">myFunction1</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;添加Null外观&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding null costume&quot;</span><span class="p">)</span>
     <span class="kr">if</span><span class="p">(</span><span class="n">somethingHappend</span><span class="p">)</span> <span class="kr">then</span>
         <span class="n">player</span><span class="p">:</span><span class="n">AddNullCostume</span> <span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span>
     <span class="kr">end</span>
-    <span class="c1">-- 移除Null外观</span>
+    <span class="c1">-- removing the null costume</span>
     <span class="kr">if</span><span class="p">(</span><span class="n">somethingDifferentHappend</span><span class="p">)</span> <span class="kr">then</span>
         <span class="n">player</span><span class="p">:</span><span class="n">TryRemoveNullCostume</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span>
     <span class="kr">end</span>
 <span class="kr">end</span>
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_PLAYER_UPDATE</span><span class="p">,</span> <span class="n">mod</span><span class="p">.</span><span class="n">myFunction1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="c1">-- 使用 &quot;NullEffects&quot; 添加一个 Nullcostume（在当前房间中持续存在，然后被移除）</span>
+<span class="c1">-- adding a nullcostume using &quot;NullEffects&quot; (persists for current room and gets removed afterwards)</span>
 <span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">myFunction2</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
     <span class="kr">if</span> <span class="ow">not</span> <span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">():</span><span class="n">HasNullEffect</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">)</span> <span class="kr">then</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;添加Null外观&quot;</span><span class="p">)</span> <span class="c1">--每次更换房间时都会触发</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding null costume&quot;</span><span class="p">)</span> <span class="c1">-- will get triggered everytime the room is changed</span>
         <span class="n">player</span><span class="p">:</span><span class="n">GetEffects</span><span class="p">():</span><span class="n">AddNullEffect</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_SOME_NULL_COSTUME</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
     <span class="kr">end</span>
 <span class="kr">end</span>
 <span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_PLAYER_UPDATE</span><span class="p">,</span> <span class="n">mod</span><span class="p">.</span><span class="n">myFunction2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>特别感谢 <em><strong>Piber20</strong></em> 和 <em><strong>JSG</strong></em> 找出这些方法！</p>
+<hr />
+<p>Special thanks to <em><strong>Piber20</strong></em> and <em><strong>JSG</strong></em> for figuring out these methods!</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
       
     
   </small>
@@ -4758,7 +4759,7 @@
     
     
     
-    <a href="https://github.com/cuerzor/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
+    <a href="https://github.com/wofsauge/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   

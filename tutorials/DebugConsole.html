@@ -19,7 +19,7 @@
     
     
       
-        <title>控制台 - 以撒的结合: Lua API文档</title>
+        <title>Debug Console - BoI: Lua API Docs</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#tutorial-debugconsole" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-header__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-header__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -140,13 +140,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            以撒的结合: Lua API文档
+            BoI: Lua API Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              控制台
+              Debug Console
             
           </span>
         </div>
@@ -190,13 +190,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/./" hreflang="en" class="md-select__link">
+                  <a href="/site/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/site/de/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -248,13 +248,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
       </div>
@@ -280,7 +280,7 @@
 
   <li class="md-tabs__item">
     <a href="../index.html" class="md-tabs__link">
-      主页
+      Home
     </a>
   </li>
 
@@ -295,7 +295,7 @@
   
     <li class="md-tabs__item">
       <a href="../index.html" class="md-tabs__link">
-        文档
+        Docs
       </a>
     </li>
   
@@ -311,7 +311,7 @@
   
     <li class="md-tabs__item">
       <a href="../entities/Overview.html" class="md-tabs__link">
-        实体
+        Entities
       </a>
     </li>
   
@@ -329,7 +329,7 @@
   
     <li class="md-tabs__item">
       <a href="ExampleProject.html" class="md-tabs__link md-tabs__link--active">
-        教程
+        Tutorials
       </a>
     </li>
   
@@ -345,7 +345,7 @@
   
     <li class="md-tabs__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-tabs__link">
-        XML
+        XMLs
       </a>
     </li>
   
@@ -361,7 +361,7 @@
   
     <li class="md-tabs__item">
       <a href="../faq/faq.html" class="md-tabs__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -377,7 +377,7 @@
   
     <li class="md-tabs__item">
       <a href="Tools.html" class="md-tabs__link">
-        工具
+        Tools
       </a>
     </li>
   
@@ -390,7 +390,7 @@
 
   <li class="md-tabs__item">
     <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-tabs__link">
-      漏洞
+      Bugs
     </a>
   </li>
 
@@ -402,7 +402,7 @@
 
   <li class="md-tabs__item">
     <a href="../tags.html" class="md-tabs__link">
-      标签
+      Tags
     </a>
   </li>
 
@@ -414,7 +414,7 @@
 
   <li class="md-tabs__item">
     <a href="https://www.lua.org/manual/5.3/" class="md-tabs__link">
-      Lua 5.3文档
+      Lua 5.3 Docs
     </a>
   </li>
 
@@ -440,23 +440,23 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-nav__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+    <a href="../index.html" title="BoI: Lua API Docs" class="md-nav__button md-logo" aria-label="BoI: Lua API Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    以撒的结合: Lua API文档
+    BoI: Lua API Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/wofsauge/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
-    cuerzor/IsaacDocs
+    wofsauge/IsaacDocs
   </div>
 </a>
     </div>
@@ -472,7 +472,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -496,14 +496,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          文档
+          Docs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          文档
+          Docs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -514,7 +514,7 @@
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        主页
+        Home
       </a>
     </li>
   
@@ -537,14 +537,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          上次访问
+          Last visited
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          上次访问
+          Last visited
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -711,14 +711,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-          常用页面
+          Frequently used
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          常用页面
+          Frequently used
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -871,14 +871,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-          枚举
+          Enums
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          枚举
+          Enums
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2016,7 +2016,7 @@
   
     <li class="md-nav__item">
       <a href="../Globals.html" class="md-nav__link">
-        全局变量
+        Globals
       </a>
     </li>
   
@@ -2030,7 +2030,7 @@
   
     <li class="md-nav__item">
       <a href="../GlobalFunctions.html" class="md-nav__link">
-        全局函数
+        Global Functions
       </a>
     </li>
   
@@ -2081,14 +2081,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
-          C++容器
+          CppContainer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_9">
           <span class="md-nav__icon md-icon"></span>
-          C++容器
+          CppContainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3299,14 +3299,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          实体
+          Entities
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          实体
+          Entities
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3317,7 +3317,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/Overview.html" class="md-nav__link">
-        概述
+        Overview
       </a>
     </li>
   
@@ -3331,7 +3331,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/EntityData.html" class="md-nav__link">
-        实体数据
+        Entity Data
       </a>
     </li>
   
@@ -3345,7 +3345,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/FissureSpawner.html" class="md-nav__link">
-        骷髅鱼生成器
+        Fissure Spawner
       </a>
     </li>
   
@@ -3359,7 +3359,7 @@
   
     <li class="md-nav__item">
       <a href="../entities/SpikeBallChain.html" class="md-nav__link">
-        链球
+        Ball & Chain
       </a>
     </li>
   
@@ -3392,14 +3392,14 @@
       
       
         <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          教程
+          Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          教程
+          Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3410,7 +3410,7 @@
   
     <li class="md-nav__item">
       <a href="ExampleProject.html" class="md-nav__link">
-        示例项目
+        Example Project
       </a>
     </li>
   
@@ -3424,7 +3424,7 @@
   
     <li class="md-nav__item">
       <a href="FunctionsInLua.html" class="md-nav__link">
-        Lua中的函数
+        Functions in Lua
       </a>
     </li>
   
@@ -3438,7 +3438,7 @@
   
     <li class="md-nav__item">
       <a href="MathAndLuaTips.html" class="md-nav__link">
-        数学和Lua技巧
+        Math and Lua Tips
       </a>
     </li>
   
@@ -3452,7 +3452,7 @@
   
     <li class="md-nav__item">
       <a href="AddingCostumesWithoutLUA.html" class="md-nav__link">
-        不使用Lua添加道具外观
+        Adding Costumes to items without LUA
       </a>
     </li>
   
@@ -3466,7 +3466,7 @@
   
     <li class="md-nav__item">
       <a href="ZeroBraneStudio.html" class="md-nav__link">
-        使用ZeroBrane Studio进行调试
+        Debugging with ZeroBrane Studio
       </a>
     </li>
   
@@ -3489,12 +3489,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          控制台
+          Debug Console
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="DebugConsole.html" class="md-nav__link md-nav__link--active">
-        控制台
+        Debug Console
       </a>
       
         
@@ -3513,39 +3513,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    前提条件
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    启用
+  <a href="#enabling" class="md-nav__link">
+    Enabling
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    隐藏
+  <a href="#hiding" class="md-nav__link">
+    Hiding
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    描述
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    命令
+  <a href="#commands" class="md-nav__link">
+    Commands
   </a>
   
-    <nav class="md-nav" aria-label="命令">
+    <nav class="md-nav" aria-label="Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3586,13 +3586,6 @@
           <li class="md-nav__item">
   <a href="#giveitem" class="md-nav__link">
     giveitem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giveitem2" class="md-nav__link">
-    giveitem2
   </a>
   
 </li>
@@ -3793,7 +3786,7 @@
   
     <li class="md-nav__item">
       <a href="Using-Additional-Lua-Files.html" class="md-nav__link">
-        使用额外的.lua文件
+        Using additional .lua Files
       </a>
     </li>
   
@@ -3807,7 +3800,7 @@
   
     <li class="md-nav__item">
       <a href="Standard-Library.html" class="md-nav__link">
-        使用标准库
+        Using the standard library
       </a>
     </li>
   
@@ -3821,7 +3814,7 @@
   
     <li class="md-nav__item">
       <a href="Writingscreenshaders.html" class="md-nav__link">
-        编写屏幕着色器
+        Writing screen shaders
       </a>
     </li>
   
@@ -3835,7 +3828,7 @@
   
     <li class="md-nav__item">
       <a href="Tutorial-Rendertext.html" class="md-nav__link">
-        渲染文本
+        Render text
       </a>
     </li>
   
@@ -3849,7 +3842,7 @@
   
     <li class="md-nav__item">
       <a href="directories-and-save-files.html" class="md-nav__link">
-        目录和存档文件
+        Directories and save files
       </a>
     </li>
   
@@ -3863,7 +3856,7 @@
   
     <li class="md-nav__item">
       <a href="mod-organization.html" class="md-nav__link">
-        组织Mod
+        Mod Organization
       </a>
     </li>
   
@@ -3877,7 +3870,7 @@
   
     <li class="md-nav__item">
       <a href="storing-data.html" class="md-nav__link">
-        储存数据
+        Storing Data
       </a>
     </li>
   
@@ -3891,7 +3884,7 @@
   
     <li class="md-nav__item">
       <a href="CustomCallbacks.html" class="md-nav__link">
-        自定义回调
+        Custom Callbacks
       </a>
     </li>
   
@@ -3922,14 +3915,14 @@
       
       
         <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          XML
+          XMLs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          XML
+          XMLs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3940,7 +3933,7 @@
   
     <li class="md-nav__item">
       <a href="../xml/XMLFiledocumentation.html" class="md-nav__link">
-        XML概述
+        XML Overview
       </a>
     </li>
   
@@ -4475,14 +4468,14 @@
       
       
         <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          常见问题
+          FAQ
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          常见问题
+          FAQ
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4493,7 +4486,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/faq.html" class="md-nav__link">
-        常见问题
+        FAQ
       </a>
     </li>
   
@@ -4507,7 +4500,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/interactive_FAQ.html" class="md-nav__link">
-        交互式问答
+        interactive FAQ
       </a>
     </li>
   
@@ -4538,14 +4531,14 @@
       
       
         <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          工具
+          Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          工具
+          Tools
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4556,7 +4549,7 @@
   
     <li class="md-nav__item">
       <a href="Tools.html" class="md-nav__link">
-        工具概览
+        Tools Overview
       </a>
     </li>
   
@@ -4570,7 +4563,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_XMLValidator.html" class="md-nav__link">
-        XML验证器
+        XML Validator
       </a>
     </li>
   
@@ -4584,7 +4577,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_AnimationEditor.html" class="md-nav__link">
-        动画编辑器
+        Animation Editor
       </a>
     </li>
   
@@ -4598,7 +4591,7 @@
   
     <li class="md-nav__item">
       <a href="Tool_ItemPoolEditor.html" class="md-nav__link">
-        道具池编辑器
+        Itempool Editor
       </a>
     </li>
   
@@ -4620,7 +4613,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-nav__link">
-        漏洞
+        Bugs
       </a>
     </li>
   
@@ -4635,7 +4628,7 @@
   
     <li class="md-nav__item">
       <a href="../tags.html" class="md-nav__link">
-        标签
+        Tags
       </a>
     </li>
   
@@ -4650,7 +4643,7 @@
   
     <li class="md-nav__item">
       <a href="https://www.lua.org/manual/5.3/" class="md-nav__link">
-        Lua 5.3文档
+        Lua 5.3 Docs
       </a>
     </li>
   
@@ -4683,39 +4676,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    前提条件
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    启用
+  <a href="#enabling" class="md-nav__link">
+    Enabling
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    隐藏
+  <a href="#hiding" class="md-nav__link">
+    Hiding
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    描述
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    命令
+  <a href="#commands" class="md-nav__link">
+    Commands
   </a>
   
-    <nav class="md-nav" aria-label="命令">
+    <nav class="md-nav" aria-label="Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4756,13 +4749,6 @@
           <li class="md-nav__item">
   <a href="#giveitem" class="md-nav__link">
     giveitem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giveitem2" class="md-nav__link">
-    giveitem2
   </a>
   
 </li>
@@ -4966,7 +4952,7 @@
     
       
       
-        <a href="../tags.html#" class="md-tag">教程</a>
+        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
       
     
   </nav>
@@ -4977,76 +4963,75 @@
   
 
 
-<h1 id="_1">[教程] 控制台<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
-<h2 id="_2">前提条件<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<p>要访问调试控制台，您必须在 options.ini 文件中启用 <code>EnableDebugConsole</code> 选项。默认情况下，该文件位于：</p>
+<h1 id="tutorial-debugconsole">[Tutorial] DebugConsole<a class="headerlink" href="#tutorial-debugconsole" title="Permanent link">⚓︎</a></h1>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">⚓︎</a></h2>
+<p>To access the debug console, you must have the <code>EnableDebugConsole</code> option enabled in your options.ini file. By default, this is located at:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Users\%USERNAME%\Documents\My Games\Binding of Isaac Repentance\options.ini
 </code></pre></div></td></tr></table></div>
-<p>（编辑此文件时请确保游戏已关闭。）</p>
-<h2 id="_3">启用<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
-<p><strong>显示控制台</strong>，在游戏中按下 <code>~</code> 或 ` 键。在大多数英语键盘布局中，该键应该在 Esc 键下面。</p>
+<p>(Make sure the game is closed when you edit this file.)</p>
+<h2 id="enabling">Enabling<a class="headerlink" href="#enabling" title="Permanent link">⚓︎</a></h2>
+<p><strong>To show the console</strong>, while in a run press the grave (`) or tilde (~) key. On most English keyboard layouts, it should be below Esc.</p>
 <table>
 <thead>
 <tr>
-<th>语言</th>
-<th>键盘</th>
-<th>按键</th>
+<th>Language</th>
+<th>Keyboard</th>
+<th>Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>英语（美国）</td>
+<td>English (US)</td>
 <td>QWERTY</td>
-<td>` 或 ~</td>
+<td>` or ~</td>
 </tr>
 <tr>
-<td>英语（英国）</td>
+<td>English (UK)</td>
 <td>QWERTY</td>
-<td>' 或 @</td>
+<td>' or @</td>
 </tr>
 <tr>
-<td>法语</td>
+<td>French</td>
 <td>AZERTY</td>
 <td>ù</td>
 </tr>
 <tr>
-<td>德语</td>
+<td>German</td>
 <td>QWERTZ</td>
 <td>ö</td>
 </tr>
 <tr>
-<td>西班牙语</td>
+<td>Spanish</td>
 <td>QWERTY</td>
 <td>ñ</td>
 </tr>
 <tr>
-<td>意大利语</td>
+<td>Italian</td>
 <td>QWERTY</td>
 <td>&gt;</td>
 </tr>
 <tr>
-<td>丹麦语</td>
+<td>Danish</td>
 <td>QWERTY</td>
 <td>æ</td>
 </tr>
 <tr>
-<td>葡萄牙语</td>
+<td>Portuguese</td>
 <td>QWERTY</td>
 <td>ç</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_4">隐藏<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
-<p><strong>隐藏控制台</strong>，只需按 Enter 而不输入任何内容。<strong>请注意剧透！</strong> 您可能会在调试控制台中意外了解到您本想通过常规游戏过程中认识的内容！</p>
-<h2 id="_5">描述<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
-<p>调试控制台是自从《重生》以来就一直存在于《以撒》中的功能，但在 AB+ 版本之前，它只在开发版本中启用。现在，modder们终于可以释放它的力量了！它可以大大节省在 mod 开发期间测试您的更改所需的时间。</p>
-<p>调试控制台不是完全稳定的，因此，如果输入的命令超出某些范围的数字，则可能会导致崩溃。下面列出了一些崩溃的情况，但可能还有其他情况。</p>
-<p>如果您正在测试特定的道具或道具组合，输入您的命令然后退出并继续游戏是有用的，因为当您继续时，您的道具会重新加载，您无需再次输入相同的命令。此外，试试使用剪贴板！您可以一次性粘贴多个命令或使用复制命令复制您输入的最后几个命令。</p>
-<p>游戏中仍然存在一些未列在此处的命令，因为它们只对 Nicalis 开发人员有用，或者已不再有用。例如，achievement和eggs命令将解锁您的游戏存档中的内容。（achievement已在忏悔被删除）</p>
-<h2 id="_6">命令<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
+<h2 id="hiding">Hiding<a class="headerlink" href="#hiding" title="Permanent link">⚓︎</a></h2>
+<p><strong>To hide the console</strong>, just hit Enter without typing anything. <strong>Beware of spoilers!</strong> You can easily learn things accidentally via the debug console that you might have wanted to learn from regular gameplay!</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">⚓︎</a></h2>
+<p>The debug console is a feature of Isaac that's been around since Rebirth, but until AB+ it's only been enabled in developer builds. Now modders can finally unleash its power! It can be a big time saver for testing your changes during development of mods.</p>
+<p>The debug console is not completely stable, so if you enter commands like numbers outside certain ranges, it may crash. Some of the crashes are documented below, but there are likely others.</p>
+<p>If you're testing a specific item or item combo, it's useful to enter your commands and then exit and continue so your items are reloaded when you continue and you don't need to keep retyping the same command. Also, try the clipboard! You can paste multiple commands at once or copy the last few commands you entered using the copy command.</p>
+<p>Some commands that are still in the game aren't listed here since they're only useful for Nicalis developers, or are no longer useful. For instance, the achievement and eggs commands unlock stuff in your game save, but saving your persistent data is disabled when mods are turned on.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">⚓︎</a></h2>
 <h3 id="spawn"><strong>spawn</strong><a class="headerlink" href="#spawn" title="Permanent link">⚓︎</a></h3>
-<p>生成一个实体。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5055,13 +5040,12 @@ spawn 20
 spawn 10.1
 spawn 10.2.0.4
 </code></pre></div></td></tr></table></div></p>
-<p>实体之间有相似的名称是很常见的一件事情，因此您可能需要输入名称然后查找编号，然后手动删除内容并输入编号。小数点允许指定：</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>类型.变体.子类型.精英
+<p>Very similar names are incredibly common among entities, so you'll likely need to type the name to figure out the number, then delete it and type the number manually. The decimal syntax lets you specify:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Type.Variant.Subtype.Champion
 </code></pre></div></td></tr></table></div>
-<code>spawn 10.2.0.4</code> 将会得到一个裂口尸（编号为10）的燃烧变种（编号为.2），带有蓝色精英类型（编号为.4）。</p>
+<code>spawn 10.2.0.4</code> will get you a gaper(10)'s flaming variant(.2) with a blue champion type(.4).</p>
 <h3 id="goto"><strong>goto</strong><a class="headerlink" href="#goto" title="Permanent link">⚓︎</a></h3>
-<p>移动到一个地图之外的额外房间。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5072,132 +5056,128 @@ goto d.10
 goto x.boss.1
 goto 9 5 1
 </code></pre></div></td></tr></table></div>
-<code>s</code> 是特殊房间类型，<code>d</code> 是普通房间类型，而 <code>x</code> 是打包在地图文件中的特殊房间类型。房间将根据所在的楼层而不同，因此 <code>goto d.10</code> 将在第一层和第三层进入到不同的房间。</p>
+<code>s</code> is for special room types, <code>d</code> is for normal room types, and <code>x</code> is for special room types which is packed inside of floor file. The rooms will be different depending on what floor you're on, so <code>goto d.10</code> will take you to a different room on stage 1 than it will on stage 3.</p>
 <h3 id="stage"><strong>stage</strong><a class="headerlink" href="#stage" title="Permanent link">⚓︎</a></h3>
-<p>移动到同一个种子的另一层。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>stage 1
 stage 10a
 stage 3b
 </code></pre></div></td></tr></table></div></p>
-<p>您可以使用它来跳到后面的楼层，返回到早期的楼层，或通过输入当前楼层的id来重置当前楼层。输入不存在的楼层可能会导致游戏崩溃。</p>
+<p>Move to another floor on the same seed. You can use this to skip ahead to a later floor, go backwards to an earlier floor, or reset the current floor by entering the current floor's id. Entering nonexistent floors can crash the game.</p>
 <h3 id="gridspawn"><strong>gridspawn</strong><a class="headerlink" href="#gridspawn" title="Permanent link">⚓︎</a></h3>
-<p>在房间的随机位置生成给定ID的网格实体。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>gridspawn 1000    -- 生成岩石
-gridspawn 1494    -- 生成彩虹便便
-gridspawn 9000    -- 生成陷阱门
-gridspawn 9000.1  -- 生成虚空传送门
-gridspawn 9100    -- 生成楼梯
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>gridspawn 1000    -- Spawns Rock
+gridspawn 1494    -- Spawns Rainbow Poop
+gridspawn 9000    -- Spawns Trap Door
+gridspawn 9000.1  -- Spawns Void Portal
+gridspawn 9100    -- Spawns Staircase
 </code></pre></div></td></tr></table></div></p>
-<p>由于无法覆盖其他网格实体或尝试在房间外生成，不总是能正常生效。沟壑
-不会正确显示，离开房间再回来可以使其正常显示。</p>
+<p>Spawns the grid entity with the given ID at a random place in the room. For some reason it doesn't always do something, possibly because of failing to overwrite other grid entities or trying to spawn outside the room or something. Pits won't look right until you leave the room and come back.</p>
 <h3 id="debug"><strong>debug</strong><a class="headerlink" href="#debug" title="Permanent link">⚓︎</a></h3>
-<p>这是一些有用的测试作弊码，一些未在此处列出的作弊码可能已过时、无用或有问题。以下是仍然有用的作弊码。</p>
-<p><strong>debug 3</strong> 完全无敌。</p>
-<p><strong>debug 4</strong> +40 伤害。与豆奶一起使用效果很好。所有饰品变为金饰品。</p>
-<p><strong>debug 5</strong> 在屏幕底部显示关于当前房间的文本。</p>
-<p><strong>debug 6</strong> 在屏幕上画出代表实体伤害击中框的圆圈。圆圈的颜色取决于实体的碰撞。</p>
+<p>Various cheats that are useful for testing. Some of the ones not listed here are obsolete, not very useful, or possibly broken. Here are the ones that are still useful.</p>
+<p><strong>debug 3</strong> Complete invincibility</p>
+<p><strong>debug 4</strong> +40 damage. Good with Soy Milk.</p>
+<p><strong>debug 5</strong> Displays text at the bottom of the screen about the current room</p>
+<p><strong>debug 6</strong> Draws circles on the screen that represent an entity's damage hitbox. The color of the circle depends on the collision of the entity</p>
 <table>
 <thead>
 <tr>
-<th>碰撞</th>
-<th>颜色</th>
+<th>Collision</th>
+<th>Color</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>无</td>
-<td>无</td>
+<td>None</td>
+<td>Nothing</td>
 </tr>
 <tr>
-<td>仅玩家</td>
-<td>橙色</td>
+<td>Player Only</td>
+<td>Orange</td>
 </tr>
 <tr>
-<td>仅玩家物体（玩家、泪弹、跟班等）</td>
-<td>粉色</td>
+<td>Player Objects</td>
+<td>Pink</td>
 </tr>
 <tr>
-<td>仅敌人</td>
-<td>绿色</td>
+<td>Enemies</td>
+<td>Green</td>
 </tr>
 <tr>
-<td>全部</td>
-<td>红色</td>
+<td>All</td>
+<td>Red</td>
 </tr>
 <tr>
-<td>调试形状</td>
-<td>黄色</td>
+<td>Debug Shapes</td>
+<td>Yellow</td>
 </tr>
 <tr>
-<td>未知碰撞</td>
-<td>黑色</td>
+<td>Unknown Collision</td>
+<td>Black</td>
 </tr>
 </tbody>
 </table>
-<p><strong>debug 7</strong> 显示伤害值，类似于蜘蛛模组道具。</p>
-<p><strong>debug 8</strong> 主动道具始终满充能。</p>
-<p><strong>debug 9</strong> +50 运气，因此像随机泪弹效果之类的基于运气的随机事件更容易发生。</p>
-<p><strong>debug 10</strong> 所有敌人快速受到伤害，所以房间在通常不到一秒钟内就被清理。</p>
-<p><strong>debug 12</strong> 显示持有的道具和临时道具效果</p>
-<p><strong>debug 13</strong> 在屏幕上画出代表实体网格碰撞框的点圆圈。圆圈的颜色取决于实体的网格碰撞类型。点的数量取决于为实体设置的<code>numGridCollisionPoint</code>属性。</p>
+<p><strong>debug 7</strong> Display damage values, similar to the Spider Mod item</p>
+<p><strong>debug 8</strong> Your active item always has max charge.</p>
+<p><strong>debug 9</strong> Your luck is very high, so luck-based random events like random tear effects happen more often.</p>
+<p><strong>debug 10</strong> All enemies take rapid damage at all times, so rooms are usually cleared in under a second.</p>
+<p><strong>debug 12</strong> Displays held collectibles and temporary collectible effects</p>
+<p><strong>debug 13</strong> Draws dotted circles on the screen that represent an entity's grid collision hitbox. The color of the circle depends on the grid collision of the entity. The number of dots depends on the <code>numGridCollisionPoint</code> variable set for the entity</p>
 <table>
 <thead>
 <tr>
-<th>碰撞</th>
-<th>颜色</th>
+<th>Collision</th>
+<th>Color</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>无</td>
-<td>无</td>
+<td>None</td>
+<td>Nothing</td>
 </tr>
 <tr>
-<td>水平墙</td>
-<td>深红</td>
+<td>Walls X</td>
+<td>Dark Red</td>
 </tr>
 <tr>
-<td>垂直墙</td>
-<td>深绿</td>
+<td>Walls Y</td>
+<td>Dark Green</td>
 </tr>
 <tr>
-<td>任意墙</td>
-<td>黄色</td>
+<td>Walls</td>
+<td>Yellow</td>
 </tr>
 <tr>
-<td>子弹移动</td>
-<td>橙色</td>
+<td>Bullet</td>
+<td>Orange</td>
 </tr>
 <tr>
-<td>地面移动</td>
-<td>红色</td>
+<td>Ground</td>
+<td>Red</td>
 </tr>
 <tr>
-<td>除了坑以外的障碍物</td>
-<td>青色</td>
+<td>No Pits</td>
+<td>Cyan</td>
 </tr>
 <tr>
-<td>坑内移动</td>
-<td>浅紫</td>
+<td>Pits Only</td>
+<td>Light Purple</td>
 </tr>
 <tr>
-<td>未知碰撞</td>
-<td>黑色</td>
+<td>Unknown Collision</td>
+<td>Black</td>
 </tr>
 </tbody>
 </table>
 <h3 id="giveitem"><strong>giveitem</strong><a class="headerlink" href="#giveitem" title="Permanent link">⚓︎</a></h3>
-<h4 id="g">别名：<code>g</code><a class="headerlink" href="#g" title="Permanent link">⚓︎</a></h4>
-<p>给予角色道具、饰品、卡牌或胶囊。</p>
-<p>道具和饰品的语法：
+<h4 id="aliases-g">aliases: <code>g</code><a class="headerlink" href="#aliases-g" title="Permanent link">⚓︎</a></h4>
+<p>Item and trinket syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5212,31 +5192,21 @@ giveitem ipec
 g mutant sp
 g soy milk
 </code></pre></div></td></tr></table></div>
-道具名称之间的冲突比较常见，因此您可能需要输入名称以找出编号，然后手动删除并输入编号。</p>
-<p>对于道具，使用“c15”而不是名称来给出道具编号。</p>
-<p>对于饰品，使用“t15”。</p>
-<p>请注意，如果您没有输入完整名称，则它可以自动补全。对于一些奇怪的道具名称（例如“&lt;3”），它无法工作，因此您必须找出可收集编号并使用“c15”。</p>
-<p>使用大写的T而非小写的t代替饰品编号的开头字母，可以给予金饰品。</p>
-<p>胶囊语法：
+Name collisions are somewhat common among items, so you'll likely need to type the name to figure out the number, then delete it and type the number manually. For items, use "c15" to give the item by number instead of name. For trinkets numbers, use "t15" Notice how it can autocomplete if you don't type the full name. It doesn't work with some odd item names like "&lt;3" so you'll have to figure out the collectible number and use "c15" instead.</p>
+<p>Pill syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>giveitem p0
 g p22
 </code></pre></div></td></tr></table></div></p>
-<p>卡牌语法：
+<p>Card syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>giveitem k1
 g k45
 </code></pre></div></td></tr></table></div></p>
-<p>不幸的是，您无法通过名称输入胶囊或卡牌，因此您必须找出编号。</p>
-<p>即使胶囊效果不在本局游戏中，您仍然可以给自己胶囊。之后它会在本局游戏中覆盖之前的胶囊。</p>
-<p>使用大写的P而非小写的p代替胶囊编号的开头字母，可以给予大胶囊。</p>
-<h3 id="giveitem2"><strong>giveitem2</strong><a class="headerlink" href="#giveitem2" title="Permanent link">⚓︎</a></h3>
-<h4 id="g2">别名：<code>g2</code><a class="headerlink" href="#g2" title="Permanent link">⚓︎</a></h4>
-<p>与<code>giveitem</code>相同，但用于以扫。</p>
+<p>Unfortunately you can't type pills or cards by name, so you have to figure out the number. You can give yourself pills even if that pill's effect is not in the rotation. It won't subsequently appear in rotation afterwards.</p>
 <h3 id="remove"><strong>remove</strong><a class="headerlink" href="#remove" title="Permanent link">⚓︎</a></h3>
-<h4 id="r">别名：<code>r</code><a class="headerlink" href="#r" title="Permanent link">⚓︎</a></h4>
-<p>移除角色的道具、饰品、卡牌或胶囊。</p>
-<p>语法：
+<h4 id="aliases-r">aliases: <code>r</code><a class="headerlink" href="#aliases-r" title="Permanent link">⚓︎</a></h4>
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5249,25 +5219,25 @@ r bob&#39;s brain
 r experi
 remove *
 </code></pre></div></td></tr></table></div></p>
-<p><code>remove *</code> 是该命令的一个特殊版本，会删除所有道具、饰品、卡牌、胶囊各一份。</p>
+<p><code>remove *</code> is a special version of the command that should remove all items.</p>
 <h3 id="costumetest"><strong>costumetest</strong><a class="headerlink" href="#costumetest" title="Permanent link">⚓︎</a></h3>
-<p>使角色获得一些完全随机的外观，而不需要相关的道具。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>costumetest
 costumetest 33
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+Gives Isaac a number of totally random costumes, without having the associated items.</p>
 <h3 id="restart"><strong>restart</strong><a class="headerlink" href="#restart" title="Permanent link">⚓︎</a></h3>
-<p>与按住R键相同。将游戏重置回新游戏的开头。在末尾添加一个数字将以特定角色重新开始。</p>
-<p>语法：
+<p>Same as holding R. Resets the game back to the beginning of a new run. Adding a number to the end will restart you as a specific character.</p>
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>restart
 restart 1
 </code></pre></div></td></tr></table></div>
-第一条命令将以当前角色重新开始，后者将以抹大拉重新开始。末尾的数字可以在0-40范围内。超出此范围的任何数字都会使游戏崩溃。</p>
+The first command will restart you as your current character, the latter will restart you as Magdalene. Numbers at the end can range from 0 - 40. Any number outside of this range will crash your game.</p>
 <h3 id="listcollectibles"><strong>listcollectibles</strong><a class="headerlink" href="#listcollectibles" title="Permanent link">⚓︎</a></h3>
-<p>打印出角色拥有的所有道具以及每种道具的数量。</p>
-<p>语法：
+<p>Prints a list of all items in your possession, and how many of each.</p>
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5276,10 +5246,9 @@ repeat 4
 g c2
 listcollectibles
 </code></pre></div></td></tr></table></div></p>
-<p>这将打印出"The Sad Onion:5,The Inner Eye:1"。</p>
+<p>This will print "The Sad Onion:5,The Inner Eye:1"</p>
 <h3 id="repeat"><strong>repeat</strong><a class="headerlink" href="#repeat" title="Permanent link">⚓︎</a></h3>
-<p>重复上一个命令N次。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5290,127 +5259,106 @@ giveitem meat!
 repeat 100
 repeat 100
 </code></pre></div></td></tr></table></div></p>
-<p>上面的命令将生成一个皱眉裂口尸，然后再生成50个皱眉裂口尸；给你一个生肉！，然后再给你200个生肉！。</p>
-<p>repeat会检测上一个控制台命令。不是repeat命令的最后一个命令将根据请求的次数重新输入，可以使用此功能为自己提供大量道具或生成大量敌人。</p>
-<p>请谨慎使用！记住，某些命令的极端重复次数可能会导致游戏崩溃或未响应很长时间。</p>
+<p>The commands above will spawn one, then fifty gapers, and then give you one MEAT! and then two hundred more MEAT!s. repeat looks back up the previous console command. The last one that wasn't a repeat command is re-entered as many times as requested. You can use this to give yourself tons of items or spawn tons of enemies. Exercise restraint! Remember that an extreme number of repetitions of some commands might crash the game or leave it hanging for a long time.</p>
 <h3 id="clearseeds"><strong>clearseeds</strong><a class="headerlink" href="#clearseeds" title="Permanent link">⚓︎</a></h3>
-<p>清除当前游戏中的所有彩蛋种子效果。</p>
+<p>Removes all easter egg effects from the current run.</p>
 <h3 id="seed"><strong>seed</strong><a class="headerlink" href="#seed" title="Permanent link">⚓︎</a></h3>
-<p>重新设置本局游戏的种子。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>seed GGGG GGGG
 seed T1MM AY48
 </code></pre></div></td></tr></table></div>
-最好还是退出到角色选择界面，按照正常方式输入种子。彩蛋种子无效。</p>
-<p>种子大小写敏感（仅大写），不会将 "i" 替换为 "1" 等。</p>
+It's much easier just to exit to the character select and type the seed the normal way. Easter egg seeds won't work. It's case-sensitive (uppercase only) and doesn't replace "i" with "1," etc.</p>
 <h3 id="challenge"><strong>challenge</strong><a class="headerlink" href="#challenge" title="Permanent link">⚓︎</a></h3>
-<p>以给定ID的挑战上以随机种子开始新的游戏。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>challenge 20
 </code></pre></div></td></tr></table></div></p>
-<p>如果数字大于基本游戏中包含的挑战数量，则会导致游戏崩溃。</p>
+<p>Starts a new run on a random seed on the given challenge number. Numbers greater than the number of challenges included in the base game will cause the game to crash.</p>
 <h3 id="combo"><strong>combo</strong><a class="headerlink" href="#combo" title="Permanent link">⚓︎</a></h3>
-<p>使角色获得某个道具池中指定数量的随机道具。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>combo 0.69
 </code></pre></div></td></tr></table></div></p>
-<p>本例中，从宝藏房道具池中给予 69 个随机道具。</p>
+<p>Gives you an item combo, taking 69 random items from the specified item pool (in this case, 0 is the treasure room item pool).</p>
 <h3 id="macro"><strong>macro</strong><a class="headerlink" href="#macro" title="Permanent link">⚓︎</a></h3>
-<h4 id="m">别名：<code>m</code><a class="headerlink" href="#m" title="Permanent link">⚓︎</a></h4>
-<p>语法：
+<h4 id="aliases-m">aliases: <code>m</code><a class="headerlink" href="#aliases-m" title="Permanent link">⚓︎</a></h4>
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>macro mom
 macro hud
 m bigchest
 </code></pre></div></td></tr></table></div></p>
-<p>这个命令并不是为了一般用户而设计的，因为宏只能在 C++ 代码中添加。抱歉！如果有足够的需求，我们可以考虑为模组制作者添加类似的功能。它只是使用缩写将一堆硬编码的控制台命令依次粘贴在一起。你也可以使用剪贴板来达到类似的效果。</p>
+<p>This command wasn't designed for general consumption, as macros can only be added in C++ code. Sorry! If there's enough demand we can consider adding a similar feature for modder access. It just pastes a bunch of hardcoded console commands one after another using an abbrevition that's quick to type. You can use the clipboard to similar effect.</p>
 <h3 id="playsfx"><strong>playsfx</strong><a class="headerlink" href="#playsfx" title="Permanent link">⚓︎</a></h3>
-<p>播放指定id的音效。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>playsfx 1
 playsfx 1 0.5
-</code></pre></div></td></tr></table></div>
-第二个参数可以指定音高。</p>
+</code></pre></div></td></tr></table></div></p>
+<p>Plays the specified sound effect id. Pitch can be specified in the second argument.</p>
 <h3 id="curse"><strong>curse</strong><a class="headerlink" href="#curse" title="Permanent link">⚓︎</a></h3>
-<p>获得诅咒。</p>
-<p>语法：
+<p>Syntax:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>curse 2
 curse 16
 curse 127
 </code></pre></div></td></tr></table></div></p>
-<p>需要输入一个值，这个值对应于所需诅咒号码的总和。黑暗（1）+迷宫（2）+迷途（4）+未知（8）+诅咒（16）+混乱（32）+致盲（64）+大房间（128）= 255。</p>
-<p>在添加了迷宫诅咒后，stage或reseed命令可用于强制重新生成楼层。</p>
+<p>Set a value corresponding to a sum of the desired curses. Darkness (1) + Labyrinth (2) + Lost (4) + Unknown (8) + Cursed (16) + Maze (32) + Blind (64) + Giant (128) = 255 The stage or reseed commands are useful after adding curse of the labyrinth to force the floor to be re-generated.</p>
 <h3 id="reseed"><strong>reseed</strong><a class="headerlink" href="#reseed" title="Permanent link">⚓︎</a></h3>
-<p>使用新的楼层种子生成当前层的新布局。该层将不再匹配其他玩家使用相同的种子所见到的层。</p>
+<p>Generates a new layout for the current floor with a new floor seed. This floor will no longer match other people playing the same seed.</p>
 <h3 id="copy"><strong>copy</strong><a class="headerlink" href="#copy" title="Permanent link">⚓︎</a></h3>
-<p>将最后N个控制台命令复制到剪贴板。</p>
-<p>语法：
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>copy 1
-copy 2
-copy 3
-</code></pre></div></td></tr></table></div>
-使用Ctrl+V或Mac上的Command+V粘贴一个或多个命令。</p>
+<p>Copies the last three console commands to your clipboard. Paste one or more commands with ctrl+v, or command+v on mac.</p>
 <h3 id="clear"><strong>clear</strong><a class="headerlink" href="#clear" title="Permanent link">⚓︎</a></h3>
-<p>清除控制台内容。这对于视频录制或者想要处理证据的情况很有用。</p>
+<p>Clears the console. Useful for video recording purposes or if you want to dispose of incriminating evidence.</p>
 <h3 id="lua"><strong>lua</strong><a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h3>
-<h4 id="l">别名：<code>l</code><a class="headerlink" href="#l" title="Permanent link">⚓︎</a></h4>
-<p>直接运行一行Lua代码。</p>
-<p>例子：
+<p>Examples:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>lua print(&quot;Hello World!&quot;)
 
 l for _,v in pairs(Isaac.GetRoomEntities()) do if v:IsVulnerableEnemy() then print(v.HitPoints..&quot;/&quot;..v.MaxHitPoints) end end
 </code></pre></div></td></tr></table></div>
-第一个示例只是将“Hello World！”打印到控制台，而第二个示例打印房间中每个非无敌敌人的当前HP和最大HP。</p>
+Directly runs a line of Lua code. The first example simply prints "Hello World!" to the console, while the second prints the current HP and max HP of every vulnerable enemy in the room.</p>
 <h3 id="luarun"><strong>luarun</strong><a class="headerlink" href="#luarun" title="Permanent link">⚓︎</a></h3>
-<p>接受一个 lua 文件的路径并立即运行它。</p>
-<p>示例：
+<p>Examples:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>luarun /full_path/hello.lua
 luarun relative_path/hello.lua
-</code></pre></div></td></tr></table></div>
-路径相对于游戏安装的文件夹。</p>
+</code></pre></div></td></tr></table></div></p>
+<p>Takes a path to a lua file and runs it immediately. Paths are relative to the folder where the game is installed.</p>
 <h3 id="luamod"><strong>luamod</strong><a class="headerlink" href="#luamod" title="Permanent link">⚓︎</a></h3>
-<p>接受一个模组文件夹的名称并运行其中的 main.lua。</p>
-<p>示例：
+<p>Examples:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>luamod mygreatmod
 </code></pre></div></td></tr></table></div>
-这可以用于重新加载模组而无需重新启动游戏。</p>
+Takes a mod folder name and runs the main.lua for it. This can be used to reload a mod without relaunching the game.</p>
 <h3 id="luarun_1"><strong>luarun</strong><a class="headerlink" href="#luarun_1" title="Permanent link">⚓︎</a></h3>
-<p>报告 Lua 的内存使用情况。</p>
+<p>Reports memory usage for Lua</p>
 <h3 id="metro"><strong>metro</strong><a class="headerlink" href="#metro" title="Permanent link">⚓︎</a></h3>
-<p>修改使用节拍器时所选择的道具。</p>
-<p>示例：
+<p>Examples:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>metro c1
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+This guarantees the next item chosen when using Metronome.</p>
 <h3 id="delirious"><strong>delirious</strong><a class="headerlink" href="#delirious" title="Permanent link">⚓︎</a></h3>
-<p>修改使用精神错乱时所选择的头目。</p>
-<p>示例：
+<p>Examples:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>delirious 1
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+This guarantees the next boss chosen when using Delirious.</p>
 <h3 id="restock"><strong>restock</strong><a class="headerlink" href="#restock" title="Permanent link">⚓︎</a></h3>
-<p>重新生成当前房间的底座道具和商店商品。</p>
+<p>Rerolls item pedestals and shop items in the current room.</p>
 <h3 id="rewind"><strong>rewind</strong><a class="headerlink" href="#rewind" title="Permanent link">⚓︎</a></h3>
-<p>使游戏忘记当前房间中的更改并将角色传送回上一个房间。（类似发光沙漏的效果）</p>
+<p>Makes the game forget about the changes in current room and teleports Isaac back to previous room. (Glowing Hourglass-like effect)</p>
 <h2 id="testbosspool"><strong>testbosspool</strong><a class="headerlink" href="#testbosspool" title="Permanent link">⚓︎</a></h2>
-<p>打印当前层中头目名称和百分比几率（100%=10000）的列表。</p>
+<p>Prints a list of boss names and percentage chance (100%=10000) for current floor.</p>
 <h2 id="reloadwisps"><strong>reloadwisps</strong><a class="headerlink" href="#reloadwisps" title="Permanent link">⚓︎</a></h2>
-<p>重新加载由美德之书生成的灵火和由无底坑生成的蝗虫。</p>
+<p>Reloads wisps spawned by Book of Virtues and locusts spawned by Abyss.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
       
     
   </small>
@@ -5455,7 +5403,7 @@ luarun relative_path/hello.lua
     
     
     
-    <a href="https://github.com/cuerzor/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
+    <a href="https://github.com/wofsauge/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
