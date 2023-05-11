@@ -1,35 +1,30 @@
 [![Discord](https://img.shields.io/discord/927985880021483571?color=blue&label=Discord&logo=Discord&logoColor=white)](https://discord.gg/435qCC6nHt)
 
-# The Binding of Isaac: Afterbirth+ Community Documentation Project
+# 以撒的结合：胎衣+ 社区文档项目
 
-You can view the website for this repository here: https://wofsauge.github.io/IsaacDocs/
+该项目的源项目来源于wofsauge的以撒MOD API英文文档：https://wofsauge.github.io/IsaacDocs/
 
-This project aims to make the Binding of Isaac modding documentation better by providing additional information, features, and a more modern design.
+您可以在此处查看此存储库的网站：https://wofsauge.github.io/IsaacDocs/
 
-## New features
+该项目旨在通过提供额外的信息、功能和更现代的设计，以更好制作《以撒的结合》的MOD。
 
-- Fully responsive and **modern design**
-- Vastly **improved search function**
-- **Last visited pages** - history
-- **Dark mode**
-- **Quick Edit** - Button
-- **Smart-Copy** Feature to quickly copy 
-- Automatic deployment & updates (using Github actions)
-- and a lot more!
+## 创建本地版本
 
-## Technology used
+1. 克隆代码库到本地。
+2. 安装最新版本的Python 3.x。
+3. 在项目文件夹打开git控制台，输入`pip install -r requirements.txt`
+4. 输入`mkdocs serve`以在本地地址`http://127.0.0.1:8000/`创建一个本地网站。
+5. 或者，使用`mkdocs build`以构建一个该页面的静态版本。
 
-- [MkDocs](https://www.mkdocs.org/) as the static site generator 
-- [MKDocs Material Theme](https://squidfunk.github.io/mkdocs-material/)
-- [mark.js](https://markjs.io/) for better search highlighting
-- Python 3.x + Beautiful Soup for conversion tools
-- CSS3 & JQuery for custom scripts
+## 帮助翻译
 
-## Creating a local version
+1. fork一个新的代码库
+2. 在fork的代码库中，以translation-chinese为基分支，新建一个分支，可以叫`page-页面名`等。
+3. 在该分支上进行翻译。
+4. 该分支的目的完成后，推送该分支。创建Pull Request，将该分支合并到Cuerzor/IsaacDocs的以translation-chinese分支上。
+5. 等待审核。
+6. 审核通过后，你的分支会被合并到translation-chinese中。
 
-1. Clone the repository.
-1. Install a current version of Python 3.x.
-1. `pip install -r requirements.txt`
-1. `cd IsaacDocs`
-1. Use `mkdocs serve` to create a locally hosted version of the page available at: `http://127.0.0.1:8000/`
-1. Alternatively, use `mkdocs build` to build a static version of the page.
+**注意：**
+1. 如果你本地的translation-chinese等分支已过时，你需要拉取该分支以进行更新。
+2. 不要使用合并操作，请使用变基，使得代码历史呈线性。
