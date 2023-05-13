@@ -1,14 +1,14 @@
 ---
 tags:
-  - Tutorial
+  - 教程
 ---
-# [Tutorial] Use custom callbacks
+# [教程] 使用自定义回调
 
-Repentance update 1.79b added various callback functions, including priority and the capability of creating your own callbacks.
+忏悔1.79b更新中加入了一些供回调使用的函数，使用它们可以为mod中的自定义回调添加优先级与兼容性。
 
-## Basic callbacks
+## 基本回调
 
-You can use `mod:AddCallback` (or `Isaac.AddCallback`, but it's recommended to use the mod table instead) with any value as the callback ID now, even strings:
+你可以将任意代表回调ID的值与 `mod:AddCallback` (或者 `Isaac.AddCallback`, 但我们更推荐使用mod表，即前者)搭配使用。这些值可以是任意类型，包括字符串。
 
 ```Lua
 MOD:AddCallback("TEST", function(_, a, b, c)
@@ -16,21 +16,22 @@ MOD:AddCallback("TEST", function(_, a, b, c)
 end)
 ```
 
-In fact, it's recommended to use strings instead of numbers like the base game does if you're using custom callbacks, to avoid conflicts with other mods.
+就实际情况而言，我们更推荐使用字符串而非数字作为自定义回调的ID. 虽然原版游戏提供的mod API中回调有对应的数字ID, 但使用字符串可以避免与其他mod所添加的自定义回调产生冲突。
 
-Just doing this won't do anything though, as nothing in the game or the mod triggers the "test" callback yet. What you can do to trigger it is:
+但仅仅输入这串代码不会起到任何作用，因为游戏中（或者mod里）没有任何事件可以触发"test"回调使其执行。为了使这一回调执行，你应该输入：
 
 ```Lua
 Isaac.RunCallback("TEST", 1, 2, 3)
 ```
 
-This will run all callbacks with the "test" id in order of priority and then in the order they were added.
+这条代码会按优先级和添加的先后顺序（首先判断优先级，然后判断先后）执行所有ID为"test"的自定义回调。
 
-Notice that you didn't need to "define" the callback anywhere, any mod can add callbacks to your custom id using its value and you can run your custom callback without any previous definitions.
+注意一点：在这一过程中我们不必“定义”添加的回调。mod可以仅通过使用自定义回调对应的ID的值来将其执行，无需任何前置定义。
 
-## Returned values
+## 返回值
 
-`Isaac.RunCallback` will stop at the first callback that returns a value and return it. For example:
+通过`Isaac.RunCallback`执行回调时，若回调返回了任意值，该函数将在首个返回了值的回调处终止执行，并返回该值。
+示例如下：
 
 ```Lua
 MOD:AddCallback("TEST_RETURN", function(_, a, b)
@@ -42,65 +43,64 @@ MOD:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
 end)
 ```
 
-This should print "3" in the log on run start.
+输入这串代码后，控制台和日志文件应当在每次游戏开始时显示"3".
 
-## Entity types / parameter matching
+## 实体类型/参数对应
 
-Like with vanilla callback, you can make your callback only run for certain entity types, variants, or any other condition you need.
+游戏mod API中提供的回调有部分需要特定参数才会执行，我们也可以如此对自定义回调加以限制。任意你设想的情景中所必须的值都可以作为特定参数，如实体类型或实体变种等。
 
 ```Lua
--- Add custom callback
+-- 添加自定义回调
 MOD:AddCallback("TEST_ENTITY", function(_, entity, a, b, c)
     print("test callback triggered", entity.Type, a, b, c)
 end)
 
--- Add custom callback with attached ID
+-- 为自定义回调添加限制参数
 MOD:AddCallback("TEST_ENTITY", function(_, entity, a, b, c)
     print("tears only callback triggered", entity.Variant, a, b, c)
 end, EntityType.ENTITY_TEAR)
 
--- Run custom callback with attached ID
+-- 执行有限制参数的自定义回调
 
--- this will run all callbacks regardless of attached ID
+-- 此函数将执行所有自定义回调，无视限制参数
 Isaac.RunCallback("TEST_ENTITY", 1, 2, 3)
--- this won't run the tears only callback
+-- 此函数将不执行“仅眼泪”（限制参数为EntityType.ENTITY_TEAR）的自定义回调
 Isaac.RunCallbackWithParam("TEST_ENTITY", EntityType.ENTITY_PLAYER, entity, 1, 2, 3)
--- this will run the tears only callback, and not callbacks with different IDs
+-- 此函数将执行“仅眼泪”回调，而非一个ID不同的回调
 Isaac.RunCallbackWithParam("TEST_ENTITY", EntityType.ENTITY_TEAR, entity, 4, 5, 6)
 ```
 
-Of course, this can be any value, not necessarily entity types. `Isaac.RunCallbackWithParam` checks if each callback's parameter matches its second argument, or is nil.
+正如前文所说，特定参数可以是任意值，不必局限于实体类型。`Isaac.RunCallbackWithParam` 函数会逐个检查所有回调的限制参数是否为nil（无限制），若不为nil则检查其是否与该函数的第二个变量相对应。
 
-## Mod compatibility
+## Mod兼容
 
-As before, you don't need to "define" your callback, creating a custom callback just needs `Isaac.RunCallback` to run that at least once and `AddCallback` to be used with it.
+之前讨论过，自定义回调不必先“定义”后使用。创建自定义回调只需要`Isaac.RunCallback` 执行至少一次且与`AddCallback`搭配。 
 
-This allows for mods that offer an API to other mods to do that in a simple way: the dependent mods don't need to wait for the main mod to be loaded. 
-For example, imagine a Minimap mod that wants to allow its dependents to run code after the minimap changes size. Let's call it MinimapLibrary:
-The code in MinimapLibrary would be:
+这使得mod可以十分轻松地为其他mod提供自己的API: 依赖该mod运行的其他mod无需等待主mod完全加载便可使用其API.
+假如有这么一个小地图mod，暂且称其为MinimapLibrary（小地图库）。现在这个mod希望其他依赖其运行的mod能够在小地图变换大小后执行特定代码。
+MinimapLibrary中的代码如下：
 
 ```Lua
--- ... callback where the minimap is enlarged
+-- ... 小地图变换大小时执行的回调
 Isaac.RunCallback("MINIMAPLIB_POST_MINIMAP_ENLARGE", nil, currentSize)
 ```
 
-While the code in any dependent mod (Mod 2, here) would be:
+依赖其运行的mod（Mod 2）代码如下：
 
 ```Lua
 MOD2:AddCallback("MINIMAPLIB_POST_MINIMAP_ENLARGE", function(_, currentSize)
     print("Minimap size has changed!", currentSize)
-    -- do something using currentSize
+    -- 以currentSize为变量做些事情
 end)
 ```
 
-Mod 2 doesn't need to check if MinimapAPI is even loaded before adding inter-mod functionality: if it's loaded, it will run, otherwise it simply won't. 
-No need to wait for the library mod to be loaded, like you'd need to do when calling functions defined by it.
+可以看出Mod 2在使用MinimapAPI提供的mod方法时，完全不需要检查MinimapAPI是否加载。原因很简单：前置mod已加载则执行，尚未加载则不执行。完全不需要等到前置库/API mod完全加载才执行——前置mod定义了对外提供的mod方法时才需要先加载再使用。
 
-## Run behavior
+## 执行模式
 
-Normally, `Isaac.RunCallback` breaks on the first return and returns it. If you need some other way of handling the callback running and returning behavior, you need to do it manually via `Isaac.GetCallbacks`.
+通常情况下`Isaac.RunCallback`会在首个返回了值的回调处中断并返回该值，但如果你需要别的方法处理回调的执行与返回模式，那你需要通过`Isaac.GetCallbacks`手动修改。
 
-For example, if you want to continue running the callback, and override its first param with the last runs' return:
+如果你想让回调继续执行，并且用最后得出的返回值覆盖其首个参数，可以这么做：
 
 ```Lua
 MOD:AddCallback("TEST_GETCALLBACKS", function(_, arg) 
@@ -119,10 +119,10 @@ for _, callback in ipairs(callbacks) do
     end
 end
 
-print(thisArg) -- prints 24
+print(thisArg) -- 显示 24
 ```
 
-`Isaac.GetCallbacks` returns a table already ordered by callback priority and order of adding, so you don't need to worry about order unless you want to change it. Its elements are structured like this:
+`Isaac.GetCallbacks`会返回一张包含所有回调的表，并按回调优先级与添加的先后顺序自动进行排序，所以无需担心循序问题（除非你想改）。表中元素结构如下所示：
 
 ```
 {
@@ -133,30 +133,30 @@ print(thisArg) -- prints 24
 }
 ```
 
-Passing true as the second argument to Isaac.GetCallbacks assigns an empty table to the callback if it didn't exist yet.
+若该回调尚不存在，向`Isaac.GetCallbacks`的第二参数中传入true值可以为其分配一张空表。
 
-## Advanced parameters
+## 进阶参数
 
-As you can get the callback table via GetCallbacks, you can also assign a metatable to it. In particular, Isaac can use a new function to have a different parameter checking than default (which uses ==).
+既然通过`Isaac.GetCallbacks`可以得到该回调对应的表，那自然可以为其分配一张元表。此过程中，游戏不再使用默认方式（使用==的判定方式）进行检验，而是特别使用一个新函数，传递一个不同的参数并进行判断。
 
 ```Lua
--- Initialize a custom callback with a custom parameter matching function
--- Passing true as the second argument to Isaac.GetCallbacks assigns an empty table to this callback if it didn't exist yet
--- In this example we expect a table as a parameter, but any type can be used
--- If either parameter is nil, we always match
+--使用带自定义参数的函数初始化自定义回调
+--在Isaac.GetCallbacks中传入true作为其第二个参数，若该回调不存在则为其分配一张空表
+--参数可以是任意类型，但在此例中我们将表作为参数
+--若任意参数为nil则总是匹配
 setmetatable(Isaac.GetCallbacks("TEST_PARAMS_2", true), {
     __matchParams = function(a, b)
         return not a or not b or (type(a) == "table" and type(b) == "table" and a[1] == b[1] and a[2] == b[2])
     end
 })
 
--- This callback has no parameter, it will always be called
+--该回调无参数，每次都会触发
 MOD:AddCallback("TEST_PARAMS_2", function()
     print("hi!")
 end)
 
--- These callbacks have a parameter attached to them, they will only be called if their parameter matches the one provided to Isaac.RunCallbackWithParam
--- The __matchParams metamethod is used to determine whether the parameters match or not
+--这些回调有参数，只会在参数与提供给Isaac.RunCallbackWithParam的一致时触发
+--使用__matchParams这一元方法检测参数是否匹配
 MOD:AddCallback("TEST_PARAMS_2", function()
     print("hello world")
 end, {"hello", "world"})
@@ -169,17 +169,17 @@ MOD:AddCallback("TEST_PARAMS_2", function()
     print("howdy globe")
 end, {"howdy", "globe"})
 
--- This should only print "hi!", then "hello world"
+--这样做应该只会显示“hi!”，然后显示“hello world”
 Isaac.RunCallbackWithParam("TEST_PARAMS_2", {"hello", "world"})
 ```
 
-*(Example source: _Kilburn)*
+*(案例提供： _Kilburn)*
 
-## Unique callback IDs
+## 唯一回调ID
 
-It's heavily recommended to use string IDs with a prefix unique to your mod in your callbacks, to avoid overlapping other mods' callbacks that might have the same name. For example, for a mod named AchievementLibrary, something like ACHLIB_TEST_CALLBACK.
+强烈推荐在自定义回调的ID中添加独特前缀，最好与你的mod相关。这样可以避免与其他mod的自定义回调重名，导致冲突。例如，如果mod名叫AchievementLibrary，自定义回调应该取名为ACHLIB_TEST_CALLBACK，或其他类似的命名。
 
-If you need your callback ID to be unique even if the name is shared, for example if you make a library to be included in other mods, and as such whose logic might run more than once (which would lead in running callbacks with the same name more than once, if using a string name), you can use table references as IDs instead. Here is an example:
+若想让自定义回调即使重名也具有唯一的ID，比方说存在于其他mod中的库mod，且该回调基于其逻辑应当运行不止一次，那就可以使用表引用作为其ID（使用字符串ID会导致其他同名回调也运行不止一次）。示例如下：
 
 ```Lua
 MyLibrary.Callbacks.TEST_CALLBACK = {}
@@ -197,6 +197,6 @@ Isaac.RunCallback(MyLibrary.Callbacks.TEST_CALLBACK)
 Isaac.RunCallback(MyLibrary.Callbacks.TEST_CALLBACK_2)
 ```
 
-As each table reference is unique, every new created table will be treated as a different ID. The advantage to this is having a unique locally defined ID, that isn't shared with the global space of possible strings.
+由于每个表引用都是唯一的，因此每张表都会被视作不同的ID，进而避免冲突。这么做有个优点：每个回调都具有唯一的局部定义ID，不会与可能重名的字符串共享全局空间。
 
 
