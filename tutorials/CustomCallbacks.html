@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-use-custom-callbacks" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -3599,50 +3599,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-callbacks" class="md-nav__link">
-    Basic callbacks
+  <a href="#_2" class="md-nav__link">
+    基本回调
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#returned-values" class="md-nav__link">
-    Returned values
+  <a href="#_3" class="md-nav__link">
+    返回值
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entity-types-parameter-matching" class="md-nav__link">
-    Entity types / parameter matching
+  <a href="#_4" class="md-nav__link">
+    实体类型/参数对应
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mod-compatibility" class="md-nav__link">
-    Mod compatibility
+  <a href="#mod" class="md-nav__link">
+    Mod兼容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-behavior" class="md-nav__link">
-    Run behavior
+  <a href="#_5" class="md-nav__link">
+    执行模式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-parameters" class="md-nav__link">
-    Advanced parameters
+  <a href="#_6" class="md-nav__link">
+    进阶参数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unique-callback-ids" class="md-nav__link">
-    Unique callback IDs
+  <a href="#id" class="md-nav__link">
+    唯一回调ID
   </a>
   
 </li>
@@ -4441,50 +4441,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-callbacks" class="md-nav__link">
-    Basic callbacks
+  <a href="#_2" class="md-nav__link">
+    基本回调
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#returned-values" class="md-nav__link">
-    Returned values
+  <a href="#_3" class="md-nav__link">
+    返回值
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entity-types-parameter-matching" class="md-nav__link">
-    Entity types / parameter matching
+  <a href="#_4" class="md-nav__link">
+    实体类型/参数对应
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mod-compatibility" class="md-nav__link">
-    Mod compatibility
+  <a href="#mod" class="md-nav__link">
+    Mod兼容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-behavior" class="md-nav__link">
-    Run behavior
+  <a href="#_5" class="md-nav__link">
+    执行模式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-parameters" class="md-nav__link">
-    Advanced parameters
+  <a href="#_6" class="md-nav__link">
+    进阶参数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unique-callback-ids" class="md-nav__link">
-    Unique callback IDs
+  <a href="#id" class="md-nav__link">
+    唯一回调ID
   </a>
   
 </li>
@@ -4508,7 +4508,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4519,24 +4519,25 @@
   
 
 
-<h1 id="tutorial-use-custom-callbacks">[Tutorial] Use custom callbacks<a class="headerlink" href="#tutorial-use-custom-callbacks" title="Permanent link">⚓︎</a></h1>
-<p>Repentance update 1.79b added various callback functions, including priority and the capability of creating your own callbacks.</p>
-<h2 id="basic-callbacks">Basic callbacks<a class="headerlink" href="#basic-callbacks" title="Permanent link">⚓︎</a></h2>
-<p>You can use <code>mod:AddCallback</code> (or <code>Isaac.AddCallback</code>, but it's recommended to use the mod table instead) with any value as the callback ID now, even strings:</p>
+<h1 id="_1">[教程] 使用自定义回调<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<p>忏悔1.79b更新中加入了一些供回调使用的函数，使用它们可以为mod中的自定义回调添加优先级与兼容性。</p>
+<h2 id="_2">基本回调<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>你可以将任意代表回调ID的值与 <code>mod:AddCallback</code> (或者 <code>Isaac.AddCallback</code>, 但我们更推荐使用mod表，即前者)搭配使用。这些值可以是任意类型，包括字符串。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">MOD</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test callback triggered&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>In fact, it's recommended to use strings instead of numbers like the base game does if you're using custom callbacks, to avoid conflicts with other mods.</p>
-<p>Just doing this won't do anything though, as nothing in the game or the mod triggers the "test" callback yet. What you can do to trigger it is:</p>
+<p>就实际情况而言，我们更推荐使用字符串而非数字作为自定义回调的ID. 虽然原版游戏提供的mod API中回调有对应的数字ID, 但使用字符串可以避免与其他mod所添加的自定义回调产生冲突。</p>
+<p>但仅仅输入这串代码不会起到任何作用，因为游戏中（或者mod里）没有任何事件可以触发"test"回调使其执行。为了使这一回调执行，你应该输入：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallback</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>This will run all callbacks with the "test" id in order of priority and then in the order they were added.</p>
-<p>Notice that you didn't need to "define" the callback anywhere, any mod can add callbacks to your custom id using its value and you can run your custom callback without any previous definitions.</p>
-<h2 id="returned-values">Returned values<a class="headerlink" href="#returned-values" title="Permanent link">⚓︎</a></h2>
-<p><code>Isaac.RunCallback</code> will stop at the first callback that returns a value and return it. For example:</p>
+<p>这条代码会按优先级和添加的先后顺序（首先判断优先级，然后判断先后）执行所有ID为"test"的自定义回调。</p>
+<p>注意一点：在这一过程中我们不必“定义”添加的回调。mod可以仅通过使用自定义回调对应的ID的值来将其执行，无需任何前置定义。</p>
+<h2 id="_3">返回值<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<p>通过<code>Isaac.RunCallback</code>执行回调时，若回调返回了任意值，该函数将在首个返回了值的回调处终止执行，并返回该值。
+示例如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4551,9 +4552,9 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>This should print "3" in the log on run start.</p>
-<h2 id="entity-types-parameter-matching">Entity types / parameter matching<a class="headerlink" href="#entity-types-parameter-matching" title="Permanent link">⚓︎</a></h2>
-<p>Like with vanilla callback, you can make your callback only run for certain entity types, variants, or any other condition you need.</p>
+<p>输入这串代码后，控制台和日志文件应当在每次游戏开始时显示"3".</p>
+<h2 id="_4">实体类型/参数对应<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<p>游戏mod API中提供的回调有部分需要特定参数才会执行，我们也可以如此对自定义回调加以限制。任意你设想的情景中所必须的值都可以作为特定参数，如实体类型或实体变种等。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4571,49 +4572,48 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- Add custom callback</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- 添加自定义回调</span>
 <span class="n">MOD</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;TEST_ENTITY&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test callback triggered&quot;</span><span class="p">,</span> <span class="n">entity</span><span class="p">.</span><span class="n">Type</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 
-<span class="c1">-- Add custom callback with attached ID</span>
+<span class="c1">-- 为自定义回调添加限制参数</span>
 <span class="n">MOD</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;TEST_ENTITY&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tears only callback triggered&quot;</span><span class="p">,</span> <span class="n">entity</span><span class="p">.</span><span class="n">Variant</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">,</span> <span class="n">EntityType</span><span class="p">.</span><span class="n">ENTITY_TEAR</span><span class="p">)</span>
 
-<span class="c1">-- Run custom callback with attached ID</span>
+<span class="c1">-- 执行有限制参数的自定义回调</span>
 
-<span class="c1">-- this will run all callbacks regardless of attached ID</span>
+<span class="c1">-- 此函数将执行所有自定义回调，无视限制参数</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallback</span><span class="p">(</span><span class="s2">&quot;TEST_ENTITY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1">-- this won&#39;t run the tears only callback</span>
+<span class="c1">-- 此函数将不执行“仅眼泪”（限制参数为EntityType.ENTITY_TEAR）的自定义回调</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallbackWithParam</span><span class="p">(</span><span class="s2">&quot;TEST_ENTITY&quot;</span><span class="p">,</span> <span class="n">EntityType</span><span class="p">.</span><span class="n">ENTITY_PLAYER</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1">-- this will run the tears only callback, and not callbacks with different IDs</span>
+<span class="c1">-- 此函数将执行“仅眼泪”回调，而非一个ID不同的回调</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallbackWithParam</span><span class="p">(</span><span class="s2">&quot;TEST_ENTITY&quot;</span><span class="p">,</span> <span class="n">EntityType</span><span class="p">.</span><span class="n">ENTITY_TEAR</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Of course, this can be any value, not necessarily entity types. <code>Isaac.RunCallbackWithParam</code> checks if each callback's parameter matches its second argument, or is nil.</p>
-<h2 id="mod-compatibility">Mod compatibility<a class="headerlink" href="#mod-compatibility" title="Permanent link">⚓︎</a></h2>
-<p>As before, you don't need to "define" your callback, creating a custom callback just needs <code>Isaac.RunCallback</code> to run that at least once and <code>AddCallback</code> to be used with it.</p>
-<p>This allows for mods that offer an API to other mods to do that in a simple way: the dependent mods don't need to wait for the main mod to be loaded. 
-For example, imagine a Minimap mod that wants to allow its dependents to run code after the minimap changes size. Let's call it MinimapLibrary:
-The code in MinimapLibrary would be:</p>
+<p>正如前文所说，特定参数可以是任意值，不必局限于实体类型。<code>Isaac.RunCallbackWithParam</code> 函数会逐个检查所有回调的限制参数是否为nil（无限制），若不为nil则检查其是否与该函数的第二个变量相对应。</p>
+<h2 id="mod">Mod兼容<a class="headerlink" href="#mod" title="Permanent link">⚓︎</a></h2>
+<p>之前讨论过，自定义回调不必先“定义”后使用。创建自定义回调只需要<code>Isaac.RunCallback</code> 执行至少一次且与<code>AddCallback</code>搭配。 </p>
+<p>这使得mod可以十分轻松地为其他mod提供自己的API: 依赖该mod运行的其他mod无需等待主mod完全加载便可使用其API.
+假如有这么一个小地图mod，暂且称其为MinimapLibrary（小地图库）。现在这个mod希望其他依赖其运行的mod能够在小地图变换大小后执行特定代码。
+MinimapLibrary中的代码如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- ... callback where the minimap is enlarged</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- ... 小地图变换大小时执行的回调</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallback</span><span class="p">(</span><span class="s2">&quot;MINIMAPLIB_POST_MINIMAP_ENLARGE&quot;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">currentSize</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>While the code in any dependent mod (Mod 2, here) would be:</p>
+<p>依赖其运行的mod（Mod 2）代码如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">MOD2</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;MINIMAPLIB_POST_MINIMAP_ENLARGE&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">currentSize</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimap size has changed!&quot;</span><span class="p">,</span> <span class="n">currentSize</span><span class="p">)</span>
-    <span class="c1">-- do something using currentSize</span>
+    <span class="c1">-- 以currentSize为变量做些事情</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Mod 2 doesn't need to check if MinimapAPI is even loaded before adding inter-mod functionality: if it's loaded, it will run, otherwise it simply won't. 
-No need to wait for the library mod to be loaded, like you'd need to do when calling functions defined by it.</p>
-<h2 id="run-behavior">Run behavior<a class="headerlink" href="#run-behavior" title="Permanent link">⚓︎</a></h2>
-<p>Normally, <code>Isaac.RunCallback</code> breaks on the first return and returns it. If you need some other way of handling the callback running and returning behavior, you need to do it manually via <code>Isaac.GetCallbacks</code>.</p>
-<p>For example, if you want to continue running the callback, and override its first param with the last runs' return:</p>
+<p>可以看出Mod 2在使用MinimapAPI提供的mod方法时，完全不需要检查MinimapAPI是否加载。原因很简单：前置mod已加载则执行，尚未加载则不执行。完全不需要等到前置库/API mod完全加载才执行——前置mod定义了对外提供的mod方法时才需要先加载再使用。</p>
+<h2 id="_5">执行模式<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<p>通常情况下<code>Isaac.RunCallback</code>会在首个返回了值的回调处中断并返回该值，但如果你需要别的方法处理回调的执行与返回模式，那你需要通过<code>Isaac.GetCallbacks</code>手动修改。</p>
+<p>如果你想让回调继续执行，并且用最后得出的返回值覆盖其首个参数，可以这么做：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4646,9 +4646,9 @@ No need to wait for the library mod to be loaded, like you'd need to do when cal
     <span class="kr">end</span>
 <span class="kr">end</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">thisArg</span><span class="p">)</span> <span class="c1">-- prints 24</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">thisArg</span><span class="p">)</span> <span class="c1">-- 显示 24</span>
 </code></pre></div></td></tr></table></div>
-<p><code>Isaac.GetCallbacks</code> returns a table already ordered by callback priority and order of adding, so you don't need to worry about order unless you want to change it. Its elements are structured like this:</p>
+<p><code>Isaac.GetCallbacks</code>会返回一张包含所有回调的表，并按回调优先级与添加的先后顺序自动进行排序，所以无需担心循序问题（除非你想改）。表中元素结构如下所示：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4661,9 +4661,9 @@ No need to wait for the library mod to be loaded, like you'd need to do when cal
     Param = entity id / other param (default -1),
 }
 </code></pre></div></td></tr></table></div>
-<p>Passing true as the second argument to Isaac.GetCallbacks assigns an empty table to the callback if it didn't exist yet.</p>
-<h2 id="advanced-parameters">Advanced parameters<a class="headerlink" href="#advanced-parameters" title="Permanent link">⚓︎</a></h2>
-<p>As you can get the callback table via GetCallbacks, you can also assign a metatable to it. In particular, Isaac can use a new function to have a different parameter checking than default (which uses ==).</p>
+<p>若该回调尚不存在，向<code>Isaac.GetCallbacks</code>的第二参数中传入true值可以为其分配一张空表。</p>
+<h2 id="_6">进阶参数<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
+<p>既然通过<code>Isaac.GetCallbacks</code>可以得到该回调对应的表，那自然可以为其分配一张元表。此过程中，游戏不再使用默认方式（使用==的判定方式）进行检验，而是特别使用一个新函数，传递一个不同的参数并进行判断。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4694,23 +4694,23 @@ No need to wait for the library mod to be loaded, like you'd need to do when cal
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- Initialize a custom callback with a custom parameter matching function</span>
-<span class="c1">-- Passing true as the second argument to Isaac.GetCallbacks assigns an empty table to this callback if it didn&#39;t exist yet</span>
-<span class="c1">-- In this example we expect a table as a parameter, but any type can be used</span>
-<span class="c1">-- If either parameter is nil, we always match</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">--使用带自定义参数的函数初始化自定义回调</span>
+<span class="c1">--在Isaac.GetCallbacks中传入true作为其第二个参数，若该回调不存在则为其分配一张空表</span>
+<span class="c1">--参数可以是任意类型，但在此例中我们将表作为参数</span>
+<span class="c1">--若任意参数为nil则总是匹配</span>
 <span class="nb">setmetatable</span><span class="p">(</span><span class="n">Isaac</span><span class="p">.</span><span class="n">GetCallbacks</span><span class="p">(</span><span class="s2">&quot;TEST_PARAMS_2&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">),</span> <span class="p">{</span>
     <span class="n">__matchParams</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
         <span class="kr">return</span> <span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;table&quot;</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;table&quot;</span> <span class="ow">and</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
     <span class="kr">end</span>
 <span class="p">})</span>
 
-<span class="c1">-- This callback has no parameter, it will always be called</span>
+<span class="c1">--该回调无参数，每次都会触发</span>
 <span class="n">MOD</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;TEST_PARAMS_2&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi!&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 
-<span class="c1">-- These callbacks have a parameter attached to them, they will only be called if their parameter matches the one provided to Isaac.RunCallbackWithParam</span>
-<span class="c1">-- The __matchParams metamethod is used to determine whether the parameters match or not</span>
+<span class="c1">--这些回调有参数，只会在参数与提供给Isaac.RunCallbackWithParam的一致时触发</span>
+<span class="c1">--使用__matchParams这一元方法检测参数是否匹配</span>
 <span class="n">MOD</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="s2">&quot;TEST_PARAMS_2&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">})</span>
@@ -4723,13 +4723,13 @@ No need to wait for the library mod to be loaded, like you'd need to do when cal
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;howdy globe&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;howdy&quot;</span><span class="p">,</span> <span class="s2">&quot;globe&quot;</span><span class="p">})</span>
 
-<span class="c1">-- This should only print &quot;hi!&quot;, then &quot;hello world&quot;</span>
+<span class="c1">--这样做应该只会显示“hi!”，然后显示“hello world”</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallbackWithParam</span><span class="p">(</span><span class="s2">&quot;TEST_PARAMS_2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
-<p><em>(Example source: _Kilburn)</em></p>
-<h2 id="unique-callback-ids">Unique callback IDs<a class="headerlink" href="#unique-callback-ids" title="Permanent link">⚓︎</a></h2>
-<p>It's heavily recommended to use string IDs with a prefix unique to your mod in your callbacks, to avoid overlapping other mods' callbacks that might have the same name. For example, for a mod named AchievementLibrary, something like ACHLIB_TEST_CALLBACK.</p>
-<p>If you need your callback ID to be unique even if the name is shared, for example if you make a library to be included in other mods, and as such whose logic might run more than once (which would lead in running callbacks with the same name more than once, if using a string name), you can use table references as IDs instead. Here is an example:</p>
+<p><em>(案例提供： _Kilburn)</em></p>
+<h2 id="id">唯一回调ID<a class="headerlink" href="#id" title="Permanent link">⚓︎</a></h2>
+<p>强烈推荐在自定义回调的ID中添加独特前缀，最好与你的mod相关。这样可以避免与其他mod的自定义回调重名，导致冲突。例如，如果mod名叫AchievementLibrary，自定义回调应该取名为ACHLIB_TEST_CALLBACK，或其他类似的命名。</p>
+<p>若想让自定义回调即使重名也具有唯一的ID，比方说存在于其他mod中的库mod，且该回调基于其逻辑应当运行不止一次，那就可以使用表引用作为其ID（使用字符串ID会导致其他同名回调也运行不止一次）。示例如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4756,14 +4756,14 @@ No need to wait for the library mod to be loaded, like you'd need to do when cal
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallback</span><span class="p">(</span><span class="n">MyLibrary</span><span class="p">.</span><span class="n">Callbacks</span><span class="p">.</span><span class="n">TEST_CALLBACK</span><span class="p">)</span>
 <span class="n">Isaac</span><span class="p">.</span><span class="n">RunCallback</span><span class="p">(</span><span class="n">MyLibrary</span><span class="p">.</span><span class="n">Callbacks</span><span class="p">.</span><span class="n">TEST_CALLBACK_2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>As each table reference is unique, every new created table will be treated as a different ID. The advantage to this is having a unique locally defined ID, that isn't shared with the global space of possible strings.</p>
+<p>由于每个表引用都是唯一的，因此每张表都会被视作不同的ID，进而避免冲突。这么做有个优点：每个回调都具有唯一的局部定义ID，不会与可能重名的字符串共享全局空间。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 13, 2023</span>
       
     
   </small>
