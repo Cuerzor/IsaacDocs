@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-using-additional-lua-files" class="md-skip">
+        <a href="#lua" class="md-skip">
           Skip to content
         </a>
       
@@ -3508,22 +3508,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#require-with-directories" class="md-nav__link">
-    require With Directories
+  <a href="#require_1" class="md-nav__link">
+    使用文件目录的require
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-namespacing-problem-with-require" class="md-nav__link">
-    The Namespacing Problem With require
+  <a href="#require_2" class="md-nav__link">
+    require的命名空间问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-luamod-problem-with-require" class="md-nav__link">
-    The luamod Problem With require
+  <a href="#requireluamod" class="md-nav__link">
+    require的luamod问题
   </a>
   
 </li>
@@ -3536,22 +3536,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sharing-variables" class="md-nav__link">
-    Sharing Variables
+  <a href="#_1" class="md-nav__link">
+    共享变量
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workaround-for-require-problems" class="md-nav__link">
-    Workaround for Require Problems
+  <a href="#require_3" class="md-nav__link">
+    解决require问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternate-workaround-for-require-problems" class="md-nav__link">
-    Alternate Workaround for Require Problems
+  <a href="#require_4" class="md-nav__link">
+    解决require问题的替代方法
   </a>
   
 </li>
@@ -4455,22 +4455,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#require-with-directories" class="md-nav__link">
-    require With Directories
+  <a href="#require_1" class="md-nav__link">
+    使用文件目录的require
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-namespacing-problem-with-require" class="md-nav__link">
-    The Namespacing Problem With require
+  <a href="#require_2" class="md-nav__link">
+    require的命名空间问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-luamod-problem-with-require" class="md-nav__link">
-    The luamod Problem With require
+  <a href="#requireluamod" class="md-nav__link">
+    require的luamod问题
   </a>
   
 </li>
@@ -4483,22 +4483,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sharing-variables" class="md-nav__link">
-    Sharing Variables
+  <a href="#_1" class="md-nav__link">
+    共享变量
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workaround-for-require-problems" class="md-nav__link">
-    Workaround for Require Problems
+  <a href="#require_3" class="md-nav__link">
+    解决require问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#alternate-workaround-for-require-problems" class="md-nav__link">
-    Alternate Workaround for Require Problems
+  <a href="#require_4" class="md-nav__link">
+    解决require问题的替代方法
   </a>
   
 </li>
@@ -4522,7 +4522,7 @@
     
       
       
-        <a href="../tags.html#tutorial" class="md-tag">Tutorial</a>
+        <a href="../tags.html#" class="md-tag">教程</a>
       
     
   </nav>
@@ -4533,53 +4533,54 @@
   
 
 
-<h1 id="tutorial-using-additional-lua-files">[Tutorial] Using Additional .lua Files<a class="headerlink" href="#tutorial-using-additional-lua-files" title="Permanent link">⚓︎</a></h1>
-<p>If you want to load an additional .lua file besides your main.lua file, you can use either the <code>require</code> or <code>include</code> functions. Both have different purposes.</p>
+<h1 id="lua">[教程]使用额外的.lua文件<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h1>
+<p>如果您想在main.lua文件之外加载一个额外的.lua文件，您可以使用“require”或“include”函数。两者都有不同的目的。</p>
 <h3 id="require"><code>require</code><a class="headerlink" href="#require" title="Permanent link">⚓︎</a></h3>
-<p><code>require</code> is a built-in Lua function. Using <code>require</code> is the conventional way in Lua programs to split code up into multiple files. For example:</p>
+<p><code>require</code>是一个内置的Lua函数。在Lua程序中，使用<code>require</code>是将代码拆分为多个文件的传统方式。例如：</p>
 <h4 id="mainlua"><code>main.lua</code><a class="headerlink" href="#mainlua" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">foo</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span> <span class="c1">-- Loads the &quot;foo.lua&quot; file and saves its return value into the variable &quot;foo&quot;.</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">foo</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span> <span class="c1">-- 加载&quot;foo.lua&quot;文件，并且将其返回值储存在变量&quot;foo&quot;中。</span>
 
-<span class="n">foo</span><span class="p">:</span><span class="n">bar</span><span class="p">()</span> <span class="c1">-- Calls the function &quot;bar()&quot; of the foo table.</span>
+<span class="n">foo</span><span class="p">:</span><span class="n">bar</span><span class="p">()</span> <span class="c1">-- 调用foo表的&quot;bar()&quot;函数。</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="foolua"><code>foo.lua</code><a class="headerlink" href="#foolua" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">foo</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- Creates a table that represents this module and will be returned later.</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">foo</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 创建一个表示此模块的表，稍后将返回该表。</span>
 
-<span class="kr">function</span> <span class="nc">foo</span><span class="p">:</span><span class="nf">bar</span><span class="p">()</span> <span class="c1">-- Defines the function &quot;bar()&quot; and adds it to the &quot;foo&quot; table.</span>
+<span class="kr">function</span> <span class="nc">foo</span><span class="p">:</span><span class="nf">bar</span><span class="p">()</span> <span class="c1">-- 定义函数&quot;bar()&quot;并将其添加到&quot;foo&quot;表中。</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="kr">return</span> <span class="n">foo</span> <span class="c1">-- Returns the &quot;foo&quot; table so that it can be accessed by anything that imports this file .</span>
+<span class="kr">return</span> <span class="n">foo</span> <span class="c1">-- 返回&quot;foo&quot;表，以便任何导入该文件的东西都可以访问该表。</span>
 </code></pre></div></td></tr></table></div>
-<p>Here, "foo" is a Lua <em>module</em> that provides variables and methods. It's also possible to return functions or primitive values, but conventionally Lua modules always return a table.</p>
-<p>One important aspect of <code>require</code> is that when it is used, it caches the result. Thus, when a file is required in two different places in the code, it will execute all the code normally on the first require, and then return a reference to the module on the second require. (This default behavior makes sense, because there is no need to execute the same code over and over.)</p>
-<h3 id="require-with-directories"><code>require</code> With Directories<a class="headerlink" href="#require-with-directories" title="Permanent link">⚓︎</a></h3>
-<p>Unlike other programming languages, it is conventional in Lua to use a period as a path separator. For example, if you wanted to import a file called <code>bar.lua</code> in a subdirectory called <code>foo</code>, you would use the following <code>require</code> statement:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">bar</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;foo.bar&quot;</span><span class="p">)</span> <span class="c1">-- Loads a file from the path: ./foo/bar.lua</span>
+这里，"foo"是一个提供变量和方法的Lua<em>模块</em>。也可以返回函数或值，但通常Lua模块总是返回一个表。</p>
+<p><code>require</code>的一个重要方面是，当使用它时，它会缓存结果。因此，当一个文件在代码中的两个不同位置被require时，它将在第一个要求时正常执行所有代码，然后在第二个要求时直接返回对模块的引用。（这种默认行为是有意义的，因为不需要反复执行相同的代码。）</p>
+<h3 id="require_1">使用文件目录的<code>require</code><a class="headerlink" href="#require_1" title="Permanent link">⚓︎</a></h3>
+<p>与其他编程语言不同，在Lua中，一般使用句点作为路径分隔符。例如，如果您想在名为"foo"的子目录中导入名为“bar.lua”的文件，则可以使用以下<code>require</code>语句：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">bar</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;foo.bar&quot;</span><span class="p">)</span> <span class="c1">-- 从路径：./foo/bar.lua导入模块</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="the-namespacing-problem-with-require">The Namespacing Problem With <code>require</code><a class="headerlink" href="#the-namespacing-problem-with-require" title="Permanent link">⚓︎</a></h3>
-<p>Unlike import statements in other programming languages, the <code>require</code> function does not use relative paths. Instead, it is based on the exact string passed into to the function. (And every mod directory is added to list of directories to look through.)</p>
-<p>This causes a problem for mods that have an overlap in the <code>require</code> string. For example, imagine that there are two mods, mod 1 and mod 2. Both mods have a file called "foo.lua" and both mods use a require statement of <code>local foo = require("foo")</code>. Mod 1 will work normally, but when mod 2 loads, its require statement will actually return the "foo.lua" file from mod 1.</p>
-<p>In order to work around this problem, mods have conventionally put all of their Lua files in a directory that matches the name of their mod. For example, mod 1 would make a directory called <code>mod1</code> and have an import statement like: <code>local foo = require("mod1.foo")</code></p>
-<p>This way, there would never be a conflict as long as there are no other mods called "mod1".</p>
-<h3 id="the-luamod-problem-with-require">The <code>luamod</code> Problem With <code>require</code><a class="headerlink" href="#the-luamod-problem-with-require" title="Permanent link">⚓︎</a></h3>
-<p><code>luamod</code> is a console command that will reload a mod. This is helpful when you are developing a mod and you want to immediately test your changes without having to go back to the menu.</p>
-<p>Unfortunately, require caching causes the <code>luamod</code> console command to not work correctly. If code inside of a module is updated, it will not be reflected in game after using the <code>luamod</code> command because the reference to the module is already cached.</p>
+<p>当然，你也可以使用<code>/</code>作为分隔符。</p>
+<h3 id="require_2"><code>require</code>的命名空间问题<a class="headerlink" href="#require_2" title="Permanent link">⚓︎</a></h3>
+<p>与其他编程语言中的导入语句不同，<code>require</code>函数不使用相对路径。相反，它是基于传递给函数的确切字符串。（每个mod目录都被添加到要查看的目录列表中。）</p>
+<p>这会给在<code>require</code>的路径中有重叠的mod带来问题。例如，假设有两个mod，mod1和mod2。两个mod都有一个名为"foo.lua"的文件，并且两个mod都使用一个<code>local foo = require("foo")</code>的require语句。mod1将正常工作，但当mod2加载时，其require语句实际上将从mod1返回"foo.lua"文件。</p>
+<p>为了解决这个问题，mod通常会将所有Lua文件放在与mod名称匹配的目录中。例如，mod1将创建一个名为<code>mod1</code>的目录，并有一个导入语句，如：<code>local foo = require("mod1.foo")</code></p>
+<p>这样，只要没有其他被称为<code>mod1</code>的mod，就永远不会发生冲突。</p>
+<h3 id="requireluamod"><code>require</code>的<code>luamod</code>问题<a class="headerlink" href="#requireluamod" title="Permanent link">⚓︎</a></h3>
+<p><code>luamod</code>是一个控制台命令，它将重新加载一个mod。当你正在开发一个mod，并且你想立即测试你的更改而不返回主菜单时，这很有帮助。</p>
+<p>不幸的是，require的缓存机制会导致<code>luamod</code>控制台命令无法正常工作。如果模块内部的代码被更新，在使用<code>luamod</code>命令后，它将不会反映在游戏中，因为对该模块的引用已经被缓存。</p>
 <h3 id="include"><code>include</code><a class="headerlink" href="#include" title="Permanent link">⚓︎</a></h3>
-<p>In order to get around the namespacing problem and the <code>luamod</code> problem, Kilburn added an Isaac-specific API function called <code>include</code> in Repentance patch v1.06.J818. <code>include</code> works in a mostly identical way to <code>require</code>, except it will never cache the result, causing the code to execute every time. (It will also never get files from other people's mods, even if the paths are identical.)</p>
-<h3 id="sharing-variables">Sharing Variables<a class="headerlink" href="#sharing-variables" title="Permanent link">⚓︎</a></h3>
-<p><code>include</code> is only designed for <a href="https://en.wikipedia.org/wiki/Pure_function">pure</a> modules that have no <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>. In other words, if you use <code>include</code> on a module with module-level state variables, they will be instantiated N times, once for each <code>include</code>. Obviously, this is really bad, because internal state between files will become desynchronized.</p>
-<p>Thus, if you have module-level state or need to share variables between files, you cannot use <code>include</code> and must use <code>require</code>.</p>
-<h3 id="workaround-for-require-problems">Workaround for Require Problems<a class="headerlink" href="#workaround-for-require-problems" title="Permanent link">⚓︎</a></h3>
-<p>If you need to use <code>require</code> instead of <code>include</code>, it's recommended to put all of your Lua code inside of a namespaced directory, as mentioned earlier. If you also want to have <code>luamod</code> functionality, you can enable the <code>--luadebug</code> launch flag and then hack the <code>require</code> function with something along the lines of:</p>
+<p>为了解决命名空间问题和<code>luamod</code>问题，Kilburn在Repentance补丁v1.06.J818中添加了一个名为<code>include</code>的以撒特有的API函数。<code>include</code>的工作方式与<code>require</code>基本相同，只是它永远不会缓存结果，导致每次都执行代码。（它也永远不会从其他人的mod中获取文件，即使路径相同。）</p>
+<h3 id="_1">共享变量<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h3>
+<p><code>include</code>仅设计给没有<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">副作用</a>的<a href="https://en.wikipedia.org/wiki/Pure_function">纯模块</a>。换言之，如果在具有模块级状态变量的模块上使用<code>include</code>，则它们将被实例化N次，每个<code>include</code>实例化一次。显然，这真的很糟糕，因为文件之间的内部状态将变得不同步。</p>
+<p>因此，如果您具有模块级状态或需要在文件之间共享变量，则不能使用<code>include</code>，而必须使用<code>require</code>。</p>
+<h3 id="require_3">解决require问题<a class="headerlink" href="#require_3" title="Permanent link">⚓︎</a></h3>
+<p>如果您需要使用<code>require</code>而不是<code>include</code>，建议您将所有Lua代码都放在名称空间目录中，如前所述。如果你还想拥有<code>luamod”</code>功能，你可以启用“--luadebug”启动选项，然后用以下内容修改<code>require</code>函数：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4638,44 +4639,42 @@
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">--[[ main.lua ]]</span><span class="c1">--</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">--[[ main.lua ]]</span><span class="c1">--</span>
 
-<span class="kd">local</span> <span class="n">MOD_NAME</span> <span class="o">=</span> <span class="s2">&quot;MyMod&quot;</span> <span class="c1">-- Cannot have spaces, since it represents a path.</span>
+<span class="kd">local</span> <span class="n">MOD_NAME</span> <span class="o">=</span> <span class="s2">&quot;MyMod&quot;</span> <span class="c1">-- 因为代表一个路径，不能拥有空格</span>
 
-<span class="c1">-- Players can boot the game with an launch option called &quot;--luadebug&quot;, which will enable additional</span>
-<span class="c1">-- functionality that is considered to be unsafe. For more information about this flag, see the</span>
-<span class="c1">-- wiki: https://bindingofisaacrebirth.fandom.com/wiki/Launch_Options</span>
+<span class="c1">-- 玩家可以通过名为“--luadebug”的启动选项启动游戏，这将启用额外的</span>
+<span class="c1">-- 被认为不安全的功能。有关此选项的更多信息，请参阅wiki: </span>
+<span class="c1">-- https://bindingofisaacrebirth.fandom.com/wiki/Launch_Options</span>
 <span class="c1">--</span>
-<span class="c1">-- When this flag is enabled, the global environment will be slightly different. The differences are</span>
-<span class="c1">-- documented here: https://wofsauge.github.io/IsaacDocs/rep/Globals.html</span>
+<span class="c1">-- 启用此标志后，全局环境将略有不同。不同之处在此处被列出: </span>
+<span class="c1">-- https://cuerzor.github.io/IsaacDocs/Globals.html</span>
 <span class="c1">--</span>
-<span class="c1">-- This function uses the `package` global variable as a proxy to determine if the &quot;--luadebug&quot; flag</span>
-<span class="c1">-- is enabled or not.</span>
+<span class="c1">-- 此函数使用“package”全局变量作为代理来确定“--luadebug”标志是否已启用。</span>
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">isLuaDebugEnabled</span><span class="p">()</span>
   <span class="kr">return</span> <span class="n">package</span> <span class="o">~=</span> <span class="kc">nil</span>
 <span class="kr">end</span>
 
-<span class="c1">-- The require hack uses a global variable to store the paths that are cached for this particular</span>
-<span class="c1">-- mod. This cannot be a local variable because the state of any local variables is lost when the</span>
-<span class="c1">-- &quot;luamod&quot; command is executed. Rename the variable to correspond with the name of your mod.</span>
+<span class="c1">-- 修改过的require使用全局变量来存储为该特定mod缓存的路径。</span>
+<span class="c1">-- 这不能是局部变量，因为当执行“luamod”命令时，任何局部变量的状态都会丢失。</span>
+<span class="c1">-- 重命名该变量以与您的mod名称相对应。</span>
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">initGlobalVariable</span><span class="p">()</span>
   <span class="kr">if</span> <span class="n">__MY_MOD_REQUIRED_PATHS</span> <span class="o">==</span> <span class="kc">nil</span> <span class="kr">then</span>
-    <span class="n">__MY_MOD_REQUIRED_PATHS</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- This must be a global variable</span>
+    <span class="n">__MY_MOD_REQUIRED_PATHS</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 必须是全局变量</span>
   <span class="kr">end</span>
 <span class="kr">end</span>
 
-<span class="c1">-- Reference the global variable to reset the caching status for every path used in the mod.</span>
+<span class="c1">-- 引用全局变量以重置mod中使用的每个路径的缓存状态。</span>
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">unloadEverything</span><span class="p">()</span>
   <span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">__MY_MOD_REQUIRED_PATHS</span><span class="p">)</span> <span class="kr">do</span>
     <span class="nb">package.loaded</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
   <span class="kr">end</span>
 <span class="kr">end</span>
 
-<span class="c1">-- Back up the vanilla require function so that we can restore it later.</span>
+<span class="c1">-- 备份原版的require函数，以便我们稍后可以恢复它。</span>
 <span class="kd">local</span> <span class="n">vanillaRequire</span> <span class="o">=</span> <span class="nb">require</span>
 
-<span class="c1">-- Define a custom require function that will keep track of which paths are required.</span>
+<span class="c1">-- 定义一个自定义的require函数，该函数将跟踪需要哪些路径。</span>
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">patchedRequire</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
   <span class="n">__MY_MOD_REQUIRED_PATHS</span><span class="p">[</span><span class="n">file</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
   <span class="kr">return</span> <span class="n">vanillaRequire</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
@@ -4688,27 +4687,27 @@
     <span class="nb">require</span> <span class="o">=</span> <span class="n">patchedRequire</span>
   <span class="kr">end</span>
 
-  <span class="c1">-- We put all mod-related code in a separate file in order to keep the hack code separated.</span>
+  <span class="c1">-- 我们将所有与mod相关的代码放在一个单独的文件中，以保持与修改过的代码的分离。</span>
   <span class="kd">local</span> <span class="n">modInit</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">MOD_NAME</span> <span class="o">..</span> <span class="s2">&quot;.init&quot;</span><span class="p">)</span>
   <span class="n">modInit</span><span class="p">:</span><span class="n">init</span><span class="p">()</span>
 
   <span class="kr">if</span> <span class="n">isLuaDebugEnabled</span><span class="p">()</span> <span class="kr">then</span>
-    <span class="c1">-- Restore the vanilla functionality.</span>
+    <span class="c1">-- 恢复原版函数。</span>
     <span class="nb">require</span> <span class="o">=</span> <span class="n">vanillaRequire</span>
   <span class="kr">end</span>
 <span class="kr">end</span>
 
 <span class="n">init</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="alternate-workaround-for-require-problems">Alternate Workaround for Require Problems<a class="headerlink" href="#alternate-workaround-for-require-problems" title="Permanent link">⚓︎</a></h3>
-<p>It's also worth noting that the <code>require</code> problems discussed above are non-problems if you are writing your mod with TypeScript using the <a href="https://isaacscript.github.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>IsaacScript framework</a>. This is because the transpiler automatically combines all of your code into a single "main.lua" file. This means that you don't have to bother juggling between using <code>include</code> and <code>require</code>, worrying about state, or monkey patching the <code>require</code> function - you can simply write code that works.</p>
+<h3 id="require_4">解决require问题的替代方法<a class="headerlink" href="#require_4" title="Permanent link">⚓︎</a></h3>
+<p>同样值得注意的是，如果您使用<a href="https://isaacscript.github.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>IsaacScript framework</a>和TypeScript编写mod，则上述<code>require</code>问题不存在。这是因为transpiler会自动将所有代码组合到一个“main.lua”文件中。这意味着，您不必在使用<code>include</code>和<code>require</code>之间左右为难，也不必担心状态问题，也不需要对<code>require</code>函数进行猴子补丁——您只需编写有效的代码即可。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2023</span>
       
     
   </small>

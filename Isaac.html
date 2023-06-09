@@ -5654,7 +5654,7 @@
 <p>在给定位置（世界坐标）生成一个<a href="GridEntity.html">网格实体</a>。</p>
 <details class="bug" open="open">
 <summary>Bugs</summary>
-<p>“forced”参数无效，并且将<strong>不会</strong>覆盖给定位置的网格实体。如果必要的话，先在在给定位置移除网格实体，然后在再其上生成新的网格实体。</p>
+<p>在某些情况下，“forced”参数可以覆盖给定位置的网格实体。例如：它不适用于岩石，但适用于被炸毁的岩石。您可以使用“Isaac.GetFreeNearPosition”检查位置，看看游戏是否认为该位置是空闲的。检查返回的网格实体的类型，以确保发生了替换。否则，您可能需要先删除给定位置的网格实体，然后再在其位置生成其他内容。</p>
 </details>
 <p>例如，要在房间中央生成一块超级标记石头：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -5824,7 +5824,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2023</span>
       
     
   </small>
