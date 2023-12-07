@@ -11,7 +11,7 @@ ___
 
 如果你想帮忙协助该项目，考虑访问 **[:fontawesome-brands-github: Github Project](https://github.com/58115310/IsaacDocs)**
 
-To learn how to understand the documentation, [click this link.](./faq/faq.md#how-do-i-understand-the-docs)
+如果想了解如何理解文档，[点击该链接](./faq/faq.md#how-do-i-understand-the-docs)。
 
 如果你对制作MOD有任何疑问，请访问官方Discord：
 
