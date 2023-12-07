@@ -19,12 +19,12 @@
 ## 帮助翻译
 
 1. fork一个新的代码库
-2. 在fork的代码库中，以translation-chinese为基分支，新建一个分支，可以叫`page-页面名`等。
+2. 在fork的代码库中，以main为基分支，新建一个分支，可以叫`page-页面名`等。
 3. 在该分支上进行翻译。
-4. 该分支的目的完成后，推送该分支。创建Pull Request，将该分支合并到Cuerzor/IsaacDocs的以translation-chinese分支上。
+4. 该分支的目的完成后，推送该分支。创建Pull Request，将该分支合并到Cuerzor/IsaacDocs的以main分支上。
 5. 等待审核。
-6. 审核通过后，你的分支会被合并到translation-chinese中。
+6. 审核通过后，你的分支会被合并到main中。
 
 **注意：**
-1. 如果你本地的translation-chinese等分支已过时，你需要拉取该分支以进行更新。
+1. 如果你本地的main等分支已过时，你需要拉取该分支以进行更新。
 2. 不要使用合并操作，请使用变基，使得代码历史呈线性。
