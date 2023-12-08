@@ -55,7 +55,7 @@ tags:
 
 即使您知道要正确地放在“mods”目录下，它们的内部文件也必须处于正确的特定位置。因此您可能没有将文件放在正确的地方。
 
-首先，请遵循视频教程，或者其他人的指导，这大致对应于你想做的东西（例如角色/跟班/敌人/其他什么）。一步一步来，一旦你验证了你做的的角色/跟班/敌人/其他东西的工作方式与指导中的完全相同，然后开始一件一件地做出改变，直到你要做的东西开始不起作用。然后，你就会看到问题在哪里，如果需要，你可以继续问一些更具体的问题。 
+首先，请遵循视频教程，或者其他人的指导，这大致对应于你想做的东西（例如角色/跟班/敌人/其他什么）。一步一步来，一旦你验证了你做的的角色/跟班/敌人/其他东西的工作方式与指导中的完全相同，然后开始一件一件地做出改变，直到你要做的东西开始不起作用。然后，你就会看到问题在哪里，如果需要，你可以继续问一些更具体的问题。
 
 ### 我在哪儿看[某些原版道具]或者[某些原版机制]？ {: .subHeader}
 
@@ -119,7 +119,7 @@ tags:
 
 ### [某个音效]的ID是什么？ {: .subHeader}
 
-使用[这个MOD](misc/sounds-display.lua)，它会告诉你当前播放的任何音效的ID是什么。 
+使用[这个MOD](misc/sounds-display.lua)，它会告诉你当前播放的任何音效的ID是什么。
 
 ### 我要怎么覆盖原版音乐？ {: .subHeader}
 
@@ -248,43 +248,43 @@ Lua是一种解释型语言，这意味着如果你犯了拼写错误或有其�
 
 如果你在Lua中编程你的mod，那么你唯一的选择就是插入大量的打印语句，试图缩小崩溃发生的范围。
 
-如果您正在使用:material-language-typescript:TypeScript[IsaacScript框架](https://isaacscript.github.io/)编程您的mod，您可以使用[崩溃调试插件](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts)，这将把mod崩溃的确切行号写在log.txt中，非常方便。
+如果您正在使用:material-language-typescript:TypeScript的[IsaacScript框架](https://isaacscript.github.io/)编程您的mod，您可以使用[崩溃调试插件](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts)，这将把mod崩溃的确切行号写在log.txt中，非常方便。
 
-## Coding
+## 代码
 
-### How do I do X? How do I code X? {: .subHeader}
+### 我要怎么做X？ 我要怎么写X的代码？ {: .subHeader}
 
-The fastest way to figure out how to do something is to download a few mods that provide similar functionality to what you want to do，and then study the code.
+找出如何做某事的最快方法是下载一些提供与你想做的类似功能的mod，然后研究代码。
 
-### What is a callback? {: .subHeader}
+### 回调是什么？ {: .subHeader}
 
-Mods affect the game by putting code inside of *callbacks*. Each callback fires when a particular event happens in the game. There are 72 different callbacks to choose from，so you have to choose the right one depending on what you want to do.
+Mod通过将一些代码放入*回调*来修改游戏。当游戏中发生特定事件时，每个回调都会触发。有72种不同的回调可供选择，所以你必须根据你想做的事情选择正确的回调。
 
-For example，the most basic callback is `MC_POST_GAME_STARTED`，which fires once at the beginning of a new run. You would put code in here to do something custom at the beginning of every run.
+例如，最基本的回调是`MC_POST_GAME_STARTED`，它在一局新游戏开始时触发一次。您可以将代码放在这里，以在每局游戏开始时进行自定义操作。
 
-Another common callback that mods use is `MC_POST_UPDATE`，which fires on every single update frame (i.e. 30 times per second). You would put code in this callback for custom items that have constant effects.
+Mod使用的另一个常见回调是`MC_POST_UPDATE`，它在每个更新帧上触发（即每秒30次）。您可以将具有固定效果的自定义道具的代码放入此回调中。
 
-Go through the [ModCallbacks page](../enums/ModCallbacks.md) and read what all of the callbacks do so that you can get familiar with them.
+浏览[ModCallbacks页面](../enums/ModCallbacks.md)并阅读所有回调的作用，以便熟悉它们。
 
-### How do I understand the docs? {: .subHeader}
+### <span id="how-do-i-understand-the-docs">我要怎么理解文档?</span> {: .subHeader}
 
 ![img](../images/docs_reading_guide.png)
 
-### What is Single Line Responsibility (SLR)? {: .subHeader}
+### 什么是单行职责(SLR)？ {: .subHeader}
 
-When writing code，put some effort into making it look nice and be easy to read for others，especially if you are showing it to other people or asking for help. In this vein，it is a good idea to follow the "single line responsibility" rule - meaning that **one line** should only do **one thing**. Read [this blog](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/) for more details about why SLR is great.
+在编写代码时，要努力使其看起来美观，便于他人阅读，尤其是当你向他人展示或寻求帮助时。在这种情况下，遵循“单行职责”规则是一个好主意，这意味着**一行代码**应该只做**一件事**。阅读[此博客](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/)了解更多细节，你会明白为什么SLR伟大。
 
-### How do I apply a costume to my character? {: .subHeader}
+### 如何将人物外观应用于我的角色？ {: .subHeader}
 
-This is called a "null costume" and it is accomplished via the `EntityPlayer.AddNullCostume()` method. For more information，see [Lytebringr's 8th video](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9).
+这被称为“Null Costume”（空外观），它是通过`EntityPlayer.AddNullCostume()`方法来完成的。有关更多信息，请参阅[Lytebringr的第8个视频](https://www.youtube.com/watch?v=R1CdCyGL1DQ&list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&index=9)。
 
-???- example "Example code"
-    The follow is an example of a mod adding a null costume:
+???- example "示例代码"
+    以下是一个使用MOD添加空外观的示例：
 
     ```lua
     local MOD_NAME = "My Mod"
 
-    -- For EntityType.ENTITY_PLAYER (1)
+    -- 用于EntityType.ENTITY_PLAYER (1)
     local PlayerVariant = {
       PLAYER = 0,
       COOP_BABY = 1,
@@ -298,7 +298,7 @@ This is called a "null costume" and it is accomplished via the `EntityPlayer.Add
       BAR = Isaac.GetCostumeIdByPath("gfx/characters/bar.anm2"),
     }
 
-    local mod = RegisterMod(MOD_NAME，1)
+    local mod = RegisterMod(MOD_NAME, 1)
 
     function mod:postPlayerInit(player)
       local character = player:GetPlayerType()
@@ -310,24 +310,24 @@ This is called a "null costume" and it is accomplished via the `EntityPlayer.Add
         player:AddNullCostume(NullItemIDCustom.BAR)
       end
     end
-    mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT，mod.postPlayerInit)
+    mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, mod.postPlayerInit)
     ```
 
-### How do I make the costume on my custom character persistent? {: .subHeader}
+### 如何使自定义角色的人物外观永久存在？ {: .subHeader}
 
-Use [Sanio's "Character Costume Protector" library](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255) for this，or study the source code and re-implement it yourself.
+使用[Sanio的“角色外观保护器”库](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255)，或者研究源代码并自己重新实现它。
 
-For a reference implementation，see [Andrew the Bunny Knight](https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854).
+有关参考实现，请参见[Andrew the Bunny Knight](https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854)。
 
-### How do I create a new floor/level/stage? {: .subHeader}
+### 如何创建新的层？ {: .subHeader}
 
-Unfortunately，Isaac does not natively support modded custom floors. BudJMT and DeadInfinity have built a custom system called [StageAPI](https://github.com/Meowlala/BOIStageAPI15) that allows mods to add custom floors in a hacky way. However，StageAPI is not easy to use，so unless you are already an experienced Isaac modder & coder，you should stick to more simple projects.
+不幸的是，以撒并不支持MOD自定义楼层。BudJMT和DeadConfinity搭建了一个名为[StageAPI](https://github.com/Meowlala/BOIStageAPI15)的自定义系统，这允许Mod以一种巧妙的方式添加自定义楼层。然而，StageAPI并不容易使用，所以除非你已经是一个经验丰富的以撒MOD制作者和程序员，否则你应该坚持制作更简单的项目。
 
-### How do I modify the Devil Room / Angel Room chances? {: .subHeader}
+### 如何修改恶魔房/天使房的开启率？ {: .subHeader}
 
-There is no built-in way to do this，so you will have to get inventive. For the most control，you can delete all vanilla Devil/Angel doors and completely re-implement the system from scratch. Otherwise，you can temporarily give items to the player such as Goat Head or Rosary Bead，or use things like [Game.SetLastDevilRoomStage()](../Level.md#setlastdevilroomstage) or [Level.SetRedHeartDamage()](../Level.md#setredheartdamage). You also might want to use [LevelStateFlags](../enums/LevelStateFlag.md).
+没有内置的方法可以做到这一点，所以您必须有些创造力。为了获得开启率的最大控制权，您可以删除所有原版的恶魔房/天使房门，并从头开始完全重新实现系统。或者，您可以临时将道具给予玩家，如山羊头或念珠段，或使用[Game.SetLastDevilRoomStage()](../Level.md#setlastdevilroomstage)或[Level.SetRedHeartDamage()](../Level.md#setredheartdamage)方法。您还可能需要使用[LevelStateFlags](../enums/LevelStateFlag.md)。
 
-### How do I get a familiar to follow the player like Brother Bobby does? {: .subHeader}
+### 我该如何让一个跟班像波比兄弟那样跟随玩家？ {: .subHeader}
 
 === ":material-language-lua: Lua"
     ```lua
@@ -351,64 +351,64 @@ There is no built-in way to do this，so you will have to get inventive. For the
     }
     ```
 
-### How do you use StageAPI to add new bosses? {: .subHeader}
+### 如何使用StageAPI添加新头目？ {: .subHeader}
 
-This is an example code snippet from Xalum:
+这是一段来自于Xalum的示例代码:
 
 ```lua
 mod.StageAPIBosses = {
-    StageAPI.AddBossData("The Baron"，{
+    StageAPI.AddBossData("The Baron", {
         Name = "The Baron",
         Portrait = "gfx/bosses/baron/portrait_baron.png",
         Bossname = "gfx/bosses/baron/name_baron.png",
-        Rooms = StageAPI.RoomsList("BaronBossRooms"，include("resources.luarooms.boss_baron"))
+        Rooms = StageAPI.RoomsList("BaronBossRooms", include("resources.luarooms.boss_baron"))
     }),
 
-    StageAPI.AddBossData("High Amon"，{
+    StageAPI.AddBossData("High Amon", {
         Name = "High Amon",
         Portrait = "gfx/bosses/amon/portrait_amon.png",
         Bossname = "gfx/bosses/amon/name_amon.png",
-        Rooms = StageAPI.RoomsList("AmonBossRooms"，include("resources.luarooms.boss_amon"))
+        Rooms = StageAPI.RoomsList("AmonBossRooms", include("resources.luarooms.boss_amon"))
     }),
 }
 
-StageAPI.AddBossToBaseFloorPool({BossID = "The Baron"，Weight = 1.5}，LevelStage.STAGE3_1，StageType.STAGETYPE_胎衣)
-StageAPI.AddBossToBaseFloorPool({BossID = "High Amon"，AlwaysReplaceSubtype = 83，OnlyReplaceSubtype = 83}，LevelStage.STAGE2_1，StageType.STAGETYPE_忏悔_B)
+StageAPI.AddBossToBaseFloorPool({BossID = "The Baron", Weight = 1.5}, LevelStage.STAGE3_1, StageType.STAGETYPE_REPENTANCE)
+StageAPI.AddBossToBaseFloorPool({BossID = "High Amon", AlwaysReplaceSubtype = 83, OnlyReplaceSubtype = 83}, LevelStage.STAGE2_1, StageType.STAGETYPE_REPENTANCE_B)
 ```
 
-### How do I make my custom character start with a smelted / gulped trinket? {: .subHeader}
+### 如何使我的自定义角色开局自带熔炼/吞下的饰品？ {: .subHeader}
 
-You cannot do this via editing the XML 文件. Thus，you must accomplish this via Lua or TypeScript code.
+没有办法通过编辑XML文件来完成此操作。因此，您必须通过Lua或TypeScript代码来实现这一点。
 
-### How do I know when a player has picked up a collectible item? {: .subHeader}
+### 我要怎么知道玩家什么时候捡到了道具？ {: .subHeader}
 
-There is no vanilla callback for this. As a workaround，you can check `EntityPlayer.IsItemQueueEmpty()` on every PostUpdate frame，and then check `EntityPlayer.QueuedItem` when it is not empty. Obviously，this will not work for items that never get queued.
+对此没有原版的回调。作为一种变通方法，您可以在PostUpdate回调中使用`EntityPlayer.IsItemQueueEmpty()`检查玩家是否没有在举起道具，然后在举起道具的时候通过`EntityPlayer.QueuedItem`获取道具ID。显然，这对直接添加的不起作用。
 
-For :material-language-typescript:[IsaacScript](https://isaacscript.github.io/) users，you can use the provided [:material-language-typescript:MC_POST_ITEM_PICKUP](https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup) callback.
+对于:material-language-typescript:[IsaacScript](https://isaacscript.github.io/)使用，您可以使用IsaacScript提供的[:material-language-typescript:MC_POST_ITEM_PICKUP](https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup)回调。
 
-If you want to implement this callback yourself，the source code / algorithm is provided [here](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts).
+如果你想自己实现这个回调，[这里](https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts)提供了源代码/算法。
 
-### How do you tell what the entity type，variant，or subtype of a particular entity is? {: .subHeader}
+### 如何得知某个实体的实体类型、变种或子类型？ {: .subHeader}
 
-You can:
+您可以：
 
-1. Type "spawn x" into the in-game console. For example，"spawn confessional" would show that the Confessional entity has an identifier of 6.17. This means that it has an entity type of 6 and a variant of 17.
-2. Or，you can ctrl+f in the "resources-dlc3/entities2.xml" 文件 for the entity you want.
+1. 在游戏控制台中输入“spawn x”。例如，“spawn Confessional”将显示忏悔室的ID为6.17。这意味着它的实体类型是6，变种是17。
+2. 或者，您可以在“resources-dlc3/entities2.xml”文件中使用ctrl+f搜索您想要的实体。
 
-### How do I blindfold the player? {: .subHeader}
+### 如何让角色蒙眼？ {: .subHeader}
 
 === ":material-language-lua: Lua"
     ```lua
-    --- Written by Zamiel，technique created by im_tem
+    --- Zamiel编写代码，im_tem创建该机制
     -- @param player EntityPlayer
-    -- @param 启用 boolean
+    -- @param enabled boolean
     -- @param modifyCostume boolean
-    function setBlindfold(player，启用，modifyCostume)
+    function setBlindfold(player, enabled, modifyCostume)
       local game = Game()
       local character = player:GetPlayerType()
       local challenge = Isaac.GetChallenge()
 
-      if 启用 then
+      if enabled then
         game.Challenge = Challenge.CHALLENGE_SOLAR_SYSTEM -- This challenge has a blindfold
         player:ChangePlayerType(character)
         game.Challenge = challenge
@@ -430,37 +430,38 @@ You can:
     ```
 
 === ":material-language-typescript: TypeScript"
-    If you are using [:material-language-typescript:IsaacScript](https://isaacscript.github.io/)，then all you have to do is call the `setBlindfold` function，like so:
+    如果你正在使用[:material-language-typescript:IsaacScript](https://isaacscript.github.io/)，你完全可以直接调用`setBlindfold`函数，如：
 
     ```ts
     const player = Isaac.GetPlayer();
-    setBlindfold(player，true);
+    setBlindfold(player, true);
     ```
 
-### What is the 区别 between an API and a library? {: .subHeader}
+### API和库之间的区别是什么？ {: .subHeader}
 
-Some mods on the workshop package functionality together as an abstraction for other people to use. In software，this is what is typically known as a "library". As a programmer，it is usually a lot easier to leverage other people's battle-tested libraries than to roll your own from scratch.
+创意工坊上的一些MOD将功能打包在一起，作为抽象供其他人使用。在软件中，这就是通常所说的“库”。作为一名程序员，利用别人经过实际测试的库通常比从头开始使用自己的库容易得多。
 
-On the other hand，an API is short for application programming interface，and it is exactly what it sounds like. An application might want to expose some functionality to external users and software，and it would do that through an explicitly defined interface. Libraries expose an API so that end-users can consume them. But note that *any* software can have an API，not just a library. For example，the Revelations Mod is a popular mod that adds new floors，bosses，and items to the game. But it also exposes an API so that it can be made compatible with other mods.
+另一方面，API是“应用程序编程接口”的缩写，这正是它听起来的样子。应用程序可能希望向外部用户和软件公开一些功能，并且它将通过显式定义的接口来实现这一点。库公开了API，以便最终用户可以使用它们。但请注意，*任何*软件都可以有一个API，而不仅仅是一个库。例如，启示录MOD是一个流行的MOD，它为游戏添加了新的楼层、头目和道具。但它也公开了一个API，这样它就可以与其他MOD兼容。
 
-Historically，Isaac libraries have labeled themselves as "APIs"，but this is a misnomer. Some examples of this include [StageAPI](https://github.com/Meowlala/BOIStageAPI15) and [MinimapAPI](https://github.com/TazTxUK/MinimapAPI). On the other hand，an example of a library that is correctly named is Sanio's [Character Costume Protector](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255).
+从历史上看，以撒的一些库将自己标记为“API”，但这是一个用词不当的说法。这方面的一些例子包括[StageAPI](https://github.com/Meowlala/BOIStageAPI15)和[MinimapAPI](https://github.com/TazTxUK/MinimapAPI)。另一方面，一个正确命名的库的例子是Sanio的[角色外观保护器](https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255)。
 
-If you are creating a new library，please use the correct terminology to name your project，which helps prevent confusion for newcomers to the Isaac modding scene.
+如果你正在创建一个新的库，请使用正确的术语来命名你的项目，这有助于防止以撒MOD制作新手感到困惑。
 
-### What is a micro-optimization? Should I optimize my mod? {: .subHeader}
+### 什么是微观优化？我应该优化我的MOD吗？ {: .subHeader}
 
-#### Definition
+#### 定义
 
-As programmers，we are often concerned with the speed of our programs.
+作为程序员，我们经常关心程序的运行速度如何。
 
-When beginner programmers start to think about "performance"，they often make bad adjustments to their code in the hopes that it will speed it up. These are called [micro-optimizations (or premature optimizations)](https://wiki.c2.com/?PrematureOptimization). For example，a beginner might start with some code that is neatly organized into separate functions，like this:
+当新手程序员开始考虑“性能”时，他们可能会对代码进行糟糕的调整，希望它能加快速度。这些被称为[微观优化（或过早优化）](https://wiki.c2.com/?PrematureOptimization)。例如，新手可能会从一些整齐地组织成单独函数的代码开始，如下所示：
+
 
 ```lua
 local function main()
-  -- Do some stuff with foo
+  -- 使用foo做点什么
   foo()
 
-  -- Do some stuff with bar
+  -- 使用bar做点什么
   bar()
 end
 
@@ -473,58 +474,58 @@ local function bar()
 end
 ```
 
-In the previous code，we have two functions that are small，named well (theoretically)，and are easy to read and understand. But a beginner might be tempted to transform the code to this:
+在上面的代码中，我们有两个小函数，命名良好（理论上），易于阅读和理解。但是新手可能会想把代码转换成这样：
 
 ```lua
 local function main()
-  -- Do some stuff with foo
+  -- 使用foo做点什么
   -- TODO
 
-  -- Do some stuff with bar
+  -- 使用bar做点什么
   -- TODO
 end
 ```
 
-The idea here is that since we got rid of two function calls，the program should *theoretically* speed up. (Because under the hood，what functions do when they are called is put values on the stack，and then pop them back off of the stack when they are done.)
+这里的想法是，既然我们去掉了两个函数调用，那么程序在理论上应该会加快速度。（因为在后台，函数在被调用时所做的是将值放在堆栈上，然后在完成后将它们从堆栈中弹出。）
 
-But in reality，compilers can often optimize the code to perform this speed-up automatically (without the programmer having to actually modify their source code). So in this case，the beginner programmer is making their source code worse in exchange for byte-code that will run identically. Bad!
+但实际上，编译器通常可以优化代码以自动执行这种加速（而无需程序员实际修改其源代码）。因此，在这种情况下，新手程序员获得了运行效率完全一样的字节码，代价是源代码变得更糟。太差劲了！
 
-Furthermore，even if the compiler does not optimize the function call automatically，the simple act of calling a function can happen in few short nanoseconds. You would never be able to meaningfully measure a 区别 in the run-time performance of the program with a few extra function calls. So it's still the same as before: the beginner programmer is making their source code worse for no measurable benefit.
+此外，即使编译器没有自动优化函数调用，调用函数的简单操作也可以在几纳秒内完成。你永远无法有意义地衡量程序的运行时性能中，使用一些额外的函数调用所产生的区别。所以还是和以前一样：新手程序员正在使他们的源代码变得更糟，而没有可衡量的好处。
 
-Micro-optimziation is a trap that many beginners fall into. The time spent on performing micro-optimizations should instead be spent on measuring *real* bottlenecks in the code，and then optimizing those. Or fixing real bugs! Or adding real features!
+微观优化是许多新手陷入的陷阱。花在执行微观优化上的时间应该花在测量代码中的实际瓶颈上，然后对这些瓶颈进行优化。或者修复真正的bug！或者添加真正的功能！
 
-This is the reason why programmers have the maxim: "Premature optimization is the root of all evil." It comes from [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)，who is one of the most renown computer scientests of all time. In his paper "[Structured Programming with go to Statements](https://pic.plover.com/knuth-GOTO.pdf)"，he famously writes:
+这就是为什么程序员有这样一句格言：“过早的优化是万恶之源。”，出自[唐纳德·克努特](https://en.wikipedia.org/wiki/Donald_Knuth)，是有史以来最著名的计算机科学家之一。在他的论文“[Structured Programming with go to Statements](https://pic.plover.com/knuth-GOTO.pdf)”中，他写了这样一句著名的话：
 
-> Programmers waste enormous amounts of time thinking about，or worrying about，the speed of noncritical parts of their programs，and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies，say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.
+> 程序员浪费了大量的时间去考虑或担心程序中非关键部分的速度，而当考虑到调试和维护时，这些对效率的尝试实际上会产生强烈的负面影响。我们应该忘记这种微小的效率，比如说因为过早优化而浪费的大约97%的时间。然而，我们不应该放弃那关键的 3% 的机会
 
-#### Measuring
+#### 测量性能
 
-In the example above，the beginner programmer assumed that removing function calls would speed up the program. But these kinds of assumptions could be about any type of code，not just function calls. You might "know" that coding in a certain way will be faster than in another way.
+在上面的例子中，新手认为删除函数调用会加快程序的速度。但这些假设可以是关于任何类型的代码，而不仅仅是函数调用。您可能“知道”以某种方式进行编码会比以另一种方式更快。
 
-But in real life programs，it is **extremely difficult** to predict what kinds of code transformations will actually affect the performance of the program. Sometimes，you can make a change that you think will speed up the program，but it really makes it slower! And sometimes，you can make a change that you think will make the program slower，but it really speeds it up! The compiler does all kinds of crazy things under-the-hood.
+但在实际生活中的程序中，要预测哪种代码形式实际上会影响程序的性能是**极其困难**的。有时，你可以做出一个你认为会加快程序的变更，但却会让程序变慢！有时，你可以做出一个你认为会让程序变慢的变更，但它却加快了速度！编译器一直在引擎盖下做各种摸不着头脑的事情。
 
-This is why when we talk about optimization，the most important thing to discuss is **measuring**. Measuring the run-time of a piece of code is calling profiling. (It can also be called benchmarking.)
+这就是为什么当我们谈论优化时，最需要讨论的是**测量性能**。测量一段代码的运行时间的行为叫做性能分析。（也可以称为基准测试。）
 
-Memorize the **[three rules of optimization](https://wiki.c2.com/?RulesOfOptimization)** from the C2 wiki:
+记住来自于C2 wiki的**[优化的三条准则](https://wiki.c2.com/?RulesOfOptimization)**：
 
-1. Don't.
-2. Don't... yet.
-3. Pro文件 before optimization.
+1. 别这么做。
+2. 现在先别这么做。
+3. 优化前先做性能分析。
 
-The idea behind these 3 rules is that in real life programs，you almost never need to optimize. But if you really do，you **must** measure both before and after. Based on what you measure，it will tell you if the code change is worth the costs of making the code longer，more complicated，or harder to understand. Sometimes，it will be worth it. But often，it won't.
+这3条规则背后的理念是，在实际生活中的程序中，你几乎从不需要优化。但如果你真的这么做了，你**必须**在之前和之后都测量性能。根据你的衡量标准，它会告诉你代码更改是否值得让代码变得更长、更复杂或更难理解。有时候，这是值得的，但往往不会。
 
-#### Code Clarity
+#### 代码清晰度
 
-So，if you should not generally be concerned with performance，what should you be concerned with? The answer is code clarity.
+那么，如果你一般不应该关心性能，你应该关心什么呢？答案是代码清晰度。
 
-First and foremost，the goal of code is to make it neat and easy to read for others. (And even if you are writing code that is never going to be read by anyone else，you should still make it neat and easy to read for future-you，who might have to read this code months or years from now and have to figure out what it does in order to fix some bug.)
+首先也是最重要的一点，代码的目标是使其简洁易读。（即使你正在编写的代码永远不会被其他人阅读，你仍然应该让它整洁易读，以供未来的你阅读，因为你可能需要在几个月或几年后阅读这些代码，并且必须弄清楚它能做什么来修复一些错误。）
 
-You might think it is silly to rank "code clarity" as being more important than having "code that works". And that's certainly debatable. But consider this:
+您可能会认为将“代码清晰度”列为比拥有“能跑的代码”更重要这个做法很蠢。这当然有争议。但考虑一下：
 
-- Code that doesn't work，but is easy to understand，can be modified to be made to work.
-- Code that works，but is indecipherable，is going to be very difficult to modify. And this means that we probably can't fix any bugs or add new features.
+- 不能跑但易于理解的代码可以被修改，让它能跑。
+- 能跑但无法破译的代码将很难修改。这意味着我们可能无法修复任何错误或添加新功能。
 
-One of the key insights of [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)，the creator of the [Python](https://www.python.org/) programming language，was that [code is read much more often than it is written](https://www.python.org/dev/peps/pep-0008/). Python was designed to be concise，clean，and readable. It had standard ways of doing things and recommends that everyone follow the [PEP-8 coding standard](https://www.python.org/dev/peps/pep-0008/). Now，Python is the [most popular programming language in the world](https://pypl.github.io/PYPL.html). The readability of the code isn't the *only* reason for Python's rise，but it is one of the more important ones.
+[吉多·范罗苏姆](https://en.wikipedia.org/wiki/Guido_van_Rossum)，编程语言[Python](https://www.python.org/)的创建者，他的关键见解之一就是[代码读起来比写起来频繁得多](https://www.python.org/dev/peps/pep-0008/)。Python被设计为简洁、干净和可读的语言，它有标准的做事方式，并建议每个人都遵循[PEP-8编码标准](https://www.python.org/dev/peps/pep-0008/)。现在，Python是[世界上最流行的编程语言](https://pypl.github.io/PYPL.html)。代码的可读性并不是Python崛起的*唯一*原因，但它仍是重要的原因之一。
 
 ## Lua
 
@@ -538,7 +539,7 @@ For example，in Lua:
     local game = Game()
     local level = game:GetLevel()
     local rooms = level:GetRooms()
-    for i = 0，rooms.Size - 1 do
+    for i = 0, rooms.Size - 1 do
       local room = rooms:Get(i)
       -- Do something with the room
     end
@@ -571,9 +572,9 @@ local map = {
   baz = 123,
 }
 
-for key，value in pairs(map) do
-  print(key) -- Prints foo，baz
-  print(value) -- Prints bar，123
+for key, value in pairs(map) do
+  print(key) -- Prints foo, baz
+  print(value) -- Prints bar, 123
 end
 ```
 
@@ -584,9 +585,9 @@ local array = {
   789,
 }
 
-for i，element in ipairs(array) do
-  print(i) -- Prints 1，2，3
-  print(element) -- Prints 123，456，789
+for i, element in ipairs(array) do
+  print(i) -- Prints 1, 2, 3
+  print(element) -- Prints 123, 456, 789
 end
 ```
 
@@ -604,8 +605,8 @@ foo:bar()
 A period invokes the function in the "normal" way. A colon invokes the function in a special way that is syntactic sugar for passing the module as the first argument. For example，the following two function calls are equivalent:
 
 ```lua
-foo.bar(foo，arg1，arg2)
-foo:bar(arg1，arg2)
+foo.bar(foo, arg1, arg2)
+foo:bar(arg1, arg2)
 ```
 
 The point of using the colon is that it is a convenience to save you from typing out the longer function call，at the cost of some obfuscation for those not familiar with Lua. This feature is included in the language since doing this is such a common task. (Lua modules are often used to emulate Java-style classes.)
