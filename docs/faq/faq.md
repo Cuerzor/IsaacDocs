@@ -150,7 +150,7 @@ tags:
 
 Basement Renovator是用Python编写的，因此您可以从源代码运行它，也可以从[发布页面](https://github.com/basement-renovator/basement-renovator/releases)下载exe文件。
 
-## 疑难解答
+## 故障排除
 
 ### 为什么我的贴图在游戏中显示为黑色或红色方块？ {: .subHeader}
 
@@ -194,61 +194,61 @@ Basement Renovator是用Python编写的，因此您可以从源代码运行它�
 7. 在Steam Workshop上重新订阅mod。
 8. 再次打开游戏。当游戏看上去未响应时，**不要**关闭游戏。
 
-### Why isn't my code working? How do I know when errors occur? Where is the log.txt 文件 located? {: .subHeader}
+### 为什么我的代码不起作用？我怎么知道哪里发生错误了？log.txt文件在哪里？ {: .subHeader}
 
-Lua is an interpreted language，which means that if you make a typo or have otherwise bad code，you will only be able to discover it once the program actually runs. If the Lua interpreters encounters an error，it will write it to the game's log.txt 文件.
+Lua是一种解释型语言，这意味着如果你犯了拼写错误或有其他错误的代码，你只有在程序真正运行后才能发现它。如果Lua解释器遇到错误，它会将其写入游戏的log.txt文件.
 
-By default，this 文件 is located at:
-
-```
-文档\My Games\Binding of Isaac 忏悔\log.txt
-```
-
-Open this 文件 and search it carefully for Lua-related errors. (Ctrl + f for "error" is a good start.) This will often tell you the line number that you messed up on.
-
-It is also recommended to set `FadedConsoleDisplay=1` in the options.ini 文件 so that it is a little bit more easy to discover errors while you play. By default，the options.ini 文件 is located at:
+默认情况下，该文件处于：
 
 ```
-文档\My Games\Binding of Isaac 忏悔\options.ini
+文档\My Games\Binding of Isaac Repentance\log.txt
 ```
 
-For people comfortable with command-line applications，use Zamiel's [isaac-log-viewer](https://github.com/Zamiell/isaac-log-viewer) and have it running on a second monitor as you code & test.
+打开这个文件并仔细搜索与Lua相关的错误。（Ctrl+F查找单词“error”是一个好方法。）这通常会告诉你写错的代码的的行号。
 
-### When is the log.txt cleared? {: .subHeader}
+还建议在options.ini文件中设置`FadedConsoleDisplay=1`，这样在一局游戏中中发现错误就更容易了。默认情况下，options.ini文件位于：
 
-Every time that you open the game，all of the contents of the log.txt is deleted. Thus，if you need information from the log after a bug occurs，make sure that you do not re-launch the game.
+```
+文档\My Games\Binding of Isaac Repentance\options.ini
+```
 
-### How do I troubleshoot my code? {: .subHeader}
+对于熟悉命令行应用程序的用户，请使用Zamiel的[以撒日志查看器](https://github.com/Zamiell/isaac-log-viewer)并在编写代码和测试时让它在第二个监视器上运行。
 
-When you write programs，they may not work right away. Your first reaction should not be to paste a bunch of code into Discord and ask "why doesn't this work?". Doing that means you aren't putting forth very much effort to try and solve the problem on your own.
+### 为什么log.txt文件里面什么都没有？ {: .subHeader}
 
-The tried-and-true method to figure out almost any bug is called "print debugging". In Isaac，this means printing out a bunch of messages to the log.txt 文件 so that you can view it and see which parts of your code are being executed，and which are not. So，go to a bunch of places in your code and add `Isaac.DebugString("GETTING HERE 1")`，`Isaac.DebugString("GETTING HERE 2")`，and so on. Then，run your code (i.e. walk around in-game and trigger the bug)，and study the log.txt 文件 to try and see what is happening.
+每次打开游戏时，log.txt的所有内容都会被删除。因此，如果您在错误发生后需要日志中的信息，请确保不要重新启动游戏。
 
-Often times，the reason that your code is not working is that your variables are not what you think they are. So，print out what the variables are at each step of the way so that you can confirm that they are what you think they are. Use something along the lines of: `Isaac.DebugString("GETTING HERE - FOO IS: " .. tostring(foo))`
+### 如何对代码进行故障排除？ {: .subHeader}
 
-You might also want to use a log viewer like [this one](https://github.com/Zamiell/isaac-log-viewer).
+当你编写程序时，它们可能无法立即工作。你首先要做的不应该是把一堆代码粘贴到群聊里，然后问“为什么没用？”。这样做意味着你不会花太多精力试图独立解决问题。
 
-### I modified an XML 文件 and the game crashes when I open it or when I go into a new run. {: .subHeader}
+有一种久经考验的，可以找出几乎所有错误的，叫做“打印调试”的方法。在以撒中，它的意思是将一堆信息打印到log.txt文件，这样您就可以查看它，并查看代码的哪些部分被执行，哪些部分没有执行。所以，去代码中的一些位置，添加`Isaac.DebugString("到这里了1")`，`Isaac.DebugString("到这里了2")`等等输出信息的代码。然后，运行您的代码（即在游戏中各种尝试并触发错误），并研究log.txt文件试着看看发生了什么。
 
-A crash means that the XML 文件 is invalid，meaning that you messed up somewhere while editing the 文件. Start over from scratch and make tiny edits one at a time until you find the exact part that crashes the game.
+通常情况下，代码不起作用的原因是变量不是您认为的那样。所以，用一些类似于`Isaac.DebugString("到这里了 - FOO是: " .. tostring(foo))`的语句把每一步的变量都打印出来，这样你就可以确认它们是你认为的样子。
 
-Another helpful troubleshooting tool is validators like [xmlvalidation.com](https://www.xmlvalidation.com/).
+您可能还想使用类似[这个](https://github.com/Zamiell/isaac-log-viewer)的日志查看器。
 
-### I 启用 a mod and now my game is crashing. How can I fix this? {: .subHeader}
+### 我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。 {: .subHeader}
 
-You can try looking through the log.txt 文件 to see if anything interesting is there. However，in the vast majority of cases，the log will not show any helpful information when the game crashes.
+崩溃意味着XML文件无效，这意味着您在编辑文件时写错了某个地方。从头开始，一次做一个小编辑，直到你找到导致游戏崩溃的确切部分。
 
-Instead，you can find the problem by disabling your mods one by one until you find the exact mod that is causing the crash. Then，you can report it to the developer of the mod，or try to manually fix the code yourself.
+另一个有用的故障排除工具是类似[xmlvalidation.com](https://www.xmlvalidation.com/)的XML验证器。
 
-Note that whenever you enable or disable a mod，you should completely close and re-open the game (because the game does not load resources properly when you enable/disable a mod via the in-game menu).
+### 我启用一个MOD，现在我的游戏崩溃了。我该怎么解决这个问题？ {: .subHeader}
 
-### My mod is causing the game to crash. How do I figure out which line of code is causing the crash? {: .subHeader}
+您可以尝试浏览log.txt文件看看有没有什么有趣的东西。然而，在绝大多数情况下，当游戏崩溃时，日志不会显示任何有用的信息。
 
-First，check out the log.txt 文件 for clues as to why the game is crashing. However，in the vast majority of cases，the log will not show any helpful information when the game crashes.
+相反，你可以通过逐个禁用你的mod来找到问题，直到你找到导致崩溃的确切mod。然后，你可以将其报告给mod的开发者，或者尝试自己手动修复代码。
 
-If you are programming your mod in Lua，then your only option is to insert a lot of print statements to try and narrow down where the crash is occurring.
+请注意，无论何时启用或禁用mod，都应完全关闭并重新打开游戏（因为当您通过游戏内菜单启用/禁用mod时，游戏无法正确加载资源）。
 
-If you are programming your mod in :material-language-typescript:TypeScript using the [IsaacScript framework](https://isaacscript.github.io/)，then you can use [this crash debug plugin](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts) that will put the exact line that the mod is crashing at in the log.txt，which is extremely handy.
+### 我的MOD导致游戏崩溃。如何找出导致崩溃的代码行？ {: .subHeader}
+
+首先，查看log.txt文件寻找游戏崩溃原因的线索。然而，在绝大多数情况下，当游戏崩溃时，日志不会显示任何有用的信息。
+
+如果你在Lua中编程你的mod，那么你唯一的选择就是插入大量的打印语句，试图缩小崩溃发生的范围。
+
+如果您正在使用:material-language-typescript:TypeScript[IsaacScript框架](https://isaacscript.github.io/)编程您的mod，您可以使用[崩溃调试插件](https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts)，这将把mod崩溃的确切行号写在log.txt中，非常方便。
 
 ## Coding
 
