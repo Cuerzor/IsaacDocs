@@ -1,0 +1,6244 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>常见问题 - 以撒的结合: Lua API文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-ZBKP3LLT96"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-ZBKP3LLT96",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-ZBKP3LLT96",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mod" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<!--<p>
+    <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:"> <b> WARNING </b> <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:">
+    <br> Due to the new DLC, some informations on this website can potentially be out-of-date.
+    <br> If you notice errors, please use the "Pencil"
+    <span href="#" class="md-content__button md-icon" style="float: none;margin-left: 0; color:white">
+<svg style="width:1.1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg></span>    icon in the top right to edit the page.</p>
+
+    -->
+<script>
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("darkMode") == 1) {
+            document.body.classList.add("darkMode");
+        }
+    }
+</script>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-header__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            以撒的结合: Lua API文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              常见问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cuerzor/IsaacDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        文档
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../entities/Overview.html" class="md-tabs__link">
+        实体
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/ExampleProject.html" class="md-tabs__link">
+        教程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../xml/XMLFiledocumentation.html" class="md-tabs__link">
+        XML
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="faq.html" class="md-tabs__link md-tabs__link--active">
+        常见问题
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/Tools.html" class="md-tabs__link">
+        工具
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-tabs__link">
+      漏洞
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../tags.html" class="md-tabs__link">
+      标签
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://www.lua.org/manual/5.3/" class="md-tabs__link">
+      Lua 5.3文档
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="以撒的结合: Lua API文档" class="md-nav__button md-logo" aria-label="以撒的结合: Lua API文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    以撒的结合: Lua API文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuerzor/IsaacDocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cuerzor/IsaacDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文档" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          上次访问
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="上次访问" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          上次访问
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLACEHOLDER.html" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          常用页面
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="常用页面" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          常用页面
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Isaac.html" class="md-nav__link">
+        Isaac.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Entity.html" class="md-nav__link">
+        Entity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityPlayer.html" class="md-nav__link">
+        -- EntityPlayer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityNPC.html" class="md-nav__link">
+        -- EntityNPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityEffect.html" class="md-nav__link">
+        -- EntityEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game.html" class="md-nav__link">
+        Game():
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room.html" class="md-nav__link">
+        Room
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Level.html" class="md-nav__link">
+        Level
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ModCallbacks.html" class="md-nav__link">
+        ModCallbacks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          枚举
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="枚举" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          枚举
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ActionTriggers.html" class="md-nav__link">
+        ActionTriggers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ActiveSlot.html" class="md-nav__link">
+        ActiveSlot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BabySubType.html" class="md-nav__link">
+        BabySubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BackdropType.html" class="md-nav__link">
+        BackdropType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BatterySubType.html" class="md-nav__link">
+        BatterySubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BedSubType.html" class="md-nav__link">
+        BedSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BombSubType.html" class="md-nav__link">
+        BombSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/BombVariant.html" class="md-nav__link">
+        BombVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ButtonAction.html" class="md-nav__link">
+        ButtonAction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/CacheFlag.html" class="md-nav__link">
+        CacheFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/CallbackPriority.html" class="md-nav__link">
+        CallbackPriority
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Card.html" class="md-nav__link">
+        Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Challenge.html" class="md-nav__link">
+        Challenge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ChampionColor.html" class="md-nav__link">
+        ChampionColor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ChestSubType.html" class="md-nav__link">
+        ChestSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/CoinSubType.html" class="md-nav__link">
+        CoinSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/CollectibleType.html" class="md-nav__link">
+        CollectibleType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/DamageFlag.html" class="md-nav__link">
+        DamageFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Difficulty.html" class="md-nav__link">
+        Difficulty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Direction.html" class="md-nav__link">
+        Direction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/DoorSlot.html" class="md-nav__link">
+        DoorSlot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/DoorState.html" class="md-nav__link">
+        DoorState
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/DoorVariant.html" class="md-nav__link">
+        DoorVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EffectVariant.html" class="md-nav__link">
+        EffectVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EntityCollisionClass.html" class="md-nav__link">
+        EntityCollisionClass
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EntityFlag.html" class="md-nav__link">
+        EntityFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EntityGridCollisionClass.html" class="md-nav__link">
+        EntityGridCollisionClass
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EntityPartition.html" class="md-nav__link">
+        EntityPartition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/EntityType.html" class="md-nav__link">
+        EntityType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/FamiliarVariant.html" class="md-nav__link">
+        FamiliarVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/GameStateFlag.html" class="md-nav__link">
+        GameStateFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/GridCollisionClass.html" class="md-nav__link">
+        GridCollisionClass
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/GridEntityType.html" class="md-nav__link">
+        GridEntityType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/GridRooms.html" class="md-nav__link">
+        GridRooms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/HeartSubType.html" class="md-nav__link">
+        HeartSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/InputHook.html" class="md-nav__link">
+        InputHook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ItemConfig.html" class="md-nav__link">
+        ItemConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ItemPoolType.html" class="md-nav__link">
+        ItemPoolType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ItemType.html" class="md-nav__link">
+        ItemType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Keyboard.html" class="md-nav__link">
+        Keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/KeySubType.html" class="md-nav__link">
+        KeySubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LaserOffset.html" class="md-nav__link">
+        LaserOffset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LaserSubType.html" class="md-nav__link">
+        LaserSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LaserVariant.html" class="md-nav__link">
+        LaserVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LevelCurse.html" class="md-nav__link">
+        LevelCurse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LevelStage.html" class="md-nav__link">
+        LevelStage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LevelStateFlag.html" class="md-nav__link">
+        LevelStateFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/LocustSubtypes.html" class="md-nav__link">
+        LocustSubtypes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ModCallbacks.html" class="md-nav__link">
+        ModCallbacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Mouse.html" class="md-nav__link">
+        Mouse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/Music.html" class="md-nav__link">
+        Music
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/NpcState.html" class="md-nav__link">
+        NpcState
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/NullItemID.html" class="md-nav__link">
+        NullItemID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PickupPrice.html" class="md-nav__link">
+        PickupPrice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PickupVariant.html" class="md-nav__link">
+        PickupVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PillColor.html" class="md-nav__link">
+        PillColor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PillEffect.html" class="md-nav__link">
+        PillEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PlayerForm.html" class="md-nav__link">
+        PlayerForm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PlayerSpriteLayer.html" class="md-nav__link">
+        PlayerSpriteLayer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PlayerType.html" class="md-nav__link">
+        PlayerType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PoopPickupSubType.html" class="md-nav__link">
+        PoopPickupSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/PoopSpellType.html" class="md-nav__link">
+        PoopSpellType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ProjectileFlags.html" class="md-nav__link">
+        ProjectileFlags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/ProjectileVariant.html" class="md-nav__link">
+        ProjectileVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/RenderMode.html" class="md-nav__link">
+        RenderMode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/RoomDescriptor.html" class="md-nav__link">
+        RoomDescriptor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/RoomShape.html" class="md-nav__link">
+        RoomShape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/RoomTransitionAnim.html" class="md-nav__link">
+        RoomTransitionAnim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/RoomType.html" class="md-nav__link">
+        RoomType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/SackSubType.html" class="md-nav__link">
+        SackSubType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/SeedEffect.html" class="md-nav__link">
+        SeedEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/SkinColor.html" class="md-nav__link">
+        SkinColor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/SortingLayer.html" class="md-nav__link">
+        SortingLayer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/SoundEffect.html" class="md-nav__link">
+        SoundEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/StageType.html" class="md-nav__link">
+        StageType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/TearFlags.html" class="md-nav__link">
+        TearFlags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/TearVariant.html" class="md-nav__link">
+        TearVariant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/TrinketType.html" class="md-nav__link">
+        TrinketType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/UseFlag.html" class="md-nav__link">
+        UseFlag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/WeaponType.html" class="md-nav__link">
+        WeaponType
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Globals.html" class="md-nav__link">
+        全局变量
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlobalFunctions.html" class="md-nav__link">
+        全局函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BitSet128.html" class="md-nav__link">
+        BitSet128
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Color.html" class="md-nav__link">
+        Color
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9">
+          C++容器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C++容器" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          C++容器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_1" type="checkbox" id="__nav_2_9_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9_1">
+          ArrayProxy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ArrayProxy" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          ArrayProxy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_ArrayProxy_RoomConfigEntries.html" class="md-nav__link">
+        RoomConfigEntries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_ArrayProxy_RoomConfigSpawns.html" class="md-nav__link">
+        RoomConfigSpawns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_ArrayProxy_RoomDescriptor.html" class="md-nav__link">
+        RoomDescriptor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_ArrayProxy_intValues.html" class="md-nav__link">
+        intValues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_EntityList.html" class="md-nav__link">
+        EntityList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_3" type="checkbox" id="__nav_2_9_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9_3">
+          Vector
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vector" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vector
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_CardConfigList.html" class="md-nav__link">
+        CardConfigList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_CostumeConfigList.html" class="md-nav__link">
+        CostumeConfigList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_EffectList.html" class="md-nav__link">
+        EffectList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_ItemConfigList.html" class="md-nav__link">
+        ItemConfigList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_PillConfigList.html" class="md-nav__link">
+        PillConfigList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CppContainer_Vector_VectorList.html" class="md-nav__link">
+        VectorList
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10">
+          Entity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Entity" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Entity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Entity.html" class="md-nav__link">
+        Entity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityBomb.html" class="md-nav__link">
+        EntityBomb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityEffect.html" class="md-nav__link">
+        EntityEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityFamiliar.html" class="md-nav__link">
+        EntityFamiliar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityKnife.html" class="md-nav__link">
+        EntityKnife
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityLaser.html" class="md-nav__link">
+        EntityLaser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityNPC.html" class="md-nav__link">
+        EntityNPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityPickup.html" class="md-nav__link">
+        EntityPickup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityPlayer.html" class="md-nav__link">
+        EntityPlayer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityProjectile.html" class="md-nav__link">
+        EntityProjectile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityTear.html" class="md-nav__link">
+        EntityTear
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityPtr.html" class="md-nav__link">
+        EntityPtr
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EntityRef.html" class="md-nav__link">
+        EntityRef
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Font.html" class="md-nav__link">
+        Font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game.html" class="md-nav__link">
+        Game
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" type="checkbox" id="__nav_2_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_15">
+          GridEntity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="GridEntity" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_15">
+          <span class="md-nav__icon md-icon"></span>
+          GridEntity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntity.html" class="md-nav__link">
+        GridEntity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityDoor.html" class="md-nav__link">
+        GridEntityDoor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityPit.html" class="md-nav__link">
+        GridEntityPit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityPoop.html" class="md-nav__link">
+        GridEntityPoop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityPressurePlate.html" class="md-nav__link">
+        GridEntityPressurePlate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityRock.html" class="md-nav__link">
+        GridEntityRock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntitySpikes.html" class="md-nav__link">
+        GridEntitySpikes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityTNT.html" class="md-nav__link">
+        GridEntityTNT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridEntityDesc.html" class="md-nav__link">
+        GridEntityDesc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HUD.html" class="md-nav__link">
+        HUD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_18" type="checkbox" id="__nav_2_18" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_18">
+          ItemConfig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ItemConfig" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_18">
+          <span class="md-nav__icon md-icon"></span>
+          ItemConfig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemConfig.html" class="md-nav__link">
+        ItemConfig Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemConfig_Card.html" class="md-nav__link">
+        ItemConfig - Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemConfig_Costume.html" class="md-nav__link">
+        ItemConfig - Costume
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemConfig_Item.html" class="md-nav__link">
+        ItemConfig - Item
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemConfig_PillEffect.html" class="md-nav__link">
+        ItemConfig - PillEffect
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Input.html" class="md-nav__link">
+        Input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Isaac.html" class="md-nav__link">
+        Isaac
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ItemPool.html" class="md-nav__link">
+        ItemPool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KColor.html" class="md-nav__link">
+        KColor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Level.html" class="md-nav__link">
+        Level
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MusicManager.html" class="md-nav__link">
+        MusicManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModReference.html" class="md-nav__link">
+        Mod Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Options.html" class="md-nav__link">
+        Options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PathFinder.html" class="md-nav__link">
+        PathFinder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_28" type="checkbox" id="__nav_2_28" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_28">
+          PlayerTypes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PlayerTypes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_28">
+          <span class="md-nav__icon md-icon"></span>
+          PlayerTypes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PlayerTypes_ActiveItemDesc.html" class="md-nav__link">
+        PlayerTypesActiveItemDesc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PlayerTypes_PosVel.html" class="md-nav__link">
+        PlayerTypesPosVel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProjectileParams.html" class="md-nav__link">
+        ProjectileParams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QueueItemData.html" class="md-nav__link">
+        QueueItemData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room.html" class="md-nav__link">
+        Room
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_32" type="checkbox" id="__nav_2_32" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_32">
+          RoomConfig
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="RoomConfig" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_32">
+          <span class="md-nav__icon md-icon"></span>
+          RoomConfig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoomConfig_Entry.html" class="md-nav__link">
+        Entry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoomConfig_Room.html" class="md-nav__link">
+        Room
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoomConfig_Spawn.html" class="md-nav__link">
+        Spawn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoomDescriptor.html" class="md-nav__link">
+        RoomDescriptor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RNG.html" class="md-nav__link">
+        RNG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Seeds.html" class="md-nav__link">
+        Seeds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sprite.html" class="md-nav__link">
+        Sprite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SFXManager.html" class="md-nav__link">
+        SFXManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TearParams.html" class="md-nav__link">
+        TearParams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TemporaryEffect.html" class="md-nav__link">
+        TemporaryEffect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TemporaryEffects.html" class="md-nav__link">
+        TemporaryEffects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vector.html" class="md-nav__link">
+        Vector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          实体
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="实体" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          实体
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/Overview.html" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          头目数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="头目数据" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          头目数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter1.html" class="md-nav__link">
+        第1章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter1-5.html" class="md-nav__link">
+        第1.5章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter2.html" class="md-nav__link">
+        第2章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter2-5.html" class="md-nav__link">
+        第2.5章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter3.html" class="md-nav__link">
+        第3章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter3-5.html" class="md-nav__link">
+        第3.5章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter4.html" class="md-nav__link">
+        第4章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/Chapter4-5.html" class="md-nav__link">
+        第4.5章节
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/bosses/FinalBosses.html" class="md-nav__link">
+        最终头目
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/EntityData.html" class="md-nav__link">
+        实体数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/FissureSpawner.html" class="md-nav__link">
+        骷髅鱼生成器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/SpikeBallChain.html" class="md-nav__link">
+        链球
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          教程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="教程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          教程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/ExampleProject.html" class="md-nav__link">
+        示例项目
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/FunctionsInLua.html" class="md-nav__link">
+        Lua中的函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/MathAndLuaTips.html" class="md-nav__link">
+        数学和Lua技巧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/AddingCostumesWithoutLUA.html" class="md-nav__link">
+        不使用Lua添加道具外观
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/ZeroBraneStudio.html" class="md-nav__link">
+        使用ZeroBrane Studio进行调试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/DebugConsole.html" class="md-nav__link">
+        控制台
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Using-Additional-Lua-Files.html" class="md-nav__link">
+        使用额外的.lua文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Standard-Library.html" class="md-nav__link">
+        使用标准库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Writingscreenshaders.html" class="md-nav__link">
+        编写屏幕着色器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Tutorial-Rendertext.html" class="md-nav__link">
+        渲染文本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/directories-and-save-files.html" class="md-nav__link">
+        目录和存档文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/mod-organization.html" class="md-nav__link">
+        组织Mod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/storing-data.html" class="md-nav__link">
+        储存数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/CustomCallbacks.html" class="md-nav__link">
+        自定义回调
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          XML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="XML" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          XML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/XMLFiledocumentation.html" class="md-nav__link">
+        XML概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/achievements.html" class="md-nav__link">
+        achievements.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/ambush.html" class="md-nav__link">
+        ambush.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/babies.html" class="md-nav__link">
+        babies.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/bombcostumes.html" class="md-nav__link">
+        bombcostumes.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/backdrops.html" class="md-nav__link">
+        backdrops.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/bosscolors.html" class="md-nav__link">
+        bosscolors.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/bossoverlays.html" class="md-nav__link">
+        bossoverlays.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/bosspools.html" class="md-nav__link">
+        bosspools.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/bossportraits.html" class="md-nav__link">
+        bossportraits.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/challenges.html" class="md-nav__link">
+        challenges.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/costumes2.html" class="md-nav__link">
+        costumes2.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/curses.html" class="md-nav__link">
+        curses.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/cutscenes.html" class="md-nav__link">
+        cutscenes.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/entities2.html" class="md-nav__link">
+        entities2.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/fortunes.html" class="md-nav__link">
+        fortunes.txt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/fxlayers.html" class="md-nav__link">
+        fxlayers.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/giantbook.html" class="md-nav__link">
+        giantbook.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/itempools.html" class="md-nav__link">
+        itempools.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/items.html" class="md-nav__link">
+        items.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/items_metadata.html" class="md-nav__link">
+        items_metadata.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/locusts.html" class="md-nav__link">
+        locusts.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/minibosses.html" class="md-nav__link">
+        minibosses.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/music.html" class="md-nav__link">
+        music.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/nightmares.html" class="md-nav__link">
+        nightmares.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/players.html" class="md-nav__link">
+        players.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/playerforms.html" class="md-nav__link">
+        playerforms.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/pocketitems.html" class="md-nav__link">
+        pocketitems.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/preload.html" class="md-nav__link">
+        preload.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/recipes.html" class="md-nav__link">
+        recipes.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/rules.html" class="md-nav__link">
+        rules.txt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/seedmenu.html" class="md-nav__link">
+        seedmenu.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/seeds.html" class="md-nav__link">
+        seeds.txt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/sounds.html" class="md-nav__link">
+        sounds.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/stages.html" class="md-nav__link">
+        stages.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/translations.html" class="md-nav__link">
+        translations.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/wisps.html" class="md-nav__link">
+        wisps.xml
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          常见问题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="常见问题" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          常见问题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          常见问题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="faq.html" class="md-nav__link md-nav__link--active">
+        常见问题
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本
+  </a>
+  
+    <nav class="md-nav" aria-label="基本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mod_1" class="md-nav__link">
+    MOD禁用成就吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_2" class="md-nav__link">
+    如何安装MOD？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moddlc" class="md-nav__link">
+    我使用MOD需要安装所有DLC吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_3" class="md-nav__link">
+    重生/胎衣的MOD能在胎衣+/忏悔上玩吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    怎么开启控制台？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_4" class="md-nav__link">
+    我要怎么开始做以撒的MOD？（新手入门）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_5" class="md-nav__link">
+    我正在尝试制作一个基本的mod，但它不起作用。我试图制造一个角色/跟班/敌人，但贴图看不见。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    我在哪儿看[某些原版道具]或者[某些原版机制]？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_6" class="md-nav__link">
+    我可以雇佣/委托谁为我编程以撒MOD？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    资源
+  </a>
+  
+    <nav class="md-nav" aria-label="资源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mod_7" class="md-nav__link">
+    MOD的目录/文件夹在哪里？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    我要怎么解包文件？我要怎么用资源提取器？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    [某个音效]的ID是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    我要怎么覆盖原版音乐？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anm2" class="md-nav__link">
+    anm2文件在哪儿？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    我要怎么编辑房间？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    故障排除
+  </a>
+  
+    <nav class="md-nav" aria-label="故障排除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    为什么我的贴图在游戏中显示为黑色或红色方块？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modmods" class="md-nav__link">
+    为什么我订阅的mod在“mods”菜单中不可见？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_8" class="md-nav__link">
+    MOD没效果。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_9" class="md-nav__link">
+    MOD有看不见的敌人或其他缺失的内容。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt" class="md-nav__link">
+    为什么我的代码不起作用？我怎么知道哪里发生错误了？log.txt文件在哪里？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt_1" class="md-nav__link">
+    为什么log.txt文件里面什么都没有？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    如何对代码进行故障排除？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_10" class="md-nav__link">
+    我启用一个MOD，现在我的游戏崩溃了。我该怎么解决这个问题？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_11" class="md-nav__link">
+    我的MOD导致游戏崩溃。如何找出导致崩溃的代码行？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代码
+  </a>
+  
+    <nav class="md-nav" aria-label="代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-x" class="md-nav__link">
+    我要怎么做X？ 我要怎么写X的代码？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    回调是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    我要怎么理解文档?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slr" class="md-nav__link">
+    什么是单行职责(SLR)？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    如何将人物外观应用于我的角色？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    如何使自定义角色的人物外观永久存在？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    如何创建新的层？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    如何修改恶魔房/天使房的开启率？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    我该如何让一个跟班像波比兄弟那样跟随玩家？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stageapi" class="md-nav__link">
+    如何使用StageAPI添加新头目？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    如何使我的自定义角色开局自带熔炼/吞下的饰品？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    我要怎么知道玩家什么时候捡到了道具？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    如何得知某个实体的实体类型、变种或子类型？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    如何让角色蒙眼？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API和库之间的区别是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_12" class="md-nav__link">
+    什么是微观优化？我应该优化我的MOD吗？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav" aria-label="Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-iterate-over-a-list-object-from-the-api" class="md-nav__link">
+    How do I iterate over a list object from the API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-between-require-and-include" class="md-nav__link">
+    What is the 区别 between require and include?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-between-pairs-and-ipairs" class="md-nav__link">
+    What is the 区别 between pairs and ipairs?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-colon-operator-in-lua-do" class="md-nav__link">
+    What does the colon operator in Lua do?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-info-warn-item-pool-ran-out-of-repicks-message-mean-in-the-logtxt" class="md-nav__link">
+    What does the "[INFO] - [warn] item pool ran out of repicks" message mean in the "log.txt" 文件?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    Communication
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-the-docs" class="md-nav__link">
+    Read the Docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-discord-syntax-highlighting" class="md-nav__link">
+    Use Discord Syntax Highlighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-code" class="md-nav__link">
+    Format Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-posting-screenshots" class="md-nav__link">
+    Avoid Posting Screenshots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-minimalreproducible-examples" class="md-nav__link">
+    Use Minimal，Reproducible Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-using-link-previews" class="md-nav__link">
+    Avoid Using Link Previews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LaunchOptions.html" class="md-nav__link">
+        启动设置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interactive_FAQ.html" class="md-nav__link">
+        交互式问答
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Tools.html" class="md-nav__link">
+        工具概览
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Tool_XMLValidator.html" class="md-nav__link">
+        XML验证器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Tool_AnimationEditor.html" class="md-nav__link">
+        动画编辑器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/Tool_ItemPoolEditor.html" class="md-nav__link">
+        道具池编辑器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Meowlala/RepentanceAPIIssueTracker" class="md-nav__link">
+        漏洞
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html" class="md-nav__link">
+        标签
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.lua.org/manual/5.3/" class="md-nav__link">
+        Lua 5.3文档
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本
+  </a>
+  
+    <nav class="md-nav" aria-label="基本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mod_1" class="md-nav__link">
+    MOD禁用成就吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_2" class="md-nav__link">
+    如何安装MOD？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moddlc" class="md-nav__link">
+    我使用MOD需要安装所有DLC吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_3" class="md-nav__link">
+    重生/胎衣的MOD能在胎衣+/忏悔上玩吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    怎么开启控制台？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_4" class="md-nav__link">
+    我要怎么开始做以撒的MOD？（新手入门）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_5" class="md-nav__link">
+    我正在尝试制作一个基本的mod，但它不起作用。我试图制造一个角色/跟班/敌人，但贴图看不见。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    我在哪儿看[某些原版道具]或者[某些原版机制]？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_6" class="md-nav__link">
+    我可以雇佣/委托谁为我编程以撒MOD？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    资源
+  </a>
+  
+    <nav class="md-nav" aria-label="资源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mod_7" class="md-nav__link">
+    MOD的目录/文件夹在哪里？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    我要怎么解包文件？我要怎么用资源提取器？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    [某个音效]的ID是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    我要怎么覆盖原版音乐？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anm2" class="md-nav__link">
+    anm2文件在哪儿？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    我要怎么编辑房间？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    故障排除
+  </a>
+  
+    <nav class="md-nav" aria-label="故障排除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    为什么我的贴图在游戏中显示为黑色或红色方块？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modmods" class="md-nav__link">
+    为什么我订阅的mod在“mods”菜单中不可见？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_8" class="md-nav__link">
+    MOD没效果。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_9" class="md-nav__link">
+    MOD有看不见的敌人或其他缺失的内容。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt" class="md-nav__link">
+    为什么我的代码不起作用？我怎么知道哪里发生错误了？log.txt文件在哪里？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt_1" class="md-nav__link">
+    为什么log.txt文件里面什么都没有？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    如何对代码进行故障排除？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_10" class="md-nav__link">
+    我启用一个MOD，现在我的游戏崩溃了。我该怎么解决这个问题？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_11" class="md-nav__link">
+    我的MOD导致游戏崩溃。如何找出导致崩溃的代码行？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代码
+  </a>
+  
+    <nav class="md-nav" aria-label="代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-x" class="md-nav__link">
+    我要怎么做X？ 我要怎么写X的代码？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    回调是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    我要怎么理解文档?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slr" class="md-nav__link">
+    什么是单行职责(SLR)？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    如何将人物外观应用于我的角色？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    如何使自定义角色的人物外观永久存在？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    如何创建新的层？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    如何修改恶魔房/天使房的开启率？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    我该如何让一个跟班像波比兄弟那样跟随玩家？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stageapi" class="md-nav__link">
+    如何使用StageAPI添加新头目？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    如何使我的自定义角色开局自带熔炼/吞下的饰品？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    我要怎么知道玩家什么时候捡到了道具？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    如何得知某个实体的实体类型、变种或子类型？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    如何让角色蒙眼？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API和库之间的区别是什么？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_12" class="md-nav__link">
+    什么是微观优化？我应该优化我的MOD吗？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav" aria-label="Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-iterate-over-a-list-object-from-the-api" class="md-nav__link">
+    How do I iterate over a list object from the API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-between-require-and-include" class="md-nav__link">
+    What is the 区别 between require and include?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-between-pairs-and-ipairs" class="md-nav__link">
+    What is the 区别 between pairs and ipairs?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-colon-operator-in-lua-do" class="md-nav__link">
+    What does the colon operator in Lua do?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-info-warn-item-pool-ran-out-of-repicks-message-mean-in-the-logtxt" class="md-nav__link">
+    What does the "[INFO] - [warn] item pool ran out of repicks" message mean in the "log.txt" 文件?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    Communication
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-the-docs" class="md-nav__link">
+    Read the Docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-discord-syntax-highlighting" class="md-nav__link">
+    Use Discord Syntax Highlighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-code" class="md-nav__link">
+    Format Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-posting-screenshots" class="md-nav__link">
+    Avoid Posting Screenshots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-minimalreproducible-examples" class="md-nav__link">
+    Use Minimal，Reproducible Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-using-link-previews" class="md-nav__link">
+    Avoid Using Link Previews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="../tags.html#" class="md-tag">常见问题</a>
+      
+    
+  </nav>
+
+
+
+  <a href="https://github.com/cuerzor/IsaacDocs/edit/main/docs/faq/faq.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="mod">《以撒的结合：忏悔》MOD常见问题<a class="headerlink" href="#mod" title="Permanent link">⚓︎</a></h1>
+<h2 id="_1">基本<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<h3 class="subHeader" id="mod_1">MOD禁用成就吗？<a class="headerlink" href="#mod_1" title="Permanent link">⚓︎</a></h3>
+<p><strong>Mod不禁用成就</strong>，但至少需要你的存档先不开启MOD和控制台击杀一次妈妈（即深牢II的头目）。在挑战或者每日挑战中击杀妈妈不算。</p>
+<h3 class="subHeader" id="mod_2">如何安装MOD？<a class="headerlink" href="#mod_2" title="Permanent link">⚓︎</a></h3>
+<p>简单地点击Steam创意工坊页面上的“<strong>订阅</strong>”按钮即可，这会自动下载并安装MOD。只需要安装完毕后重启你的游戏，你安装的MOD就会被列在主界面的“模组”菜单中，并且可以将其启用/禁用。</p>
+<h3 class="subHeader" id="moddlc">我使用MOD需要安装所有DLC吗？<a class="headerlink" href="#moddlc" title="Permanent link">⚓︎</a></h3>
+<p>要使用MOD，你必须至少安装游戏本体（重生），第一个DLC（胎衣），以及第二个DLC（胎衣+）。</p>
+<p>第三个DLC（忏悔）并不强制要求，但因为其具有新的MOD特性，推荐安装。许多新的MOD都不与之前的胎衣+兼容。</p>
+<h3 class="subHeader" id="mod_3">重生/胎衣的MOD能在胎衣+/忏悔上玩吗？<a class="headerlink" href="#mod_3" title="Permanent link">⚓︎</a></h3>
+<p>看你的MOD是什么，但是大部分情况下都不行。</p>
+<h3 class="subHeader" id="_2">怎么开启控制台？<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
+<p>在胎衣+中，控制台在你启用至少一个MOD时会自动启用。</p>
+<p>在忏悔中，控制台的启用基于options.ini文件中的"EnableDebugConsole"设置。默认情况下，它被设置为"0"，所以如果你想使用控制台，你必须把它从"0"改成"1"。（默认情况下，options.ini文件位于<code>文档\My Games\Binding of Isaac Repentance\options.ini</code>.）</p>
+<p>要打开控制台，在一局游戏内按下<strong>波浪号(~)</strong>键。如果你不是英文键盘，详见<a href="https://isaac.huijiwiki.com/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0">wiki的控制台页面</a>。</p>
+<p>该wiki同时拥有一个<a href="https://isaac.huijiwiki.com/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0">控制台命令的列表</a>.</p>
+<h3 class="subHeader" id="mod_4">我要怎么开始做以撒的MOD？（新手入门）<a class="headerlink" href="#mod_4" title="Permanent link">⚓︎</a></h3>
+<p>如果你能够访问Youtube并且可以听懂英文，推荐观看<a href="https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF">Youtube上的Lytebringr的教程视频系列</a>。这些视频是在胎衣+DLC发布之后制作的，但与忏悔DLC之间没有太大变化，所以它们仍然是你学习诀窍的最佳选择。</p>
+<p>如果你不具备查看外网视频的条件，可以去视频网站上搜索一些以撒的MOD制作教程。</p>
+<p>胎衣+和忏悔的一个主要区别是，<a href="#where-is-the-directoryfolder-for-mods-located">MOD目录的位置</a>发生了改变。</p>
+<p>其他资源：</p>
+<ul>
+<li><a href="../tutorials/ExampleProject.html">项目实例教程</a></li>
+<li><a href="../tutorials/Tools.html">一些有用的工具</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLUYzSIp7NO8cEer2FmtxSXlXoMFirvYDN">AgentCucco的视频教程（Youtube）</a> （播放列表）</li>
+<li><a href="https://isaacscript.github.io/main/example-mod"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>IsaacScript的“绿蜡烛”教程</a></li>
+</ul>
+<h3 class="subHeader" id="mod_5">我正在尝试制作一个基本的mod，但它不起作用。我试图制造一个角色/跟班/敌人，但贴图看不见。<a class="headerlink" href="#mod_5" title="Permanent link">⚓︎</a></h3>
+<p>文件必须处在正确的目录，不然就没有用。注意在忏悔中，<a href="#where-is-the-directoryfolder-for-mods-located">MOD目录的位置</a>和胎衣+是不同的。</p>
+<p>即使您知道要正确地放在“mods”目录下，它们的内部文件也必须处于正确的特定位置。因此您可能没有将文件放在正确的地方。</p>
+<p>首先，请遵循视频教程，或者其他人的指导，这大致对应于你想做的东西（例如角色/跟班/敌人/其他什么）。一步一步来，一旦你验证了你做的的角色/跟班/敌人/其他东西的工作方式与指导中的完全相同，然后开始一件一件地做出改变，直到你要做的东西开始不起作用。然后，你就会看到问题在哪里，如果需要，你可以继续问一些更具体的问题。</p>
+<h3 class="subHeader" id="_3">我在哪儿看[某些原版道具]或者[某些原版机制]？<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
+<p>你不能。游戏是用C++编程语言编写的，源代码不开源。</p>
+<p>这意味着，如果你想制作一个与原版道具类似的自定义道具，你必须从头开始完全重新实现它。（您可以经常使用wiki作为实现参考。）</p>
+<p>这也意味着，如果你想改变一个原版道具的工作方式，你通常必须从头开始重新实现这个道具。</p>
+<h3 class="subHeader" id="mod_6">我可以雇佣/委托谁为我编程以撒MOD？<a class="headerlink" href="#mod_6" title="Permanent link">⚓︎</a></h3>
+<p>社区的一些成员可以被雇佣来创建mod。有关具体建议，您可以在一些以撒相关群聊中询问。</p>
+<h2 id="_4">资源<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<h3 class="subHeader" id="mod_7"><span id="where-is-the-directoryfolder-for-mods-located">MOD的目录/文件夹在哪里？</span><a class="headerlink" href="#mod_7" title="Permanent link">⚓︎</a></h3>
+<p>所有MOD都在这个位置内：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m0 93.7 183.6-25.3v177.4H0V93.7zm0 324.6 183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></span> <strong>Windows</strong></label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg></span> <strong>Mac OS</strong></label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"/></svg></span> <strong>Linux</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>忏悔:
+[以撒游戏目录]\mods\
+
+胎衣+:
+文档\My Games\Binding of Isaac Afterbirth+ Mods\
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>胎衣+:
+/Users/[username]/Library/Application Support/Binding of Isaac Afterbirth+ Mods
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>胎衣+:
+/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My Games/Binding of Isaac Afterbirth+ Mods
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="_5">我要怎么解包文件？我要怎么用资源提取器？<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h3>
+<p>默认情况下，游戏资源在：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[以撒游戏目录]\resources
+</code></pre></div></td></tr></table></div>
+<p>但是，除非您运行所提供的资源提取器，否则此目录将大部分为空。资源提取器位于此处：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[以撒游戏目录]\tools\ResourceExtractor\ResourceExtractor.exe
+</code></pre></div></td></tr></table></div>
+<p>运行提取器后，resources目录将被游戏使用的所有XML文件、ANM2文件、图像和其他各种文件充满。</p>
+<p>请注意，每次出现原版补丁时，您还必须重新运行资源提取器。</p>
+<h3 class="subHeader" id="id">[某个音效]的ID是什么？<a class="headerlink" href="#id" title="Permanent link">⚓︎</a></h3>
+<p>使用<a href="misc/sounds-display.lua">这个MOD</a>，它会告诉你当前播放的任何音效的ID是什么。</p>
+<h3 class="subHeader" id="_6">我要怎么覆盖原版音乐？<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>对于正常的音乐替换，您可以直接在MOD文件夹里替换相应的原版资源文件。</li>
+<li>对于动态的音乐替换，请使用Taz的<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2491006386">音乐MOD回调MOD</a>.</li>
+</ul>
+<h3 class="subHeader" id="anm2">anm2文件在哪儿？<a class="headerlink" href="#anm2" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>在以撒中，贴图动画由位于<code>resources/gfx</code>文件夹中的anm2文件表示。</li>
+<li>游戏中的每个实体都有一个相关的anm2文件。</li>
+<li>此外，UI元素使用各种anm2文件进行渲染（位于<code>resources/gfx/ui</code>文件夹中）。</li>
+<li>anm2文件只是一种有不同文件扩展名的XML文件。</li>
+<li>要编辑原版动画或添加新动画，您可以：</li>
+<li>直接使用文本编辑器编辑文件。（以撒前制作人员Kilburn就是这么做的。）</li>
+<li>使用提供的以撒动画编辑器编辑文件，该编辑器位于：<code>[以撒游戏目录]\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe</code></li>
+</ul>
+<h3 class="subHeader" id="_7">我要怎么编辑房间？<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
+<p>官方房间编辑器伴随着游戏本体一起提供，位于：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[以撒游戏目录]\tools\RoomEditor\RoomEditor.exe
+</code></pre></div></td></tr></table></div>
+<p>这是Edmund用来为《重生》和《胎衣》创建所有房间的工具。然而，官方编辑器用起来不是很好，也不能用于任何忏悔的房间。</p>
+<p>2014年，Chronometrics制作了一个名为<a href="https://github.com/Basement-Renovator/Basement-Renovator">Basement Renovator</a>的第三方房间编辑器，以提高官方编辑的水平。它是开源的，位于GitHub上。由于Basement Renovator比官方房间编辑好用得多，即使是官方开发商现在也使用Basement Renovator。（这就是为什么忏悔房间不能用官方编辑器编辑。）</p>
+<p>Basement Renovator是用Python编写的，因此您可以从源代码运行它，也可以从<a href="https://github.com/basement-renovator/basement-renovator/releases">发布页面</a>下载exe文件。</p>
+<h2 id="_8">故障排除<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h2>
+<h3 class="subHeader" id="_9">为什么我的贴图在游戏中显示为黑色或红色方块？<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
+<p>当贴图以错误的位深度保存时会发生这种情况。你需要手动将其设置为32位深度。（不要将其设置为“自动”。）</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><img alt="paint.net" src="misc/paintNetIcon.png" /> <strong>Paint.NET</strong></label><label for="__tabbed_2_2"><img alt="photoshop" src="misc/photoshopIcon.png" /> <strong>Photoshop</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="paint.net" src="misc/32bit_paintNET.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="photoshop" src="misc/32bit_photoshop.png" /></p>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="modmods">为什么我订阅的mod在“mods”菜单中不可见？<a class="headerlink" href="#modmods" title="Permanent link">⚓︎</a></h3>
+<p>如果您即使在Steam创意工坊上订阅了MOD，MOD在mods文件夹中也不可见，这可能是由以下原因引起的：</p>
+<ol>
+<li>
+<p>你不拥有胎衣和胎衣+。所有Steam创意工坊的MOD都需要安装这两个DLC才能正常工作。</p>
+</li>
+<li>
+<p>（仅适用于胎衣+）您的Windows/Mac用户名包含不属于标准英文字母表的字符。由于游戏无法正确解析这些内容，因此无法找到mods文件夹。为了解决此问题，您必须在计算机上创建一个名称仅包含英文字符的新用户。</p>
+</li>
+</ol>
+<h3 class="subHeader" id="mod_8">MOD没效果。<a class="headerlink" href="#mod_8" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>检查MOD是否已列出启用在主界面“模组”菜单中。</li>
+<li>按照<a href="#a-mod-has-invisible-enemies-or-other-missing-content">这个问题</a>中的步骤清理mod。</li>
+<li>检查log.txt是否包含任何错误消息。（默认情况下，log.txt位于<code>文档\My Games\Binding of Isaac Repentance\log.txt</code>）如果您在日志中看到了类似于<code>... attempt to call a nil value (global 'RegisterMod')</code>的提示，说明您的游戏文件可能已损坏，您需要验证游戏的完整性（见下文）。</li>
+<li>禁用你安装的所有其他mod，看看它们是否会导致任何错误。</li>
+<li>使用Steam“验证游戏文件的完整性”。有关更多信息，请参阅<a href="https://inxile.zendesk.com/hc/en-us/articles/115004662908-Verify-game-cache-文件s-Steam-">本指南</a>。</li>
+</ol>
+<h3 class="subHeader" id="mod_9"><span id="a-mod-has-invisible-enemies-or-other-missing-content">MOD有看不见的敌人或其他缺失的内容。</span><a class="headerlink" href="#mod_9" title="Permanent link">⚓︎</a></h3>
+<p>这很可能是Steam没有下载所有的MOD文件造成的。您可以通过执行以下步骤清理mod：</p>
+<ol>
+<li>关闭游戏。</li>
+<li>取消订阅Steam创意工坊的mod。</li>
+<li>接下来，删除“mods”目录中的真实mod目录。（默认情况下，它位于<code>[以撒游戏目录]\mods</code>。）</li>
+<li>删除Steam缓存的MOD目录中的“mod”目录。（默认情况下，它位于<code>[Steam目录]\userdata\[Steam ID]\250900\remote</code>。）</li>
+<li>打开游戏。</li>
+<li>在介绍过场开始播放后关闭游戏。</li>
+<li>在Steam Workshop上重新订阅mod。</li>
+<li>再次打开游戏。当游戏看上去未响应时，<strong>不要</strong>关闭游戏。</li>
+</ol>
+<h3 class="subHeader" id="logtxt">为什么我的代码不起作用？我怎么知道哪里发生错误了？log.txt文件在哪里？<a class="headerlink" href="#logtxt" title="Permanent link">⚓︎</a></h3>
+<p>Lua是一种解释型语言，这意味着如果你犯了拼写错误或有其他错误的代码，你只有在程序真正运行后才能发现它。如果Lua解释器遇到错误，它会将其写入游戏的log.txt文件.</p>
+<p>默认情况下，该文件处于：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>文档\My Games\Binding of Isaac Repentance\log.txt
+</code></pre></div></td></tr></table></div>
+<p>打开这个文件并仔细搜索与Lua相关的错误。（Ctrl+F查找单词“error”是一个好方法。）这通常会告诉你写错的代码的的行号。</p>
+<p>还建议在options.ini文件中设置<code>FadedConsoleDisplay=1</code>，这样在一局游戏中中发现错误就更容易了。默认情况下，options.ini文件位于：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>文档\My Games\Binding of Isaac Repentance\options.ini
+</code></pre></div></td></tr></table></div>
+<p>对于熟悉命令行应用程序的用户，请使用Zamiel的<a href="https://github.com/Zamiell/isaac-log-viewer">以撒日志查看器</a>并在编写代码和测试时让它在第二个监视器上运行。</p>
+<h3 class="subHeader" id="logtxt_1">为什么log.txt文件里面什么都没有？<a class="headerlink" href="#logtxt_1" title="Permanent link">⚓︎</a></h3>
+<p>每次打开游戏时，log.txt的所有内容都会被删除。因此，如果您在错误发生后需要日志中的信息，请确保不要重新启动游戏。</p>
+<h3 class="subHeader" id="_10">如何对代码进行故障排除？<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
+<p>当你编写程序时，它们可能无法立即工作。你首先要做的不应该是把一堆代码粘贴到群聊里，然后问“为什么没用？”。这样做意味着你不会花太多精力试图独立解决问题。</p>
+<p>有一种久经考验的，可以找出几乎所有错误的，叫做“打印调试”的方法。在以撒中，它的意思是将一堆信息打印到log.txt文件，这样您就可以查看它，并查看代码的哪些部分被执行，哪些部分没有执行。所以，去代码中的一些位置，添加<code>Isaac.DebugString("到这里了1")</code>，<code>Isaac.DebugString("到这里了2")</code>等等输出信息的代码。然后，运行您的代码（即在游戏中各种尝试并触发错误），并研究log.txt文件试着看看发生了什么。</p>
+<p>通常情况下，代码不起作用的原因是变量不是您认为的那样。所以，用一些类似于<code>Isaac.DebugString("到这里了 - FOO是: " .. tostring(foo))</code>的语句把每一步的变量都打印出来，这样你就可以确认它们是你认为的样子。</p>
+<p>您可能还想使用类似<a href="https://github.com/Zamiell/isaac-log-viewer">这个</a>的日志查看器。</p>
+<h3 class="subHeader" id="xml">我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。<a class="headerlink" href="#xml" title="Permanent link">⚓︎</a></h3>
+<p>崩溃意味着XML文件无效，这意味着您在编辑文件时写错了某个地方。从头开始，一次做一个小编辑，直到你找到导致游戏崩溃的确切部分。</p>
+<p>另一个有用的故障排除工具是类似<a href="https://www.xmlvalidation.com/">xmlvalidation.com</a>的XML验证器。</p>
+<h3 class="subHeader" id="mod_10">我启用一个MOD，现在我的游戏崩溃了。我该怎么解决这个问题？<a class="headerlink" href="#mod_10" title="Permanent link">⚓︎</a></h3>
+<p>您可以尝试浏览log.txt文件看看有没有什么有趣的东西。然而，在绝大多数情况下，当游戏崩溃时，日志不会显示任何有用的信息。</p>
+<p>相反，你可以通过逐个禁用你的mod来找到问题，直到你找到导致崩溃的确切mod。然后，你可以将其报告给mod的开发者，或者尝试自己手动修复代码。</p>
+<p>请注意，无论何时启用或禁用mod，都应完全关闭并重新打开游戏（因为当您通过游戏内菜单启用/禁用mod时，游戏无法正确加载资源）。</p>
+<h3 class="subHeader" id="mod_11">我的MOD导致游戏崩溃。如何找出导致崩溃的代码行？<a class="headerlink" href="#mod_11" title="Permanent link">⚓︎</a></h3>
+<p>首先，查看log.txt文件寻找游戏崩溃原因的线索。然而，在绝大多数情况下，当游戏崩溃时，日志不会显示任何有用的信息。</p>
+<p>如果你在Lua中编程你的mod，那么你唯一的选择就是插入大量的打印语句，试图缩小崩溃发生的范围。</p>
+<p>如果您正在使用<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>TypeScript的<a href="https://isaacscript.github.io/">IsaacScript框架</a>编程您的mod，您可以使用<a href="https://github.com/IsaacScript/isaacscript/blob/main/src/plugins/addCrashDebugStatements.ts">崩溃调试插件</a>，这将把mod崩溃的确切行号写在log.txt中，非常方便。</p>
+<h2 id="_11">代码<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h2>
+<h3 class="subHeader" id="x-x">我要怎么做X？ 我要怎么写X的代码？<a class="headerlink" href="#x-x" title="Permanent link">⚓︎</a></h3>
+<p>找出如何做某事的最快方法是下载一些提供与你想做的类似功能的mod，然后研究代码。</p>
+<h3 class="subHeader" id="_12">回调是什么？<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
+<p>Mod通过将一些代码放入<em>回调</em>来修改游戏。当游戏中发生特定事件时，每个回调都会触发。有72种不同的回调可供选择，所以你必须根据你想做的事情选择正确的回调。</p>
+<p>例如，最基本的回调是<code>MC_POST_GAME_STARTED</code>，它在一局新游戏开始时触发一次。您可以将代码放在这里，以在每局游戏开始时进行自定义操作。</p>
+<p>Mod使用的另一个常见回调是<code>MC_POST_UPDATE</code>，它在每个更新帧上触发（即每秒30次）。您可以将具有固定效果的自定义道具的代码放入此回调中。</p>
+<p>浏览<a href="../enums/ModCallbacks.html">ModCallbacks页面</a>并阅读所有回调的作用，以便熟悉它们。</p>
+<h3 class="subHeader" id="_13"><span id="how-do-i-understand-the-docs">我要怎么理解文档?</span><a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h3>
+<p><img alt="img" src="../images/docs_reading_guide.png" /></p>
+<h3 class="subHeader" id="slr">什么是单行职责(SLR)？<a class="headerlink" href="#slr" title="Permanent link">⚓︎</a></h3>
+<p>在编写代码时，要努力使其看起来美观，便于他人阅读，尤其是当你向他人展示或寻求帮助时。在这种情况下，遵循“单行职责”规则是一个好主意，这意味着<strong>一行代码</strong>应该只做<strong>一件事</strong>。阅读<a href="https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/">此博客</a>了解更多细节，你会明白为什么SLR伟大。</p>
+<h3 class="subHeader" id="_14">如何将人物外观应用于我的角色？<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h3>
+<p>这被称为“Null Costume”（空外观），它是通过<code>EntityPlayer.AddNullCostume()</code>方法来完成的。有关更多信息，请参阅<a href="https://www.youtube.com/watch?v=R1CdCyGL1DQ&amp;list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF&amp;index=9">Lytebringr的第8个视频</a>。</p>
+<details class="- example">
+<summary>示例代码</summary>
+<p>以下是一个使用MOD添加空外观的示例：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">MOD_NAME</span> <span class="o">=</span> <span class="s2">&quot;My Mod&quot;</span>
+
+<span class="c1">-- 用于EntityType.ENTITY_PLAYER (1)</span>
+<span class="kd">local</span> <span class="n">PlayerVariant</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">PLAYER</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="n">COOP_BABY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">local</span> <span class="n">PlayerTypeCustom</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">FOO</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetPlayerTypeByName</span><span class="p">(</span><span class="s2">&quot;Foo&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="kd">local</span> <span class="n">NullItemIDCustom</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">BAR</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetCostumeIdByPath</span><span class="p">(</span><span class="s2">&quot;gfx/characters/bar.anm2&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="kd">local</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">RegisterMod</span><span class="p">(</span><span class="n">MOD_NAME</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="kr">function</span> <span class="nc">mod</span><span class="p">:</span><span class="nf">postPlayerInit</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">character</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">GetPlayerType</span><span class="p">()</span>
+
+  <span class="kr">if</span> <span class="p">(</span>
+    <span class="n">player</span><span class="p">.</span><span class="n">Variant</span> <span class="o">==</span> <span class="n">PlayerVariant</span><span class="p">.</span><span class="n">PLAYER</span>
+    <span class="ow">and</span> <span class="n">character</span> <span class="o">==</span> <span class="n">PlayerTypeCustom</span><span class="p">.</span><span class="n">FOO</span>
+  <span class="p">)</span> <span class="kr">then</span>
+    <span class="n">player</span><span class="p">:</span><span class="n">AddNullCostume</span><span class="p">(</span><span class="n">NullItemIDCustom</span><span class="p">.</span><span class="n">BAR</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+<span class="n">mod</span><span class="p">:</span><span class="n">AddCallback</span><span class="p">(</span><span class="n">ModCallbacks</span><span class="p">.</span><span class="n">MC_POST_PLAYER_INIT</span><span class="p">,</span> <span class="n">mod</span><span class="p">.</span><span class="n">postPlayerInit</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 class="subHeader" id="_15">如何使自定义角色的人物外观永久存在？<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h3>
+<p>使用<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255">Sanio的“角色外观保护器”库</a>，或者研究源代码并自己重新实现它。</p>
+<p>有关参考实现，请参见<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2531089854">Andrew the Bunny Knight</a>。</p>
+<h3 class="subHeader" id="_16">如何创建新的层？<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h3>
+<p>不幸的是，以撒并不支持MOD自定义楼层。BudJMT和DeadConfinity搭建了一个名为<a href="https://github.com/Meowlala/BOIStageAPI15">StageAPI</a>的自定义系统，这允许Mod以一种巧妙的方式添加自定义楼层。然而，StageAPI并不容易使用，所以除非你已经是一个经验丰富的以撒MOD制作者和程序员，否则你应该坚持制作更简单的项目。</p>
+<h3 class="subHeader" id="_17">如何修改恶魔房/天使房的开启率？<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h3>
+<p>没有内置的方法可以做到这一点，所以您必须有些创造力。为了获得开启率的最大控制权，您可以删除所有原版的恶魔房/天使房门，并从头开始完全重新实现系统。或者，您可以临时将道具给予玩家，如山羊头或念珠段，或使用<a href="../Level.html#setlastdevilroomstage">Game.SetLastDevilRoomStage()</a>或<a href="../Level.html#setredheartdamage">Level.SetRedHeartDamage()</a>方法。您还可能需要使用<a href="../enums/LevelStateFlag.html">LevelStateFlags</a>。</p>
+<h3 class="subHeader" id="_18">我该如何让一个跟班像波比兄弟那样跟随玩家？<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 5A8.5 8.5 0 0 0 2 13.5a8.5 8.5 0 0 0 8.5 8.5 8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 10.5 5m3 8a2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 13.5 8a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5m6-11A2.5 2.5 0 0 0 17 4.5 2.5 2.5 0 0 0 19.5 7 2.5 2.5 0 0 0 22 4.5 2.5 2.5 0 0 0 19.5 2"/></svg></span> Lua</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span> TypeScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">function</span> <span class="nf">postFamiliarInitMyFamiliar</span><span class="p">(</span><span class="n">familiar</span><span class="p">)</span>
+  <span class="n">familiar</span><span class="p">:</span><span class="n">AddToFollowers</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">postFamiliarUpdateMyFamiliar</span><span class="p">(</span><span class="n">familiar</span><span class="p">)</span>
+  <span class="n">familiar</span><span class="p">:</span><span class="n">FollowParent</span><span class="p">()</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">postFamiliarInitMyFamiliar</span><span class="p">(</span><span class="nx">familiar</span><span class="o">:</span><span class="w"> </span><span class="kt">EntityFamiliar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">familiar</span><span class="p">.</span><span class="nx">AddToFollowers</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">postFamiliarUpdateMyFamiliar</span><span class="p">(</span><span class="nx">familiar</span><span class="o">:</span><span class="w"> </span><span class="kt">EntityFamiliar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">familiar</span><span class="p">.</span><span class="nx">FollowParent</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="stageapi">如何使用StageAPI添加新头目？<a class="headerlink" href="#stageapi" title="Permanent link">⚓︎</a></h3>
+<p>这是一段来自于Xalum的示例代码:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mod</span><span class="p">.</span><span class="n">StageAPIBosses</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">StageAPI</span><span class="p">.</span><span class="n">AddBossData</span><span class="p">(</span><span class="s2">&quot;The Baron&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;The Baron&quot;</span><span class="p">,</span>
+        <span class="n">Portrait</span> <span class="o">=</span> <span class="s2">&quot;gfx/bosses/baron/portrait_baron.png&quot;</span><span class="p">,</span>
+        <span class="n">Bossname</span> <span class="o">=</span> <span class="s2">&quot;gfx/bosses/baron/name_baron.png&quot;</span><span class="p">,</span>
+        <span class="n">Rooms</span> <span class="o">=</span> <span class="n">StageAPI</span><span class="p">.</span><span class="n">RoomsList</span><span class="p">(</span><span class="s2">&quot;BaronBossRooms&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">&quot;resources.luarooms.boss_baron&quot;</span><span class="p">))</span>
+    <span class="p">}),</span>
+
+    <span class="n">StageAPI</span><span class="p">.</span><span class="n">AddBossData</span><span class="p">(</span><span class="s2">&quot;High Amon&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;High Amon&quot;</span><span class="p">,</span>
+        <span class="n">Portrait</span> <span class="o">=</span> <span class="s2">&quot;gfx/bosses/amon/portrait_amon.png&quot;</span><span class="p">,</span>
+        <span class="n">Bossname</span> <span class="o">=</span> <span class="s2">&quot;gfx/bosses/amon/name_amon.png&quot;</span><span class="p">,</span>
+        <span class="n">Rooms</span> <span class="o">=</span> <span class="n">StageAPI</span><span class="p">.</span><span class="n">RoomsList</span><span class="p">(</span><span class="s2">&quot;AmonBossRooms&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">&quot;resources.luarooms.boss_amon&quot;</span><span class="p">))</span>
+    <span class="p">}),</span>
+<span class="p">}</span>
+
+<span class="n">StageAPI</span><span class="p">.</span><span class="n">AddBossToBaseFloorPool</span><span class="p">({</span><span class="n">BossID</span> <span class="o">=</span> <span class="s2">&quot;The Baron&quot;</span><span class="p">,</span> <span class="n">Weight</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">},</span> <span class="n">LevelStage</span><span class="p">.</span><span class="n">STAGE3_1</span><span class="p">,</span> <span class="n">StageType</span><span class="p">.</span><span class="n">STAGETYPE_REPENTANCE</span><span class="p">)</span>
+<span class="n">StageAPI</span><span class="p">.</span><span class="n">AddBossToBaseFloorPool</span><span class="p">({</span><span class="n">BossID</span> <span class="o">=</span> <span class="s2">&quot;High Amon&quot;</span><span class="p">,</span> <span class="n">AlwaysReplaceSubtype</span> <span class="o">=</span> <span class="mi">83</span><span class="p">,</span> <span class="n">OnlyReplaceSubtype</span> <span class="o">=</span> <span class="mi">83</span><span class="p">},</span> <span class="n">LevelStage</span><span class="p">.</span><span class="n">STAGE2_1</span><span class="p">,</span> <span class="n">StageType</span><span class="p">.</span><span class="n">STAGETYPE_REPENTANCE_B</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 class="subHeader" id="_19">如何使我的自定义角色开局自带熔炼/吞下的饰品？<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h3>
+<p>没有办法通过编辑XML文件来完成此操作。因此，您必须通过Lua或TypeScript代码来实现这一点。</p>
+<h3 class="subHeader" id="_20">我要怎么知道玩家什么时候捡到了道具？<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h3>
+<p>对此没有原版的回调。作为一种变通方法，您可以在PostUpdate回调中使用<code>EntityPlayer.IsItemQueueEmpty()</code>检查玩家是否没有在举起道具，然后在举起道具的时候通过<code>EntityPlayer.QueuedItem</code>获取道具ID。显然，这对直接添加的不起作用。</p>
+<p>对于<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span><a href="https://isaacscript.github.io/">IsaacScript</a>使用，您可以使用IsaacScript提供的<a href="https://isaacscript.github.io/docs/function-signatures-custom#mc_post_item_pickup"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>MC_POST_ITEM_PICKUP</a>回调。</p>
+<p>如果你想自己实现这个回调，<a href="https://github.com/IsaacScript/isaacscript-common/blob/main/src/callbacks/itemPickup.ts">这里</a>提供了源代码/算法。</p>
+<h3 class="subHeader" id="_21">如何得知某个实体的实体类型、变种或子类型？<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h3>
+<p>您可以：</p>
+<ol>
+<li>在游戏控制台中输入“spawn x”。例如，“spawn Confessional”将显示忏悔室的ID为6.17。这意味着它的实体类型是6，变种是17。</li>
+<li>或者，您可以在“resources-dlc3/entities2.xml”文件中使用ctrl+f搜索您想要的实体。</li>
+</ol>
+<h3 class="subHeader" id="_22">如何让角色蒙眼？<a class="headerlink" href="#_22" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 5A8.5 8.5 0 0 0 2 13.5a8.5 8.5 0 0 0 8.5 8.5 8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 10.5 5m3 8a2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 13.5 8a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5m6-11A2.5 2.5 0 0 0 17 4.5 2.5 2.5 0 0 0 19.5 7 2.5 2.5 0 0 0 22 4.5 2.5 2.5 0 0 0 19.5 2"/></svg></span> Lua</label><label for="__tabbed_4_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span> TypeScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">--- Zamiel编写代码，im_tem创建该机制</span>
+<span class="c1">-- @param player EntityPlayer</span>
+<span class="c1">-- @param enabled boolean</span>
+<span class="c1">-- @param modifyCostume boolean</span>
+<span class="kr">function</span> <span class="nf">setBlindfold</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">enabled</span><span class="p">,</span> <span class="n">modifyCostume</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">character</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">GetPlayerType</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">challenge</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetChallenge</span><span class="p">()</span>
+
+  <span class="kr">if</span> <span class="n">enabled</span> <span class="kr">then</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">Challenge</span> <span class="o">=</span> <span class="n">Challenge</span><span class="p">.</span><span class="n">CHALLENGE_SOLAR_SYSTEM</span> <span class="c1">-- This challenge has a blindfold</span>
+    <span class="n">player</span><span class="p">:</span><span class="n">ChangePlayerType</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">Challenge</span> <span class="o">=</span> <span class="n">challenge</span>
+
+    <span class="c1">-- The costume is applied automatically</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">modifyCostume</span> <span class="kr">then</span>
+      <span class="n">player</span><span class="p">:</span><span class="n">TryRemoveNullCostume</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_BLINDFOLD</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">else</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">Challenge</span> <span class="o">=</span> <span class="n">Challenge</span><span class="p">.</span><span class="n">CHALLENGE_NULL</span>
+    <span class="n">player</span><span class="p">:</span><span class="n">ChangePlayerType</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">Challenge</span> <span class="o">=</span> <span class="n">challenge</span>
+
+    <span class="kr">if</span> <span class="n">modifyCostume</span> <span class="kr">then</span>
+      <span class="n">player</span><span class="p">:</span><span class="n">TryRemoveNullCostume</span><span class="p">(</span><span class="n">NullItemID</span><span class="p">.</span><span class="n">ID_BLINDFOLD</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>如果你正在使用<a href="https://isaacscript.github.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>IsaacScript</a>，你完全可以直接调用<code>setBlindfold</code>函数，如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Isaac</span><span class="p">.</span><span class="nx">GetPlayer</span><span class="p">();</span>
+<span class="nx">setBlindfold</span><span class="p">(</span><span class="nx">player</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="api">API和库之间的区别是什么？<a class="headerlink" href="#api" title="Permanent link">⚓︎</a></h3>
+<p>创意工坊上的一些MOD将功能打包在一起，作为抽象供其他人使用。在软件中，这就是通常所说的“库”。作为一名程序员，利用别人经过实际测试的库通常比从头开始使用自己的库容易得多。</p>
+<p>另一方面，API是“应用程序编程接口”的缩写，这正是它听起来的样子。应用程序可能希望向外部用户和软件公开一些功能，并且它将通过显式定义的接口来实现这一点。库公开了API，以便最终用户可以使用它们。但请注意，<em>任何</em>软件都可以有一个API，而不仅仅是一个库。例如，启示录MOD是一个流行的MOD，它为游戏添加了新的楼层、头目和道具。但它也公开了一个API，这样它就可以与其他MOD兼容。</p>
+<p>从历史上看，以撒的一些库将自己标记为“API”，但这是一个用词不当的说法。这方面的一些例子包括<a href="https://github.com/Meowlala/BOIStageAPI15">StageAPI</a>和<a href="https://github.com/TazTxUK/MinimapAPI">MinimapAPI</a>。另一方面，一个正确命名的库的例子是Sanio的<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2541362255">角色外观保护器</a>。</p>
+<p>如果你正在创建一个新的库，请使用正确的术语来命名你的项目，这有助于防止以撒MOD制作新手感到困惑。</p>
+<h3 class="subHeader" id="mod_12">什么是微观优化？我应该优化我的MOD吗？<a class="headerlink" href="#mod_12" title="Permanent link">⚓︎</a></h3>
+<h4 id="_23">定义<a class="headerlink" href="#_23" title="Permanent link">⚓︎</a></h4>
+<p>作为程序员，我们经常关心程序的运行速度如何。</p>
+<p>当新手程序员开始考虑“性能”时，他们可能会对代码进行糟糕的调整，希望它能加快速度。这些被称为<a href="https://wiki.c2.com/?PrematureOptimization">微观优化（或过早优化）</a>。例如，新手可能会从一些整齐地组织成单独函数的代码开始，如下所示：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="c1">-- 使用foo做点什么</span>
+  <span class="n">foo</span><span class="p">()</span>
+
+  <span class="c1">-- 使用bar做点什么</span>
+  <span class="n">bar</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">foo</span><span class="p">()</span>
+  <span class="c1">-- TODO</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">bar</span><span class="p">()</span>
+  <span class="c1">-- TODO</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+<p>在上面的代码中，我们有两个小函数，命名良好（理论上），易于阅读和理解。但是新手可能会想把代码转换成这样：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">main</span><span class="p">()</span>
+  <span class="c1">-- 使用foo做点什么</span>
+  <span class="c1">-- TODO</span>
+
+  <span class="c1">-- 使用bar做点什么</span>
+  <span class="c1">-- TODO</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+<p>这里的想法是，既然我们去掉了两个函数调用，那么程序在理论上应该会加快速度。（因为在后台，函数在被调用时所做的是将值放在堆栈上，然后在完成后将它们从堆栈中弹出。）</p>
+<p>但实际上，编译器通常可以优化代码以自动执行这种加速（而无需程序员实际修改其源代码）。因此，在这种情况下，新手程序员获得了运行效率完全一样的字节码，代价是源代码变得更糟。太差劲了！</p>
+<p>此外，即使编译器没有自动优化函数调用，调用函数的简单操作也可以在几纳秒内完成。你永远无法有意义地衡量程序的运行时性能中，使用一些额外的函数调用所产生的区别。所以还是和以前一样：新手程序员正在使他们的源代码变得更糟，而没有可衡量的好处。</p>
+<p>微观优化是许多新手陷入的陷阱。花在执行微观优化上的时间应该花在测量代码中的实际瓶颈上，然后对这些瓶颈进行优化。或者修复真正的bug！或者添加真正的功能！</p>
+<p>这就是为什么程序员有这样一句格言：“过早的优化是万恶之源。”，出自<a href="https://en.wikipedia.org/wiki/Donald_Knuth">唐纳德·克努特</a>，是有史以来最著名的计算机科学家之一。在他的论文“<a href="https://pic.plover.com/knuth-GOTO.pdf">Structured Programming with go to Statements</a>”中，他写了这样一句著名的话：</p>
+<blockquote>
+<p>程序员浪费了大量的时间去考虑或担心程序中非关键部分的速度，而当考虑到调试和维护时，这些对效率的尝试实际上会产生强烈的负面影响。我们应该忘记这种微小的效率，比如说因为过早优化而浪费的大约97%的时间。然而，我们不应该放弃那关键的 3% 的机会</p>
+</blockquote>
+<h4 id="_24">测量性能<a class="headerlink" href="#_24" title="Permanent link">⚓︎</a></h4>
+<p>在上面的例子中，新手认为删除函数调用会加快程序的速度。但这些假设可以是关于任何类型的代码，而不仅仅是函数调用。您可能“知道”以某种方式进行编码会比以另一种方式更快。</p>
+<p>但在实际生活中的程序中，要预测哪种代码形式实际上会影响程序的性能是<strong>极其困难</strong>的。有时，你可以做出一个你认为会加快程序的变更，但却会让程序变慢！有时，你可以做出一个你认为会让程序变慢的变更，但它却加快了速度！编译器一直在引擎盖下做各种摸不着头脑的事情。</p>
+<p>这就是为什么当我们谈论优化时，最需要讨论的是<strong>测量性能</strong>。测量一段代码的运行时间的行为叫做性能分析。（也可以称为基准测试。）</p>
+<p>记住来自于C2 wiki的<strong><a href="https://wiki.c2.com/?RulesOfOptimization">优化的三条准则</a></strong>：</p>
+<ol>
+<li>别这么做。</li>
+<li>现在先别这么做。</li>
+<li>优化前先做性能分析。</li>
+</ol>
+<p>这3条规则背后的理念是，在实际生活中的程序中，你几乎从不需要优化。但如果你真的这么做了，你<strong>必须</strong>在之前和之后都测量性能。根据你的衡量标准，它会告诉你代码更改是否值得让代码变得更长、更复杂或更难理解。有时候，这是值得的，但往往不会。</p>
+<h4 id="_25">代码清晰度<a class="headerlink" href="#_25" title="Permanent link">⚓︎</a></h4>
+<p>那么，如果你一般不应该关心性能，你应该关心什么呢？答案是代码清晰度。</p>
+<p>首先也是最重要的一点，代码的目标是使其简洁易读。（即使你正在编写的代码永远不会被其他人阅读，你仍然应该让它整洁易读，以供未来的你阅读，因为你可能需要在几个月或几年后阅读这些代码，并且必须弄清楚它能做什么来修复一些错误。）</p>
+<p>您可能会认为将“代码清晰度”列为比拥有“能跑的代码”更重要这个做法很蠢。这当然有争议。但考虑一下：</p>
+<ul>
+<li>不能跑但易于理解的代码可以被修改，让它能跑。</li>
+<li>能跑但无法破译的代码将很难修改。这意味着我们可能无法修复任何错误或添加新功能。</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">吉多·范罗苏姆</a>，编程语言<a href="https://www.python.org/">Python</a>的创建者，他的关键见解之一就是<a href="https://www.python.org/dev/peps/pep-0008/">代码读起来比写起来频繁得多</a>。Python被设计为简洁、干净和可读的语言，它有标准的做事方式，并建议每个人都遵循<a href="https://www.python.org/dev/peps/pep-0008/">PEP-8编码标准</a>。现在，Python是<a href="https://pypl.github.io/PYPL.html">世界上最流行的编程语言</a>。代码的可读性并不是Python崛起的<em>唯一</em>原因，但它仍是重要的原因之一。</p>
+<h2 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">⚓︎</a></h2>
+<h3 class="subHeader" id="how-do-i-iterate-over-a-list-object-from-the-api">How do I iterate over a list object from the API?<a class="headerlink" href="#how-do-i-iterate-over-a-list-object-from-the-api" title="Permanent link">⚓︎</a></h3>
+<p>For example，in Lua:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 5A8.5 8.5 0 0 0 2 13.5a8.5 8.5 0 0 0 8.5 8.5 8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 10.5 5m3 8a2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 13.5 8a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5m6-11A2.5 2.5 0 0 0 17 4.5 2.5 2.5 0 0 0 19.5 7 2.5 2.5 0 0 0 22 4.5 2.5 2.5 0 0 0 19.5 2"/></svg></span> Lua</label><label for="__tabbed_5_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span> TypeScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">level</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetLevel</span><span class="p">()</span>
+<span class="kd">local</span> <span class="n">rooms</span> <span class="o">=</span> <span class="n">level</span><span class="p">:</span><span class="n">GetRooms</span><span class="p">()</span>
+<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rooms</span><span class="p">.</span><span class="n">Size</span> <span class="o">-</span> <span class="mi">1</span> <span class="kr">do</span>
+  <span class="kd">local</span> <span class="n">room</span> <span class="o">=</span> <span class="n">rooms</span><span class="p">:</span><span class="n">Get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="c1">-- Do something with the room</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>In IsaacScript，you could implement the code on the Lua tab in the exact same way. However，for this specific case，you can simply use a helper function to iterate over the rooms directly:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">roomDescriptor</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">getRooms</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Do something with the room</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="what-is-the-between-require-and-include">What is the 区别 between <code>require</code> and <code>include</code>?<a class="headerlink" href="#what-is-the-between-require-and-include" title="Permanent link">⚓︎</a></h3>
+<p>See the <a href="../tutorials/Using-Additional-Lua-文件s.md">tutorial on using additional Lua 文件s</a>.</p>
+<h3 class="subHeader" id="what-is-the-between-pairs-and-ipairs">What is the 区别 between <code>pairs</code> and <code>ipairs</code>?<a class="headerlink" href="#what-is-the-between-pairs-and-ipairs" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><code>pairs</code> is for iterating over Lua tables that represent a <a href="https://en.wikipedia.org/wiki/Associative_array">map</a>. In other words，something with key/value associations.</li>
+<li><code>ipairs</code> is for iterating over Lua tables that represent an <a href="https://en.wikipedia.org/wiki/Array_data_structure">array</a>. In other words，something that contains a list of elements.</li>
+</ul>
+<p>Code speaks louder than words:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">map</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">foo</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+  <span class="n">baz</span> <span class="o">=</span> <span class="mi">123</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kr">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">map</span><span class="p">)</span> <span class="kr">do</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="c1">-- Prints foo, baz</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">-- Prints bar, 123</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="mi">123</span><span class="p">,</span>
+  <span class="mi">456</span><span class="p">,</span>
+  <span class="mi">789</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">element</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="kr">do</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1">-- Prints 1, 2, 3</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="c1">-- Prints 123, 456, 789</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+<p>Since Lua is <a href="https://www.tutorialspoint.com/What-are-the-differences-between-untyped-and-dynamically-typed-programming-languages">untyped</a> and uses tables to represent multiple different data structures，<code>pairs</code> and <code>ipairs</code> serve as a flag to tell the reader what the underlying data structure really is.</p>
+<h3 class="subHeader" id="what-does-the-colon-operator-in-lua-do">What does the colon operator in Lua do?<a class="headerlink" href="#what-does-the-colon-operator-in-lua-do" title="Permanent link">⚓︎</a></h3>
+<p>In Lua，you can invoke module functions (i.e. functions that are attached to a table) in two different ways:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">foo</span><span class="p">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">foo</span><span class="p">:</span><span class="n">bar</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>A period invokes the function in the "normal" way. A colon invokes the function in a special way that is syntactic sugar for passing the module as the first argument. For example，the following two function calls are equivalent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">foo</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+<span class="n">foo</span><span class="p">:</span><span class="n">bar</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>The point of using the colon is that it is a convenience to save you from typing out the longer function call，at the cost of some obfuscation for those not familiar with Lua. This feature is included in the language since doing this is such a common task. (Lua modules are often used to emulate Java-style classes.)</p>
+<p>It is idiomatic in Lua to invoke any function that is part of a module with a colon，and you should follow this convention when writing your own code. Additionally，most API class methods should be invoked with a colon. However，there are exceptions; methods marked as "static"，or from object-independant classes (e.g. <code>Isaac</code>，<code>Input</code>，<code>Options</code>)，are not invoked with a colon.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- This is the normal case，illustrated with the `EntityPlayer` class.</span>
+<span class="kd">local</span> <span class="n">player</span> <span class="o">=</span> <span class="n">Isaac</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">()</span>
+<span class="n">player</span><span class="p">.</span><span class="n">AddCollectible</span><span class="p">(</span><span class="n">CollectibleType</span><span class="p">.</span><span class="n">COLLECTIBLE_SAD_ONION</span><span class="p">)</span> <span class="c1">-- Fails because the method expects the class as the first argument.</span>
+<span class="n">player</span><span class="p">:</span><span class="n">AddCollectible</span><span class="p">(</span><span class="n">CollectibleType</span><span class="p">.</span><span class="n">COLLECTIBLE_SAD_ONION</span><span class="p">)</span> <span class="c1">-- Works.</span>
+
+<span class="c1">-- This is the special case，illustrated with the `Isaac` class.</span>
+<span class="n">Isaac</span><span class="p">.</span><span class="n">DebugString</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span> <span class="c1">-- Works.</span>
+<span class="n">Isaac</span><span class="p">:</span><span class="n">DebugString</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span> <span class="c1">-- Fails because the method does not expect the class as the first argument.</span>
+
+<span class="c1">-- Another special case is with static methods.</span>
+<span class="c1">-- Imagine that we have a laser already，provided by the `MC_POST_LASER_UPDATE` callback.</span>
+<span class="c1">-- Like most classes，we are supposed to use a colon.</span>
+<span class="n">laser</span><span class="p">.</span><span class="n">SetMaxDistance</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="c1">-- Fails because the method expects the class as the first argument.</span>
+<span class="n">laser</span><span class="p">:</span><span class="n">SetMaxDistance</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="c1">-- Works.</span>
+<span class="c1">-- But static methods are different.</span>
+<span class="n">laser</span><span class="p">.</span><span class="n">ShootAngle</span><span class="p">(...)</span> <span class="c1">-- Works (because `ShootAngle` is a static method).</span>
+<span class="n">laser</span><span class="p">:</span><span class="n">ShootAngle</span><span class="p">(...)</span> <span class="c1">-- Fails because the method does not expect the class as the first argument.</span>
+<span class="c1">-- Obviously，you can also invoke static methods without an instantiated class. (That&#39;s the point of them being static.)</span>
+<span class="n">EntityLaser</span><span class="p">.</span><span class="n">ShootAngle</span><span class="p">(...)</span> <span class="c1">-- Works.</span>
+<span class="n">EntityLaser</span><span class="p">:</span><span class="n">ShootAngle</span><span class="p">(...)</span> <span class="c1">-- Fails because the method does not expect the class as the first argument.</span>
+</code></pre></div></td></tr></table></div>
+<p>It can be pretty annoying to swap back and forth between using periods and colons. If this part of Lua bothers you，you can try programming mods in TypeScript using the <a href="https://isaacscript.github.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span>IsaacScript</a> framework. (In TypeScript，you invoke every function with a period，which is consistent and impossible to mess up.)</p>
+<h3 class="subHeader" id="what-does-the-info-warn-item-pool-ran-out-of-repicks-message-mean-in-the-logtxt">What does the "[INFO] - [warn] item pool ran out of repicks" message mean in the "log.txt" 文件?<a class="headerlink" href="#what-does-the-info-warn-item-pool-ran-out-of-repicks-message-mean-in-the-logtxt" title="Permanent link">⚓︎</a></h3>
+<p>This message means that the game attempted to get a new random collectible type from an item pool，but the item pool was all out of items. When an item pool is depleted like this，the game reverts to getting a random collectible from the Treasure Room pool instead，since that is the default pool. In the case that the Treasure Room pool itself was depleted，then the game will return <code>CollectibleType.COLLECTIBLE_BREAKFAST</code> instead.</p>
+<p>If your mod is causing this message，it is likely a sign that you have a problem in your logic somewhere. Perhaps you are spawning a ton of random collectibles by accident，which would subsequently deplete the room's item pool. You might also want to examine the logic in any <code>MC_PRE_GET_COLLECTIBLE</code> or <code>MC_POST_GET_COLLECTIBLE</code> callbacks.</p>
+<h2 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">⚓︎</a></h2>
+<p>These are some tips on how to improve communication.</p>
+<h3 id="read-the-docs">Read the Docs<a class="headerlink" href="#read-the-docs" title="Permanent link">⚓︎</a></h3>
+<p>A lot of basic questions about Isaac modding can be answered by "reading the manual". In this case，the "manual" is the unofficial community documentation website，created by famous Isaac modder Wofsauge. (The community documentation website is much better than the "normal" documentation that comes included with the game，which is incomplete，hard to search，and buggy.)</p>
+<p>In fact，the website you are on right now is the community docs. Welcome! Use the search bar in the top right hand corner to easily look up the information you need. For example，if you wanted to know how to get the soul hearts of a player，you could search for "soul hearts"，and then you would find the <code>EntityPlayer.GetSoulHearts</code> method.</p>
+<p>Now that you know about the docs，please remember to search the docs before asking a question in the Isaac community Discord server. By asking questions that can be easily answered by searching the docs，it is not being very respectful to the volunteers who spend their time answering questions.</p>
+<h3 class="subHeader" id="use-discord-syntax-highlighting">Use Discord Syntax Highlighting<a class="headerlink" href="#use-discord-syntax-highlighting" title="Permanent link">⚓︎</a></h3>
+<p>When pasting code into Discord，make sure to paste it in a "code block" by using triple backticks. And make sure to use syntax highlighting for the language，by typing the name of the language next to the backticks.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 5A8.5 8.5 0 0 0 2 13.5a8.5 8.5 0 0 0 8.5 8.5 8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 10.5 5m3 8a2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 13.5 8a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5m6-11A2.5 2.5 0 0 0 17 4.5 2.5 2.5 0 0 0 19.5 7 2.5 2.5 0 0 0 22 4.5 2.5 2.5 0 0 0 19.5 2"/></svg></span> Lua Example</label><label for="__tabbed_6_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span> TypeScript Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>```lua
+local foo = &quot;bar&quot;
+Isaac.DebugString(foo)
+```
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>```ts
+const foo = &quot;bar&quot;;
+Isaac.DebugString(foo);
+```
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 class="subHeader" id="format-code">Format Code<a class="headerlink" href="#format-code" title="Permanent link">⚓︎</a></h3>
+<p>When asking for help，it is common to post a code-snippet. Before posting code，<strong>please format it with an auto-formatter</strong> so that it can be easily understood by others.</p>
+<ul>
+<li>In <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 5A8.5 8.5 0 0 0 2 13.5a8.5 8.5 0 0 0 8.5 8.5 8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 10.5 5m3 8a2.5 2.5 0 0 1-2.5-2.5A2.5 2.5 0 0 1 13.5 8a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5m6-11A2.5 2.5 0 0 0 17 4.5 2.5 2.5 0 0 0 19.5 7 2.5 2.5 0 0 0 22 4.5 2.5 2.5 0 0 0 19.5 2"/></svg></span> Lua，use <a href="https://goonlinetools.com/lua-beautifier/">Lua Beautifier</a>，<a href="https://github.com/Koihik/LuaFormatter">LuaFormatter</a>，or <a href="https://github.com/trixnz/lua-fmt">lua-fmt</a>.</li>
+<li>In <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5Z"/></svg></span> TypeScript，use <a href="https://prettier.io/">Prettier</a>.</li>
+</ul>
+<h3 class="subHeader" id="avoid-posting-screenshots">Avoid Posting Screenshots<a class="headerlink" href="#avoid-posting-screenshots" title="Permanent link">⚓︎</a></h3>
+<p>When asking for help，it is common to post a screenshot of your code. <strong>Don't do this</strong>，because it isn't editable，or copy-pasteable，or searchable. Instead，post the actual text of the code. Also see the section on <a href="#use-discord-syntax-highlighting">Discord syntax highlighting</a>.</p>
+<h3 class="subHeader" id="use-minimalreproducible-examples">Use Minimal，Reproducible Examples<a class="headerlink" href="#use-minimalreproducible-examples" title="Permanent link">⚓︎</a></h3>
+<p>When asking for help，it is common to post a bunch of code that is unrelated to the problem. This makes questions hard to understand and usually means that the person asking the question is putting forth very little effort.</p>
+<p>Please read <a href="https://stackoverflow.com/help/minimal-reproducible-example">this StackOverflow post on how to create minimal，reproducible examples</a>.</p>
+<h3 class="subHeader" id="avoid-using-link-previews">Avoid Using Link Previews<a class="headerlink" href="#avoid-using-link-previews" title="Permanent link">⚓︎</a></h3>
+<p>Link previews can clutter the conversion，turning a tiny message into a massive wall of text. It is courteous to enclose all links in &lt;&gt;，which will disable the feature.</p>
+<p>For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Here&#39;s a link to my code: &lt;https://github.com/IsaacScript/isaacscript-common/blob/main/src/functions/array.ts#L3-L16&gt;
+</code></pre></div></td></tr></table></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+       
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; 2021 - 2023 Wofsauge (Discord: Wofsauge#6503)
+                </div>
+                 Made with
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a> 
+            </div>
+            <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/cuerzor/IsaacDocs" target="_blank" rel="noopener" title="BoI: Lua API Docs on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://discord.gg/isaac" target="_blank" rel="noopener" title="Official Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+     <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.tabs", "navigation.instant", "navigation.top"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "rep", "provider": "mike"}}</script>
+    
+<script>
+    var __search = {
+        transform: function(query) {
+            query = query.replace("_", " ")
+            query = query + "^5 " + query // increase priority of query words in order to prefer matches with page titles. this makes the sorting better
+
+            /* Original Search query filter code*/
+            return query
+                .split(/"([^"]+)"/g) /* => 1 */
+                .map((terms, index) => index & 1 ?
+                    terms.replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +") :
+                    terms
+                )
+                .join("")
+                .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "") /* => 2 */
+                .trim()
+        }
+    }
+</script>
+
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../js/tablesort.number.min.js"></script>
+      
+        <script src="../js/customJS.js"></script>
+      
+        <script src="../js/jquery.mark.min.js"></script>
+      
+    
+    
+  </body>
+</html>
