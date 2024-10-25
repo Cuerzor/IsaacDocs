@@ -1,6 +1,6 @@
 [![Discord](https://img.shields.io/discord/927985880021483571?color=blue&label=Discord&logo=Discord&logoColor=white)](https://discord.gg/435qCC6nHt)
 
-# 以撒的结合：胎衣+ 社区文档项目
+# 以撒的结合：~~胎衣+~~ 忏悔 社区文档项目
 
 该项目的源项目来源于wofsauge的以撒MOD API英文文档：https://wofsauge.github.io/IsaacDocs/
 
