@@ -1,62 +1,62 @@
-# Entity Overview
+# 实体概述
+## 介绍
 
-## Introduction
+以撒的结合里面的每一样东西几乎都是一个*实体*。
 
-Almost everything in the Binding of Isaac is considered to be an *entity*.
-
-Mods for the game typically add new custom entities, arbitrarily spawn entities at special times, or modify existing entities.
-
-<br>
-
-## Entities and Grid Entities
-
-There are two different forms of entities:
-
-### 1) Entities
-
-Most things in the game are "normal" entities. This includes players, enemies, tears, projectiles, and more.
-
-Normal entities are represented by the `Entity` API class.
-
-Vanilla entities are defined in the "resources/entities2.xml" file. Mods can create custom entities by creating the "content/entities2.xml" file and adding entries to it.
-
-Mods can spawn entities with the `Isaac.Spawn` or `Game.Spawn` methods. The former should be used when the seed of the entity does not matter. Otherwise, use the latter and specify the seed.
-
-Hint: Nearly everything that you spawn should use have a specified seed, so that the rerolls and other random effects are consistent when replaying through the same seed. (This is how the vanilla game works.)
-
-### 2) Grid Entities
-
-Grid entities are special entities that are aligned with a grid tile. This includes rocks, pots, and so on.
-
-Grid entities are represented by the `GridEntity` API class.
-
-Vanilla grid entities are not defined in an XML file. Mods cannot create custom grid entities.
-
-Mods can spawn grid entities with the `Isaac.GridSpawn` method. (It is not possible to spawn grid entities with a specific seed.)
+这个游戏的模组通常可以添加新的自定义实体，或在特定的时间任意生成实体，或修改现有的实体。
 
 <br>
 
-## Type, Variant, and SubType
+## 实体和单元格实体
 
-Three integers make up the identity of an entity: `EntityType`, `Variant`, and `SubType`. These three values are often represented as a string with a period as a separator.
+下面是两种不同形式的实体：
 
-- `EntityType` corresponds to the major entity type. For example, a Frowning Gaper (10.0.0) is different from a Pooter (14.0.0).
-- `Variant` corresponds to different kinds of the same `EntityType`. For example, a Frowning Gaper (10.0.0) is different from a Flaming Gaper (10.2.0).
-- `SubType` corresponds to different kinds of the same `EntityType` and `Variant` combination. For example, a Sad Onion (5.100.1) is different from an Inner Eye (5.100.2).
+### 1) 实体
 
-The `Entity` API class contains all three of these values as properties. The `GridEntity` API class offers a `GetType` and `GetVariant` method. (Grid entities do not use sub-types.)
+游戏里大多数的数据都是“普通”实体，这里面包括了玩家、怪物、泪弹、敌人的泪弹和其他别的数据。
 
-You can make a helper function for getting the ID of an entity:
+普通的实体在`实体` API类中已经描述过了。
+
+原始实体在"resources/entities2.xml"文件中已经被定义了。模组可以通过创建"content/entities2.xml"文件并添加条目来创建自定义实体。
+
+模组可以通过使用`Issa.Spawn`和`Game.Spawn`两种方法来生成实体，前一种方法生成的实体应该与种子之间不存在联系，否则，使用另一种方法生成实体并需要指定种子。
+
+小提示：几乎每一样生成的实体都应该使用一个特定的种子，因此在游玩相同的种子下可以使重掷的结果和其他随机效果保持一致（这就是原版游戏的运行方式）。
+
+### 2) 单元格实体
+
+单元格实体是指一种特殊的可以与单元格索引对齐的实体，其中包括了岩石、管子等。
+
+单元格实体在`GridEntity`API类中被定义了。
+
+原始单元格实体并没有被定义在一个XML文件中，因此模组无法创建自定义单元格实体。
+
+模组可以通过`Isaac.GridSpawn`方法来生成单元格实体（但无法生成带有特定种子的单元格实体）。
+
+<br>
+
+## 属性、变量和子属性
+
+
+一个实体数据结构由三个整型定义：`EntityType`、`Variant`和`SubType`。这三个值通常被定义为一个字符型数据并以句号为分隔符。
+
+- `EntityType`对应实体属性。 例如，裂口尸（10.0.0）的实体属性与狙击蝇（14.0.0）的不同`EntityTpye`。
+- `Variant`对应不同种类但有着相同`EntityType`的实体。例如，皱眉裂口尸(10.0.0)和燃烧裂口尸(10.2.0)的第二位数据也就是`Variant`不相同。
+- `SubType`对应有着相同`EntityType`和`Variant`的不同实体。例如悲伤洋葱(5.100.1)和泪眼(5.100.2)有着相同的前两位数据，却在最后一位不相同。
+
+`Entity`API类包含了这三个值作为属性的实体。`GridEntity`API类提供了`GetType`和`GetVariant`方法来获取这两种属性的值（单元格实体通常没有子属性）。
+
+你可以创建一个辅助函数来获得实体的ID：
 
 ```lua
--- Helper function to get a string containing an entity's type, variant, and sub-type.
+-- 一个辅助函数用于获取包含实体的属性、变量和子属性的字符串数据。
 local function getEntityID(entity)
   return tostring(entity.Type) .. "." .. tostring(entity.Variant) .. "." .. tostring(entity.SubType)
 end
 ```
 
 ```lua
--- Helper function to get a string containing a grid entity's type and variant.
+-- 一个辅助函数用于获取包含单元格实体的属性和变量的字符串数据。
 local function getGridEntityID(gridEntity)
   local gridEntityType = gridEntity:GetType()
   local gridEntityVariant = gridEntity:GetVariant()
@@ -64,6 +64,7 @@ local function getGridEntityID(gridEntity)
 end
 ```
 
-If you are using [IsaacScript](https://isaacscript.github.io/), these two functions are already included in the standard library, so don't bother making them yourself.
+
+如果你正在使用[ISaacScript]（https://isaacscript.github.io/）库，上述的两个函数已经被包含在其标准库中，因此你无需自建。
 
 <br>
