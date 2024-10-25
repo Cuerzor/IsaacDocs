@@ -154,7 +154,7 @@ end
     mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, mod.postPlayerInit)
     ```
 
-### 我该如何让一个跟班像波比兄弟那样跟随玩家？ {: .subHeader}
+## 我该如何让一个跟班像波比兄弟那样跟随玩家？ {: .subHeader}
 
 === ":material-language-lua: Lua"
     ```lua
@@ -206,7 +206,7 @@ end
     }
     ```
 
-### 如何使用StageAPI添加新头目？ {: .subHeader}
+## 如何使用StageAPI添加新头目？ {: .subHeader}
 
 这是一段来自于Xalum的示例代码:
 

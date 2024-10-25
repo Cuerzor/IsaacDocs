@@ -5,7 +5,7 @@ tags:
 
 # MOD常见问题：入门
 
-### 我要怎么开始做以撒的MOD？（新手入门） {: .subHeader}
+## 我要怎么开始做以撒的MOD？（新手入门） {: .subHeader}
 
 如果你能够访问Youtube并且可以听懂英文，推荐观看[Youtube上的Lytebringr的教程视频系列](https://www.youtube.com/playlist?list=PLMZJyHSWa_My5DDoTQcKCgs475xIpQHSF)。这些视频是在胎衣+DLC发布之后制作的，但与忏悔DLC之间没有太大变化，所以它们仍然是你学习诀窍的最佳选择。
 
@@ -63,7 +63,7 @@ tags:
     /Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My Games/Binding of Isaac Afterbirth+ Mods
     ```
 
-### 我要怎么解包文件？我要怎么用资源提取器？ {: .subHeader}
+## 我要怎么解包文件？我要怎么用资源提取器？ {: .subHeader}
 
 默认情况下，游戏资源在：
 
@@ -81,7 +81,7 @@ tags:
 
 请注意，每次出现原版补丁时，您还必须重新运行资源提取器。
 
-### anm2文件在哪儿？ {: .subHeader}
+## anm2文件在哪儿？ {: .subHeader}
 
 - 在以撒中，贴图动画由位于`resources/gfx`文件夹中的anm2文件表示。
 - 游戏中的每个实体都有一个相关的anm2文件。
@@ -91,13 +91,13 @@ tags:
   - 直接使用文本编辑器编辑文件。（以撒前制作人员Kilburn就是这么做的。）
   - 使用提供的以撒动画编辑器编辑文件，该编辑器位于：`[以撒游戏目录]\tools\IsaacAnimationEditor\IsaacAnimationEditor.exe`
 
-### 我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。 {: .subHeader}
+## 我修改了一个XML文件，但当我打开游戏或开始新的一局时会崩溃。 {: .subHeader}
 
 崩溃意味着XML文件无效，这意味着您在编辑文件时写错了某个地方。从头开始，一次做一个小编辑，直到你找到导致游戏崩溃的确切部分。
 
 另一个有用的故障排除工具是类似[xmlvalidation.com](https://www.xmlvalidation.com/)的XML验证器。
 
-### 如何得知某个实体的实体类型、变种或子类型？ {: .subHeader}
+## 如何得知某个实体的实体类型、变种或子类型？ {: .subHeader}
 
 您可以：
 
@@ -105,7 +105,7 @@ tags:
 2. 或者，您可以在“resources-dlc3/entities2.xml”文件中使用ctrl+f搜索您想要的实体。
 
 
-### 我要怎么编辑房间？ {: .subHeader}
+## 我要怎么编辑房间？ {: .subHeader}
 
 2014年，Chronometrics制作了一个名为[Basement Renovator](https://github.com/Basement-Renovator/Basement-Renovator)的第三方房间编辑器，以改进官方编辑房间的流程。它是开源的，位于GitHub上。由于Basement Renovator比官方房间编辑好用得多，即使是官方开发商现在也使用Basement Renovator。（这就是为什么忏悔房间不能用官方编辑器编辑。）
 
@@ -117,7 +117,7 @@ tags:
 
 Basement Renovator是用Python编写的，因此您可以从源代码运行它，也可以从[发布页面](https://github.com/basement-renovator/basement-renovator/releases)下载exe文件。
 
-### 我要怎么覆盖原版音乐？ {: .subHeader}
+## 我要怎么覆盖原版音乐？ {: .subHeader}
 
 - 对于正常的音乐替换，您可以直接在MOD文件夹里替换相应的原版资源文件。
 - 对于动态的音乐替换，选择一项：
