@@ -4,6 +4,15 @@ tags:
 ---
 # Class "GridEntityDoor"
 
+???+ info
+    You can get this class by using the following function:
+
+    * [GridEntity.ToDoor()](GridEntity.md#todoor)
+    * [Room.GetDoor()](Room.md#getdoor)
+
+    ???+ example "Example Code"
+        `Game():GetRoom():GetGridEntity(25):ToDoor()`
+
 ## Class Diagram
 --8<-- "docs/snippets/GridEntityClassDiagram.md"
 ## Functions
@@ -136,11 +145,15 @@ ___
 ### Previous·State {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int PreviousState  {: .copyable aria-label='Variables' }
+???+ bug "Bug"
+    This variable is broken and returns userdata.
 
 ___
 ### Previous·Variant {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int PreviousVariant  {: .copyable aria-label='Variables' }
+???+ bug "Bug"
+    This variable is broken and returns userdata.
 
 ___
 ### Slot {: aria-label='Variables' }

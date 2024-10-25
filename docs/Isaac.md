@@ -4,12 +4,14 @@ tags:
   - 类
   - Isaac
 ---
-# 类 "Isaac"
+# 全局类 "Isaac"
 
 ???+ info "提示"
+    你可以通过全局表`Isaac`来获取该类。
+
     **访问Isaac类的方法时，需要使用`.`（句点）而不是`:`（冒号）！**
 
-    例如：
+    ???+ example "示例代码"
     ```lua
     local player = Isaac.GetPlayer()
     ```
@@ -17,7 +19,7 @@ tags:
 ## 函数
 ### Add·Callback () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
-#### void AddCallback ( table modRef, function callbackId, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
+#### void AddCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
 添加一个MOD回调。
 
 推荐使用[Mod Reference](ModReference.md)的[AddCallback](ModReference.md#addcallback)函数而非该函数。
@@ -28,12 +30,12 @@ ___
 #### int AddPillEffectToPool ( int pillEffect ) {: .copyable aria-label='Functions' }
 将一个胶囊效果pillEffect加入到胶囊池中。
 
-返回胶囊颜色。
+返回加入的胶囊的[胶囊颜色](enums/PillColor.md)。
 
 ___
 ### Add·Priority·Callback () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
-#### void AddPriorityCallback ( table modRef, function callbackId, [CallbackPriority](enums/CallbackPriority.md) priority, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
+#### void AddPriorityCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, [CallbackPriority](enums/CallbackPriority.md) priority, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
 添加一个MOD回调。该回调具有优先级，并根据优先级决定执行顺序。
 
 推荐使用[Mod Reference](ModReference.md)的[AddPriorityCallback](ModReference.md#addcallback)函数而非该函数。
@@ -51,7 +53,7 @@ ___
     Isaac.ConsoleOutput("This is a Test.")
     -- 输出: This is a Test.
 
-    -- 替代:
+    -- 替代以下代码:
     print("This is a Test.")
     -- 输出: This is a Test.
 
@@ -76,11 +78,9 @@ ___
 
 返回本房间内的满足指定需求的实体数量。
 
-Spawner为该实体的创建者。（可以为`:::lua nil`）
-
-Type为该实体的类型。（可以为`:::lua EntityType.ENTITY_NULL`）
-
-Variant和SubType为该实体的变体和子类型。（可以为`:::lua -1`）
+- `Spawner`为该实体的创建者。（可以为`:::lua nil`）
+- `Type`为该实体的类型。（可以为`:::lua EntityType.ENTITY_NULL`）
+- `Variant`和`Subtype`为该实体的变体和子类型。（可以为`:::lua -1`）
 
 ___
 ### Debug·String () {: aria-label='Functions' }
@@ -94,7 +94,6 @@ ___
     ```lua
     Isaac.DebugString("This is a Test.")
     -- Output: [INFO] - Lua Debug: This is a Test.
-
     ```
 
 ___
@@ -115,11 +114,10 @@ ___
 ### Find·By·Type () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
 #### table FindByType ( [EntityType](enums/EntityType.md) Type, int Variant = -1, int SubType = -1, boolean Cache = false, boolean IgnoreFriendly = false ) {: .copyable aria-label='Functions' }
-返回符合Type，Variant和SubType的所有实体。
+返回符合Type，Variant和SubType的所有实体。如果Variant/SubType为-1，表示包括任意Variant/SubType的实体。Cache为true时会缓存结果，一帧执行多次时可以使用。
 
-如果Variant/SubType为-1，表示包括任意Variant/SubType的实体。
+如果一个实体拥有`EntityFlag.FLAG_NO_QUERY`实体标志，它不会出现在查询结果中。如果需要获取拥有该实体标志的实体，应该改为使用`GetRoomEntities`函数。
 
-Cache为true时会缓存结果，一帧执行多次时可以使用。
 ___
 ### Find·In·Radius () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
@@ -133,14 +131,19 @@ ___
 #### boolean GetBuiltInCallbackState ( function callbackId ) {: .copyable aria-label='Functions' }
 获取内置回调状态。
 
-作用未知。
+如果ID为`callbackId`的回调会被游戏执行，返回`true`。如果不存在ID为`callbackId`的回调，会返回`false`。
 ___
 ### Get·Callbacks () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
 #### table GetCallbacks ( function callbackId, boolean createIfMissing ) {: .copyable aria-label='Functions' }
-获取所有callbackId的MOD回调。
+获取所有ID为`callbackId`的MOD回调。这些回调会表示为一个表，更多信息请查阅[自定义回调教程](tutorials/CustomCallbacks.md#run-behavior)。
 
-createIfMissing：为true时，如果没有该回调，则创建一个。
+游戏会将所有ID为`callbackId`的回调加进一个表里，`callbackId`是其索引，而值则是一个包含所有ID为`callbackId`的回调的表。
+
+如果`createIfMissing`为`true`，并且不存在ID为`callbackId`的回调，游戏会自动创建一个包含ID为`callbackId`的回调的空表，用于增加新的回调。这个空表包含一个具有默认元函数`__matchParams`的元表，而这个元函数会在添加回调，并且检查指定的额外参数是否匹配时被调用。每当一个回调被添加时，这个元函数也会被使用，其参数`createIfMissing`为`true`。
+
+如果`createIfMissing`为`false`或者`nil`，并且不存在ID为`callbackId`的回调，该函数返回一个空表。
+
 ___
 ### Get·Card·Id·By·Name () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -181,7 +184,6 @@ ___
     ```lua
     Isaac.GetChallengeIdByName("Aprils fool")
     --返回：32
-
     ```
 
 ___
@@ -196,7 +198,6 @@ ___
     ```lua
     Isaac.GetCostumeIdByPath("gfx/characters/n027_Transformation_Poop.anm2")
     --返回：27
-
     ```
 
 ___
@@ -211,7 +212,6 @@ ___
     ```lua
     Isaac.GetCurseIdByName("Curse of the Unknown")
     --返回：4
-
     ```
 
 ___
@@ -229,7 +229,6 @@ ___
     ```lua
     Isaac.GetEntityTypeByName("Flaming Gaper")
     --返回：10
-
     ```
 
 ___
@@ -248,7 +247,6 @@ ___
     ```lua
     Isaac.GetEntityVariantByName("Flaming Gaper")
     --返回：2
-
     ```
 
 ___
@@ -305,7 +303,6 @@ ___
     ```lua
     Isaac.GetMusicIdByName("Title Screen")
     --返回：61
-
     ```
 
 ___
@@ -321,7 +318,6 @@ ___
     ```lua
     Isaac.GetPillEffectByName("I can see forever!")
     --返回：23
-
     ```
 
 ___
@@ -361,12 +357,19 @@ ___
 
 根据角色的名称返回角色类型（ID）。（文件：players.xml）如果找不到具有该名称的角色，则返回`-1`。
 
+???+ warning "警告"
+    在《忏悔》中，角色名字被设置为可翻译文本，并且会使用翻译占位符作为他们的“基本名称”。例如，要获取该隐的[角色类型](enums/PlayerType.md)，你需要使用名称`#CAIN_NAME`而非`Cain`。
+    建议对MOD角色使用该函数，而对原版角色直接使用[PlayerType](enums/PlayerType.md)枚举。
+
 ???- example "示例代码"
     以下代码获取阿撒泻勒的角色类型。
 
     ```lua
-    Isaac.GetPlayerTypeByName("Azazel")
-    --返回：7
+    -- 忏悔：
+    Isaac.GetPlayerTypeByName("#AZAZEL_NAME") --返回: 7
+
+    -- 胎衣+:
+    Isaac.GetPlayerTypeByName("Azazel") --Returns: 7
 
     ```
 
@@ -381,9 +384,9 @@ ___
 ___
 ### Get·Room·Entities () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
-#### table GetRoomEntities ( ) {: .copyable aria-label='Functions' }
+#### [Entity](Entity.md)[] GetRoomEntities ( ) {: .copyable aria-label='Functions' }
 
-返回一个可迭代表，该表包含调用函数时房间中的所有实体。
+返回一个可遍历的表，该表包含调用函数时房间中的所有实体。
 
 此行为不同于[`Room::GetEntities()`](Room.md#GetEntities)，后者返回一个原始指针，指向在任何给定时间存储房间所有实体的数组。
 
@@ -538,7 +541,7 @@ ___
 ___
 ### Remove·Callback () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
-#### void RemoveCallback ( table modRef, function callbackId, table callbackFn ) {: .copyable aria-label='Functions' }
+#### void RemoveCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, table callbackFn ) {: .copyable aria-label='Functions' }
 
 移除一个MOD回调。
 
@@ -592,15 +595,16 @@ ___
 ___
 ### Run·Callback () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
-#### void RunCallback ( function callbackId, ... ) {: .copyable aria-label='Functions' }
+#### void RunCallback ( [ModCallback](enums/ModCallbacks.md)|string callbackId, ...) {: .copyable aria-label='Functions' }
 
-执行所有callbackId的MOD回调。
+执行所有ID为`callbackId`的MOD回调，会在第一个返回值出现时中断，并使该函数返回该值。
 ___
 ### Run·Callback·With·Param () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
-#### void RunCallbackWithParam ( function callbackId, object param, ... ) {: .copyable aria-label='Functions' }
+#### void RunCallbackWithParam ( [ModCallback](enums/ModCallbacks.md)|string callbackId, object param, ...) {: .copyable aria-label='Functions' }
+Runs all callbacks added under `callbackId`, breaking on the first return and returning that value.
 
-执行所有可选参数为param的callbackId的MOD回调。
+执行所有可选参数为`param`的`callbackId`的MOD回调，会在第一个返回值出现时中断，并使该函数返回该值。
 ___
 ### Save·Mod·Data () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -630,7 +634,8 @@ ___
 ___
 ### Set·Built·In·Callback·State () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
-#### void SetBuiltInCallbackState ( function callbackId, boolean state ) {: .copyable aria-label='Functions' }
+#### void SetBuiltInCallbackState ( [ModCallbacks](enums/ModCallbacks.md) callbackId, boolean state ) {: .copyable aria-label='Functions' }
+Sets whether callbacks under `callbackId` will be ran by the game. The game uses this to activate a [ModCallbacks](enums/ModCallbacks.md) once a callback is added under one, or deactivate them when those callbacks have been removed.
 
 设置内置回调状态。
 
@@ -643,16 +648,16 @@ ___
 
 在给定位置生成一个实体。如果位置不是空的，会在最近的空位置生成。
 
-有两个生成实体的函数：[Isaac.Spawn()](Isaac.md#Spawn)和[Game():Spawn()](Game.md#Spawn)。如果你需要用特定的种子来生成实体，那么你可以使用[Game():Spawn()](Game.md#Spawn)。如果你想生成随机种子的实体，那么你可以使用[Isaac.Spawn()](Isaac.md#Spawn)。
-
-大多数情况下，会使用[Isaac.Spawn()](Isaac.md#Spawn)。
+存在两个生成实体的函数。一个是[Isaac.Spawn()](Isaac.md#spawn)（该函数），用于以随机种子生成一个实体；另一个是[Game():Spawn()](Game.md#spawn)，用于以特定种子生成一个实体。但由于一个BUG，[Isaac.Spawn()](Isaac.md#spawn)有概率生成种子为0的实体，会导致游戏崩溃。如果需要生成一个拥有随机种子的实体，应该总是使用一个自定义的辅助函数，其使用[Random()](GlobalFunctions.md#random)获取种子，在种子为0时将其改为1，并且使用[Game():Spawn()](Game.md#spawn)来生成实体。([IsaacScript](https://isaacscript.github.io/)用户使用`spawn`辅助函数就可以了，它自己就会使用`Game.Spawn`。)
 
 ???- example "示例代码"
     以下代码在本房间的中央生成一个随机道具。
     ```lua
     Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, 0, Vector(320,280), Vector(0,0), nil)
-
     ```
+
+???+ bug "Bug"
+    由于随机种子使用的是[Random()](GlobalFunctions.md#random)函数，会导致生成的实体的InitSeed可能为0。如果这个实体要用到随机数生成器，游戏会崩溃。
 ___
 ### World·To·Render·Position () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -683,7 +688,6 @@ ___
     local player = Isaac.GetPlayer()
     local screenpos = Isaac.WorldToScreen(player.Position)
     Isaac.RenderText("test", screenpos.X, screenpos.Y, 1 ,1 ,1 ,1 )
-
     ```
 
 ___

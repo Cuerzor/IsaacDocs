@@ -15,12 +15,12 @@ nav:
             - "": PLACEHOLDER.md
             - "": PLACEHOLDER.md
         - "常用页面":
-            - "Isaac.": Isaac.md
+            - "Isaac": Isaac.md
             - "Entity": Entity.md
-            - "-- EntityPlayer": EntityPlayer.md
-            - "-- EntityNPC": EntityNPC.md
-            - "-- EntityEffect": EntityEffect.md
-            - "Game():": Game.md
+            - "EntityPlayer": EntityPlayer.md
+            - "EntityNPC": EntityNPC.md
+            - "EntityEffect": EntityEffect.md
+            - "Game": Game.md
             - "Room": Room.md
             - "Level": Level.md
             - "ModCallbacks": enums/ModCallbacks.md
@@ -202,8 +202,8 @@ nav:
     - 教程:
         - "示例项目": tutorials/ExampleProject.md
         - "Lua中的函数": tutorials/FunctionsInLua.md
-        - "数学和Lua技巧": tutorials/MathAndLuaTips.md
-        - "不使用Lua添加道具外观": tutorials/AddingCostumesWithoutLUA.md
+        - "良好代码练习": tutorials/GoodPractices.md
+        - "代码帮助": tutorials/GettingHelp.md
         - "使用ZeroBrane Studio进行调试": tutorials/ZeroBraneStudio.md
         - "控制台": tutorials/DebugConsole.md
         - "使用额外的.lua文件": tutorials/Using-Additional-Lua-Files.md
@@ -253,9 +253,14 @@ nav:
         - "translations.xml" : xml/translations.md
         - "wisps.xml" : xml/wisps.md
     - 常见问题:
-        - "常见问题" : faq/faq.md
-        - "启动设置": faq/LaunchOptions.md
+        - "常见问题" : faq/FaqHome.md
         - "交互式问答" : faq/interactive_FAQ.md
+        - "基本信息" : faq/BasicInformation.md
+        - "新手入门" : faq/GettingStarted.md
+        - "代码帮助" : faq/Coding.md
+        - "Lua语言" : faq/Lua.md
+        - "疑难解答" : faq/Troubleshoot.md
+        - "启动选项": faq/LaunchOptions.md
     - 工具:
         - "工具概览" : tutorials/Tools.md
         - "XML验证器" : tutorials/Tool_XMLValidator.md
@@ -342,7 +347,7 @@ extra_javascript:
     - js/tablesort.number.min.js
     - js/customJS.js
     - js/jquery.mark.min.js
-copyright: "Copyright &copy; 2021 - 2023 Wofsauge (Discord: Wofsauge#6503)"
+copyright: "Copyright &copy; 2021 - 2024 Wofsauge (Discord: Wofsauge#6503)"
 repo_url: https://github.com/cuerzor/IsaacDocs
 repo_name: cuerzor/IsaacDocs
 edit_uri: edit/main/docs/

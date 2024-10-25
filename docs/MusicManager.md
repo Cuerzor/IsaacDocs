@@ -4,6 +4,15 @@ tags:
   - Class
 ---
 # Class "MusicManager"
+
+???+ info
+    This class can be accessed by using its constructor:
+
+    ???+ example "Example Code"
+        ```lua
+        local musicManager = MusicManager()
+        ```
+
 ## Constructors
 ### Music·Manager () {: aria-label='Constructors' }
 [ ](#){: .abrep .tooltip .badge }
@@ -48,7 +57,7 @@ ___
 ___
 ### Fadein () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
-#### void Fadein ( [MusicManager](MusicManager.md) ID, float Volume = 1, float FadeRate = 0.08 ) {: .copyable aria-label='Functions' }
+#### void Fadein ( [Music](enums/Music.md) ID, float Volume = 1, float FadeRate = 0.08 ) {: .copyable aria-label='Functions' }
 
 ___
 ### Fadeout () {: aria-label='Functions' }
@@ -95,7 +104,7 @@ ___
 ___
 ### Queue () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
-#### void Queue ( [MusicManager](MusicManager.md) ID ) {: .copyable aria-label='Functions' }
+#### void Queue ( [Music](enums/Music.md) ID ) {: .copyable aria-label='Functions' }
 
 ___
 ### Reset·Pitch () {: aria-label='Functions' }

@@ -4,6 +4,17 @@ tags:
   - Class
 ---
 # Class "Font"
+
+???+ info
+    This class can be accessed by using its constructor or this function:
+
+    * [Game.GetFont()](Game.md#getfont)
+
+    ???+ example "Example Code"
+        ```lua
+        local myFont = Font()
+        ```
+
 ## Constructors
 ### Font () {: aria-label='Constructors' }
 [ ](#){: .abrep .tooltip .badge }
@@ -112,7 +123,7 @@ ___
 ### Get·Character·Width () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### int GetCharacterWidth ( char Character ) {: .copyable aria-label='Functions' }
-Returns the width of a specific character.
+Returns the width of a specific character in pixels.
 ___
 ### Get·Line·Height () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -122,7 +133,7 @@ ___
 ### Get·String·Width () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### int GetStringWidth ( string String ) {: .copyable aria-label='Functions' }
-Converts a string from UTF8 to UTF16, and returns the string's width.
+Converts a string from UTF8 to UTF16, and returns the string's width in pixels.
 
 ???- bug "Bug"
     Calling this function with `nil` as the parameter will crash the game.
@@ -130,7 +141,7 @@ ___
 ### Get·String·Width·UTF8 () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### int GetStringWidthUTF8 ( string String ) {: .copyable aria-label='Functions' }
-Returns the string width of a Unicode text.
+Returns the string width of a Unicode text in pixels.
 ___
 ### Is·Loaded () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
