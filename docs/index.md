@@ -13,11 +13,11 @@ ___
 
 如果你对制作MOD有任何疑问，请访问官方Discord：
 
-**[:fontawesome-brands-discord: Official BoI Discord-Server](https://discord.gg/isaac)** or **[:fontawesome-brands-discord: Official Modding Of Isaac Discord-Server](https://discord.gg/KbevtvgD4z)**
+**[:fontawesome-brands-discord: 官方以撒Discord服务器](https://discord.gg/isaac)**或者**[:fontawesome-brands-discord: 官方以撒MOD制作Discord服务器](https://discord.gg/KbevtvgD4z)**
 
-### How to read the documentation
-Check out the [FAQ](./faq/FaqHome.md) for answers to commonly asked questions.
+### 如何阅读文档
+查看[常见问题解答](./faq/FaqHome.md)来寻找答案。
 
-The image below provides a quick example on how to read the documentation:
+下图提供了如何阅读文档的快速示例：
 
 ![img](./images/docs_reading_guide.png)
