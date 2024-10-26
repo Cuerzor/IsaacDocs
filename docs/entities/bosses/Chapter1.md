@@ -1,99 +1,99 @@
-# Boss data documentation
+# 头目数据文档
 
-### About
-This table displays important data values for each phase of a boss.
+### 关于
+这张表展示了头目在各个阶段的重要数据值。
 
-### Excel file
-You can downlad the whole table as a handy excel file here: [bosses.xlsx](../../customData/bosses.xlsx)
+### Excel文件
+你可以在这里[bosses.xlsx](../../customData/bosses.xlsx)下载到这整张表的便捷excel文件。
 
-### Chapter 1
+### 章节 1
 
-|Boss|ID|Attack|State|StateFrame|I1|I2|V1|V2|Animation|Trigger|TriggerFrame|Comments|
+|头目|ID|攻击方式|状态|状态帧|I1|I2|V1|V2|动画|触发器|触发器发生帧|说明|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
-|Monstro|20|Small Hop|4|0|0|0|0|0|Walk|Jump|6| |
+|萌死戳|20|小跳|4|0|0|0|0|0|Walk|Jump|6| |
 | | | | | | | | | | |Land|22| |
-| | |Bullet Spit|8|0|0|0|0|0|Taunt|Shoot|22| |
-| | |Jump|6|0|0|0|0|0|JumpUp|Jump|10| |
+| | |抛射泪弹|8|0|0|0|0|0|Taunt|Shoot|22| |
+| | |大跳|6|0|0|0|0|0|JumpUp|Jump|10| |
 | | | |7|0|0|0|0|0|JumpDown|Land|32| |
 | | | | | | | | | | |Shoot|34| |
-|Gemini (Contusion)|79|Walk|4|0|0|0|0|0|WalkVert/WalkHori| | |Steven uses the same values 79.1 / 79.11|
-| | |Chase|8|Time spent (max 101)|0|0|0|0|RageBody| | | |
-| | |Pant|3|Time spent (max 101)|0|0|0|0|Pant| | | |
-|Gemini (Suture)|79.10|Walk|4|0|0|0|0|0|Walk01| | | |
+|连体双子|79|行走|4|0|0|0|0|0|WalkVert/WalkHori| | |史蒂文79.1 / 79.11使用同样的值 |
+| | |追逐|8|消耗时间 (最长 101)|0|0|0|0|RageBody| | | |
+| | |喘气|3|消耗时间 (最长 101)|0|0|0|0|Pant| | | |
+|双子宝宝|79.10|行走|4|0|0|0|0|0|Walk01| | | |
 | | |Attack|8|0|0|0|0|0|Attack01|Shoot|17| |
 | | |Rage|4|0|0|0|0|0|Rage| | | |
-| | |Chase|4|0|0|0|0|0|Walk02| | | |
-|Dingle|261|Idle|3|Time spent|0|0|0|0|Idle| | |Dangle uses the same values 261.1|
-| | |Whistle|9|0|0|0|0|0|Whistle| | | |
+| | |追逐|4|0|0|0|0|0|Walk02| | | |
+|坨坨|261|闲混|3|消耗时间|0|0|0|0|Idle| | |滑坨坨261.1使用同样的值 |
+| | |吹口哨|9|0|0|0|0|0|Whistle| | | |
 | | | |8|0|0|0|0|0|Spit|Shoot|3| |
-| | |Spit|10|0|0|0|0|0|Dance| | | |
+| | |发射敌弹|10|0|0|0|0|0|Dance| | | |
 | | | |8|0|0|0|0|0|Spit|Shoot|3| |
-| | |Slide|11|0|0|0|0|0|BeforeSlide| | | |
-| | | |4|0|Number of dashes|0|0|0|Slide| | | |
-| | | |16|Time spent|0|0|0|0|Tired| | | |
-|Gurglings|237.1|Idle|4|0|0|0|0|0|Walk*| | |Turdlings use the same values 237.2|
-| | |Charge|8|0|0|0|Original pos|0|Charge*| | | |
+| | |滑行|11|0|0|0|0|0|BeforeSlide| | | |
+| | | |4|0|冲刺次数|0|0|0|Slide| | | |
+| | | |16|消耗时间|0|0|0|0|Tired| | | |
+|肉山幼崽|237.1|闲混|4|0|0|0|0|0|Walk*| | |粪山幼崽237.2使用同样的值|
+| | |冲锋|8|0|0|0|初始位置|0|Charge*| | | |
 | | | |3|0|0|0|0|0|Stop|Shoot|7| |
-|Larry Jr.|19|Idle|4|0|0|0|0|0| | | | |
-| | |Poop|4|0|0|0|X = Cooldown|0| | | | |
-|The Duke of Flies|67|Small Flies|13|Time spent|0|0|0|0|Attack01| | | |
-| | |Big Fly|14|Time spent|0|0|0|0|Attack02| | | |
-| | |Swarm|8|Time spent|0|0|0|0|Attack03| | | |
-| | |Idle|4|0|0|0|0|0|Walk| | | |
-|Widow|100|Jump|6|0|0|0|Speed ?|0|Jump|Jump|7| |
+|拉里子虫|19|闲混|4|0|0|0|0|0| | | | |
+| | |生成大便|4|0|0|0|X = Cooldown|0| | | | |
+|苍蝇公爵|67|环绕|13|消耗时间|0|0|0|0|Attack01| | | |
+| | |进攻|14|消耗时间|0|0|0|0|Attack02| | | |
+| | |散开|8|消耗时间|0|0|0|0|Attack03| | | |
+| | |闲混|4|0|0|0|0|0|Walk| | | |
+|寡妇蛛|100|Jump|6|0|0|0|Speed ?|0|Jump|Jump|7| |
 | | | | | | | | | | |Land|19| |
-| | |Sack|8|0|1|0|0|0|Attack01|Shoot|18| |
+| | |卵囊|8|0|1|0|0|0|Attack01|Shoot|18| |
 | | | | | | | | | | |Jump|26| |
-| | |Spider|9|Time spent|0|0|0|0|Attack02|Jump|3| |
+| | |蜘蛛|9|消耗时间|0|0|0|0|Attack02|Jump|3| |
 | | | | | | | | | | |Shoot|6| |
-|Blighted Ovum (Contusion)|79.2|Run|4|0|0|0|0|0| | | | |
-| | |Chase|8|Time spent (max 101)|0|0|0|0| | | | |
-|Blighted Ovum (Suture)|79.12|Idle|4|Time spent|0|0|0|0| | | | |
-| | |Fire|8|Time spent|0|0|0|0|Attack01|Shoot|15| |
-|The Haunt|260|Idle (P1)|4|0|Number of Lil'Haunts alive|0|0|0|IdleSkin| | | |
-| | |FlyUp|4|0|0|0|0|0|AngrySkin| | | |
+|凋零双子|79.2|跑|4|0|0|0|0|0| | | | |
+| | |喘气|8|消耗时间 (max 101)|0|0|0|0| | | | |
+|凋零双子宝宝|79.12|闲混|4|消耗时间|0|0|0|0| | | | |
+| | |硫磺火|8|消耗时间|0|0|0|0|Attack01|Shoot|15| |
+|大恶灵|260|闲混 (P1)|4|0|小恶灵存活数量|0|0|0|IdleSkin| | | |
+| | |飘起|4|0|0|0|0|0|AngrySkin| | | |
 | | | |16|0|0|0|0|0|Peel| | | |
-| | |Idle (P2)|3|Time spent|0|0|0|0|IdleNoSkin| | | |
-| | |Spit|8|0|0|0|0|0|SpitNoSkin|Shoot|3| |
+| | |闲混 (P2)|3|消耗时间|0|0|0|0|IdleNoSkin| | | |
+| | |发射敌弹|8|0|0|0|0|0|SpitNoSkin|Shoot|3| |
 | | | | | | | | | | |Stop|19| |
-| | |Laser|9|0|0|0|0|0|LaserNoSkin|Shoot|18| |
-|Pin|62|Burry|4|1|0|0|0|0| | | | |
-| | |Ipecac|8|Time spent|0|0|0|0|Attack1| | | |
-|Famine|63|Dash|8|Number of dashes|0|0|0|0|DashAttackStart|Shoot|24| |
+| | |硫磺火激光|9|0|0|0|0|0|LaserNoSkin|Shoot|18| |
+|钉头虫|62|埋|4|1|0|0|0|0| | | | |
+| | |吐根|8|消耗时间|0|0|0|0|Attack1| | | |
+|饥荒骑士|63|冲刺|8|冲刺次数|0|0|0|0|DashAttackStart|Shoot|24| |
 | | | | | | | | | |DashAttack| | | |
-| | |Spawn|13|0|0|0|0|0|Attack1|Shoot|25| |
-| | |Idle|4|0|0|0|0|0|FullFloat| | | |
-|Famine (head)|63|Idle|9|0|0|0|0|0|HeadWalk| | | |
-| | |Attack|9|0|0|0|0|0|HeadAttack|Shoot|16| |
-|The Fallen|81|Idle|4|0|0|0|0|0|Walk| | | |
-| | |Spit|8|0|0|0|0|0|Attack1|Shoot|20| |
+| | |Summon|13|0|0|0|0|0|Attack1|Shoot|25| |
+| | |闲混|4|0|0|0|0|0|FullFloat| | | |
+|饥荒骑士 (头)|63|闲混|9|0|0|0|0|0|HeadWalk| | | |
+| | |攻击|9|0|0|0|0|0|HeadAttack|Shoot|16| |
+|堕落恶魔|81|闲混|4|0|0|0|0|0|行走| | | |
+| | |发射敌弹|8|0|0|0|0|0|Attack1|Shoot|20| |
 | | | | | | | | | | |Shoot2|34| |
-| | |Charge|9|0|0|0|0|0|ChargeStart| | | |
-| | | | |0|0|0|X = Damage taken during attack|0|Charge| | |Damage taken starts only during "Charge" anim Transition into Brimstone depend on MaxHP|
+| | |冲锋|9|0|0|0|0|0|ChargeStart| | | |
+| | | | |0|0|0|X = 攻击期间的承伤|0|Charge| | |承伤仅从冲锋动画转到发射硫磺火期间计算且与最大生命值相关|
 | | | |10|0|0|0|0|0|Attack2|Shoot|20| |
-| | |Split|13|0|0|0|0|0|Split| | |Fallen dies and spawns two smaller ones|
-|Headless Horseman (Head)|83|Idle|4|0|0|0|0|0|Walk| | | |
-| | |Dash|8|Remaining dashes|0|0|0|0|Charge + Shake| | | |
-| | |Spit|9|Time spent|0|0|0|0|Attack| | | |
-|Headless Horseman (Body)|82|Idle|4|0|0|0|0|0|Walk| | | |
-| | |Spit|8|Time spent|0|0|0|0|Attack| | | |
-|Rag Man|405|Walk|4|0|0 or timer to revive a spider|0|0|0|Walk*| | | |
-| | |Shoot|8|0|0 or timer to revive a spider|0|0|0|Shooting1|Shoot|4| |
+| | |分裂|13|0|0|0|0|0|Split| | |堕落恶魔死亡并分裂成两个更小的|
+|无头骑士的头|83|闲混|4|0|0|0|0|0|行走| | | |
+| | |冲刺|8|持续冲刺|0|0|0|0|Charge + Shake| | | |
+| | |发射敌弹|9|消耗时间|0|0|0|0|Attack| | | |
+|无头骑士的身体|82|闲混|4|0|0|0|0|0|Walk| | | |
+| | |发射敌弹|8|消耗时间|0|0|0|0|Attack| | | |
+|绷带人|405|行走|4|0|0 或者计时器唤醒一个蜘蛛|0|0|0|Walk*| | | |
+| | |Shoot|8|0|0 或者计时器唤醒一个蜘蛛|0|0|0|Shooting1|Shoot|4| |
 | | | | | | | | | |Shooting3|Shoot|4/10/16| |
 | | | | | | | | | |Shooting5|Shoot|4/10/16/22/28| |
-| | |Spawn|13|0|0 or timer to revive a spider|0|0|0|HeadThrow*|Spawn|17| |
-| | |Idle|3|0|0|0|0|0|WalkNoHead*| | |No state for shoot (only on head: 405.1)|
-|Little Horn|404|Ball|8|0|0|0|Unknown|0|Shoot|Shoot|25| |
-| | |Perma Pit|13|0|0|0|Unknown|0|Summon|Summon|20| |
-| | |Multi Pit|14|0|0|0|Unknown|0|Summon|Summon|20|Amount is not parameterized|
-| | |Troll|9|0|0|0|Unknown|0|Bomb|Bomb|20| |
-| | |Mega Troll|10|0|0|0|Unknown|0|MegaBomb|Bomb|20| |
-| | |Teleport|6|0/1 : Down/Up|0|Remaining TP|Unknown|0|Teleport / Return|CollisionOn / Off|13/10|I2 always set to 1 during this attack|
-| | |Multi TP|16|0/1 : Down/Up|0|Remaining TP|Unknown|0|Teleport / Return|CollisionOn / Off|13/10| |
-| | |Idle|3|0|0|0|Unknown|0| | | | |
-|Baby Plum|908|Idle|3|Time spent|0|0|0|0|Idle| | | |
-| | |Spiral|8|0|0|0|0|0|Attack1|Shoot / Sound|7/30| |
-| | |Rings|9|0|0|0|0|0|Attack2|Jump/Shoot/Sound|7/19/30| |
-| | |Bullet hell|10|0|0|0|0|0|Attack3| | | |
+| | |生成|13|0|0 或者计时器唤醒一个蜘蛛|0|0|0|HeadThrow*|Spawn|17| |
+| | |闲混|3|0|0|0|0|0|WalkNoHead*| | |没有射击状态 (只在有绷带人的头: 405.1)|
+|小角恶魔|404|黑暗球|8|0|0|0|未知|0|Shoot|Shoot|25| |
+| | |陷阱|13|0|0|0|未知|0|Summon|Summon|20| |
+| | |多个陷阱|14|0|0|0|未知|0|Summon|Summon|20|数量无法被参数化|
+| | |即爆炸弹|9|0|0|0|未知|0|Bomb|Bomb|20| |
+| | |超级即爆炸弹|10|0|0|0|未知|0|MegaBomb|Bomb|20| |
+| | |传送陷阱|6|0/1 : 下/上|0|保持传送|未知|0|Teleport / Return|CollisionOn / Off|13/10|I2在攻击中总是设置为1|
+| | |多个传送陷阱|16|0/1 : 下/上|0|保持传送|未知|0|Teleport / Return|CollisionOn / Off|13/10| |
+| | |闲混|3|0|0|0|未知|0| | | | |
+|糖梅宝宝|908|闲混|3|消耗时间|0|0|0|0|Idle| | | |
+| | |旋转|8|0|0|0|0|0|Attack1|Shoot / Sound|7/30| |
+| | |环形泪弹|9|0|0|0|0|0|Attack2|Jump/Shoot/Sound|7/19/30| |
+| | |泪弹地狱|10|0|0|0|0|0|Attack3| | | |
 | | | | | | | | | |Attack3(Back)Loop| | | |
 | | | | | | | | | |Attack3End| | | |
