@@ -5,7 +5,7 @@ tags:
 
 # [教程] 良好代码练习
 
-### 什么是微观优化？我应该优化我的MOD吗？ {: .subHeader}
+### 什么是微观优化？我应该优化我的 MOD 吗？ {: .subHeader}
 
 #### 定义
 
@@ -16,10 +16,10 @@ tags:
 
 ```lua
 local function main()
-  -- 使用foo做点什么
+  -- 使用 foo 做点什么
   foo()
 
-  -- 使用bar做点什么
+  -- 使用 bar 做点什么
   bar()
 end
 
@@ -36,10 +36,10 @@ end
 
 ```lua
 local function main()
-  -- 使用foo做点什么
+  -- 使用 foo 做点什么
   -- TODO
 
-  -- 使用bar做点什么
+  -- 使用 bar 做点什么
   -- TODO
 end
 ```
@@ -54,7 +54,7 @@ end
 
 这就是为什么程序员有这样一句格言：“过早的优化是万恶之源。”，出自[唐纳德·克努特](https://en.wikipedia.org/wiki/Donald_Knuth)，是有史以来最著名的计算机科学家之一。在他的论文“[Structured Programming with go to Statements](https://pic.plover.com/knuth-GOTO.pdf)”中，他写了这样一句著名的话：
 
-> 程序员浪费了大量的时间去考虑或担心程序中非关键部分的速度，而当考虑到调试和维护时，这些对效率的尝试实际上会产生强烈的负面影响。我们应该忘记这种微小的效率，比如说因为过早优化而浪费的大约97%的时间。然而，我们不应该放弃那关键的 3% 的机会
+> 程序员浪费了大量的时间去考虑或担心程序中非关键部分的速度，而当考虑到调试和维护时，这些对效率的尝试实际上会产生强烈的负面影响。我们应该忘记这种微小的效率，比如说因为过早优化而浪费的大约 97% 的时间。然而，我们不应该放弃那关键的 3% 的机会
 
 #### 测量性能
 
@@ -64,7 +64,7 @@ end
 
 这就是为什么当我们谈论优化时，最需要讨论的是**测量性能**。测量一段代码的运行时间的行为叫做性能分析。（也可以称为基准测试。）
 
-记住来自于C2 wiki的**[优化的三条准则](https://wiki.c2.com/?RulesOfOptimization)**：
+记住来自于 C2 wiki 的**[优化的三条准则](https://wiki.c2.com/?RulesOfOptimization)**：
 
 1. 别这么做。
 2. 现在先别这么做。
@@ -83,8 +83,8 @@ end
 - 不能跑但易于理解的代码可以被修改，让它能跑。
 - 能跑但无法破译的代码将很难修改。这意味着我们可能无法修复任何错误或添加新功能。
 
-[吉多·范罗苏姆](https://en.wikipedia.org/wiki/Guido_van_Rossum)，编程语言[Python](https://www.python.org/)的创建者，他的关键见解之一就是[代码读起来比写起来频繁得多](https://www.python.org/dev/peps/pep-0008/)。Python被设计为简洁、干净和可读的语言，它有标准的做事方式，并建议每个人都遵循[PEP-8编码标准](https://www.python.org/dev/peps/pep-0008/)。现在，Python是[世界上最流行的编程语言](https://pypl.github.io/PYPL.html)。代码的可读性并不是Python崛起的*唯一*原因，但它仍是重要的原因之一。
+[吉多·范罗苏姆](https://en.wikipedia.org/wiki/Guido_van_Rossum)，编程语言 [Python](https://www.python.org/) 的创建者，他的关键见解之一就是[代码读起来比写起来频繁得多](https://www.python.org/dev/peps/pep-0008/)。Python被设计为简洁、干净和可读的语言，它有标准的做事方式，并建议每个人都遵循 [PEP-8 编码标准](https://www.python.org/dev/peps/pep-0008/)。现在，Python 是[世界上最流行的编程语言](https://pypl.github.io/PYPL.html)。代码的可读性并不是Python崛起的*唯一*原因，但它仍是重要的原因之一。
 
 ### 什么是单行职责(SLR)？ {: .subHeader}
 
-在编写代码时，要努力使其看起来美观，便于他人阅读，尤其是当你向他人展示或寻求帮助时。在这种情况下，遵循“单行职责”规则是一个好主意，这意味着**一行代码**应该只做**一件事**。阅读[此博客](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/)了解更多细节，你会明白为什么SLR伟大。
+在编写代码时，要努力使其看起来美观，便于他人阅读，尤其是当你向他人展示或寻求帮助时。在这种情况下，遵循“单行职责”规则是一个好主意，这意味着**一行代码**应该只做**一件事**。阅读[此博客](https://midu.dev/single-line-responsability-haz-una-cosa-por-linea/)了解更多细节，你会明白为什么 SLR 伟大。
