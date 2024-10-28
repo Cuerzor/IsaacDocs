@@ -1,4 +1,4 @@
-site_name: "以撒的结合: Lua API文档"
+site_name: "以撒的结合: Lua API 文档"
 nav:
     - 主页: index.md
     - 文档:
@@ -109,7 +109,7 @@ nav:
         - "全局函数": GlobalFunctions.md
         - "BitSet128": BitSet128.md
         - "Color": Color.md
-        - "C++容器":
+        - "C++ 容器":
             - "ArrayProxy":
                 - "RoomConfigEntries": CppContainer_ArrayProxy_RoomConfigEntries.md
                 - "RoomConfigSpawns": CppContainer_ArrayProxy_RoomConfigSpawns.md
@@ -187,35 +187,35 @@ nav:
     - 实体:
         - "概述": entities/Overview.md
         - "头目数据":
-          - "第1章节": entities/bosses/Chapter1.md
-          - "第1.5章节": entities/bosses/Chapter1-5.md
-          - "第2章节": entities/bosses/Chapter2.md
-          - "第2.5章节": entities/bosses/Chapter2-5.md
-          - "第3章节": entities/bosses/Chapter3.md
-          - "第3.5章节": entities/bosses/Chapter3-5.md
-          - "第4章节": entities/bosses/Chapter4.md
-          - "第4.5章节": entities/bosses/Chapter4-5.md
+          - "第 1 章节": entities/bosses/Chapter1.md
+          - "第 1.5 章节": entities/bosses/Chapter1-5.md
+          - "第 2 章节": entities/bosses/Chapter2.md
+          - "第 2.5 章节": entities/bosses/Chapter2-5.md
+          - "第 3 章节": entities/bosses/Chapter3.md
+          - "第 3.5 章节": entities/bosses/Chapter3-5.md
+          - "第 4 章节": entities/bosses/Chapter4.md
+          - "第 4.5 章节": entities/bosses/Chapter4-5.md
           - "最终头目": entities/bosses/FinalBosses.md
         - "实体数据": entities/EntityData.md
         - "骷髅鱼生成器": entities/FissureSpawner.md
         - "链球": entities/SpikeBallChain.md
     - 教程:
         - "示例项目": tutorials/ExampleProject.md
-        - "Lua中的函数": tutorials/FunctionsInLua.md
+        - "Lua 中的函数": tutorials/FunctionsInLua.md
         - "良好代码练习": tutorials/GoodPractices.md
         - "代码帮助": tutorials/GettingHelp.md
-        - "使用ZeroBrane Studio进行调试": tutorials/ZeroBraneStudio.md
+        - "使用 ZeroBrane Studio 进行调试": tutorials/ZeroBraneStudio.md
         - "控制台": tutorials/DebugConsole.md
-        - "使用额外的.lua文件": tutorials/Using-Additional-Lua-Files.md
+        - "使用额外的 .lua 文件": tutorials/Using-Additional-Lua-Files.md
         - "使用标准库": tutorials/Standard-Library.md
         - "编写屏幕着色器": tutorials/Writingscreenshaders.md
         - "渲染文本": tutorials/Tutorial-Rendertext.md
         - "目录和存档文件": tutorials/directories-and-save-files.md
-        - "组织Mod": "tutorials/mod-organization.md"
+        - "组织 Mod": "tutorials/mod-organization.md"
         - "储存数据": "tutorials/storing-data.md"
         - "自定义回调": tutorials/CustomCallbacks.md
     - XML:
-        - "XML概述": xml/XMLFiledocumentation.md
+        - "XML 概述": xml/XMLFiledocumentation.md
         - "achievements.xml" : xml/achievements.md
         - "ambush.xml" : xml/ambush.md
         - "babies.xml" : xml/babies.md
@@ -258,17 +258,17 @@ nav:
         - "基本信息" : faq/BasicInformation.md
         - "新手入门" : faq/GettingStarted.md
         - "代码帮助" : faq/Coding.md
-        - "Lua语言" : faq/Lua.md
+        - "Lua 语言" : faq/Lua.md
         - "疑难解答" : faq/Troubleshoot.md
         - "启动选项": faq/LaunchOptions.md
     - 工具:
         - "工具概览" : tutorials/Tools.md
-        - "XML验证器" : tutorials/Tool_XMLValidator.md
+        - "XML 验证器" : tutorials/Tool_XMLValidator.md
         - "动画编辑器" : tutorials/Tool_AnimationEditor.md
         - "道具池编辑器" : tutorials/Tool_ItemPoolEditor.md
     - 漏洞: https://github.com/Meowlala/RepentanceAPIIssueTracker
     - 标签: tags.md
-    - Lua 5.3文档: https://www.lua.org/manual/5.3/
+    - Lua 5.3 文档: https://www.lua.org/manual/5.3/
 theme:
     name: material
     custom_dir: overrides

@@ -5,7 +5,7 @@ tags:
 
 # 常见问题
 
-在这里，您可以找到有关以撒mod的有用信息和常见问题的目录。
+在这里，您可以找到有关以撒 MOD 的有用信息和常见问题的目录。
 
 - [交互式问答](interactive_FAQ.md)
 - [MOD基本信息](BasicInformation.md)
