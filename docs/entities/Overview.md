@@ -15,7 +15,7 @@
 
 游戏里大多数的数据都是“普通”实体，这里面包括了玩家、怪物、泪弹、敌弹和其他数据。
 
-普通的实体表示为 `Entity` API类。
+普通的实体表示为 `Entity` API 类。
 
 原版实体在 "resources/entities2.xml" 文件中定义。模组可以通过创建 "content/entities2.xml" 文件并添加实体条目来创建自定义实体。
 
