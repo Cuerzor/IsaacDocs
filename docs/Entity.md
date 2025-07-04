@@ -5,9 +5,9 @@ tags:
 # Class "Entity"
 
 ???+ info
-    First, see [the tutorial on entities](entities/Overview.md).
+    首先，请看 [实体介绍](entities/Overview.md).
 
-    You can get this class by using the following function:
+    可通过以下函数获取 “Entity” 对象:
 
     ???- info "List of all functions that return 'Entity' objects"
         * [EntityList.Get()](CppContainer_EntityList.md#get)
@@ -33,7 +33,7 @@ tags:
         * [Game.Spawn()](Game.md#spawn)
         * [Isaac.Spawn()](Game.md#spawn)
 
-    ???+ example "Example Code"
+    ???+ example "示例代码"
         `local entity = Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, 0, Vector(320,280), Vector(0,0), nil)`
 
 ## Class Diagram
@@ -44,16 +44,16 @@ tags:
 [ ](#){: .abrep .tooltip .badge }
 #### void AddBurn ( [EntityRef](EntityRef.md) Source, int Duration, float Damage ) {: .copyable aria-label='Functions' }
 
-Adds a burn effect to an enemy. `Duration` is in number of frames. `Damage` is the damage taken per frame.
+为实体添加燃烧效果. `Duration` 是持续帧数（时间）. `Damage` 为每帧造成的伤害.
 
-???- info "Duration Information"
-    `Duration` must be a minimum of 3 frames to deal damage. Every consecutive damage tick is 20 frames apart.
+???- info "持续时间说明"
+    `Duration` 至少需要 3 帧才能造成伤害。每次连续的伤害间隔为 20 帧.
 
-    - 2 damage ticks = 23 frames
-    - 3 damage ticks = 43 frames
-    - 4 damage ticks = 63 frames
+    - 2 次伤害 = 23 帧
+    - 3 次伤害 = 43 帧
+    - 4 次伤害 = 63 帧
 
-    `Duration` has an upper limit. For an EntityPlayer, its maximum is one interval. For a normal entity, the maximum is 6 intervals.
+    持续时间存在上限：对于玩家实体（EntityPlayer），最大值为 1 个间隔；对于普通实体，最大值为 6 个间隔.
 
 ???- example "Example Code"
     This code damages every entity in the room for 1 second with the damage source set to the player. The total damage dealt is 1.
@@ -71,9 +71,9 @@ ___
 [ ](#){: .rep .tooltip .badge }
 #### void AddCharmed ( [EntityRef](EntityRef.md) sourceEntity, int Duration ) {: .copyable aria-label='Functions' }
 
-Adds a charmed-effect to an enemy. Duration is in Number of Frames. Charmed enemies are friendly towards Isaac and attack other enemies.
+为敌人添加魅惑效果。持续时间以帧数为单位。被魅惑的敌人会对玩家友好，并攻击其他敌人.
 
-`:::lua Duration = -1` makes the effect permanent and the enemy will follow you even to different rooms.
+`:::lua Duration = -1` 效果将永久存在，且敌人会跟随玩家进入不同房间.
 
 ???- example "Example Code"
     This code charms every entity in the room for 1 second.
@@ -91,10 +91,10 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddConfusion ( [EntityRef](EntityRef.md) Source, int Duration, boolean IgnoreBosses ) {: .copyable aria-label='Functions' }
 
-Adds a confusion effect to an entity.
+为实体添加混乱效果.
 
-???- info "Duration infos"
-    The Duration has a maximum of 5 seconds
+???- info "持续时间说明"
+    最大持续时间为 5 秒
 
 ???- example "Example Code"
     This code confuses every entity in the room for 1 second while ignoring bosses.
@@ -112,7 +112,7 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddEntityFlags ( int Flags ) {: .copyable aria-label='Functions' }
 
-Add [EntityFlags](enums/EntityFlag.md) to the entity. Flags are used to add specific effects like being friendly or being immune from spike damage. You can add multiple flags at the same time by bitwise-concatenating them.
+为实体添加[实体标记](enums/EntityFlag.md)标记用于添加特定效果，如友好状态或对尖刺伤害免疫等。可通过按位拼接同时添加多个标记.
 
 ???- example "Example Code"
     This code adds slowing and confusion to the entity.
@@ -129,10 +129,10 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddFear ( [EntityRef](EntityRef.md) Source, int Duration ) {: .copyable aria-label='Functions' }
 
-Adds a fear-effect to an entity.
+为实体添加恐惧效果.
 
-???- info "Duration infos"
-    The Duration has a maximum of 5 seconds
+???- info "持续时间说明"
+    最大持续时间为 5 秒
 
 ???- example "Example Code"
     This code frightens every entity in the room for 1 second.
@@ -152,8 +152,8 @@ ___
 
 Freezes an entity, making it unable to move and attack.
 
-???- info "Duration infos"
-    The Duration has a maximum of 5 seconds
+???- info "持续时间说明"
+    最大持续时间为 5 秒
 
 ???- example "Example Code"
     This code freezes every entity in the room for 1 second.
@@ -170,18 +170,18 @@ ___
 ### Add·Health () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void AddHealth ( float HitPoints ) {: .copyable aria-label='Functions' }
-Heals an entity.
+为实体恢复生命值.
 ___
 ### Add·Midas·Freeze () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void AddMidasFreeze ( [EntityRef](EntityRef.md) Source, int Duration ) {: .copyable aria-label='Functions' }
-Turns the entity into a gold statue (can't move, can't attack, drops coins when killed)
+将实体变为黄金雕像（无法移动、无法攻击，被击杀时掉落硬币）
 
-???- info "Duration infos"
-    The Duration has a maximum of 5 seconds
+???- info "持续时间说明"
+    最大持续时间为 5 秒
 
 ???+ bug
-    The golden color applied to the entity will stay for the full duration passed into the function, despite the freeze effect only lasting for a maximum of 5 seconds.
+    应用到实体上的金色会在传入函数的整个持续时间内保留，即使冻结效果最多只持续 5 秒.
 
 ???- example "Example Code"
     This code turns every entity in the room into gold for 1 second.
@@ -198,20 +198,20 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddPoison ( [EntityRef](EntityRef.md) Source, int Duration, float Damage ) {: .copyable aria-label='Functions' }
 
-Adds a poison effect to the entity.
+为实体添加中毒效果.
 
-???- info "Duration infos"
-    The Duration must be a minimum of 3 frames to deal damage. Every consecutive damage tick is 20 frames apart.
+???- info "持续时间说明"
+    持续时间至少需要 3 帧才能造成伤害。每次连续的伤害间隔为 20 帧.
 
     ```
-    2 Damage-ticks = 23 frames
-    3 = 43
-    4 = 63
+    - 2 次伤害 = 23 帧
+    - 3 次伤害 = 43 帧
+    - 4 次伤害 = 63 帧
     ...
     ```
 
 ???+ bug
-    The Duration value seems to have an upper limit. For a PlayerEntity, it's only lasting for the duration of one damage interval. For Entities it's up to 6 damage-intervals.
+    持续时间存在上限。对于玩家实体（EntityPlayer），仅持续 1 个伤害间隔；对于普通实体，最多持续 6 个伤害间隔.
 
 ???- example "Example Code"
     This code applies a poison effect to every entity in the room for 1 second.
@@ -228,10 +228,10 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddShrink ( [EntityRef](EntityRef.md) Source, int Duration ) {: .copyable aria-label='Functions' }
 
-Adds a shrink effect to the entity.
+为实体添加缩小效果.
 
-???- info "Duration infos"
-    The Duration has a maximum of 5 seconds
+???- info "持续时间说明"
+    最大持续时间为 5 秒
 
 ???- example "Example Code"
     This code shrinks every entity in the room for 1 second.
@@ -247,7 +247,7 @@ ___
 ### Add·Slowing () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void AddSlowing ( [EntityRef](EntityRef.md) Source, int Duration, float SlowValue, [Color](Color.md) SlowColor ) {: .copyable aria-label='Functions' }
-Makes the friction higher, effectively slowing down the entity.
+提高实体的摩擦力，从而有效减缓实体速度.
 
 ???- example "Example Code"
     This code slows every entity in the room for 1 second with 0.5 original speed and applies a red color to it.
@@ -265,65 +265,64 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void AddVelocity ( [Vector](Vector.md) Velocity ) {: .copyable aria-label='Functions' }
 
-Adds velocity to the entity. This can be used to move him in a certain direction (for example as a result of collision)
+为实体添加速度。可用于使实体向特定方向移动（例如碰撞后的结果）
 ___
 ### Blood·Explode () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void BloodExplode ( ) {: .copyable aria-label='Functions' }
-Explodes with gibs and blood.
+使实体伴随碎块和血液爆炸.
 ___
 ### Can·Shut·Doors () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean CanShutDoors ( ) {: .copyable aria-label='Functions' }
-Enemies keep the doors shut.
+判断敌人是否会保持门关闭状态。返回布尔值
 ___
 ### Clear·Entity·Flags () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void ClearEntityFlags ( int Flags ) {: .copyable aria-label='Functions' }
 
-Removes all of the provided [EntityFlags](enums/EntityFlag.md) from the entity.
+从实体中移除所有指定的[实体标记](enums/EntityFlag.md).
 ___
 ### Collides·With·Grid () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean CollidesWithGrid ( ) {: .copyable aria-label='Functions' }
 
-Returns true if the entity is currently colliding with a valid GridEntity, as dictated by its `Entity.GridCollisionClass`.
+若实体当前正与有效的网格实体（根据其`Entity.GridCollisionClass`属性）发生碰撞，则返回 true.
 ___
 ### Die () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void Die ( ) {: .copyable aria-label='Functions' }
 
-Kills the entity and triggers its death animation.
+杀死实体并触发其死亡动画.
 ___
 ### Exists () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean Exists ( ) {: .copyable aria-label='Functions' }
 
-Checks whether the entity is still spawned in the current room.
+检查实体是否仍在当前房间中生成.
 
-This is mostly useful in situations where you are unwrapping an `EntityPtr` and the corresponding entity may or may not have been killed in the interim period.
+主要用于解包 EntityPtr 时，对应的实体可能已在期间被杀死的情况.
 
 ___
 ### Get·Boss·ID () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### int GetBossID ( ) {: .copyable aria-label='Functions' }
-If the entity is a boss, it returns its specific boss id. If it isn't a boss it will return 0.
+若实体是 Boss，返回其特定的 Boss ID；若不是 Boss，返回 0.
 
-A boss ID is **NOT** equal to the entity Type, but is defined as a separate value in the entities2.xml file inside the "bossID" attribute.
-
-For Delirium, this function returns the boss id, delirium is currently transformed into.
+Boss ID 与实体类型（Type）**不同**，它在 entities2.xml 文件的 “bossID” 属性中单独定义。
+对于百变怪（Delirium），此函数返回其当前变形后的 Boss ID.
 ___
 ### Get·Color () {: aria-label='Functions' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const [Color](Color.md) GetColor ( ) {: .copyable aria-label='Functions' }
 
-Returns the Color object associated with this entity.
+返回与该实体关联的颜色对象（Color）.
 ___
 ### Get·Data () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### table GetData ( ) {: .copyable aria-label='Functions' }
 
-Returns a Lua table that contains mod-related data associated with the entity. Initially, this will always be an empty table. Any values stored in the table by mods will persist until the entity is despawned.
+返回一个包含与实体关联的模组相关数据的 Lua 表。初始时该表为空，模组存储在表中的任何值将保留到实体消失.
 
 GetData is typically used by smaller mods as a quick way to store information about an entity without having to create a dedicated data structure.
 
@@ -342,28 +341,28 @@ GetData is typically used by smaller mods as a quick way to store information ab
     end
     ```
 
-There are three main problems with `GetData`:
+注意事项`GetData`:
 
-1. Data is not unique per mod, which means that using `GetData` is essentially the same thing as using a global variable. Using global variables is bad for two main reasons. First, other mods can overwrite or mess with your data, so it isn't safe to use them. Second, the scope of global variables makes it difficult to determine where the variable is used when reading the code, and makes it harder to track down bugs, especially in larger programs.
+1. 数据并非每个模组独有，类似于全局变量，可能被其他模组覆盖，且不利于代码调试.
 
-2. Most entities will despawn when leaving the room. For example, even though heart pickups are persisted by the game, they will be despawned and respawned each time the room is left and reentered, respectively. Thus, most entities will have their data deleted upon leaving the room. The exceptions to this are players, familiars, and entities with `EntityFlag.FLAG_PERSISTENT`.
+2. 大多数实体离开房间时会消失，其数据也会被删除（玩家、随从和带有 `EntityFlag.FLAG_PERSISTENT` 标记的实体除外）.
 
-3. Even for entities that don't despawn when you leave a room, `GetData` is still not a suitable storage mechanism because it will be deleted when exiting to the menu or restarting/finishing a run. Well-programmed mods should never lose state when end-users save and quit the game, so instead of programming a `GetData` conversion + serialization routine, it's much simpler to just avoid using it to begin with.
+3. 即使实体离开房间不消失，退出菜单或重启 / 结束 run 时，GetData 中的数据也会被删除，不适合存储需要持久化的状态.
 
-For these reasons, programmers who want their code to be the best that it can be should always avoid using `GetData` in favor of data structures that are local to their own mod (or local to the specific mod feature). The index for such data structures is usually the pointer hash, which can be retrieved for any entity by using the `GetPtrHash` function.
+基于这些原因，想要让代码达到最佳状态的程序员，应当始终避免使用 `GetData`，转而优先采用其所属模组本地的数据结构（或特定模组功能本地的数据结构）。此类数据结构的索引通常是指针哈希，借助 `GetPtrHash` 函数，可获取任意实体对应的指针哈希.
 
 ___
 ### Get·Drop·RNG () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [RNG](RNG.md) GetDropRNG ( ) {: .copyable aria-label='Functions' }
 
-Returns the assigned RNG object for the entity. This RNG is used to determine the items that are dropped on the entity's death.
+返回实体的指定随机数生成器（RNG）对象，用于确定实体死亡时掉落的物品.
 ___
 ### Get·Entity·Flags () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### int GetEntityFlags ( ) {: .copyable aria-label='Functions' }
 
-Get the [EntityFlags](enums/EntityFlag.md)of the entity. This will be a number which acts like a bitmask.
+获取实体的[实体标记](enums/EntityFlag.md)返回值为一个用作位掩码的数字.
 
 ???- example "Example Code"
     This code prints something in the console, if the entity has a specific [EntityFlags](enums/EntityFlag.md).
@@ -378,36 +377,37 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) GetLastChild ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
 
-Returns the last child of this entity. This is useful for certain segmented enemies so you can go all the way to the bottom "tail" entity in one method call.
+返回该实体的最后一个子实体。对于某些分段敌人，可用于直接获取最底部的 “尾部” 实体.
 
-???+ note "Return behavior"
-    If no child is found, this function returns `nil`.
+???+ note "返回行为"
+    若未找到子实体，返回 `nil`.
 ___
 ### Get·Last·Parent () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) GetLastParent ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
 
-Returns the last parent of this entity. This is useful for certain segmented enemies so you can go all the way to the top "head" entity in one method call.
+返回该实体的最后一个父实体。对于某些分段敌人，可用于直接获取最顶部的 “头部” 实体.
 
-???+ note "Return behavior"
-    If no parent is found, this function returns `nil`.
+???+ note "返回行为"
+    若未找到父实体，返回`nil`.
 ___
 ### Get·Sprite () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Sprite](Sprite.md) GetSprite ( ) {: .copyable aria-label='Functions' }
 
-Return the sprite object of the entity.
+返回实体的精灵对象（Sprite）.
 ___
 ### Has·Common·Parent·With·Entity () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean HasCommonParentWithEntity ( [Entity](Entity.md) Other ) {: .copyable aria-label='Functions' }
 
+判断该实体与另一个实体是否有共同的父实体，返回布尔值
 ___
 ### Has·Entity·Flags () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean HasEntityFlags ( int Flags ) {: .copyable aria-label='Functions' }
 
-Returns true if the entity has all named [EntityFlags](enums/EntityFlag.md) set.
+若实体具有所有指定的[实体标记](enums/EntityFlag.md)，返回 true.
 
 ???- example "Example Code"
     This code prints something in the console, if the entity has a specific [EntityFlags](enums/EntityFlag.md).
@@ -422,35 +422,38 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### boolean HasFullHealth ( ) {: .copyable aria-label='Functions' }
 
+判断实体是否处于满血状态，返回布尔值
 ___
 ### Has·Mortal·Damage () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean HasMortalDamage ( ) {: .copyable aria-label='Functions' }
 
+判断实体是否受到了致命伤害，返回布尔值
 
-???- note "Notes"
-    The game adds taken damage to a damage buffer, which gets applied in the next frame. HasMortalDamage() returns true if the buffered damage is enough to kill the entity.
-    HasMortalDamage() will be updated additionally after TakeDamage() is called.
+???- note "说明"
+    游戏会将受到的伤害添加到伤害缓冲区，并在下一帧应用。若缓冲伤害足以杀死实体，此函数返回 true。调用 TakeDamage () 后，该函数会额外更新.
 ___
 ### Is·Active·Enemy () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsActiveEnemy ( boolean includeDead ) {: .copyable aria-label='Functions' }
-return true for non background NPCs (ex: every enemy except fire and shopkeepers)
+如果实体是非背景 NPC（例如，除了火焰和店主之外的所有敌人），则返回 true
 ___
 ### Is·Boss () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsBoss ( ) {: .copyable aria-label='Functions' }
-bosses display health bar
+如果实体是首领（显示生命值条），则返回 true
 ___
 ### Is·Dead () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsDead ( ) {: .copyable aria-label='Functions' }
 
+检查实体是否已死亡
 ___
 ### Is·Enemy () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsEnemy ( ) {: .copyable aria-label='Functions' }
-return true for NPCs that are not controlled by the player
+
+如果实体是不受玩家控制的 NPC，则返回 true
 ___
 ### Is·Flying () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -460,37 +463,38 @@ ___
 ### Is·Frame () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsFrame ( int Frame, int Offset ) {: .copyable aria-label='Functions' }
-true every X frames
+每 X 帧返回 true
 ___
 ### Is·Invincible () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsInvincible ( ) {: .copyable aria-label='Functions' }
-
+检查实体是否无敌
 ___
 ### Is·Visible () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsVisible ( ) {: .copyable aria-label='Functions' }
-
+检查实体是否可见
 ___
 ### Is·Vulnerable·Enemy () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsVulnerableEnemy ( ) {: .copyable aria-label='Functions' }
-return true for enemies that can be damaged
+
+如果实体是可以被伤害的敌人，则返回 true
 ___
 ### Kill () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void Kill ( ) {: .copyable aria-label='Functions' }
-Kills the entity and makes a blood splat or gibs.
+杀死实体并产生血溅或碎块效果.
 ___
 ### Multiply·Friction () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void MultiplyFriction ( float Value ) {: .copyable aria-label='Functions' }
-
+将实体的摩擦力乘以指定的值
 ___
 ### Post·Render () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void PostRender ( ) {: .copyable aria-label='Functions' }
-
+将实体的摩擦力乘以指定的值
 ___
 ### Remove () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
@@ -501,26 +505,26 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void RemoveStatusEffects ( ) {: .copyable aria-label='Functions' }
 
-Removes all Status Effects from the entity.
+立即从游戏中移除实体，不执行任何额外的效果或动画.
 ___
 ### Render () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void Render ( [Vector](Vector.md) Offset ) {: .copyable aria-label='Functions' }
-Render the current sprite of the Entity at the current entity position + offset.
+在当前实体位置加上偏移量的位置渲染实体的当前精灵.
 ___
 ### Render·Shadow·Layer () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean RenderShadowLayer ( [Vector](Vector.md) Offset ) {: .copyable aria-label='Functions' }
 
-Render the shadow / shadow layer again.
+再次渲染阴影 / 阴影层.
 ___
 ### Set·Color () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void SetColor ( [Color](Color.md) Color, int Duration, int Priority, boolean Fadeout, boolean Share ) {: .copyable aria-label='Functions' }
 
-Set the colormask for the entity. This can be used to tint the sprites in different colors.
+为实体设置颜色掩码。这可用于将精灵染成不同的颜色.
 
-``Share`` boolean will apply color to child entitiy.
+``Share`` 布尔值将颜色应用于子实体.
 
 ???- example "Example Code"
     This code changes the color of the sprite to a fully white sprite for 15 frames.
@@ -534,120 +538,120 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### void SetSize ( float Size, [Vector](Vector.md) SizeMulti, int NumGridCollisionPoints ) {: .copyable aria-label='Functions' }
 
-Set the size of the entity.
+设置实体的大小(碰撞大小).
 ___
 ### Set·Sprite·Frame () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void SetSpriteFrame ( string AnimationName, int FrameNum ) {: .copyable aria-label='Functions' }
-
+设置实体精灵的指定动画的帧
 ___
 ### Set·Sprite·Overlay·Frame () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void SetSpriteOverlayFrame ( string AnimationName, int FrameNum ) {: .copyable aria-label='Functions' }
-
+设置实体精灵覆盖层的指定动画的帧号
 ___
 ### Take·Damage () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean TakeDamage ( float Damage, int Flags, [EntityRef](EntityRef.md) Source, int DamageCountdown ) {: .copyable aria-label='Functions' }
 
 
-???- note "Notes"
-    The game adds taken damage to a damage buffer, which gets applied in the next frame. Therefore, TakeDamage() will not decrement the entities HP immediately upon calling the function. Rather, it is only updated on the frame afterwards.
+???- note "注意"
+    游戏会将受到的伤害添加到伤害缓冲区中，该缓冲区会在下一帧应用。因此，调用 TakeDamage() 后，实体的生命值不会立即减少，而是在下一帧更新.
 ___
 ### To·Bomb () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityBomb](EntityBomb.md) ToBomb ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityBomb](EntityBomb.md) object.
+用于将[Entity](Entity.md) 对象转换为 [EntityBomb](EntityBomb.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 ___
 ### To·Effect () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityEffect](EntityEffect.md) ToEffect ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityEffect](EntityEffect.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityEffect](EntityEffect.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Familiar () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityFamiliar](EntityFamiliar.md) ToFamiliar ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityFamiliar](EntityFamiliar.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityFamiliar](EntityFamiliar.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Knife () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityKnife](EntityKnife.md) ToKnife ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityKnife](EntityKnife.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityKnife](EntityKnife.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Laser () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityLaser](EntityLaser.md) ToLaser ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityLaser](EntityLaser.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityLaser](EntityLaser.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·NPC () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityNPC](EntityNPC.md) ToNPC ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityNPC](EntityNPC.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityNPC](EntityNPC.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Pickup () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityPickup](EntityPickup.md) ToPickup ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityPickup](EntityPickup.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityPickup](EntityPickup.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Player () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityPlayer](EntityPlayer.md) ToPlayer ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityPlayer](EntityPlayer.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityPlayer](EntityPlayer.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Projectile () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityProjectile](EntityProjectile.md) ToProjectile ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
-Used to cast an [Entity](Entity.md) object to an [EntityProjectile](EntityProjectile.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityProjectile](EntityProjectile.md) 对象.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### To·Tear () {: aria-label='Functions' data-altreturn='nil' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityTear](EntityTear.md) ToTear ( ) {: .copyable aria-label='Functions' }
-Used to cast an [Entity](Entity.md) object to an [EntityTear](EntityTear.md) object.
+用于将 [Entity](Entity.md) 对象转换为 [EntityTear](EntityTear.md) object.
 
-???+ note "Return behavior"
-    If the conversion is not successful, this function returns `nil`.
+???+ note "返回行为"
+    如果转换不成功，此函数返回 `nil`.
 
 ___
 ### Update () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### void Update ( ) {: .copyable aria-label='Functions' }
 
-Runs the post-update logic for the entity for a single frame, which will cause the associated callback to fire. Mods usually never need to call this function, as it can cause bugs when post-update logic is run more than once a frame.
+为实体运行一帧的更新后逻辑，这将触发关联的回调。模组通常不需要调用此函数，因为在一帧内多次运行更新后逻辑可能会导致错误.
 
 ___
 ## Variables
@@ -655,24 +659,28 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) Child {: .copyable aria-label='Variables' }
 
+实体的子实体
+
 ???- warning "Warning"
-    Sisters Vis bosses do have their counterpart entity as their Child. But none of them have a Parent entity set.
+    “Sisters visi” Boss 的对应实体互为子实体，但它们都没有父实体（Parent.
 ___
 ### Collision·Damage {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float CollisionDamage  {: .copyable aria-label='Variables' }
 
+实体碰撞造成的伤害
 ___
 ### Color {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Color](Color.md) Color  {: .copyable aria-label='Variables' }
 
+实体的颜色
 ___
 ### Depth·Offset {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float DepthOffset  {: .copyable aria-label='Variables' }
 
-Get/Set the depth-offset of the entity. This value is added to the Y Position of the entity, which is then used to determine the rendering order of each entity. Default is 0 for all entities.
+获取 / 设置实体的深度偏移量。该值会添加到实体的 Y 坐标中，用于确定每个实体的渲染顺序。所有实体的默认值为 0.
 
 ???- example "Example Code"
     This code explains how this variable works.
@@ -692,17 +700,19 @@ ___
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const int DropSeed  {: .copyable aria-label='Variables' }
 
-Get the Seed of the Drop RNG.
+获取掉落随机数生成器（RNG）的种子
 ___
 ### Entity·Collision·Class {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityCollisionClass](enums/EntityCollisionClass.md) EntityCollisionClass {: .copyable aria-label='Variables' }
 
+实体的碰撞类别
 ___
 ### FlipX {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean FlipX  {: .copyable aria-label='Variables' }
 
+实体是否沿 X 轴翻转
 ___
 ### Frame·Count {: aria-label='Variables' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
@@ -712,23 +722,26 @@ ___
 ### Friction {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float Friction  {: .copyable aria-label='Variables' }
-loaded from entity config
+
+从实体配置中加载的摩擦力
 ___
 ### Grid·Collision·Class {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityGridCollisionClass](enums/EntityGridCollisionClass.md) GridCollisionClass {: .copyable aria-label='Variables' }
 
+实体与网格的碰撞类别
 
-???- note "Notes"
-    EntityPlayers can only use GRIDCOLL_NONE, GRIDCOLL_WALLS, and GRIDCOLL_GROUND. All other enums will behave like GRIDCOLL_WALLS.
+???- note "注意"
+    玩家实体（EntityPlayers）只能使用 GRIDCOLL_NONE、GRIDCOLL_WALLS 和 GRIDCOLL_GROUND，其他枚举值的行为与 GRIDCOLL_WALLS 相同.
 ___
 ### Hit·Points {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float HitPoints  {: .copyable aria-label='Variables' }
 
 
-???- note "Notes"
-    The HitPoints value is not decremented immediately upon taking damage like you would expect. Rather, it is only updated on the frame after the entity takes damage.
+实体的当前生命值
+???- note "注意"
+    实体受到伤害时，生命值不会立即减少，而是在下一帧更新.
 ___
 ### Index {: aria-label='Variables' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
@@ -739,23 +752,28 @@ ___
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const int InitSeed  {: .copyable aria-label='Variables' }
 
+实体的初始种子
 ___
 ### Mass {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float Mass  {: .copyable aria-label='Variables' }
-???+ note "Notes"
-    Stationary enemies have a Mass of 100. This does not apply to some stationary non-enemies, like slots.
+
+实体的质量
+
+???+ note "注意"
+    静止敌人的质量为 100（某些静止非敌人实体如老虎机除外）.
 ___
 ### Max·Hit·Points {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float MaxHitPoints  {: .copyable aria-label='Variables' }
 
+实体的最大生命值
 ___
 ### Parent {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) Parent  {: .copyable aria-label='Variables' data-altreturn='nil' }
 
-This is a reference to the "parent" entity. For most entities, this field will be nil. This field is used in multi-segment entities to refer back to which segment is the "main" entity, like the head.
+实体的父实体。对于大多数实体，该字段为 nil。在多段实体中，该字段用于指向 “主” 实体（如头部）.
 
 ___
 ### Position {: aria-label='Variables' }
@@ -767,25 +785,28 @@ ___
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const [Vector](Vector.md) PositionOffset  {: .copyable aria-label='Variables' }
 
+实体的位置
 ___
 ### Render·ZOffset {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int RenderZOffset  {: .copyable aria-label='Variables' }
 
+实体的位置偏移量
 
 ???+ bug "Bugs"
-    This variable doesn't seem to do anything useful. Use DepthOffset instead.
+    该变量似乎没有任何有用的作用。请改用 DepthOffset.
 ___
 ### Size {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float Size  {: .copyable aria-label='Variables' }
-Returns the size of the hitbox on an entity.
+实体 hitbox（阴影/碰撞箱） 的大小.
 
 ___
 ### Size·Multi {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) SizeMulti  {: .copyable aria-label='Variables' }
 
+大小倍数
 ___
 ### Sorting·Layer {: aria-label='Variables' }
 [ ](#){: .rep .tooltip .badge }
@@ -796,88 +817,91 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) SpawnerEntity  {: .copyable aria-label='Variables' data-altreturn='nil' }
 
+生成该实体的实体
 ___
 ### Spawner·Type {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [EntityType](enums/EntityType.md) SpawnerType  {: .copyable aria-label='Variables' }
 
+生成该实体的实体类型
 ___
 ### Spawner·Variant {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int SpawnerVariant  {: .copyable aria-label='Variables' }
 
+生成该实体的实体变种
 ___
 ### Spawn·Grid·Index {: aria-label='Variables' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const int SpawnGridIndex  {: .copyable aria-label='Variables' }
 
-This is the grid index with which the entity spawned upon room generation.
-
-Rerolled item pedestals, or entities spawned after the initial room generation will have a value of -1
+房间生成时实体生成所在的网格索引.
+重新随机生成的物品基座或房间初始生成后再生成的实体，该值为 - 1
 
 ___
 ### Splat·Color {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Color](Color.md) SplatColor  {: .copyable aria-label='Variables' }
 
-The color of the gibs when an entity dies.
-
-The Color of this property is read only, so if you want to change it, you have to replace the entire thing with a new Color object.
+实体死亡时碎块的颜色.
+该属性的颜色为只读，若要更改，需用新的颜色对象（Color）替换.
 
 ___
 ### Sprite·Offset {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) SpriteOffset  {: .copyable aria-label='Variables' }
 
+精灵的偏移量
 ___
 ### Sprite·Rotation {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### float SpriteRotation  {: .copyable aria-label='Variables' }
 
+精灵的旋转角度
 ___
 ### Sprite·Scale {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) SpriteScale  {: .copyable aria-label='Variables' }
-Get/set the scale of the enemy sprite. This can be used to also scale the shadow of the entity.
+获取 / 设置敌人精灵的缩放比例，也可用于缩放实体的阴影。它还作为玩家属性，可在 MC_EVALUATE_CACHE 回调中使用 CacheFlag.CACHE_SIZE 标记更改，**等同于大小（Size）属性**
 
-Also used as a Player stat - Change this in a callback to MC_EVALUATE_CACHE using the CacheFlag.CACHE_SIZE flag.  **This is equal to the Size stat.**
-
-Most items that apply a Size Up (Magic Mushroom, Pill Larger...) do so by multiplying the SpriteScale by 1.2500623464584 (this is speculated to be 1.25 with a floating number error, you may choose to use 1.25 for future proofing instead).
-
-Most items that apply a Size Down (Mini Mushroom, Binky, Pill Smaller...) do so by multiplying the SpriteScale by 0.79996013641357 (this is speculated to be 0.8 with a floating number error, you may choose to use 0.8 for future proofing instead).
-
-Pluto uses its own multiplier of 0.5.
+大多数 “变大” 效果的物品（如魔法蘑菇、“变大” 药丸等）通过将 SpriteScale 乘以 1.2500623464584（推测为 1.25，存在浮点误差，建议使用 1.25 以保证兼容性）来实现效果；大多数 “变小” 效果的物品（如迷你蘑菇、Binky、“变小” 药丸等）通过乘以 0.79996013641357（推测为 0.8）来实现；冥王星（Pluto）使用自己的乘数 0.5
 
 ___
 ### Sub·Type {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int SubType  {: .copyable aria-label='Variables' }
 
+实体的子类型
 ___
 ### Target {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Entity](Entity.md) Target  {: .copyable aria-label='Variables' }
 
+实体的目标实体
 ___
 ### Target·Position {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) TargetPosition  {: .copyable aria-label='Variables' }
 
+实体的目标位置
 ___
 ### Type {: aria-label='Variables' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .abrep .tooltip .badge }
 #### const [EntityType](enums/EntityType.md) Type  {: .copyable aria-label='Variables' }
 
+实体的类型
 ___
 ### Variant {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### int Variant  {: .copyable aria-label='Variables' }
 
+实体的变种
 ___
 ### Velocity {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) Velocity  {: .copyable aria-label='Variables' }
 
+实体的速度
 ___
 ### Visible {: aria-label='Variables' }
 [ ](#){: .abrep .tooltip .badge }
