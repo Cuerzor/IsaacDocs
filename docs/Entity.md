@@ -9,7 +9,7 @@ tags:
 
     可通过以下函数获取 “Entity” 对象:
 
-    ???- info "List of all functions that return 'Entity' objects"
+    ???- info 能获取 “Entity” 对象的列表
         * [EntityList.Get()](CppContainer_EntityList.md#get)
         * [Entity.GetLastChild()](Entity.md#getlastchild)
         * [Entity.GetLastParent()](Entity.md#getlastparent)
