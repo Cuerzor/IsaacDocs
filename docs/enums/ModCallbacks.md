@@ -12,12 +12,19 @@ Execution order diagram: [![callback diagram](../images/infographics/Isaac Callb
 ## 有关回调的注意事项
 
 首先，最好不要在高频回调如MC_NPC_UPDATE，MC_INPUT_ACTION中在不加限制的情况下使用如spawn等函数，否则将会导致游戏卡顿等问题
+
 Value表示回调的序号
+
 Name表示回调的名称
+
 Function Args表示可以在Function中定义的变量
+
 Optional Args表示可供筛选的变量
+
 Return Type表示返回值的类型
+
 ???- example "Example Code"
+
     function mod:example(_,_,Ent_Player) --注意，Fun Arg必须按顺序，所以要用到后面的变量但前面的没有用处时可以用"_"或其他变量名替代而非直接在第一个处当后面的变量使用
         if Ebt_player:GetPlayerType() == 4 then
             print("小蓝人使用了D6？！")
