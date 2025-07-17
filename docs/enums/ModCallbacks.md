@@ -23,14 +23,18 @@ Optional Args表示可供筛选的变量
 
 Return Type表示返回值的类型
 
-???- example "Example Code"
+???- example "示例代码"
 
-    function mod:example(_,_,Ent_Player) --注意，Fun Arg必须按顺序，所以要用到后面的变量但前面的没有用处时可以用"_"或其他变量名替代而非直接在第一个处当后面的变量使用
+    ```lua
+    -- 注意，Fun Arg必须按顺序，所以要用到后面的变量但前面的没有用处时可以用"_"或其他变量名替代而非直接在第一个处当后面的变量使用
+    function mod:example(_,_,Ent_Player)
         if Ebt_player:GetPlayerType() == 4 then
             print("小蓝人使用了D6？！")
         end
     end
-    mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.example, CollectibleType.COLLECTIBLE_D6)--在最后的“CollectibleType.COLLECTIBLE_D6”即限定了只有主动道具D6被使用时该函数才会被调用
+    -- 在最后的“CollectibleType.COLLECTIBLE_D6”即限定了只有主动道具D6被使用时该函数才会被调用
+    mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.example, CollectibleType.COLLECTIBLE_D6)
+    ```
 
 ### MC_NPC_UPDATE {: .copyable }
 
@@ -42,21 +46,21 @@ Return Type表示返回值的类型
 
     当NPC播放“出现”动画时，此回调不会触发。例如，当一个裂口魔生成时，它会在第1帧触发，然后在第31帧及之后触发。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" for every NPC Update.
+    这段代码会在每个NPC更新时打印“Hello World!”。
 
     ```lua
-    function mod:myFunction(entity) -- 'entity' contains a reference to the NPC
+    function mod:myFunction(entity) -- 'entity' 包括对一个NPC的引用
         print("Hello World!")
     end
     mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.myFunction)
     ```
 
-    This function will only print "Gaper found", if the NPC is of the type "ENTITY_GAPER".
+    这段代码只会在NPC的类型为“ENTITY_GAPER”时打印“Gaper found”。
 
     ```lua
-    function mod:myFunction2(entity) -- 'entity' contains a reference to the NPC
+    function mod:myFunction2(entity) -- 'entity' 包括对一个NPC的引用
         print("Gaper found!")
     end
     mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.myFunction2, EntityType.ENTITY_GAPER)
@@ -76,9 +80,9 @@ This code will print "Hello World!" for every NPC Update.
 
     此回调每秒调用30次。当游戏暂停时（例如在屏幕过渡或暂停菜单时），它不会被调用。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" for every Game Update.
+    这段代码会在每次游戏更新时打印“Hello World!”。
 
     ```lua
     function mod:myFunction()
@@ -101,9 +105,9 @@ This code will print "Hello World!" for every Game Update.
 
     强烈建议仅在需要渲染某些内容时使用此函数。不建议将此函数用于不经常使用或需要持续重新计算的事情。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" everytime the game renders.
+    这段代码会在每次游戏渲染时打印“Hello World!”。
 
     ```lua
     function mod:myFunction()
@@ -132,11 +136,11 @@ This code will print "Hello World!" everytime the game renders.
 
 ???- info "注意"
 
-    “Discharge”字段决定了美德之书是否应该生成一个小精灵。将其设置为`false`可以防止小精灵生成。
+    “Discharge”字段决定了美德之书是否应该生成一个灵火。将其设置为`false`可以防止灵火生成。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" everytime an active item is used.
+    这段代码会在每次使用主动道具时打印“Hello World!”。
 
     ```lua
     function mod:myFunction(collectibleID, rngObj, playerWhoUsedItem, useFlags, activeSlot, varData)
@@ -145,7 +149,7 @@ This code will print "Hello World!" everytime an active item is used.
     mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.myFunction)
     ```
 
-    This code showcases how the return value can be used to alter the behavior of the item usage. Here, it will cause the item to not discharge, not be removed on use and not show the use animation.
+    这段代码展示了如何使用返回值来改变道具使用的行为。在这里，它将导致道具不消耗充能，在使用时不被移除，也不显示使用动画。
 
     ```lua
     function mod:myFunction2(collectibleID, rngObj, playerWhoUsedItem, useFlags, activeSlot, varData)
@@ -158,7 +162,7 @@ This code will print "Hello World!" everytime an active item is used.
     mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.myFunction2)
     ```
 
-    This code will only print "D6 used!" when the D6 is used.
+    这段代码只会在每次使用六面骰时打印“D6 used!”。
 
     ```lua
     function mod:myFunction3(collectibleID, rngObj, playerWhoUsedItem, useFlags, activeSlot, varData)
@@ -187,9 +191,9 @@ This code will print "Hello World!" everytime an active item is used.
 
 返回任何值都不会影响后续回调的执行。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" everytime any card is used.
+    这段代码会在每次使用卡牌时打印“Hello World!”。
 
     ```lua
     function mod:myFunction(cardID, playerWhoUsedItem, useFlags)
@@ -198,7 +202,7 @@ This code will print "Hello World!" everytime any card is used.
     mod:AddCallback(ModCallbacks.MC_USE_CARD, mod.myFunction)
     ```
 
-    This code will only print "Fool card used!" when the Fool card is used.
+    这段代码只会在每次使用愚者卡时打印“Fool card used!”。
 
     ```lua
     function mod:myFunction2(cardID, playerWhoUsedItem, useFlags)
@@ -213,7 +217,7 @@ This code will print "Hello World!" everytime any card is used.
 
 ### MC_FAMILIAR_UPDATE {: .copyable }
 
-每个小精灵每帧都会调用。
+每个跟班每帧都会调用。
 
 返回任何值都不会影响后续回调的执行。
 
@@ -223,7 +227,7 @@ This code will print "Hello World!" everytime any card is used.
 
 ### MC_FAMILIAR_INIT {: .copyable }
 
-在小精灵初始化后立即调用。
+在跟班初始化后立即调用。
 
 返回任何值都不会影响后续回调的执行。
 
@@ -237,7 +241,7 @@ This code will print "Hello World!" everytime any card is used.
 
 ### MC_EVALUATE_CACHE {: .copyable }
 
-当玩家的属性重新评估时调用一次或多次。例如，当玩家拾取一个提供属性的收集品道具或使用属性药丸时，此回调将触发。
+当玩家的属性重新评估时调用一次或多次。例如，当玩家拾取一个提供属性的道具道具或使用属性药丸时，此回调将触发。
 
 可选参数可用于指定一个`CacheFlag`。它必须是一个单一的`CacheFlag`，两个或多个`CacheFlag`的组合将不起作用。
 
@@ -245,7 +249,7 @@ This code will print "Hello World!" everytime any card is used.
 
 使用此回调来实现任何改变玩家属性、小精灵、飞行能力、武器等的功能。
 
-自定义收集品和饰品在“items.xml”文件中使用“cache”标签注释它们影响的特定属性。例如，一个增加眼泪射速和伤害的自定义被动收集品应该在“items.xml”条目中包含类似以下的内容：
+自定义道具和饰品在“items.xml”文件中使用“cache”标签注释它们影响的特定属性。例如，一个增加眼泪射速和伤害的自定义被动道具应该在“items.xml”条目中包含类似以下的内容：
 
 ```xml
   <passive
@@ -344,9 +348,9 @@ end
 
 返回任何值都不会影响后续回调的执行。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code will print "Hello World!" everytime any pill is used.
+    这段代码会在每次使用药丸时打印“Hello World!”。
 
     ```lua
     function mod:myFunction(pillEffectID, playerWhoUsedItem, useFlags)
@@ -355,7 +359,7 @@ This code will print "Hello World!" everytime any pill is used.
     mod:AddCallback(ModCallbacks.MC_USE_PILL, mod.myFunction)
     ```
 
-    This code will only print "Bad Gas Pill used!" when the Fool pill is used.
+    这段代码只会在每次使用剧毒臭屁药丸时打印“Bad Gas Pill used!”。
 
     ```lua
     function mod:myFunction2(pillEffectID, playerWhoUsedItem, useFlags)
@@ -410,14 +414,14 @@ This code will print "Hello World!" everytime any pill is used.
 
 每当游戏轮询[ButtonAction](ButtonAction.md)输入时触发此回调，即使是同一动作，每帧也会触发多次。由于它与轮询有关，无论玩家是否实际按下任何特定输入，它都会触发。
 
-此回调用于任意更改输入。例如，您可以完全禁用玩家按下某个按钮。或者，您可以强制玩家按下特定按钮，等等。如果您只想_读取_某个输入是否被按下，则不应使用此回调，而应在`MC_POST_RENDER`回调中使用`Input.IsActionTriggered`方法。
+此回调用于任意更改输入。例如，您可以完全禁用玩家按下某个按钮。或者，您可以强制玩家按下特定按钮，等等。如果您只想*读取*某个输入是否被按下，则不应使用此回调，而应在`MC_POST_RENDER`回调中使用`Input.IsActionTriggered`方法。
 
 此回调不会影响任何通过`Input`类读取用户输入的自定义模组代码。
 
 * [Entity](../Entity.md) - 请求输入的实体。大多数情况下，这将是一个玩家。但是，如果输入不是从实体类读取的，或者是由好友探测器控制的实体，则它也可以为`nil`。
 * [InputHook](InputHook.md) - 这决定了正在轮询的输入类型。这对应于`Input.IsActionTriggered`、`Input.IsActionPressed`和`Input.GetActionValue`方法，这些方法会触发此回调。
 
-如果您不想覆盖输入，则返回`nil`。如果您想覆盖输入，则对于`IS_ACTION_PRESSED`（0）和`IS_ACTION_TRIGGERED`（1）输入钩子，必须返回一个布尔值；对于`GET_ACTION_VALUE`（2）输入钩子，必须返回一个介于0.0和1.0之间的浮点数。
+如果您不想覆盖输入，则返回`nil`。如果您想覆盖输入，则对于`IS_ACTION_PRESSED`（0）和`IS_ACTION_TRIGGERED`（1）InputHook，必须返回一个布尔值；对于`GET_ACTION_VALUE`（2）InputHook，必须返回一个介于0.0和1.0之间的浮点数。
 
 返回任何值都不会影响后续回调的执行。
 
@@ -447,7 +451,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 返回任何值都不会影响后续回调的执行。
 
-???- example "Example Code"
+???- example "示例代码"
 
     ```lua
     local function onStart(_,bool)
@@ -467,7 +471,7 @@ This code will print "Hello World!" everytime any pill is used.
 返回任何值都不会影响后续回调的执行。
 
 
-???- example "Example Code"
+???- example "示例代码"
 
     ```lua
     local function onEnd(_,bool)
@@ -486,7 +490,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 返回任何值都不会影响后续回调的执行。
 
-???- example "Example Code"
+???- example "示例代码"
 
     ```lua
     local function onExit(_,bool)
@@ -525,7 +529,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 由于并非所有卡牌都有相同的生成几率，因此使用[RNG](../RNG.md)进行种子随机选择。
 
-您可以使用布尔值作为选择的过滤器。
+您可以使用布尔值作为选择的筛选器。
 
 返回值决定将生成什么[Card](Card.md)。返回`nil`以不替换生成的卡牌。
 
@@ -561,17 +565,17 @@ This code will print "Hello World!" everytime any pill is used.
 
 ???+ info "重要"
 
-    此函数不会为默认游戏命令（如`Spawn`或`Debug`）调用。
+    此函数不会因默认游戏命令（如`Spawn`或`Debug`）而被调用。
 
-返回字符串将其打印到控制台。
+    返回字符串会将其打印到控制台。
 
-返回任何值都不会影响后续回调的执行。
+    返回任何值都不会影响后续回调的执行。
 
 ???+ bug
 
     返回除`nil`以外的任何值将导致游戏崩溃，包括字符串。
 
-???- example "Example Code"
+???- example "示例代码"
 
     ```lua
     function mod.oncmd(_, command, args)
@@ -634,7 +638,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_FAMILIAR_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -674,7 +678,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_NPC_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -708,7 +712,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_PLAYER_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -777,7 +781,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_PICKUP_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -816,7 +820,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_TEAR_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -854,7 +858,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_PROJECTILE_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -933,7 +937,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_KNIFE_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -1004,7 +1008,7 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_PRE_BOMB_COLLISION {: .copyable }
 
-当实体首先与碰撞器碰撞时，`Low`值为`true`。如果碰撞器首先碰撞，则为`false`。
+当实体首先与`Collider`碰撞时，`Low`值为`true`。如果`Collider`首先碰撞，则为`false`。
 
 返回`true`以忽略碰撞，返回`false`以进行碰撞但不执行内部代码，返回`nil`以继续执行内部代码（例如，接触时受到伤害）。
 返回任何非`nil`值将跳过其余回调。
@@ -1029,9 +1033,9 @@ This code will print "Hello World!" everytime any pill is used.
 
 当游戏需要从道具池中获取一个新的随机道具时调用此回调。
 
-您可以从此回调中返回一个整数，以更改返回的收集品类型。
+您可以从此回调中返回一个整数，以更改返回的道具ID。
 
-它不会为“脚本化”掉落（如愤怒的炸弹先生）和手动生成的道具调用。
+它不会因“固定”掉落（如愤怒的炸弹先生）和手动生成的道具而被调用。
 
 返回的值不会改变后续执行回调的参数。
 
@@ -1055,11 +1059,11 @@ This code will print "Hello World!" everytime any pill is used.
 
 ### MC_POST_GET_COLLECTIBLE {: .copyable }
 
-此函数在`MC_PRE_GET_COLLECTIBLE`之后立即调用，并确定将从给定的[ItemPoolType](ItemPoolType.md)中生成的收集品。
+此函数在`MC_PRE_GET_COLLECTIBLE`之后立即调用，并确定将从给定的[ItemPoolType](ItemPoolType.md)中生成的道具。
 
 如果`MC_PRE_GET_COLLECTIBLE`返回了任何非`nil`值，则此回调将被跳过。
 
-您可以从此回调中返回一个整数，以更改返回的收集品类型。
+您可以从此回调中返回一个整数，以更改返回的道具ID。
 
 返回的值不会更新后续执行回调的“SelectedCollectible”参数。
 
@@ -1115,9 +1119,9 @@ This code will print "Hello World!" everytime any pill is used.
 
     最后一个返回有效返回值的回调将胜出并覆盖先前回调的返回值。
 
-???- example "Example Code"
+???- example "示例代码"
 
-This code turn "Bad Trip" pills into "Balls of Steel" pills.
+    这段代码会将每个剧毒臭屁药丸变为钢铁双蛋药丸。
 
     ```lua
     function mod:getPillEffect(pillEffect, pillColor)
@@ -1138,7 +1142,7 @@ This code turn "Bad Trip" pills into "Balls of Steel" pills.
 
 可以返回一个[TrinketType](TrinketType.md)以更改所选的饰品。
 
-返回的值不会更新后续执行回调的“SelectedTrinket”参数。
+返回的值不会更新后续执行回调的`SelectedTrinket`参数。
 
 ???+ bug
 
@@ -1182,7 +1186,7 @@ This code turn "Bad Trip" pills into "Balls of Steel" pills.
 
 ### MC_PRE_SPAWN_CLEAN_AWARD {: .copyable }
 
-此函数在每个可以清空的房间中触发，包括BOSS和天使房间，甚至在通常不会生成奖励的情况下也会触发。
+此函数在每个可以清理的房间中触发，包括BOSS和天使房，甚至在通常不会生成奖励的情况下也会触发。
 
 此回调还处理特殊生成，例如BOSS被击杀后的活板门、为当前角色授予完成标记，以及在某些情况下结束游戏（妈妈、超级撒旦和野兽）。因此，在此返回`true`也将取消这些事件。
 
@@ -1190,7 +1194,7 @@ This code turn "Bad Trip" pills into "Balls of Steel" pills.
 
 ???+ bug
 
-    返回`true`将导致房间的奖励种子不前进，导致在同一房间中后续调用此回调时具有相同的RNG对象。要修复此问题，您可以使用以下代码片段手动更新奖励种子。
+    返回`true`将导致房间的AwardSeed不前进，导致在同一房间中后续调用此回调时具有相同的随机数。要修复此问题，您可以使用以下代码片段手动更新AwardSeed。
 
     ```lua
     function mod:preSpawnCleanAward(rng)
@@ -1220,7 +1224,7 @@ This code turn "Bad Trip" pills into "Balls of Steel" pills.
 
 ### MC_PRE_ENTITY_DEVOLVE {: .copyable }
 
-当实体通过D10或类似物品退化时调用。
+当实体通过十面骰或类似物品退化时调用。
 
 如果应忽略内部退化行为，则返回`true` - 当返回`true`时，此回调负责生成退化后的实体并移除原始实体。
 
