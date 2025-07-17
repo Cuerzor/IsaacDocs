@@ -30,6 +30,48 @@ tags:
 在胎衣+中，控制台在你启用至少一个 MOD 时会自动启用。
 
 在忏悔中，控制台的启用基于 options.ini 文件中的 "EnableDebugConsole" 设置。默认情况下，它被设置为 "0"，所以如果你想使用控制台，你必须把它从 "0" 改成 "1" 。（默认情况下，options.ini 文件位于 `文档\My Games\Binding of Isaac Repentance\options.ini`.）
+The options.ini file is located here:
+
+=== ":fontawesome-brands-windows: **Windows**"
+
+    ```
+    Repentance+:
+    C:\Users\[username]\Documents\My Games\Binding of Isaac Repentance+\options.ini
+    
+    Repentance:
+    C:\Users\[username]\Documents\My Games\Binding of Isaac Repentance\options.ini
+
+    Afterbirth+:
+    C:\Users\[username]\Documents\My Games\Binding of Isaac Afterbirth+\options.ini
+    ```
+
+=== ":fontawesome-brands-apple: **Mac OS**"
+
+    ```
+    Repentance+:
+    /Users/[username]/Library/Application Support/Binding of Isaac Repentance+\options.ini
+    
+    Repentance:
+    C/Users/[username]/Library/Application Support/Binding of Isaac Repentance\options.ini
+
+    Afterbirth+:
+    /Users/[username]/Library/Application Support/Binding of Isaac Afterbirth+/options.ini
+    ```
+
+=== ":fontawesome-brands-linux: **Linux**"
+
+    ```
+    Repentance+:
+    ~/.steam/steamapps/compatdata/250900/pfx/users/steamuser/Documents/My Games/Binding of Isaac Repentance+\options.ini
+    
+    Repentance:
+    ~/.steam/steamapps/compatdata/250900/pfx/users/steamuser/Documents/My Games/Binding of Isaac Repentance\options.ini
+
+    Afterbirth+:
+    ~/.steam/steamapps/compatdata/250900/pfx/users/steamuser/Documents/My Games/Binding of Isaac Afterbirth+/options.ini
+    ```
+    
+
 
 要打开控制台，在一局游戏内按下**波浪号(~)**键。如果你不是英文键盘，详见[wiki的控制台页面](https://isaac.huijiwiki.com/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0)。
 

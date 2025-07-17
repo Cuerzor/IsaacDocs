@@ -18,7 +18,7 @@ tags:
 
 ## 函数
 ### Add·Callback () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void AddCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
 添加一个MOD回调。
 
@@ -26,15 +26,15 @@ tags:
 
 ___
 ### Add·Pill·Effect·To·Pool () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int AddPillEffectToPool ( int pillEffect ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [PillColor](enums/PillColor.md) AddPillEffectToPool ( [PillEffect](enums/PillEffect.md) pillEffect ) {: .copyable aria-label='Functions' }
 将一个胶囊效果pillEffect加入到胶囊池中。
 
 返回加入的胶囊的[胶囊颜色](enums/PillColor.md)。
 
 ___
 ### Add·Priority·Callback () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### void AddPriorityCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, [CallbackPriority](enums/CallbackPriority.md) priority, table callbackFn, int entityId ) {: .copyable aria-label='Functions' }
 添加一个MOD回调。该回调具有优先级，并根据优先级决定执行顺序。
 
@@ -42,7 +42,7 @@ ___
 
 ___
 ### Console·Output () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void ConsoleOutput ( string text ) {: .copyable aria-label='Functions' }
 
 向控制台打印一行文本。
@@ -61,19 +61,19 @@ ___
 
 ___
 ### Count·Bosses () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int CountBosses ( ) {: .copyable aria-label='Functions' }
 
 返回本房间内的头目数量。
 ___
 ### Count·Enemies () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int CountEnemies ( ) {: .copyable aria-label='Functions' }
 
 返回本房间内的敌人数量。
 ___
 ### Count·Entities () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### int CountEntities ( [Entity](Entity.md) Spawner, [EntityType](enums/EntityType.md) Type = EntityType.ENTITY_NULL, int Variant = -1, int SubType = -1 ) {: .copyable aria-label='Functions' }
 
 返回本房间内的满足指定需求的实体数量。
@@ -84,7 +84,7 @@ ___
 
 ___
 ### Debug·String () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void DebugString ( string str ) {: .copyable aria-label='Functions' }
 
 向日志文件打印一行文本。你可以在这里找到文件：`:::lua %systemdrive%\Users\%username%\Documents\My Games\Binding of Isaac Repentance\log.txt`
@@ -98,7 +98,7 @@ ___
 
 ___
 ### Execute·Command () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### string ExecuteCommand ( string command ) {: .copyable aria-label='Functions' }
 
 执行一个控制台指令。
@@ -106,13 +106,13 @@ ___
 关于如何使用指令，见[控制台教程](tutorials/DebugConsole.md)。
 ___
 ### Explode () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void Explode ( [Vector](Vector.md) pos, [Entity](Entity.md) source, float damage ) {: .copyable aria-label='Functions' }
 
 在pos位置生成一次爆炸。其伤害源实体为source，伤害为damage。
 ___
 ### Find·By·Type () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### table FindByType ( [EntityType](enums/EntityType.md) Type, int Variant = -1, int SubType = -1, boolean Cache = false, boolean IgnoreFriendly = false ) {: .copyable aria-label='Functions' }
 返回符合Type，Variant和SubType的所有实体。如果Variant/SubType为-1，表示包括任意Variant/SubType的实体。Cache为true时会缓存结果，一帧执行多次时可以使用。
 
@@ -120,21 +120,21 @@ ___
 
 ___
 ### Find·In·Radius () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
-#### table FindInRadius ( [Vector](Vector.md) Position, float Radius, int Partitions = 0xFFFFFFFF  ) {: .copyable aria-label='Functions' }
-返回中心为Position，半径为Radius范围内的所有由Partitions筛选的实体（另见[EntityPartition enum](enums/EntityPartition.md)）（包括所有 = 0xffffffff）
+[ ](#){: .reporplus .tooltip .badge }
+#### [Entity](Entity.md)[] FindInRadius ( [Vector](Vector.md) Position, float Radius, [EntityPartition](enums/EntityPartition.md) Partitions = 0xFFFFFFFF  ) {: .copyable aria-label='Functions' }
+返回中心为Position，半径为Radius范围内的所有由Partitions筛选的实体（包括所有 = 0xffffffff）
 
 该函数不根据实体距离中心的距离，而是根据他们加载的顺序排序。
 ___
 ### Get·Built·In·Callback·State () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### boolean GetBuiltInCallbackState ( function callbackId ) {: .copyable aria-label='Functions' }
 获取内置回调状态。
 
 如果ID为`callbackId`的回调会被游戏执行，返回`true`。如果不存在ID为`callbackId`的回调，会返回`false`。
 ___
 ### Get·Callbacks () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### table GetCallbacks ( function callbackId, boolean createIfMissing ) {: .copyable aria-label='Functions' }
 获取所有ID为`callbackId`的MOD回调。这些回调会表示为一个表，更多信息请查阅[自定义回调教程](tutorials/CustomCallbacks.md#run-behavior)。
 
@@ -146,8 +146,8 @@ ___
 
 ___
 ### Get·Card·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetCardIdByName ( string cardHudName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [Card](enums/Card.md) GetCardIdByName ( string cardHudName ) {: .copyable aria-label='Functions' }
 基于“pocketitems.xml”文件中定义的“hud”属性返回[卡牌ID](enums/Card.md) 。如果找不到具有该“hud”属性值的卡，则返回`-1`。
 
 ???+ warning "警告"
@@ -169,13 +169,13 @@ ___
 
 ___
 ### Get·Challenge () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetChallenge ( ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [Challenge](enums/Challenge.md) GetChallenge ( ) {: .copyable aria-label='Functions' }
 返回玩家当前正在进行的挑战的ID。如果玩家没有进行任何挑战，则返回0。
 ___
 ### Get·Challenge·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetChallengeIdByName ( string challengeName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [Challenge](enums/Challenge.md) GetChallengeIdByName ( string challengeName ) {: .copyable aria-label='Functions' }
 
 根据挑战的名称返回挑战的ID。（文件：challenges.xml）如果找不到具有该名称的挑战，则返回`-1`（区分大小写）。
 
@@ -188,7 +188,7 @@ ___
 
 ___
 ### Get·Costume·Id·By·Path () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int GetCostumeIdByPath ( string path ) {: .copyable aria-label='Functions' }
 
 根据外观的文件路径返回外观的ID。（文件：costumes2.xml）如果找不到具有该路径的外观，则返回`-1`。
@@ -202,8 +202,8 @@ ___
 
 ___
 ### Get·Curse·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetCurseIdByName ( string curseName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [LevelCurse](enums/LevelCurse.md) GetCurseIdByName ( string curseName ) {: .copyable aria-label='Functions' }
 
 根据诅咒的名称返回诅咒的ID。（文件：curses.xml）如果找不到具有该名称的诅咒，则返回`-1`。
 
@@ -216,8 +216,8 @@ ___
 
 ___
 ### Get·Entity·Type·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetEntityTypeByName ( string entityName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [EntityType](enums/EntityType.md) GetEntityTypeByName ( string entityName ) {: .copyable aria-label='Functions' }
 
 根据实体的名称返回实体的EntityType。（文件：entities2.xml）如果找不到具有该名称的实体，则返回`0`。
 
@@ -233,7 +233,7 @@ ___
 
 ___
 ### Get·Entity·Variant·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int GetEntityVariantByName ( string entityName ) {: .copyable aria-label='Functions' }
 
 根据实体的名称返回实体的Variant。（文件：entities2.xml）如果找不到具有该名称的实体，则返回`-1`。
@@ -251,7 +251,7 @@ ___
 
 ___
 ### Get·Frame·Count () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int GetFrameCount ( ) {: .copyable aria-label='Functions' }
 
 返回整个游戏正在运行的帧数。即使游戏暂停或在主菜单中，计数器也会增加！
@@ -262,13 +262,13 @@ ___
 
 ___
 ### Get·Free·Near·Position () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) GetFreeNearPosition ( [Vector](Vector.md) pos, float step ) {: .copyable aria-label='Functions' }
 
 返回距离位置pos最近的空区域。
 ___
 ### Get·Item·Config () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [ItemConfig](ItemConfig.md) GetItemConfig ( ) {: .copyable aria-label='Functions' }
 
 获取ItemConfig对象。
@@ -276,8 +276,8 @@ ___
 这是唯一可以访问`ItemConfig`对象的方法。
 ___
 ### Get·Item·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetItemIdByName ( string itemName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [CollectibleType](enums/CollectibleType.md) GetItemIdByName ( string itemName ) {: .copyable aria-label='Functions' }
 
 根据道具名称返回道具的ID。（文件：items.xml）如果找不到具有该名称的道具，则返回`-1`。
 
@@ -292,8 +292,8 @@ ___
 
 ___
 ### Get·Music·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetMusicIdByName ( string musicName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [Music](enums/Music.md) GetMusicIdByName ( string musicName ) {: .copyable aria-label='Functions' }
 
 返回一个音乐的ID。（文件：music.xml）如果找不到具有该名称的音乐，则返回`-1`。
 
@@ -307,8 +307,8 @@ ___
 
 ___
 ### Get·Pill·Effect·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetPillEffectByName ( string pillEffect ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [PillEffect](enums/PillEffect.md) GetPillEffectByName ( string pillEffect ) {: .copyable aria-label='Functions' }
 
 根据胶囊效果的名称返回胶囊效果ID。（文件：pocketitems.xml）如果找不到具有该名称的胶囊效果，则返回`-1`。
 
@@ -322,7 +322,7 @@ ___
 
 ___
 ### Get·Player () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### [EntityPlayer](EntityPlayer.md) GetPlayer ( int playerID = 0 ) {: .copyable aria-label='Functions' data-altreturn='nil' }
 
 返回与提供的玩家ID匹配的EntityPlayer。玩家ID从0开始并向上递增。例如，当扮演雅各布和以扫时，雅各布的玩家ID将为0，以扫的玩家ID为1。
@@ -352,7 +352,7 @@ ___
 
 ___
 ### Get·Player·Type·By·Name () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### [PlayerType](enums/PlayerType.md) GetPlayerTypeByName ( string playerName , boolean Tainted = false ) {: .copyable aria-label='Functions' }
 
 根据角色的名称返回角色类型（ID）。（文件：players.xml）如果找不到具有该名称的角色，则返回`-1`。
@@ -375,7 +375,7 @@ ___
 
 ___
 ### Get·Random·Position () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) GetRandomPosition ( ) {: .copyable aria-label='Functions' }
 
 返回当前房间内的随机位置。
@@ -383,7 +383,7 @@ ___
 返回值是一个向量，表示世界坐标中的位置。
 ___
 ### Get·Room·Entities () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Entity](Entity.md)[] GetRoomEntities ( ) {: .copyable aria-label='Functions' }
 
 返回一个可遍历的表，该表包含调用函数时房间中的所有实体。
@@ -404,13 +404,13 @@ ___
 
 ___
 ### Get·Screen·Height () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### float GetScreenHeight ( ) {: .copyable aria-label='Functions' }
 
 获取游戏屏幕的高度（以像素为单位）。
 ___
 ### Get·Screen·Point·Scale () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### float GetScreenPointScale ( ) {: .copyable aria-label='Functions' }
 
 返回一个表示屏幕“缩放”程度的数字。
@@ -427,16 +427,16 @@ ___
 
 ___
 ### Get·Screen·Width () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### float GetScreenWidth ( ) {: .copyable aria-label='Functions' }
 
 获取游戏屏幕的宽度（以像素为单位）。
 ___
 ### Get·Sound·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetSoundIdByName ( string soundName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [SoundEffect](enums/SoundEffect.md) GetSoundIdByName ( string soundName ) {: .copyable aria-label='Functions' }
 
-根据音效的名称返回音效的ID。（文件：sounds.xml）如果找不到具有该名称的音效，则返回`-1`。
+根据音效的名称返回[SoundEffect](enums/SoundEffect.md)。（文件：sounds.xml）如果找不到具有该名称的音效，则返回`-1`。
 
 ???- example "示例代码"
     以下代码获取名为"Custom Sound Effect"的音效ID。
@@ -448,14 +448,14 @@ ___
 
 ___
 ### Get·Text·Width () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int GetTextWidth ( string str ) {: .copyable aria-label='Functions' }
 
 基于“terminus8”字体（与Isaac.RenderText()中使用的字体相同），返回给定字符串的宽度（以像素为单位）。
 
 ___
 ### Get·Time () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### int GetTime ( ) {: .copyable aria-label='Functions' }
 
 返回自计算机操作系统启动以来的当前时间（以毫秒为单位）。
@@ -466,8 +466,8 @@ ___
 
 ___
 ### Get·Trinket·Id·By·Name () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### int GetTrinketIdByName ( string trinketName ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [TrinketType](enums/TrinketType.md) GetTrinketIdByName ( string trinketName ) {: .copyable aria-label='Functions' }
 
 根据饰品的名称返回其饰品ID。（文件：items.xml）如果找不到具有该名称的饰品，则返回`-1`。
 
@@ -482,7 +482,7 @@ ___
 
 ___
 ### Grid·Spawn () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [GridEntity](GridEntity.md) GridSpawn ( [GridEntityType](enums/GridEntityType.md) gridEntityType, int variant, [Vector](Vector.md) position, boolean forced ) {: .copyable aria-label='Functions' }
 
 在给定位置（世界坐标）生成一个[网格实体](GridEntity.md)。
@@ -501,7 +501,7 @@ Isaac.GridSpawn(GridEntityType.GRID_ROCK_SS, 0, centerPos, true)
 
 ___
 ### Has·Mod·Data () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### boolean HasModData ( table modRef ) {: .copyable aria-label='Functions' }
 
 如果您的mod使用“SaveModData()”函数存储了数据——换句话说，如果你的mod的数据文件夹中有一个“saveX.dat”文件，则返回`true`。
@@ -515,7 +515,7 @@ ___
 建议使用[Mod Reference](ModReference.md#hasdata)的[HasData](ModReference.md#HasData)函数而非该函数。
 ___
 ### Load·Mod·Data () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### string LoadModData ( table modRef ) {: .copyable aria-label='Functions' }
 
 返回使用“SaveModData()”函数存储在“saveX.dat”文件中的字符串。如果您的mod的数据中没有“saveX.dat”文件，此函数将返回一个空字符串。
@@ -531,7 +531,7 @@ ___
 建议使用[Mod Reference](ModReference.md#hasdata)的[LoadData](ModReference.md#HasData)函数而非该函数。
 ___
 ### Register·Mod () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void RegisterMod ( table modRef, string modName, int apiVersion ) {: .copyable aria-label='Functions' }
 
 在游戏中注册一个表以使用[Mod Reference](ModReference.md)。
@@ -540,7 +540,7 @@ ___
 
 ___
 ### Remove·Callback () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void RemoveCallback ( table modRef, [ModCallback](enums/ModCallbacks.md)|string callbackId, table callbackFn ) {: .copyable aria-label='Functions' }
 
 移除一个MOD回调。
@@ -549,7 +549,7 @@ ___
 
 ___
 ### Remove·Mod·Data () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void RemoveModData ( table modRef ) {: .copyable aria-label='Functions' }
 
 如果存在储存的“saveX.dat”文件，将其删除。
@@ -559,7 +559,7 @@ ___
 建议使用[Mod Reference](ModReference.md#hasdata)的[RemoveData](ModReference.md#HasData)函数而非该函数。
 ___
 ### Render·Scaled·Text () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void RenderScaledText ( string str, float X, float Y, float ScaleX, float ScaleY, float R, float G, float B, float A ) {: .copyable aria-label='Functions' }
 
 在屏幕上渲染缩放后的文本。X和Y坐标需要在屏幕坐标（X[0，~500) Y[0，~350) ）中。ScaleX、ScaleY、R、G、B和A需要在[0,1]之间。
@@ -577,7 +577,7 @@ ___
 
 ___
 ### Render·Text () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void RenderText ( string str, float X, float Y, float R, float G, float B, float A ) {: .copyable aria-label='Functions' }
 
 在屏幕上渲染默认大小的文本。X和Y坐标需要在屏幕坐标（X[0，~500) Y[0，~350) ）中。ScaleX、ScaleY、R、G、B和A需要在[0,1]之间。
@@ -594,20 +594,20 @@ ___
 
 ___
 ### Run·Callback () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### void RunCallback ( [ModCallback](enums/ModCallbacks.md)|string callbackId, ...) {: .copyable aria-label='Functions' }
 
 执行所有ID为`callbackId`的MOD回调，会在第一个返回值出现时中断，并使该函数返回该值。
 ___
 ### Run·Callback·With·Param () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### void RunCallbackWithParam ( [ModCallback](enums/ModCallbacks.md)|string callbackId, object param, ...) {: .copyable aria-label='Functions' }
 Runs all callbacks added under `callbackId`, breaking on the first return and returning that value.
 
 执行所有可选参数为`param`的`callbackId`的MOD回调，会在第一个返回值出现时中断，并使该函数返回该值。
 ___
 ### Save·Mod·Data () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### void SaveModData ( table modRef, string data ) {: .copyable aria-label='Functions' }
 
 向“saveX.dat”存储一串字符串。存储的数据在重开一局和游戏重启之后也会存在，因此非常适合存储持久数据。
@@ -621,7 +621,7 @@ ___
 建议使用[Mod Reference](ModReference.md#hasdata)的[SaveData](ModReference.md#HasData)函数而非该函数。
 ___
 ### Screen·To·World () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) ScreenToWorld ( [Vector](Vector.md) pos ) {: .copyable aria-label='Functions' }
 
 将屏幕坐标（也称为窗口坐标）转换为世界坐标。这可以用于根据屏幕上的某一点获取房间中的特定位置。
@@ -629,11 +629,11 @@ ___
 世界坐标为x[0，inf) y[0，inf)。
 ___
 ### Screen·To·World·Distance () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) ScreenToWorldDistance ( [Vector](Vector.md) pos ) {: .copyable aria-label='Functions' }
 ___
 ### Set·Built·In·Callback·State () {: aria-label='Functions' }
-[ ](#){: .rep .tooltip .badge }
+[ ](#){: .reporplus .tooltip .badge }
 #### void SetBuiltInCallbackState ( [ModCallbacks](enums/ModCallbacks.md) callbackId, boolean state ) {: .copyable aria-label='Functions' }
 Sets whether callbacks under `callbackId` will be ran by the game. The game uses this to activate a [ModCallbacks](enums/ModCallbacks.md) once a callback is added under one, or deactivate them when those callbacks have been removed.
 
@@ -643,8 +643,8 @@ Sets whether callbacks under `callbackId` will be ran by the game. The game uses
 ___
 
 ### Spawn () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
-#### [Entity](Entity.md) Spawn ( int entityType, int entityVariant, int entitySubtype, [Vector](Vector.md) position, [Vector](Vector.md) velocity, [Entity](Entity.md) Spawner ) {: .copyable aria-label='Functions' }
+[ ](#){: .alldlc .tooltip .badge }
+#### [Entity](Entity.md) Spawn ( [EntityType](enums/EntityType.md) entityType, int entityVariant, int entitySubtype, [Vector](Vector.md) position, [Vector](Vector.md) velocity, [Entity](Entity.md) Spawner ) {: .copyable aria-label='Functions' }
 
 在给定位置生成一个实体。如果位置不是空的，会在最近的空位置生成。
 
@@ -660,7 +660,7 @@ ___
     由于随机种子使用的是[Random()](GlobalFunctions.md#random)函数，会导致生成的实体的InitSeed可能为0。如果这个实体要用到随机数生成器，游戏会崩溃。
 ___
 ### World·To·Render·Position () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) WorldToRenderPosition ( [Vector](Vector.md) pos ) {: .copyable aria-label='Functions' }
 
 将世界坐标（又名游戏坐标）转换为渲染坐标。这可以用于在房间中的固定位置渲染事物。渲染坐标系为x[0，inf) y[0，inf)。它定义当前房间中渲染平面上的位置。
@@ -675,7 +675,7 @@ ___
 
 ___
 ### World·To·Screen () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) WorldToScreen ( [Vector](Vector.md) pos ) {: .copyable aria-label='Functions' }
 
 将世界坐标（又名游戏坐标）转换为屏幕（又名窗口）坐标。这可以用来渲染实体旁边的东西。屏幕坐标系为x[0，inf) y[0，inf)。通常情况下，它一直到~500x ~300y。
@@ -692,7 +692,7 @@ ___
 
 ___
 ### World·To·Screen·Distance () {: aria-label='Functions' }
-[ ](#){: .abrep .tooltip .badge }
+[ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) WorldToScreenDistance ( [Vector](Vector.md) pos ) {: .copyable aria-label='Functions' }
 
 ___

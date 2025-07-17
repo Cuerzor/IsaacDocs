@@ -88,8 +88,13 @@ stage 1
 stage 10a
 stage 3b
 ```
+Format:
+**stage [LevelStage](../enums/LevelStage.md)[StageType(optional)](../enums/StageType.md)**
 
 您可以使用它来跳到后面的楼层，返回到早期的楼层，或通过输入当前楼层的id来重置当前楼层。输入不存在的楼层可能会导致游戏崩溃。
+
+* [LevelStage](../enums/LevelStage.md) is a number between 1 and 13.
+* [StageType (optional)](../enums/StageType.md) is a letter. Valid inputs are: a,b,c and d. It describes the variant of the selected level. If no StageType is defined, the default variant is used ([StageType](../enums/StageType.md) = 0).
 
 ### **gridspawn**
 
@@ -112,7 +117,7 @@ gridspawn 9100    -- 生成楼梯
 
 **debug 3** 完全无敌。
 
-**debug 4** +40 伤害。与豆奶一起使用效果很好。所有饰品变为金饰品。
+**debug 4** +40 伤害。与豆奶一起使用效果很好。（在忏悔/忏悔+中，也会让所有饰品变为金饰品。）
 
 **debug 5** 在屏幕底部显示关于当前房间的文本。
 

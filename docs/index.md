@@ -2,10 +2,10 @@
 search:
   boost: -999
 ---
-# 以撒的结合：忏悔 Lua API 文档
+# 以撒的结合：忏悔+ Lua API 文档
 ___
 
-本文档是一个社区策划的项目，为《以撒的结合：忏悔》Lua Mod API 提供的功能提供了附加信息和代码示例。
+本文档是一个社区策划的项目，为《以撒的结合：忏悔+》Lua Mod API 提供的功能提供了附加信息和代码示例。
 
 该项目源于 wofsauge 的英文文档 **[:fontawesome-brands-github: Github Project](https://github.com/wofsauge/IsaacDocs)**
 

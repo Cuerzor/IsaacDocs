@@ -21,6 +21,9 @@
 
 模组可以通过使用 `Isaac.Spawn` 和 `Game.Spawn` 两种方法来生成实体，第一种方法生成一个实体，而不在乎其种子应该如何，第二种方法生成一个实体，并需要指定该实体的种子。
 
+???+ bug "Bug"
+    Because the random seed to spawn an entity with `Isaac.Spawn` is generated using the `Random()` function, there is a chance that the entity's InitSeed is set to 0, which causes a crash if the entity needs to use RNG. If you need to spawn an entity with a random seed, you should always use `Game():Spawn()` with a helper function that calls `Random()` and arbitrarily sets the seed to 1 when the seed is 0.
+
 提示：大部分生成的实体都应该设定种子，这样在游玩相同种子的情况下，可以使随机结果和其他随机效果保持一致（原版游戏就是这样运行的）。
 
 ### 2) 单元格实体
@@ -31,7 +34,7 @@
 
 原版单元格实体并没有 XML 文件中定义，因此模组无法创建自定义单元格实体。
 
-模组可以通过 `Isaac.GridSpawn` 方法来生成单元格实体（但无法生成带有特定种子的单元格实体）。
+模组可以通过 `Isaac.GridSpawn` 或者 `Room.SpawnGridEntity` 方法来生成单元格实体。当网格实体的种子无关紧要时，应该使用前者。否则，使用后者并指定种子。
 
 <br>
 
