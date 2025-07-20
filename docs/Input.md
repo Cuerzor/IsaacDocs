@@ -6,9 +6,9 @@ tags:
 # Global Class "Input"
 
 ???+ info
-    You can get this class by using the `Input` global table.
+    你可以通过 `Input` 全局表来获取这个类。
 
-    **Note that to call these functions, you must use a `.` (period) instead of a `:` (colon)!**
+    **请注意，调用这些函数时，必须使用 `.`（句点）而不是 `:`（冒号）！**
 
     ???+ example "Example Code"
         ```lua
@@ -20,13 +20,14 @@ tags:
 [ ](#){: .abrep .tooltip .badge }
 #### float GetActionValue ( int action, int controllerId ) {: .copyable aria-label='Functions' }
 
-Returns the current strength in which a button was pressed. This is 0 OR 1 with a keyboard. With a controller, this can be used to get the strength in which you have moved the analog stick in a direction.
+返回按钮被按下的当前力度。对于键盘而言，这个值为 0 或 1。对于手柄（控制器），此函数可用于获取在某个方向上移动模拟摇杆的力度.
 
 ???- example "Example Code"
-    This code prints the current "strength" in which the analog stick was moved to the left.
+
+    此代码会打印模拟摇杆向左移动的当前“力度”.
+
     ```lua
     print(Input.GetActionValue(ButtonAction.ACTION_LEFT, 1))
-
     ```
 
 ___
@@ -34,21 +35,22 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### float GetButtonValue ( int button, int controllerId ) {: .copyable aria-label='Functions' }
 
-Use "GetActionValue" instead of this function.
+请使用 "GetActionValue" 函数代替此函数.
 ___
 ### Get·Mouse·Position () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [Vector](Vector.md) GetMousePosition ( boolean gameCoords ) {: .copyable aria-label='Functions' }
 
-Returns the current mouse position in game coordinates (true) or render coordinates.
+返回鼠标当前在游戏坐标（传入 true）或渲染坐标中的位置.
 
 ???- example "Example Code"
-    This code renders "Hello World!" at the current mouse position.
+
+    此代码会在当前鼠标位置渲染 “Hello World!”.
+
     ```lua
     local mousePos = Input.GetMousePosition(true) -- get mouse position in world coordinates
     local screenPos = Isaac.WorldToScreen(mousePos) -- transfer game- to screen coordinates
     Isaac.RenderText("Hello World!", screenPos.X, screenPos.Y, 1 ,1 ,1 ,1 )
-
     ```
 
 ___
@@ -56,84 +58,89 @@ ___
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsActionPressed ( int action, int controllerId ) {: .copyable aria-label='Functions' }
 
-Returns, if an action-button is pressed or not. An Action-button is any button that got a default function assigned to it. This function will return true, as long the button is held down.
+返回某个动作按钮是否被按下。动作按钮是指任何被分配了默认功能的按钮。只要按钮被按住，此函数就会返回 true.
 
-[List of all Action enums](enums/ButtonAction.md)
+[所有动作枚举列表](enums/ButtonAction.md)
 
 ???- example "Example Code"
-    This code prints "bomb Button pressed", when any button was pressed that is assigned to the "place bomb" function.
+
+    此代码会在任何被分配了 “放置炸弹” 功能的按钮被按下时，打印 “bomb Button pressed”.
+
     ```lua
     if Input.IsActionPressed(ButtonAction.ACTION_BOMB, 0)  then
         print("bomb Button pressed")
     end
-
     ```
 ___
 ### Is·Action·Triggered () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsActionTriggered ( int action, int controllerId ) {: .copyable aria-label='Functions' }
 
-Returns, if an action-button was pressed some time before or not. An Action-button is any button that got a default function assigned to it. This functions will only return true, if the button was pressed down. It will no longer return true, after you called this function and try to call it in the next update cycle (for example in the next render cycle).
+返回某个动作按钮是否在之前的某个时间被按下。动作按钮是指任何被分配了默认功能的按钮。只有在按钮被按下时，此函数才会返回 true。在你调用此函数并尝试在下一个更新周期（例如在下一个渲染周期）再次调用它时，它将不再返回 true.
 
-[List of all Action enums](enums/ButtonAction.md)
+[所有动作枚举列表](enums/ButtonAction.md)
 
 ???- example "Example Code"
-    This code prints "bomb Button pressed", when any button was pressed that is assigned to the "place bomb" function.
+
+    此代码会在任何被分配了 “放置炸弹” 功能的按钮被按下时，打印 “bomb Button pressed”.
+
     ```lua
     if Input.IsActionTriggered(ButtonAction.ACTION_BOMB, 0)  then
         print("bomb Button pressed")
     end
-
     ```
 ___
 ### Is·Button·Pressed () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsButtonPressed ( int button, int controllerId ) {: .copyable aria-label='Functions' }
 
-Returns, if a button is pressed or not. This function will return true, as long the button is held down.
+返回某个按钮是否被按下。只要按钮被按住，此函数就会返回 true.
 
-[List of all Keyboard enums](enums/Keyboard.md)
+[所有键盘枚举列表](enums/Keyboard.md)
 
 ???- example "Example Code"
-    This code prints "Enter Button pressed", when the "Enter"-Button was pressed.
+
+    此代码会在 “Enter” 键被按下时，打印 “Enter Button pressed”.
+
     ```lua
     if Input.IsButtonPressed(Keyboard.KEY_ENTER, 0)  then
         print("Enter Button pressed.")
     end
-
     ```
 ___
 ### Is·Button·Triggered () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsButtonTriggered ( int button, int controllerId ) {: .copyable aria-label='Functions' }
 
-Returns, if a button was pressed some time before or not. This functions will only return true, if the button was pressed down. It will no longer return true, after you called this function and try to call it in the next update cycle (for example in the next render cycle).
+返回某个按钮是否在之前的某个时间被按下。只有在按钮被按下时，此函数才会返回 true。在你调用此函数并尝试在下一个更新周期（例如在下一个渲染周期）再次调用它时，它将不再返回 true.
 
 [List of all Keyboard enums](enums/Keyboard.md)
 
 ???- example "Example Code"
-    This code prints "Enter Button was pressed", when the "Enter"-Button was pressed.
+
+    此代码会在 “Enter” 键被按下时，打印 “Enter Button was pressed”.
+
     ```lua
     if Input.IsButtonTriggered(Keyboard.KEY_ENTER, 0)  then
         print("Enter Button was pressed.")
     end
-
     ```
 ___
 ### Is·Mouse·Btn·Pressed () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### boolean IsMouseBtnPressed ( [Mouse](enums/Mouse.md) button ) {: .copyable aria-label='Functions' }
 
-Returns, if a mousebutton is pressed or not.
-Left: 0, Right: 1, mousewheel: 2, back button: 3, forward button: 4
+返回某个鼠标按钮是否被按下。
+左键：0，右键：1，鼠标滚轮：2，后退按钮：3，前进按钮：4
 
 ???- example "Example Code"
-    This code prints "Right Click", when the "right"-mousebutton was pressed.
+
+    此代码会在鼠标 “右键” 被按下时，打印 “Right Click”.
+
     ```lua
     if Input.IsMouseBtnPressed(Mouse.MOUSE_BUTTON_2)  then
         print("Right Click")
     end
-
     ```
 
 ___
