@@ -158,7 +158,7 @@ ___
 [ ](#){: .repplus .tooltip .badge }
 #### void AddFreeze ( [EntityRef](EntityRef.md) Source, int Duration, boolean IgnoreBosses ) {: .copyable aria-label='Functions' }
 
-Freezes an entity, making it unable to move and attack.
+冻结一个实体，使其无法移动或攻击.
 
 ???- info "持续时间说明"
     最大持续时间为 5 秒
