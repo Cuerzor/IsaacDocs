@@ -5,7 +5,7 @@ tags:
 # Class "EntityNPC"
 
 ???+ info
-    You can get this class by using the following function:
+    你可以通过以下函数获取此类：
 
     * [Entity.ToNPC()](Entity.md#tonpc)
     * [Game.SpawnEntityDesc()](Game.md#spawnentitydesc)
@@ -39,28 +39,30 @@ ___
 ### Fire·Boss·Projectiles () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [EntityProjectile](EntityProjectile.md) FireBossProjectiles ( int NumProjectiles, [Vector](Vector.md) TargetPos, float TrajectoryModifier, [ProjectileParams](ProjectileParams.md) Params ) {: .copyable aria-label='Functions' }
-fire a number of projectiles, optionally targeting the player direction is randomized, or slightly randomized when targeting the player FallingAccelModifier can be used to make projectiles fall faster to the ground returns a pointer to the projectile spawned last (useful e.g. when NumProjectiles=1)
+发射一系列弹幕，目标可以是玩家，方向会随机化，或者在瞄准玩家时稍微随机化。可以使用 FallingAccelModifier 使弹幕更快落地。返回最后生成的弹幕指针（例如，当 NumProjectiles=1 时很有用）。
 ___
 ### Fire·Projectiles () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void FireProjectiles ( [Vector](Vector.md) Pos, [Vector](Vector.md) Velocity, ProjectilesMode Mode, [ProjectileParams](ProjectileParams.md) Params ) {: .copyable aria-label='Functions' }
 
 ???- info "ProjectilesMode"
-    * 0 : single projectile
-    * 1 : two projectiles (uses params.Spread)
-    * 2 : three projectiles (uses params.Spread)
-    * 3 : three projectiles (uses params.Spread, more spread out?)
-    * 4 : four projectiles (uses params.Spread)
-    * 5 : five projectiles (uses params.Spread)
-    * 6 : four projectiles in a + pattern (uses velocity.x as speed)
-    * 7 : four projectiles in a x pattern (uses velocity.x as speed)
-    * 8 : eight projectiles in a star pattern (uses velocity.x as speed)
-    * 9 : N projectiles in a circle (velocity.x = speed, velocity.y = N, params.FireDirectionLimit and params.DotProductLimit to fire in an arc only)
+    该参数控制发射弹幕的模式：
+    * 0 : 单发弹幕
+    * 1 : 双发弹幕（使用 params.Spread）
+    * 2 : 三发弹幕（使用 params.Spread）
+    * 3 : 三发弹幕（使用 params.Spread，分布更广？）
+    * 4 : 四发弹幕（使用 params.Spread）
+    * 5 : 五发弹幕（使用 params.Spread）
+    * 6 : 四发弹幕（使用 velocity.x 作为速度，呈 + 形状）
+    * 7 : 四发弹幕（使用 velocity.x 作为速度，呈 x 形状）
+    * 8 : 八发弹幕（使用 velocity.x 作为速度，呈星形）
+    * 9 : N 发弹幕（使用 velocity.x 作为速度，velocity.y = N，params.FireDirectionLimit 和 params.DotProductLimit 仅在弧形中发射）
 ___
 ### Get·Alive·Enemy·Count () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetAliveEnemyCount ( ) {: .copyable aria-label='Functions' }
-Used to redirect close door enemies to any enemies for friendly npcs.
+
+用于将近战敌人重定向到任何敌人以供友方 NPC 使用。
 ___
 ### Get·Boss·Color·Idx () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -68,18 +70,19 @@ ___
 
 
 ???- note "Notes"
-    This will return the boss color idx reduced by 1. To get the actual color as set in bosscolors.xml, add +1 to the result.
+
+    这将返回减少 1 的 boss color idx。要获取在 bosscolors.xml 中设置的实际颜色，请在结果上加 1。
 ___
 ### Get·Champion·Color·Idx () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [ChampionColorIdx](enums/ChampionColor.md) GetChampionColorIdx ( ) {: .copyable aria-label='Functions' }
 
-Returns the NPC's champion color index. Returns -1 if the NPC is not a champion.
+返回 NPC 的精英颜色索引。如果 NPC 不是精英怪，则返回 -1。
 ___
 ### Get·Player·Target () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Entity](Entity.md) GetPlayerTarget ( ) {: .copyable aria-label='Functions' }
-if there are no modifiers (best friend) this will return the player
+如果没有修饰符（最好的朋友），这将返回玩家
 ___
 ### Is·Boss () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -94,16 +97,16 @@ ___
 ### Kill·Unique () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void KillUnique ( ) {: .copyable aria-label='Functions' }
-For entities with unique death animation, like Flush! vs poop enemies.
+对于具有独特死亡动画的实体，例如 Flush! 与粪便敌人。
 ___
 ### Make·Champion () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void MakeChampion ( int Seed, ChampionColor ChampionColorIdx = -1, boolean Init = false ) {: .copyable aria-label='Functions' }
-Forces a non champion to become a champion, resets hp to max hp.
+强制非精英怪成为精英怪，重置生命值为最大生命值。
 
-**ChampionColorIdx**: The type of champion to turn this enemy into (-1 results in a random champion type)
+**ChampionColorIdx**: 要将此敌人变为的精英类型（-1 将导致随机精英类型）
 
-**Init**: Set to true when called while initializing the enemy, false otherwise
+**Init**: 在初始化敌人时调用时设置为 true，否则为 false
 ___
 ### Make·Splat () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -114,11 +117,14 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean Morph ( [EntityType](enums/EntityType.md) type, int Variant, int SubType, int ChampionColorIdx ) {: .copyable aria-label='Functions' }
 
-Morph the current entity into another one. [ChampionColorIdx](https://bindingofisaacrebirth.gamepedia.com/Monsters#Champions) can be used to turn the entity into a champion. Use `:::lua -1` in order to not add a champion color.
-A list of Champion colors can be found here : [ChampionColorIdx](https://bindingofisaacrebirth.gamepedia.com/Monsters#Champions)
+修改当前实体为另一个实体。可以使用 [ChampionColorIdx](https://bindingofisaacrebirth.gamepedia.com/Monsters#Champions) 将实体变为精英怪。使用 `:::lua -1` 以不添加精英变体。
+
+精英变体索引的列表可以在这里找到 : [ChampionColorIdx](https://bindingofisaacrebirth.gamepedia.com/Monsters#Champions)
 
 ???+ bug
-    This function can not turn a champion NPC into a regular NPC! for that, use the following code:
+
+    这个函数无法将精英 NPC 转换为普通 NPC！为此，请使用以下代码：
+
     ```lua
     local previousNPC = entity:ToNPC()
     -- spawn the same entity at the same location as the old one
@@ -128,7 +134,9 @@ A list of Champion colors can be found here : [ChampionColorIdx](https://binding
     ```
 
 ???- example "Example Code"
+
     This code turns an entity into a gaper.
+
     ```lua
     entity:ToNPC():Morph(EntityType.ENTITY_GAPER, 0, 0, -1)
     ```
@@ -187,21 +195,24 @@ ___
 ### I1 {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int I1  {: .copyable aria-label='Variables' }
-General usage int for AI specific actions. The effect and usage is manually defined for each entity. It can also not be used at all for some.
 
-**Example**: The Frail sets I2 to 1 when entering the second phase.
+通常用于 AI 特定操作的通用用法 int。每个实体的效果和用法是手动定义的。对于某些实体，它也可能根本无法使用。
+
+**Example**: 脆皮虫进入第二阶段时将 I2 设置为 1。
 ___
 ### I2 {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int I2  {: .copyable aria-label='Variables' }
-General usage int for AI specific actions. The effect and usage is manually defined for each entity. It can also not be used at all for some.
 
-**Example**: The Frail sets I2 to 1 when entering the second phase.
+通常用于 AI 特定操作的通用用法 int。每个实体的效果和用法是手动定义的。对于某些实体，它也可能根本无法使用。
+
+**Example**: 脆皮虫进入第二阶段时将 I2 设置为 1。
 ___
 ### Parent·NPC {: aria-label='Variables' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### const [EntityNPC](EntityNPC.md) ParentNPC  {: .copyable aria-label='Variables' data-altreturn='nil' }
-parent entity, for multi-entity NPCs like Larry Jr.
+
+父实体，用于像 Larry Jr. 这样的多实体 NPC。
 ___
 ### Pathfinder {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -211,7 +222,8 @@ ___
 ### Projectile·Cooldown {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int ProjectileCooldown  {: .copyable aria-label='Variables' }
-projectiles can fire again when it reaches 0
+
+当 projectileCooldown 达到 0 时，弹幕可以再次发射
 ___
 ### Projectile·Delay {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -236,10 +248,12 @@ ___
 ### V1 {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) V1  {: .copyable aria-label='Variables' }
-General usage Vector for AI specific actions. Initialized to be Vector(0,0). The effect and usage is manually defined for each entity. It can also not be used at all for some.
+
+通常用于 AI 特定操作的通用用法 Vector。初始化为 Vector(0,0)。每个实体的效果和用法是手动定义的。对于某些实体，它也可能根本无法使用。
 ___
 ### V2 {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) V2  {: .copyable aria-label='Variables' }
-General usage Vector for AI specific actions. Initialized to be Vector(0,0). The effect and usage is manually defined for each entity. It can also not be used at all for some.
+
+通常用于 AI 特定操作的通用用法 Vector。初始化为 Vector(0,0)。每个实体的效果和用法是手动定义的。对于某些实体，它也可能根本无法使用。
 ___

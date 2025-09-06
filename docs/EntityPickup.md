@@ -5,7 +5,8 @@ tags:
 # Class "EntityPickup"
 
 ???+ info
-    You can get this class by using the following function:
+
+    你可以通过以下函数获取此类：
 
     * [Entity.ToPickup()](Entity.md#topickup)
 
@@ -38,9 +39,10 @@ ___
 ### Morph () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void Morph ( [EntityType](enums/EntityType.md) Type, int Variant, int SubType, boolean KeepPrice = false, boolean KeepSeed = false, boolean IgnoreModifiers = false ) {: .copyable aria-label='Functions' }
-**KeepSeed**: If set to true, keeps the initial RNG seed of the pickup instead of rerolling it
 
-**IgnoreModifiers**: If set to true, ignores item effects that might turn this pickup into something other than the specificed variant and sub-type. Specifically, this can be used to prevent a collectible from being affected by Tainted Isaac's rotation mechanic. (For example, if you manually spawn a quest collectible such as a Polaroid, it will be affected by Tainted Isaac's rotation mechanic, which is normally undesired. To fix this, you can immediately morph it into the same entity type / variant /sub-type after spawning with this argument set to true.)
+**KeepSeed**: 如果设置为 true，将保留拾取物的初始 RNG 种子，而不是重置它
+
+**IgnoreModifiers**: 如果设置为true，将忽略可能将此拾取物转变为其他类型的物品效果。具体来说，这可以用来防止道具受到堕化以撒的额外选择机制的影响。（例如，如果您手动生成一个任务道具，例如 Polaroid，它将受到堕化以撒的机制的影响，这通常是不可取的。要解决此问题，您可以在生成后立即将其变形为相同的实体类型/变体/子类型，并将此参数设置为 true。）
 ___
 ### Play·Drop·Sound () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -71,34 +73,36 @@ ___
 ### OptionsPickupIndex {: aria-label='Variables' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int OptionsPickupIndex  {: .copyable aria-label='Variables' }
-Any non-zero value causes the item to form an option group with any other item with the same OptionsPickupIndex value.
 
-When an item belonging to an option group is picked up, all other items belonging to the same group disappear.
+任何非 0 的值都会导致该物品与任何其他具有相同 OptionsPickupIndex 值的物品形成选项组。
 
-0 is the default value and means the item doesn't belong to any group.
+当属于选项组的物品被拾取时，所有属于同一组的其他物品都会消失。
+
+0 是默认值，表示该物品不属于任何组。
 ___
 ### Price {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int Price  {: .copyable aria-label='Variables' }
-Price of the pickup in shops.
+该物品在商店中的价格。
 
-???- info "Tainted Keeper Info"
-    On Tainted Keeper, all items are supposed to have a price. But any items spawned with Lua does not comply with this rule, so you have to manually set a price. On the next frame after assigning a price (for example `1`), it will snap to the correct price it would have for Tainted Keeper (e.g. 15). This is because of the AutoUpdatePrice feature.
+???- info "堕化店长信息"
 
-    This method works most of the time. However, it breaks in special rooms (e.g. Angel Rooms) such that sometimes, the price will snap to wrong values, such as 24, 99, and so on. The fix for this, set ShopItemId to an arbitrary negative value (e.g. -1).
+    在堕化店长身上，所有物品都应该有一个价格。但是，任何使用 Lua 生成的物品都不符合此规则，因此您必须手动设置价格。在分配价格的下一帧（例如 `1`）之后，它将自动调整为堕化店长的正确价格（例如 15）。这是由于 AutoUpdatePrice 功能造成的。
+
+    该方法在大多数情况下都有效。然而，它在特殊房间（例如天使房）中会出现问题，有时价格会跳到错误的值，例如 24、99 等。解决此问题的方法是将 ShopItemId 设置为任意负值（例如 -1）。
 
 ___
 ### Shop·Item·Id {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int ShopItemId  {: .copyable aria-label='Variables' }
 
-If in a shop, this value describes which slot the item is for sale in. For example, if the shop has 6 things for sale, the pickups in the room will have shop item IDs of 0, 1, 2, 3, 4, and 5.
+如果在商店中, 这个值描述了这个物品在商店的哪一个槽中售卖。例如，如果商店有 6 个待售物品，则房间中的拾取物将具有 0、1、2、3、4 和 5 的商店物品 ID。
 
-When spawning a new collectible item, the ShopItemId will be 0 by default. This has a side effect of making the D6 roll the collectible into a red heart. By setting shop item id to -1, it will fix this behavior such that the collectible will properly roll into another collectible. However, non-collectible pickups may reroll into collectibles through a D20 or similar.
+当生成一个新的道具时，ShopItemId 默认为 0。这会导致 D6 将道具重置为红心。通过将商店物品 ID 设置为 -1，可以修复此行为，使道具正确重置为另一个道具。然而，非道具可能会通过 D20 或类似物品重置为道具。
 
-By setting shop item id to -2, automatic prices will be devil deal prices. Otherwise this is identical to -1.
+通过将商店物品 ID 设置为 -2，自动价格将为恶魔交易价格。否则，这与 -1 相同。
 
-Other negative values act identically to -1.
+其他负值的行为与 -1 相同。
 
 ___
 ### State {: aria-label='Variables' }
@@ -110,7 +114,7 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int Timeout  {: .copyable aria-label='Variables' }
 
-Causes the pickup to blink and then disappear after a certain amount of time like the temporary health dropped from tainted maggy. The value decreases by 1 every game frame and after hitting 0 the pickup disappears. If the Timeout is set to -1(the default value for normal pickups) the pickup will act normally and not disappear.
+使拾取物在一段时间后闪烁并消失，就像堕化玛姬掉落的临时生命值一样。该值每帧减少 1，达到 0 后拾取物消失。如果 Timeout 设置为 -1（正常拾取物的默认值），则拾取物将正常工作而不会消失。
 
 ___
 ### Touched {: aria-label='Variables' }
@@ -122,8 +126,8 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int Wait  {: .copyable aria-label='Variables' }
 
-Used with collectibles to enforce a period of time where the player will not automatically pick up the collectible. New collectibles spawn with a `Wait` value of 20 (which corresponds to 20 game frames). The value will automatically decrement as game frames pass.
+被用于道具，以强制执行一段时间，期间玩家将不会自动拾取道具。新的道具生成时，`Wait` 值为 20（对应于 20 帧游戏时间）。该值会随着游戏帧的推移而自动减少。
 
-It is unknown whether or not this value is used for pickups other than collectibles.
+目前尚不清楚此值是否用于其他类型的拾取物。
 
 ___

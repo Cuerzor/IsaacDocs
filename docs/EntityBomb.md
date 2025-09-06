@@ -5,7 +5,7 @@ tags:
 # Class "EntityBomb"
 
 ???+ info
-    You can get this class by using the following function:
+    你可以通过以下函数获取此类：
 
     * [Entity.ToBomb()](Entity.md#tobomb)
     * [EntityPlayer.FireBomb()](EntityPlayer.md#firebomb)
@@ -47,7 +47,7 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### [TearFlags](enums/TearFlags.md) Flags  {: .copyable aria-label='Variables' }
 
-Uses [TearFlags](enums/TearFlags.md) to alter the behavior of the bomb.
+使用[TearFlags](enums/TearFlags.md)来改变炸弹的行为。
 ___
 ### Is·Fetus {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }

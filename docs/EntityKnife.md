@@ -54,7 +54,7 @@ ___
 ### Reset () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void Reset ( ) {: .copyable aria-label='Functions' }
-Used for master knifes, to get back to player.
+用于主刀（master knifes），以使其返回到玩家。
 ___
 ### Set·Path·Follow·Speed () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
