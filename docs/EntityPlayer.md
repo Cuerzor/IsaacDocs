@@ -6,7 +6,7 @@ tags:
 # Class "EntityPlayer"
 
 ???+ info
-    You can get this class by using the following function:
+    你可以通过以下函数获取此类：
 
     * [Entity.ToPlayer()](Entity.md#toplayer)
     * [EntityFamiliar.Player](EntityFamiliar.md#player)
@@ -28,10 +28,12 @@ tags:
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddBlackHearts ( int BlackHearts ) {: .copyable aria-label='Functions' }
 
-Adds Black hearts to the player. 1 unit is half a heart. Remove them with negative numbers.
+给玩家添加黑心。1个单位是半颗心。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 full black heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddBlackHearts(2)
     ```
@@ -41,14 +43,15 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddBloodCharge ( int Amount ) {: .copyable aria-label='Functions' }
 
-Adds to the amount of Blood Charge the player has. Blood Charge does not do anything on characters besides Tainted Bethany.
+给玩家添加血量充能。血量充能在除堕化伯大妮以外的角色上没有任何作用。
 
 ___
 ### Add·Blue·Flies () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Entity](Entity.md) AddBlueFlies ( int Amount, [Vector](Vector.md) Position, [Entity](Entity.md) Target ) {: .copyable aria-label='Functions' }
 ???- info "Amount"
-    The trinket **Fish Tail** will always double the `amount` of flies added by this function.
+
+    饰品**鱼尾**将始终将此函数添加的苍蝇数量加倍。
 
 ___
 ### Add·Blue·Spider () {: aria-label='Functions' }
@@ -56,7 +59,9 @@ ___
 #### [Entity](Entity.md) AddBlueSpider ( [Vector](Vector.md) Position ) {: .copyable aria-label='Functions' }
 
 ???- example "Example Code"
+
     This code spawns 3 blue spiders at the player's position.
+
     ```lua
     local player = Isaac.GetPlayer()
     for _ = 1, 3 do
@@ -69,10 +74,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddBombs ( int Amount ) {: .copyable aria-label='Functions' }
 
-Adds bombs to the player. Remove them with negative numbers.
+给玩家添加炸弹。用负数移除它们。
 
 ???- example "Example Code"
+
     This code removes 1 bomb from the player.
+
     ```lua
     Isaac.GetPlayer():AddBombs(-1)
     ```
@@ -82,10 +89,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddBoneHearts ( int Hearts ) {: .copyable aria-label='Functions' }
 
-Adds bone hearts to the player. 1 unit is a single bone heart. Remove them with negative numbers.
+给玩家添加骨心。1个单位是单颗骨心。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 bone heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddBoneHearts(1)
     ```
@@ -95,21 +104,27 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddBrokenHearts ( int BrokenHearts ) {: .copyable aria-label='Functions' }
 
-Adds broken hearts to the player. 1 unit is one broken heart. Broken hearts can be removed with negative numbers.
+给玩家添加碎心。1个单位是单颗碎心。用负数移除它们。
+
 ???- example "Example Code"
-	This code adds 1 broken heart to the player, then takes it away.
-	```lua
-	Isaac.GetPlayer():AddBrokenHearts(1)
-	Isaac.GetPlayer():AddBrokenHearts(-1)
-	```
+
+    This code adds 1 broken heart to the player, then takes it away.
+
+    ```lua
+    Isaac.GetPlayer():AddBrokenHearts(1)
+    Isaac.GetPlayer():AddBrokenHearts(-1)
+    ```
 ___
 ### Add·Cache·Flags () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddCacheFlags ( [CacheFlag](enums/CacheFlag.md) CacheFlag ) {: .copyable aria-label='Functions' }
-Will reevaluate the cache flags provided in the next cache reevaluation.
+
+在下一次缓存重新计算中，将重新计算提供的缓存标志。
 
 ???- example "Example Code"
+
     This code will add several cacheflags.
+
     ```lua
     Isaac.GetPlayer():AddCacheFlags(CacheFlag.CACHE_DAMAGE | CacheFlag.CACHE_FIREDELAY | CacheFlag.CACHE_LUCK)
     ```
@@ -123,10 +138,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddCoins ( int Amount ) {: .copyable aria-label='Functions' }
 
-Adds coins to the player. Remove them with negative numbers.
+给玩家添加金币。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 coin to the player.
+
     ```lua
     Isaac.GetPlayer():AddCoins(1)
     ```
@@ -138,32 +155,35 @@ ___
 [ ](#){: .repplus .tooltip .badge }
 #### void AddCollectible ( [CollectibleType](enums/CollectibleType.md) Type, int Charge = 0, boolean FirstTimePickingUp = true, [ActiveSlot](enums/ActiveSlot.md) Slot = ActiveSlot.SLOT_PRIMARY, int VarData = 0, [ItemPoolType](enums/ItemPoolType.md) PoolType ) {: .copyable aria-label='Functions' }
 
-Setting **FirstTimePickingUp** to false will not add the consumables (keys, bombs,...) of the item and will cause it to not count towards transformations.
 
-- Slot 0 is default (normal active item)
-- Slot 1 is used by Schoolbag
-- Slot 2 is used for pocket active items
+设置 **FirstTimePickingUp** 为false 将不会添加物品的消耗品（钥匙、炸弹等），并且不会计入套装。
+
+- Slot 0 是默认值 (normal active item)
+- Slot 1 是 Schoolbag 使用的
+- Slot 2 是用于口袋主动物品的
 
 ???- note "Notes"
-	Slot 2 cannot be used if character did not start with a pocket active
+
+	Slot 2 不能被用于开始时没有口袋主动物品的角色
 
 VarData is used for the storage of a persistent context-sensitive value
 
 ???- note "Notes"
-	This is a list of all items that make use of VarData:
 
-    - Jar of Wisps: Wisps spawned on next use (Max 12)
-	- D Infinity, Blank Card, Clear Rune, Placebo: Current maximum charge (Any value above 0)
-	- Hold: Stored poop
-	    - Poop Types:
-	    - [0] None
-	    - [1] Normal
-	    - [2] Flies
-	    - [3] Fire
-	    - [4] Petrified
-	    - [5] Toxic
-	    - [6] Black
-	    - [7] Holy
+    这是一个使用 VarData 的所有物品的列表：
+
+    - 魂火罐: 魂火会在下一次使用时生成 (最大12)
+	- 无限骰, 空白卡, 透明符文, 安慰剂: 当前最大充能 (任何大于0的值)
+	- Hold: 存储的便便
+	    - 便便类型:
+	    - [0] 无
+	    - [1] 普通
+	    - [2] 苍蝇
+	    - [3] 火焰
+	    - [4] 石化
+	    - [5] 有毒
+	    - [6] 黑色
+	    - [7] 神圣
 	    - [8] X-Lax
 	    - [9] Fart
 	    - [10] Bomb
@@ -200,12 +220,14 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddEternalHearts ( int EternalHearts ) {: .copyable aria-label='Functions' }
 
-Adds eternal hearts to the player. 1 unit is half a heart. Remove them with negative numbers.
+给玩家添加永恒之心。1个单位是半颗心。用负数移除它们。
 
-(Note that eternal hearts automatically turn to full hearts, when you have more than one.)
+（注意，当你拥有超过一个时，永恒之心会自动变为完整的心。）
 
 ???- example "Example Code"
+
     This code adds 1 eternal heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddEternalHearts(1)
     ```
@@ -216,6 +238,7 @@ ___
 #### void AddFriendlyDip ( int Subtype, [Vector](Vector.md) Position ) {: .copyable aria-label='Functions' }
 
 ???- note "Dip Subtypes"
+
     ```lua
     0: normal
     1: red
@@ -235,8 +258,9 @@ ___
 #### void AddGigaBombs ( int GigaBombs ) {: .copyable aria-label='Functions' }
 
 ???- note "Notes"
-	Giga bombs do not add to the bomb counter, make sure to increase the bomb count beforehand!
-	You can't add more giga bombs than player's current bomb count.
+
+    巨型炸弹不会增加炸弹计数，请确保提前增加炸弹数量！
+	你不能添加超过玩家当前炸弹数量的巨型炸弹。
 
 ___
 ### Add·Golden·Bomb () {: aria-label='Functions' }
@@ -248,10 +272,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddGoldenHearts ( int Hearts ) {: .copyable aria-label='Functions' }
 
-Adds golden hearts to the player. 1 unit is a single gold heart. Remove them with negative numbers.
+给玩家添加金心。1个单位是单颗金心。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 golden heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddGoldenHearts(1)
     ```
@@ -266,10 +292,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddHearts ( int Hearts ) {: .copyable aria-label='Functions' }
 
-Adds red hearts to the player if there are any empty heart containers. 1 unit is half a heart. Remove health with negative numbers.
+给玩家添加红心。如果有空的心容器，则添加红心。1个单位是半颗心。用负数移除生命值。
 
 ???- example "Example Code"
+
     This code adds 1 full red heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddHearts(2)
     ```
@@ -294,10 +322,12 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddKeys ( int Amount ) {: .copyable aria-label='Functions' }
 
-Adds keys to the player. Remove them with negative numbers.
+给玩家添加钥匙。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 key to the player.
+
     ```lua
     Isaac.GetPlayer():AddKeys(1)
     ```
@@ -307,24 +337,30 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddMaxHearts ( int MaxHearts, boolean IgnoreKeeper ) {: .copyable aria-label='Functions' }
 
-Adds heart containers to the player. 2 units is a full heart container. Remove them with negative numbers.
+给玩家添加心容器。2个单位是一个完整的心容器。用负数移除它们。
 
 ???- note "Notes"
-    It is possible to add a half heart container to the player. This will appear as a regular heart container but can only be filled half-way.
+
+    可以添加半颗心容器到玩家身上。这将显示为常规心容器，但只能填充一半。
 
 ???- example "Example Code"
+
     This code adds 1 heart container to the player.
+
     ```lua
     Isaac.GetPlayer():AddMaxHearts(2, true)
     ```
 
 
 ???+ bug "Bugs"
-    IgnoreKeeper does not appear to work as intended.
 
-    Max hearts can be added or removed from Keeper regardless of what this boolean is.
-    If Keeper has Greed's Gullet and this boolean is set to false, max hearts cannot be added to Keeper, but can be removed normally.
-    If Keeper has Greed's Gullet and this boolean is set to true, Max hearts can be added or removed from Keeper normally.
+    不会对店长生效（IgnoreKeeper does not appear to work as intended.）
+
+    最大心容器可以添加或移除到店长身上，而不管这个布尔值是什么。
+
+    如果店长拥有贪婪的胃袋，而这个布尔值被设置为false，则无法添加最大心容器到店长身上，但可以正常移除。
+
+    如果店长拥有贪婪的胃袋，而这个布尔值被设置为true，则可以正常添加或移除最大心容器到店长身上。
 
 ___
 ### Add·Minisaac () {: aria-label='Functions' }
@@ -345,13 +381,15 @@ ___
 ### Add·Player·Form·Costume () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddPlayerFormCostume ( [PlayerForm](enums/PlayerForm.md) Form ) {: .copyable aria-label='Functions' }
-Adds the costume of the given transformation.
+
+添加给定变身的服装。
 
 ___
 ### Add·Poop·Mana () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddPoopMana ( int Num ) {: .copyable aria-label='Functions' }
-Adds (or remove) poop consumables from the player.
+
+添加（或移除）粪便消耗品。
 
 ___
 ### Add·Pretty·Fly () {: aria-label='Functions' }
@@ -362,10 +400,13 @@ ___
 ### Add·Rotten·Hearts () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddRottenHearts ( int RottenHearts ) {: .copyable aria-label='Functions' }
-Adds rotten hearts to the player. 1 unit is half a heart. Remove rotten hearts with negative numbers.
+
+添加腐烂的心。1个单位是半颗心。用负数移除腐烂的心。
 
 ???- example "Example Code"
+
     This code adds 1 full rotten heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddRottenHearts(2)
     ```
@@ -375,17 +416,19 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddSoulCharge ( int Amount ) {: .copyable aria-label='Functions' }
 
-Adds Soul Charge to the player. Soul Charge does not do anything on characters besides Bethany.
+添加灵魂充能到玩家身上。灵魂充能对除了伯大妮以外的角色没有任何作用。
 
 ___
 ### Add·Soul·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AddSoulHearts ( int SoulHearts ) {: .copyable aria-label='Functions' }
 
-Adds soul hearts to the player. 1 unit is half a heart. Remove them with negative numbers.
+添加魂心到玩家。1个单位是半颗心。用负数移除它们。
 
 ???- example "Example Code"
+
     This code adds 1 full soul heart to the player.
+
     ```lua
     Isaac.GetPlayer():AddSoulHearts(2)
     ```
@@ -400,13 +443,18 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### void AddTrinket ( [TrinketType](enums/TrinketType.md) Type, boolean FirstTimePickingUp = true ) {: .copyable aria-label='Functions' }
 
-- If the player does not have any open trinket slots, this function will do nothing.
-- If the player has an open trinket slot but already has a trinket, the new trinket will go to the first slot and the existing trinket will get pushed back to the second slot.
-- If you provide an argument of 0 or an otherwise invalid trinket ID, the game will crash.
-- Setting **FirstTimePickingUp** to false will not spawn or add pickups for the item and will not cause it to count towards transformations.
+- 如果玩家没有任何空的饰品槽，这个函数将不做任何事情。
+
+- 如果玩家有一个空的饰品槽但已经有一个饰品，新饰品将进入第一个槽，现有饰品将被推回到第二个槽。
+
+- 如果提供的参数为0或其他无效的饰品ID，游戏将崩溃。
+
+- 将**FirstTimePickingUp**设置为false将不会为该物品生成或添加拾取物，也不会导致其计入变身。
 
 ???- example "Example Code"
+
     This code adds the golden variant of the Swallowed Penny trinket to the player.
+
     ```lua
     Isaac.GetPlayer():AddTrinket(TrinketType.TRINKET_SWALLOWED_PENNY | TrinketType.TRINKET_GOLDEN_FLAG)
     ```
@@ -415,15 +463,16 @@ ___
 ### Add·Wisp () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### [EntityFamiliar](EntityFamiliar.md) AddWisp ( [CollectibleType](enums/CollectibleType.md) Collectible, [Vector](Vector.md) Position, boolean AdjustOrbitLayer = false, boolean DontUpdate = false ) {: .copyable aria-label='Functions' }
-The type of Wisp can be defined with the Collectible. If the ID is not corresponding to an active item with a special wisp, it will default to the regular blue wisp.
 
-To access special wisp variant like Delirious forms, you need to add `65536` (1 << 16) to the id. Example: Delirious Monstro has `id = s14`, so the wisps id is `65550`.
+魂火的类型可以通过Collectible来定义。如果ID与具有特殊魂火的主动物品不对应，则默认为常规蓝色魂火。
+
+要访问特殊魂火变体，例如Delirious形式，您需要将`65536` (1 << 16)添加到ID。例如：Delirious Monstro的`id = s14`，因此魂火的ID为`65550`。
 
 ___
 ### Animate·Appear () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateAppear ( ) {: .copyable aria-label='Functions' }
-Play the animation that is normally played at the beginning of a stage.
+播放在关卡开始时通常播放的动画。
 ___
 ### Animate·Card () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
@@ -433,16 +482,20 @@ ___
 ### Animate·Collectible () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void AnimateCollectible ( [CollectibleType](enums/CollectibleType.md) Collectible, string AnimName = "Pickup", string SpriteAnimName = "PlayerPickupSparkle" ) {: .copyable aria-label='Functions' }
-`AnimName` refers to an animation name in `001.000_player.anm2` (e.g. `Pickup` or `UseItem`). `SpriteAnimName` refers to an animation name in `005.100_collectible.anm2` (e.g. `PlayerPickup` or `PlayerPickupSparkle`).
+
+`AnimName` 指 `001.000_player.anm2` 中的动画名称（例如 `Pickup` 或 `UseItem`）。 `SpriteAnimName` 指 `005.100_collectible.anm2` 中的动画名称（例如 `PlayerPickup` 或 `PlayerPickupSparkle`）。
 
 ___
 ### Animate·Happy () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateHappy ( ) {: .copyable aria-label='Functions' }
-Plays the happy animation, played when taking a positive pill.
+
+播放高兴动画，当服用正面药丸时播放。
 
 ???- example "Example Code"
+
     This code plays the happy animation.
+
     ```lua
     Isaac.GetPlayer():AnimateHappy()
     ```
@@ -450,10 +503,13 @@ Plays the happy animation, played when taking a positive pill.
 ### Animate·Light·Travel () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateLightTravel ( ) {: .copyable aria-label='Functions' }
-Plays the animation that is played when entering the light in the ascent, or entering the cathedral.
+
+播放在上升时进入光柱或进入大教堂时播放的动画。
 
 ???- example "Example Code"
+
 	Plays the animation.
+
 	```lua
 	Isaac.GetPlayer():AnimateLightTravel()
 	```
@@ -462,8 +518,10 @@ ___
 ### Animate·Pickup () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void AnimatePickup ( [Sprite](Sprite.md) sprite, boolean HideShadow = false, string AnimName = "Pickup" ) {: .copyable aria-label='Functions' }
-Plays a pickup animation using any supplied Sprite object
-HideShadow should be usually set to true when rendering a sprite with a custom shadow layer
+
+播放拾取动画，使用任何提供的Sprite对象
+
+HideShadow通常在渲染具有自定义阴影层的精灵时设置为true
 
 ___
 ### Animate·Pill () {: aria-label='Functions' }
@@ -474,20 +532,27 @@ ___
 ### Animate·Pitfall·In () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimatePitfallIn ( ) {: .copyable aria-label='Functions' }
-Does 1/2 heart of damage and plays the animation of falling into a pitfall.
+
+造成1/2心的伤害并播放掉入陷阱的动画。
+
 ___
 ### Animate·Pitfall·Out () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimatePitfallOut ( ) {: .copyable aria-label='Functions' }
-The animation of jumping back out of a pitfall.
+
+跳出陷阱的动画。
+
 ___
 ### Animate·Sad () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateSad ( ) {: .copyable aria-label='Functions' }
-Plays the sad animation, played when taking a negative pill.
+
+播放悲伤动画，当服用负面药丸时播放。
 
 ???- example "Example Code"
-	Plays the sad animation.
+
+    Plays the sad animation.
+
 	```lua
 	Isaac.GetPlayer():AnimateSad()
 	```
@@ -495,16 +560,20 @@ ___
 ### Animate·Teleport () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateTeleport ( boolean Up ) {: .copyable aria-label='Functions' }
-The animation played when teleporting into another room.
+
+当传送到另一个房间时播放的动画。
 
 ___
 ### Animate·Trapdoor () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void AnimateTrapdoor ( ) {: .copyable aria-label='Functions' }
-Plays the animation of the player jumping down a trapdoor.
+
+播放跳下陷阱门的动画。
 
 ???- example "Example Code"
+
 	Plays the animation of jumping down a trapdoor.
+
 	```lua
 	Isaac.GetPlayer():AnimateTrapdoor()
 	```
@@ -523,7 +592,8 @@ ___
 ### Are·Opposing·Shoot·Directions·Pressed () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean AreOpposingShootDirectionsPressed ( ) {: .copyable aria-label='Functions' }
-Returns the non-zero joystick direction from the most recent movement input, but goes to zero after the player comes to a stop.
+
+返回最近的移动输入中非零的摇杆方向，但在玩家停止后变为零。
 ___
 ### Can·Add·Collectible () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
@@ -533,17 +603,20 @@ ___
 ### Can·Pick·Black·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanPickBlackHearts ( ) {: .copyable aria-label='Functions' }
-returns true if player has room for more black hearts
+
+返回 true 如果玩家有容纳更多黑心的空间
 ___
 ### Can·Pick·Bone·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanPickBoneHearts ( ) {: .copyable aria-label='Functions' }
-returns true if player has room for more bone hearts
+
+返回 true 如果玩家有容纳更多骨心的空间
 ___
 ### Can·Pick·Golden·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanPickGoldenHearts ( ) {: .copyable aria-label='Functions' }
-returns true if player has room for more golden hearts
+
+返回 true 如果玩家有容纳更多金心的空间
 ___
 ### Can·Pick·Red·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -553,18 +626,20 @@ ___
 ### Can·Pick·Rotten·Hearts () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### boolean CanPickRottenHearts ( ) {: .copyable aria-label='Functions' }
-Returns true if player has room for more rotten hearts
 
+返回 true 如果玩家有容纳更多腐心的空间
 ___
 ### Can·Pick·Soul·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanPickSoulHearts ( ) {: .copyable aria-label='Functions' }
-Returns true if player has room for more soul hearts
+
+返回 true 如果玩家有容纳更多魂心的空间
 ___
 ### Can·Pickup·Item () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanPickupItem ( ) {: .copyable aria-label='Functions' }
-Can Player pick up an item right now?
+
+返回 true 如果玩家现在可以拾取物品
 ___
 ### Can·Shoot () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -574,43 +649,47 @@ ___
 ### Can·Turn·Head () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean CanTurnHead ( ) {: .copyable aria-label='Functions' }
-Returns true if head should react to keys or false otherwise
+
+返回 true 如果头部应该对按键做出反应，否则返回 false
 ___
 ### Change·Player·Type () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void ChangePlayerType ( [PlayerType](enums/PlayerType.md) PlayerType ) {: .copyable aria-label='Functions' }
-Used to change one player into another player type. For example turning Cain into Maggy.
 
-Changing the player type within MC_POST_PLAYER_INIT will result in the player getting the default items for that character. E.g. Maggy will get her Yum Heart without you having to explicitly add it. Exceptions here include unlockable items (e.g. Isaac's D6) and default numbers of hearts/keys/bombs/coins. You can change the player type after init, but then you're generally responsible for adding any items you might associate with that character.
+被用于改变一个玩家的类型。例如将该隐变成抹大拉。
 
-Changing the player Type into Jacob will also spawn Esau.
+在 MC_POST_PLAYER_INIT 中更改玩家类型将导致玩家获得该角色的默认物品。例如，抹大拉将获得她的美味的心，而无需您显式添加它。这里的例外包括可解锁物品（例如，以撒的 D6）和默认数量的心脏/钥匙/炸弹/硬币。您可以在初始化后更改玩家类型，但通常需要负责添加与该角色相关的任何物品。
 
+将玩家类型更改为雅各布也会生成以扫。
 ___
 ### Check·Familiar () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void CheckFamiliar ( [FamiliarVariant](enums/FamiliarVariant.md) FamiliarVariant, int TargetCount, [RNG](RNG.md) rng, [ItemConfigItem](ItemConfig_Item.md) SourceItemConfigItem = nil, int FamiliarSubType = -1 ) {: .copyable aria-label='Functions' }
 
-Call this method to spawn the appropriate amount of familiars associated with a custom collectible.
+访问这个方法以生成与自定义可收集物品相关的适当数量的随从。
 
-- If the target count specified is less than the current amount of familiars, it will spawn more until the target count is met.
-- If the target count specified is than the current amount of familiars, it will despawn familiars until the target count is met.
+- 如果指定的目标数量少于当前的随从数量，它将生成更多，直到达到目标数量。
 
-This is meant to be called in the EvaluateCache callback (when the cache flag is equal to `CacheFlag.CACHE_FAMILIARS`).
+- 如果指定的目标数量大于当前的随从数量，它将去除随从，直到达到目标数量。
 
-In most cases, [:material-language-typescript:IsaacScript](https://isaacscript.github.io/) users should use the [`checkFamiliarFromCollectibles`](https://isaacscript.github.io/isaacscript-common/modules/functions_familiars.html#checkFamiliarFromCollectibles) helper function instead of using this method directly, as it automatically calculates the appropriate target count.
+这意味着它应该在 EvaluateCache 回调中调用（当缓存标志等于 `CacheFlag.CACHE_FAMILIARS` 时）。
 
-**FamiliarVariant**: In most cases, use the familiar variant for your custom familiar.
+在大多数情况下，[:material-language-typescript:IsaacScript](https://isaacscript.github.io/) 用户应该使用 [`checkFamiliarFromCollectibles`](https://isaacscript.github.io/isaacscript-common/modules/functions_familiars.html#checkFamiliarFromCollectibles) 辅助函数，而不是直接使用此方法，因为它会自动计算适当的目标数量。
 
-**TargetCount**: The expected amount of this FamiliarVariant that this EntityPlayer should have. This argument can simply be how many of an item that the current EntityPlayer owns. However, if you want your familiar to synergize with Monster Manual and Box of Friends, then this argument should be  `EntityPlayer:GetCollectibleNum(collectibleType) + EntityPlayer:GetEffects():GetCollectibleEffectNum(collectibleType)`.
+**FamiliarVariant**: 大多数情况下, 使用随从变体作为自定义随从的基础。
 
-**rng**: Can just be the RNG object from `EntityPlayer.GetCollectibleRNG` of the collectible that spawns the familiar.
+**TargetCount**: 期望该实体玩家应该拥有的此随从变体的数量。此参数可以简单地是当前实体玩家拥有的某个物品的数量。但是，如果您希望您的随从与怪物手册和朋友盒子协同作用，则此参数应为 `EntityPlayer:GetCollectibleNum(collectibleType) + EntityPlayer:GetEffects():GetCollectibleEffectNum(collectibleType)`。
 
-**SourceItemConfigItem**: The `ItemConfigItem` that this familiar was created by. This is nil by default, but it should always be specified so that Sacrificial Altar will work properly. (It informs the game which collectible should be removed if the familiar is tagged with the "cansacrifice" entity tag.) This can be obtained with: `Isaac.GetItemConfig():GetCollectible(collectibleType)`
+**rng**: 可以是生成随从的可收集物品的 `EntityPlayer.GetCollectibleRNG` 的 RNG 对象。
 
-**FamiliarSubType**: The subtype of the familiar to check. -1 matches any subtype.
+**SourceItemConfigItem**: 生成此随从的 `ItemConfigItem`。默认情况下为 nil，但应始终指定，以便祭品祭坛正常工作。（它告知游戏如果随从被标记为“cansacrifice”实体标签，则应删除哪个可收集物品。）可以通过以下方式获得：`Isaac.GetItemConfig():GetCollectible(collectibleType)`
+
+**FamiliarSubType**: 要检查的随从子类型。-1 匹配任何子类型。
 
 ???- example "Example Code"
+
     This code spawns 3 "Sister Maggy" familiars.
+
     ```lua
     local player = Isaac.GetPlayer()
     local sourceCollectibleID = CollectibleType.COLLECTIBLE_SAD_ONION
@@ -624,7 +703,8 @@ ___
 ### Clear·Costumes () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void ClearCostumes ( ) {: .copyable aria-label='Functions' }
-Removes all costumes.
+
+移除所有服装。
 ___
 ### Clear·Dead·Eye·Charge () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -634,31 +714,36 @@ ___
 ### Clear·Temporary·Effects () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void ClearTemporaryEffects ( ) {: .copyable aria-label='Functions' }
-Will be called when player exits the room.
+
+将在玩家退出房间时调用。
 
 ___
 ### Discharge·Active·Item () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void DischargeActiveItem ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY ) {: .copyable aria-label='Functions' }
-Sets the charge of your active item to 0 without triggering the active item effect.
+
+设置您的主动物品的充能为 0，而不触发主动物品效果。
 
 ___
 ### Donate·Luck () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void DonateLuck ( int Luck ) {: .copyable aria-label='Functions' }
-Unlike the Luck property which should be set in MC_EVALUATE_CACHE, this method can be used anywhere and will automatically remember any additional luck added.
+
+不像Luck属性应该在MC_EVALUATE_CACHE中设置，这个方法可以在任何地方使用，并会自动记住添加的任何额外运气。
 
 ___
 ### Do·Zit·Effect () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void DoZitEffect ( [Vector](Vector.md) Direction ) {: .copyable aria-label='Functions' }
-Fires a creep shot, same as the one fired by the item "Large Zit".
+
+发射一个青春痘，效果与“青春痘”物品发射的效果相同。
 
 ___
 ### Drop·Pocket·Item () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void DropPocketItem ( int PocketNum, [Vector](Vector.md) Pos ) {: .copyable aria-label='Functions' }
-Drops a held pocketitem (Card, Pill, Rune... from the given itemslot at the given position. Possible pocketnumbers are [0, 1, 2, 3].  Dropping pocket active items or dice bag dices does not work.
+
+扔下一个持有的口袋物品（卡片、药丸、符文……）从给定的物品槽在给定的位置。可能的口袋编号是 [0, 1, 2, 3]。扔下口袋主动物品或骰子袋骰子是无效的。
 
 ___
 ### Drop·Trinket () {: aria-label='Functions' }
@@ -669,12 +754,15 @@ ___
 ### Evaluate·Items () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void EvaluateItems ( ) {: .copyable aria-label='Functions' }
-Triggers a cache reevaluation. Will trigger the MC_EVALUATE_CACHE callback.
 
-Before you use this function, you need to set the appropriate cache flags first. See the example below.
+触发一个缓存重新评估，将会触发 MC_EVALUATE_CACHE 回调。
+
+在使用此函数之前，您需要先设置适当的缓存标志。请参阅下面的示例。
 
 ???- example "Example Code"
+
     This code re-evaluates all of the stats for the player.
+
     ```lua
     local player = Isaac.GetPlayer()
     player:AddCacheFlags(CacheFlag.CACHE_ALL)
@@ -702,6 +790,7 @@ ___
 #### [EntityKnife](EntityKnife.md) FireKnife ( [Entity](Entity.md) Parent, float RotationOffset = 0, boolean CantOverwrite = false, int SubType = 0, int Variant = 0 ) {: .copyable aria-label='Functions' }
 
 ???- note "Knife Variants"
+
     ```lua
     0: Mom's Knife
     1: Bone Club
@@ -718,9 +807,10 @@ ___
 ### Fire·Tear () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### [EntityTear](EntityTear.md) FireTear ( [Vector](Vector.md) Position, [Vector](Vector.md) Velocity, boolean CanBeEye = true, boolean NoTractorBeam = false, boolean CanTriggerStreakEnd = true, Entity Source = nil, float DamageMultiplier = 1 ) {: .copyable aria-label='Functions' }
-- `CanBeEye`: If the player has the Evil Eye item, passing true allows the tear to have a chance of being an eye.
-- `NoTractorBeam`: If the player has the Tractor Beam item, passing true means that the tear will be exempt from the beam.
-- `CanTriggerStreakEnd`: If the player has the Dead Eye item, passing false means that the tear will be exempt from ending the streak.
+
+- `CanBeEye`: 如果玩家拥有邪恶之眼物品，传递 true 允许泪水有机会成为眼泪。
+- `NoTractorBeam`: 如果玩家拥有牵引光束物品，传递 true 意味着泪水将免受光束影响。
+- `CanTriggerStreakEnd`: 如果玩家拥有死亡之眼物品，传递 false 意味着泪水将免于结束连击。
 
 ___
 ### Fire·Tech·Laser () {: aria-label='Functions' }
@@ -728,7 +818,8 @@ ___
 #### [EntityLaser](EntityLaser.md) FireTechLaser ( [Vector](Vector.md) Position, [LaserOffset](enums/LaserOffset.md) OffsetID, [Vector](Vector.md) Direction, boolean LeftEye, boolean OneHit = false, Entity Source = nil, float DamageMultiplier = 1 ) {: .copyable aria-label='Functions' }
 
 ???+ bug "Bugs"
-    The `DamageMultiplier` parameter doesn't do anything when supplying [LASER_TECH2_OFFSET](enums/LaserOffset.md) as the offset.
+
+    `DamageMultiplier` 变量不影响当提供 [LASER_TECH2_OFFSET](enums/LaserOffset.md) 作为偏移量时。
 
 ___
 ### Fire·Tech·XLaser () {: aria-label='Functions' }
@@ -739,39 +830,44 @@ ___
 ### Flush·Queue·Item () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean FlushQueueItem ( ) {: .copyable aria-label='Functions' }
-called after animation is finished, or on special occasions to prevent bugs
+
+在动画完成后，或在特殊情况下调用以防止错误
 ___
 ### Full·Charge () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### boolean FullCharge ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY, int Force = false ) {: .copyable aria-label='Functions' }
-Fully charges the active item. Returns true if the item was fully charged, false otherwise. If player has battery it will first try to fill first charge slot, then the battery slot.
 
-**Force**: If set, items will always be charged even if they normally cannot be recharged by batteries
+完全充能当前的主动物品。如果物品被完全充能，返回 true；否则返回 false。如果玩家拥有电池，它将首先尝试填充第一个充能槽，然后是电池槽。
+
+**Force**: 如果设置为 true，物品将始终充能，即使它们通常无法通过电池充能
 
 ???- info "ActiveSlot"
-    Setting the ActiveSlot argument to `-1` will recharge items in all slots.
+
+    将 ActiveSlot 参数设置为 `-1` 将充能所有槽中的物品。
 
 ___
 ### Get·Active·Charge () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetActiveCharge ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY ) {: .copyable aria-label='Functions' }
 
-Get the current charge of your active item.
+获取当前主动物品的充能值。
 ___
 ### Get·Active·Item () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### [CollectibleType](enums/CollectibleType.md) GetActiveItem ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY ) {: .copyable aria-label='Functions' data-altreturn='0' }
-Returns the currently held item. Returns `0` when no item is held.
+
+返回当前持有的主动物品。如果没有物品被持有，则返回 `0`。
 
 ___
 ### Get·Active·Sub·Charge () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetActiveSubCharge ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY ) {: .copyable aria-label='Functions' }
 
-Get the current items subcharge.
+获取当前主动物品的副充能值（即第二充能槽）。
 
 ???+ bug "Bug"
-    This function seems to always return 0. Use EntityPlayer:GetActiveCharge() to get any type of charges instead. Use EntityPlayer:GetBatteryCharge() to get the charge of the second charge bar.
+
+    这个函数似乎总是返回 0。使用 EntityPlayer:GetActiveCharge() 来获取任何类型的充能值。使用 EntityPlayer:GetBatteryCharge() 来获取第二个充能槽的充能值。
 
 ___
 ### Get·Active·Weapon·Entity () {: aria-label='Functions' }
@@ -793,15 +889,17 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetBatteryCharge ( [ActiveSlot](enums/ActiveSlot.md) ActiveSlot = ActiveSlot.SLOT_PRIMARY ) {: .copyable aria-label='Functions' }
 
-Get the current charge progress of the second charge of your current active item. This bar is only active, when you have the Collectible "The Battery"
+获取当前主动物品的第二充能槽的充能进度。该槽仅在你拥有可收集物品“电池”时处于激活状态。
 ___
 ### Get·Black·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetBlackHearts ( ) {: .copyable aria-label='Functions' }
-This does not return the number of black hearts; it returns the bit mask for which soul hearts are black hearts.
+
+这个函数并不返回黑心的数量；而是返回一个位掩码，用于表示哪些灵魂心是黑心。
 
 ???- example "Example"
-    Imagine we have the following setup of hearts, where S is a soul heart and B is a black heart:
+
+    设想我们有以下血量的设置，其中 S 是灵魂心，B 是黑心：
 
     ```
     B S S B B S S B B
@@ -818,7 +916,7 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetBloodCharge ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Blood Charge the player has.
+返回玩家的血量充能值。
 
 ___
 ### Get·Body·Color () {: aria-label='Functions' }
@@ -834,30 +932,31 @@ ___
 ### Get·Bomb·Variant () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [BombVariant](enums/BombVariant.md) GetBombVariant ( [TearFlags](enums/TearFlags.md) TearFlags, boolean ForceSmallBomb ) {: .copyable aria-label='Functions' }
-Pass tear flags to add extra effects to the bomb visual like burn -> hot bombs, even if player doesn't have Hot Bombs collectible. ForceSmallBomb will override large bomb variants for TEAR_PERSISTENT.
+
+通过传递泪弹标签为炸弹视觉效果添加额外效果，例如燃烧 -> 炙热炸弹，即使玩家没有道具炙热炸弹。 ForceSmallBomb 将覆盖 TEAR_PERSISTENT 的大炸弹变体。
 
 ___
 ### Get·Bone·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetBoneHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of bone hearts that the player has. This is not doubled like the `EntityPlayer.GetMaxHearts` method is, so if e.g. the player has 3 bone hearts, this will return 3.
+返回玩家的骨心数量。这个值并不像 `EntityPlayer.GetMaxHearts` 方法那样翻倍，所以如果例如玩家有 3 个骨心，这个函数将返回 3。
 
-Also see the `EntityPlayer.GetEffectiveMaxHearts` method, which accounts for bone hearts.
+另请参阅 `EntityPlayer.GetEffectiveMaxHearts` 方法，该方法会考虑骨心。
 
 ___
 ### Get·Broken·Hearts () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetBrokenHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of broken hearts that the player has. This is not doubled like the `EntityPlayer.GetMaxHearts` method is, so if e.g. the player has 3 broken hearts, this will return 3.
+返回玩家的碎心数量。这个值并不像 `EntityPlayer.GetMaxHearts` 方法那样翻倍，所以如果例如玩家有 3 个碎心，这个函数将返回 3。
 
 ___
 ### Get·Card () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Card](enums/Card.md) GetCard ( int SlotId ) {: .copyable aria-label='Functions' data-altreturn='0' }
 
-Gets the ID of the card the player is holding in the given itemslot (0 = Main slot, 1 = secondary slot, 2 or 3). Returns `0` when no card is held in the slot.
+获取玩家在给定物品槽中持有的卡牌的 ID（0 = 主槽，1 = 副槽，2 或 3）。当槽中没有卡牌时返回 `0`。
 ___
 ### Get·Card·RNG () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -872,14 +971,19 @@ ___
 ### Get·Collectible·Num () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetCollectibleNum ( [CollectibleType](enums/CollectibleType.md) Type, boolean OnlyCountTrueItems = false ) {: .copyable aria-label='Functions' }
-**OnlyCountTrueItems**: If set to true, the function only counts collectibles that the player actually owns and ignores things like Lilith's Incubus, items granted by 3 Dollar Bill, and so forth.
+
+**OnlyCountTrueItems**: 如果设置为 true，函数仅计算玩家实际拥有的可收集物品，并忽略 莉莉丝的淫魔、3美元 授予的物品等。
 ___
 ### Get·Collectible·RNG () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [RNG](RNG.md) GetCollectibleRNG ( [CollectibleType](enums/CollectibleType.md) ID ) {: .copyable aria-label='Functions' }
-Gets the [RNG](RNG.md) object of a collectible.
-???- example "Example Code"
-    this code gives you the RNG object of the "Sad Onion" collectible.
+
+获取道具的 [RNG](RNG.md) 对象。
+
+???- example "示例代码"
+
+    这段代码将为你提供道具“伤心洋葱”的 RNG 对象。
+
     ```lua
     local player = Isaac.GetPlayer()
     local collectibleRNG = player:GetCollectibleRNG(CollectibleType.COLLECTIBLE_SAD_ONION)
@@ -895,31 +999,32 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetDamageCooldown ( ) {: .copyable aria-label='Functions' }
 
-When the player is hit, they will flash a different color and receive invulnerability frames. This method returns the amount of invulnerability frames. Normally, the player will receive 60 invulnerability frames when dealt a half-heart of damage or 120 invulnerability frames when dealt a full heart of damage. Additionally, the Blind Rage trinket can affect how invulnerability frames are granted.
+当玩家受到伤害时，他们会闪烁不同的颜色并获得无敌帧。此方法返回无敌帧的数量。通常，当玩家受到半颗心的伤害时，将获得 60 帧无敌时间；而受到一颗心的伤害时，将获得 120 帧无敌时间。此外，盲目的怒火饰品可以影响无敌帧的授予方式。
 
-Note that the frames returned by this function are render frames, not game frames.
+请注意，此函数返回的帧是渲染帧，而不是游戏帧。
 
 ___
 ### Get·Effective·Blood·Charge () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetEffectiveBloodCharge ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Blood Charge the player has. If playing as any other character besides Tainted Bethany, this will return `0`.
+返回玩家的血量充能。除堕化伯大妮外将返回 `0`。
 
 ___
 ### Get·Effective·Max·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetEffectiveMaxHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Red Hearts the player can contain in their Heart Containers and Bone Hearts. 1 unit is half a red heart.
-**Example:** you have 3 red heart container and one bone heart. 6(red) + 2(bone) = 8
+返回玩家在心容器和骨心中可以容纳的红心数量。1 个单位是半颗红心。
+
+**Example：** 你有 3 个红心容器和 1 个骨心。6（红）+ 2（骨）= 8
 
 ___
 ### Get·Effective·Soul·Charge () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetEffectiveSoulCharge ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Soul Charge the player has. If playing as any other character besides Bethany, this will return `0`.
+返回玩家的灵魂充能。除伯大妮外将返回 `0`。
 
 ___
 ### Get·Effects () {: aria-label='Functions' }
@@ -931,12 +1036,14 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetEternalHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of eternal hearts the player has.
+返回玩家的永恒之心数量。
+
 ___
 ### Get·Extra·Lives () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetExtraLives ( ) {: .copyable aria-label='Functions' }
-Returns the number of extra lives the player currently has.
+
+返回玩家当前拥有的额外生命数量。
 
 ___
 ### Get·Fire·Direction () {: aria-label='Functions' }
@@ -953,7 +1060,8 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetGoldenHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of golden hearts the player has.
+返回玩家的金心数量。
+
 ___
 ### Get·Greed·Donation·Break·Chance () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -979,7 +1087,8 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of red hearts the player has inside their heart containers and bone hearts. 1 unit is half a heart.
+返回玩家在心容器和骨心中的红心数量。1 个单位是半颗红心。
+
 ___
 ### Get·Item·State () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -1025,25 +1134,26 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### [EntityPlayer](EntityPlayer.md) GetMainTwin ( ) {: .copyable aria-label='Functions' }
 
-Returns the main player of pair characters or the main form of characters with multiple forms.
+返回成对角色的主玩家或具有多种形态的角色的主形态。
 
-- When called on Jacob or Esau, returns Jacob.
-- When called on Tainted Forgotten or Tainted Forgotten's Soul, returns Tainted Forgotten.
-- When called on Tainted Lazarus or Dead Tainted Lazarus, returns themself. If the player has Birthright, then it will return Tainted Lazarus.
-- When called on any other character, returns that character.
+- 当在雅各布或以扫身上调用时，返回雅各布。
+- 当在堕化的遗骸或堕化的遗骸之魂身上调用时，返回堕化的遗骸。
+- 当在堕化拉撒路或死亡的堕化拉撒路身上调用时，返回他们自己。如果玩家拥有长子权，则返回堕化的拉撒路。
+- 当在任何其他角色上调用时，返回该角色。
 
 ___
 ### Get·Max·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetMaxHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Heart Containers the player has. 1 unit is half a heart container.
+返回玩家的心之容器数量。1 个单位是半颗心之容器。
+
 ___
 ### Get·Max·Pocket·Items () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetMaxPocketItems ( ) {: .copyable aria-label='Functions' }
 
-Get the number of Pickup items you can carry. (1 on default. 2 with polydactyly or similar)
+获取玩家可以携带的道具数量。（默认 1，拥有多指畸形或类似效果时为 2）
 
 If you have a pocket active, it also increments the number by one.
 
@@ -1052,14 +1162,14 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetMaxPoopMana ( ) {: .copyable aria-label='Functions' }
 
-Returns the max amount of poop consumables that can be held by the player
+返回玩家可以持有的最大粪便消耗品数量。
 
 ___
 ### Get·Max·Trinkets () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetMaxTrinkets ( ) {: .copyable aria-label='Functions' }
 
-Get the number of trinkets you can carry. (1 on default. 2 with moms purse or similar)
+返回玩家可以携带的最大饰品数量。（默认 1，拥有妈妈的钱包或类似效果时为 2）
 
 ___
 ### Get·Modeling·Clay·Effect () {: aria-label='Functions' }
@@ -1090,28 +1200,34 @@ ___
 ### Get·Multi·Shot·Params () {: aria-label='Functions' }
 [ ](#){: .rep .tooltip .badge }
 #### MultiShotParams GetMultiShotParams ( [WeaponType](enums/WeaponType.md) WeaponType = WeaponType.WEAPON_TEARS ) {: .copyable aria-label='Functions' }
+
 ???+ bug "Bug"
-    Since it returns UserData which cant be edited directly, the return value of this function can only be used in combination with the [GetMultiShotPositionVelocity()](#getmultishotpositionvelocity) function.
+
+    自从它返回的 UserData 不能直接编辑，因此此函数的返回值只能与 [GetMultiShotPositionVelocity()](#getmultishotpositionvelocity) 函数结合使用。
 ___
 ### Get·Multi·Shot·Position·Velocity () {: aria-label='Functions' }
 [ ](#){: .abrep .tooltip .badge }
 #### [PosVel](PlayerTypes_PosVel.md) GetMultiShotPositionVelocity ( int LoopIndex, [WeaponType](enums/WeaponType.md) Weapon, [Vector](Vector.md) ShotDirection, float ShotSpeed, MultiShotParams params ) {: .copyable aria-label='Functions' }
-Call this function in a loop, where the LoopIndex is a number between 0 and the amount of tears the current MultiShotParams contains. Since MultiShotParams is currently not accessable via the modding api, you need to find other ways to get the amount.
+
+调用此函数时，请在循环中使用，其中 LoopIndex 是 0 到当前 MultiShotParams 包含的泪水数量之间的数字。由于 MultiShotParams 目前无法通过 modding api 访问，因此您需要找到其他方法来获取该数量。
 
 ???+ bug "Removed Function"
-    This function no longer exists since Repentance version `v1.7.9b.J835`!
+
+    这个函数自忏悔版本 `v1.7.9b.J835` 以来不再存在！
 
 ___
 ### Get·Name () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### string GetName ( ) {: .copyable aria-label='Functions' }
 
-Returns the name of the player. (Isaac, Cain, Azazel,...)
+返回玩家的名字(Isaac, Cain, Azazel,...)
+
 ___
 ### Get·NPCTarget () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Entity](Entity.md) GetNPCTarget ( ) {: .copyable aria-label='Functions' }
-Normally, this function returns the player. However, in some cases, NPCs can be redirected to attack another target, in which case this function will return the alternate target (e.g. after using Best Friend).
+
+同样，这个函数通常返回玩家。然而，在某些情况下，NPC 可以被重定向攻击另一个目标，在这种情况下，这个函数将返回替代目标（例如，在使用最好的朋友之后）。
 ___
 ### Get·Num·Blue·Flies () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -1147,20 +1263,20 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### [EntityPlayer](EntityPlayer.md) GetOtherTwin ( ) {: .copyable aria-label='Functions' }
 
-Returns the other player of pair characters or the other form of characters with multiple forms.
+返回双人角色的另一个角色或具有多种形式的角色的另一种形态。
 
-- When called on Jacob, returns Esau.
-- When called on Esau, returns Jacob.
-- When called on Tainted Forgotten, returns Tainted Forgotten's Soul.
-- When called on Tainted Forgotten's Soul, returns Tainted Forgotten.
-- When called on Tainted Lazarus, it will only return the Flip Lazarus, if the player has the Birthright item. Otherwise it returns nil.
-- When called on any other character, returns nil.
+- 当在雅各布身上调用时，返回以扫
+- 当在以扫身上调用时，返回雅各布。
+- 当在堕化遗骸身上调用时，返回堕化遗骸之魂。
+- 当在堕化遗骸之魂上调用时，返回堕化遗骸。
+- 当在堕化拉撒路身上调用时，仅当玩家拥有长子权时，它才会返回死亡的堕化拉撒路。否则，它返回 nil。
+- 当在任何其他角色上调用时，返回 nil。
 ___
 ### Get·Pill () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [PillColor](enums/PillColor.md) GetPill ( int SlotId ) {: .copyable aria-label='Functions' data-altreturn='0' }
 
-Gets the ID of the pill the player is holding in the given itemslot (0 = Main slot, 1 = secondary slot, 2 or 3) Returns `0` when no pill is held in the given slot.
+获得玩家在给定物品槽中持有的药丸的 ID (0 = 主槽, 1 = 副槽, 2 或 3) 当在给定槽中没有药丸时返回 `0`。
 ___
 ### Get·Pill·RNG () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -1176,29 +1292,31 @@ ___
 [ ](#){: .const .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### const PlayerPocketItem GetPocketItem ( int SlotId ) {: .copyable aria-label='Functions' }
 
-Get the userdata of the pocketitem (Card, Pill, Rune) in a said slot.
+获得玩家在给定物品槽中持有的口袋物品 (卡牌、药丸、符文) 的用户数据。
 
 ???+ bug "Bugs"
-    This function returns userdata, which can't be processed. It is therefore broken and should not be used!
+
+    此函数返回用户数据，无法处理。因此它是损坏的，不应使用！
 ___
 ### Get·Poop·Mana () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetPoopMana ( ) {: .copyable aria-label='Functions' }
 
-Returns how many poop consumables the player is currently holding
+返回玩家当前持有的粪便数量
 
 ___
 ### Get·Poop·Spell () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### [PoopSpellType](enums/PoopSpellType.md) GetPoopSpell ( int Position ) {: .copyable aria-label='Functions' }
 
-Returns the poop spell at the given position in the player's spell queue
+返回玩家粪便队列中给定位置的粪便类型
 
 ___
 ### Get·Recent·Movement·Vector () {: aria-label='Functions' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### const [Vector](Vector.md) GetRecentMovementVector ( ) {: .copyable aria-label='Functions' }
-Returns the joystick direction that drives player movement, taking into account certain modifiers like disabled controls and seed effects.
+
+返回驱动玩家移动的摇杆方向，同时考虑到某些修饰符，例如禁用的控制和种子效果。
 
 ___
 ### Get·Rotten·Hearts () {: aria-label='Functions' }
@@ -1210,9 +1328,10 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) GetShootingInput ( ) {: .copyable aria-label='Functions' }
 
-Returns a vector that corresponds to the shooting inputs that this player is pressing.
+返回一个向量，表示该玩家正在按下的射击输入方向。
 
 ???- info "Shooting Angle diagram"
+
     ![GetShootingInput diagram](images/infographics/GetShootingInput.png){: width='250' }
 
 ___
@@ -1220,9 +1339,9 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) GetShootingJoystick ( ) {: .copyable aria-label='Functions' }
 
-Returns a vector that corresponds to the shooting inputs that this player is holding.
+返回一个向量，表示该玩家正在按下的射击输入方向。
 
-See the image for the [GetShootingInput](#getshootinginput) method.
+可以查看 [GetShootingInput](#getshootinginput) 方法的图像。
 
 ___
 ### Get·Smooth·Body·Rotation () {: aria-label='Functions' }
@@ -1234,30 +1353,32 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### int GetSoulCharge ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Soul Charge the player has.
+返回玩家当前的魂心充能的量。
 
 ___
 ### Get·Soul·Hearts () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetSoulHearts ( ) {: .copyable aria-label='Functions' }
 
-Returns the amount of Soul Hearts the player has. 1 unit is half a heart.
+返回玩家当前的魂心数量。1 个单位是半颗心。
 
 ???- note "Notes"
-    Black Hearts count toward this total, as the game sees them as soul hearts.
+
+    黑心计入此总数，因为游戏将其视为魂心。
 
 ___
 ### Get·Sub·Player () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [EntityPlayer](EntityPlayer.md) GetSubPlayer ( ) {: .copyable aria-label='Functions' data-altreturn='nil' }
 
-Returns the other form of The Forgotten.
+返回堕化遗骸的另一种形式。
 
 ___
 ### Get·Tear·Hit·Params () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### [TearParams](TearParams.md) GetTearHitParams ( [WeaponType](enums/WeaponType.md) WeaponType, float DamageScale = 1, int TearDisplacement = 1, Entity Source = nil ) {: .copyable aria-label='Functions' }
-Used for tear parameters that are calculated on hit (ex: Tough love, Common cold), DamageScale is used for scale calculation based on damage
+
+被用于命中时计算的眼泪参数 (例如：严厉的爱，普通感冒)，DamageScale 用于基于伤害的缩放计算
 
 ___
 ### Get·Tear·Movement·Inheritance () {: aria-label='Functions' }
@@ -1273,7 +1394,8 @@ ___
 ### Get·Tear·Range·Modifier () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int GetTearRangeModifier ( ) {: .copyable aria-label='Functions' }
-For Experimental Treatement, returns `-1`, `0` or `1` depending on the range rolled.
+
+对于实验性疗法，返回 `-1`、`0` 或 `1`，具体取决于范围的掷骰结果。
 
 ___
 ### Get·Total·Damage·Taken () {: aria-label='Functions' }

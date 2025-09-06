@@ -42,8 +42,7 @@ ___
 ### Get·Non·Optimized·Samples () {: aria-label='Functions' }
 [ ](#){: .const .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### const [VectorList](CppContainer_Vector_VectorList.md) GetNonOptimizedSamples ( ) {: .copyable aria-label='Functions' }
-
-Returns a VectorList representing the path of the laser. Seems to typically return 51 evenly-spaced points along the laser's path, as opposed to [`GetSamples()`](#getsamples) which only returns the minimum needed points to represent the path of the laser.
+返回一个向量表（VectorList）用于表达激光的路径。通常会返回沿激光路径均匀分布的51个点，相对于[`GetSamples()`](#getsamples)只返回表示激光路径所需的最少点。
 
 ???+ example "Example Usage"
     ```lua
@@ -65,9 +64,9 @@ ___
 [ ](#){: .const .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### const [VectorList](CppContainer_Vector_VectorList.md) GetSamples ( ) {: .copyable aria-label='Functions' }
 
-Returns a VectorList representing the path of the laser. Unlike [`GetNonOptimizedSamples()`](#getnonoptimizedsamples), this function returns as few points as possible, while still correctly representing the path of the laser.
+返回一个向量表（VectorList）表示激光的路径。与 [`GetNonOptimizedSamples()`](#getnonoptimizedsamples) 不同，此函数返回尽可能少的点，同时仍然正确表示激光的路径。
 
-For example, for a completely straight laser, [`GetNonOptimizedSamples()`](#getnonoptimizedsamples) will still return 51 points as always, but this function only only return 2.
+例如，对于完全直的激光，[`GetNonOptimizedSamples()`](#getnonoptimizedsamples) 将始终返回 51 个点，但此函数仅返回 2 个。
 
 ???+ example "Example Usage"
     ```lua
@@ -90,13 +89,13 @@ ___
 #### boolean IsCircleLaser ( ) {: .copyable aria-label='Functions' }
 
 ???- note "Note"
-    This function cannot differentiate between different types of Circle Laser, however these may be identified by their SubType:
+    此函数无法区分不同类型的圆形激光，但可以通过其子类型进行识别：
 
-    * 0 - Linear Laser (Typical laser with a start and end point)
-    * 1 - Ring Ludovico (Controlled laser ring for Ludo synergies)
-    * 2 - Ring Projectile (Tech X)
-    * 3 - Ring Follow Parent (Maw of the Void)
-    * 4 - No Impact (No impact splash, e.g. Tech Zero)
+    * 0 - 线性激光（典型的激光，具有起点和终点）
+    * 1 - 环形鲁多维科（用于鲁多维科科技协同的受控激光环）
+    * 2 - 环形投射物（科技X）
+    * 3 - 环形跟随父物体（虚空之喉）
+    * 4 - 无碰撞（无碰撞溅射，例如科技零）
 
 ___
 ### Is·Sample·Laser () {: aria-label='Functions' }
@@ -142,7 +141,7 @@ ___
 ### Shoot·Angle () {: aria-label='Functions' }
 [ ](#){: .static .tooltip .badge } [ ](#){: .alldlc .tooltip .badge }
 #### static [EntityLaser](EntityLaser.md) ShootAngle ( int Variant, [Vector](Vector.md) SourcePos, float AngleDegrees, int Timeout, [Vector](Vector.md) PosOffset, [Entity](Entity.md) Source ) {: .copyable aria-label='Functions' }
-static helper to simplify spawning lasers
+简单化静态助手以简化激光的生成
 ___
 ## Variables
 ### Angle {: aria-label='Variables' }
@@ -173,12 +172,12 @@ ___
 ### Disable·Follow·Parent {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean DisableFollowParent  {: .copyable aria-label='Variables' }
-Set on children of other lasers, for instance Rubber Cement reflections. Disables m_ParentOffset.
+设置为其他激光的子项时使用，例如橡胶胶水的反弹。禁用 m_ParentOffset。
 ___
 ### End·Point {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) EndPoint  {: .copyable aria-label='Variables' }
-Will hold the endpoint so it will not need to be recalculated when accessed from extern.
+将会保存终点，以便在外部访问时不需要重新计算。
 ___
 ### First·Update {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -188,7 +187,7 @@ ___
 ### Grid·Hit {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### boolean GridHit  {: .copyable aria-label='Variables' }
-`true` if laser can be clipped by grid entities and it was clipped at that frame.
+返回 `true` 如果激光可以被网格实体阻挡，并且在该帧被阻挡。
 ___
 ### Homing·Laser {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -263,7 +262,8 @@ ___
 ### Start·Angle·Degrees {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### float StartAngleDegrees  {: .copyable aria-label='Variables' }
-Some lasers have a bit of random variation in rotation so they need to remember their starting point.
+
+一些激光在旋转时会有随机变化，因此它们需要记住起始点。
 ___
 ### Tear·Flags {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }

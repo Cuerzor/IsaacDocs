@@ -10,6 +10,7 @@ tags:
     可通过以下函数获取 “Entity” 对象:
 
     ???- info 能获取 “Entity” 对象的列表
+
         * [EntityList.Get()](CppContainer_EntityList.md#get)
         * [Entity.GetLastChild()](Entity.md#getlastchild)
         * [Entity.GetLastParent()](Entity.md#getlastparent)
@@ -513,18 +514,18 @@ ___
 ### Post·Render () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void PostRender ( ) {: .copyable aria-label='Functions' }
-将实体的摩擦力乘以指定的值
+
 ___
 ### Remove () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void Remove ( ) {: .copyable aria-label='Functions' }
-Remove the entity from the game instantly, without doing any additional effects/animations.
+立即从游戏中移除实体，不执行任何额外的效果或动画.
 ___
 ### Remove·Status·Effects () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void RemoveStatusEffects ( ) {: .copyable aria-label='Functions' }
 
-立即从游戏中移除实体，不执行任何额外的效果或动画.
+移除源自该实体的全部状态效果.
 ___
 ### Render () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -832,7 +833,7 @@ ___
 [ ](#){: .reporplus .tooltip .badge }
 #### [SortingLayer](enums/SortingLayer.md) SortingLayer  {: .copyable aria-label='Variables' }
 
-Determines when the entity should render over other entities.
+决定这个实体在最终渲染时的层级.
 
 ___
 ### Spawner·Entity {: aria-label='Variables' }
