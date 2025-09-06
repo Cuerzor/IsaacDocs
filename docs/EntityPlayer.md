@@ -354,7 +354,7 @@ ___
 
 ???+ bug "Bugs"
 
-    不会对店长生效（IgnoreKeeper does not appear to work as intended.）
+    对店长无效。IgnoreKeeper 参数似乎无法按预期工作。
 
     最大心容器可以添加或移除到店长身上，而不管这个布尔值是什么。
 
@@ -1412,7 +1412,7 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### [TrinketType](enums/TrinketType.md) GetTrinket ( int TrinketIndex ) {: .copyable aria-label='Functions' data-altreturn='0' }
 
-Gets the ID of the trinket the player is holding in the given trinketslot (0 or 1). Returns `0` when no trinket is held in the given slot.
+获取玩家在指定饰品槽（0 或 1）中持有的饰品 ID。当指定槽位没有饰品时，返回 `0`。
 ___
 ### Get·Trinket·Multiplier () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
