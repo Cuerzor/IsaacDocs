@@ -34,7 +34,7 @@ ___
 ### Set·Radii () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
 #### void SetRadii ( float min, float max ) {: .copyable aria-label='Functions' }
-For shockwaves.
+用于冲击波（shockwaves）。
 ___
 ### Set·Timeout () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -70,7 +70,8 @@ ___
 ### m_Height {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### float m_Height  {: .copyable aria-label='Variables' }
-for particles .dy
+用于粒子的 .dy
+
 ___
 ### Max·Radius {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -80,12 +81,14 @@ ___
 ### Min·Radius {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### float MinRadius  {: .copyable aria-label='Variables' }
-For shockwaves.
+用于冲击波（shockwaves）。
+
 ___
 ### Parent·Offset {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### [Vector](Vector.md) ParentOffset  {: .copyable aria-label='Variables' }
-probably obsolete soon, in favor of m_SpriteOffset
+可能很快就会被淘汰，取而代之的是 m_SpriteOffset
+
 ___
 ### Rotation {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
@@ -100,11 +103,13 @@ ___
 ### State {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int State  {: .copyable aria-label='Variables' }
-state var, may be used ad lib initialized to 0 in Init()
+状态变量，可在 Init() 中随意使用，初始化为 0
+
 ___
 ### Timeout {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }
 #### int Timeout  {: .copyable aria-label='Variables' }
 
-This is decremented on every frame, even for custom effects. Custom effects have this value initialized to -1.
+该值在每一帧都会递减，即使是自定义效果也是如此。自定义效果将此值初始化为 -1。
+
 ___

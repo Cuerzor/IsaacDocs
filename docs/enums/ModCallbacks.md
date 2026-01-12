@@ -648,8 +648,9 @@ end
 |[ ](#){: .alldlc .tooltip .badge }|26 |MC_PRE_FAMILIAR_COLLISION {: .copyable } | ([EntityFamiliar](../EntityFamiliar.md),<br>Collider [[Entity](../Entity.md)],<br>Low [bool])|[FamiliarVariant](FamiliarVariant.md) | boolean |
 
 ### MC_POST_NPC_INIT {: .copyable }
-
 返回任何值都不会影响后续回调的执行。
+
+Will also be called if Delirium morphs into given EntityType.
 
 ???- warning "警告"
     在某些用例中，访问初始化的实体提供的数据是不完整的。在`PostInit`回调调用之前，只有`Position`、`Velocity`、`SpawnerType`、`SpawnerVariant`、`SpawnerEntity`等一些属性被设置，因此可以访问。其他一些属性（例如效果属性或眼泪标志）将不会被设置。如果您想访问这些值，您需要挂钩到`MC_NPC_UPDATE`并在第一帧检查这些属性。

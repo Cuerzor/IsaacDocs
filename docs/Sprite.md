@@ -324,11 +324,13 @@ TopLeftClamp 和 BottomRightClamp 可用于裁剪精灵。
     ```
 ___
 ### Replace·Spritesheet () {: aria-label='Functions' }
-[ ](#){: .alldlc .tooltip .badge }
-#### void ReplaceSpritesheet ( int LayerId, string PngFilename ) {: .copyable aria-label='Functions' }
+[ ](#){: .repplus .tooltip .badge }
+#### boolean ReplaceSpritesheet ( int LayerId, string PngFilename ) {: .copyable aria-label='Functions' }
 更改与精灵特定图层关联的 “.png” 文件。这不会更改使用正在被替换的 “.png” 文件的其他图层。
 
 替换精灵表后，必须随后调用`Sprite.LoadGraphics`方法.
+
+In Repentance+, this returns `true` if the spritesheet at the given layer id was successfully replaced *and* if the new spritesheet is not the same as the old one, otherwise returns `false`.
 
 ???- example "Example Code"
     This code creates a new sprite object and replaces the spritesheet of layer 0 of a sprite object with a different spritesheet.
