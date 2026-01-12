@@ -9,11 +9,11 @@ tags:
 * Vortex Street background shader by Wofsauge [Preview Video](../customData/Vortex_Street_shader.mp4) - [Code](../customData/vortex_street_shader.zip) - [Original shader source](https://www.shadertoy.com/view/MlS3Rh)
 
 ## Create your own shader:
-**Reload shaders of mods via console command:** `reloadshaders`
+**重新加载mod的着色器可以通过控制台命令：** `reloadshaders`
 
-In order to write your screen shader you need to create '_shaders.xml_' in the '_content_' folder that is part of your **Mod folder**.
+为了写你的屏幕着色器，你需要在**Mod文件夹**中的_content_文件夹里创建'_shaders.xml_'.
 
-shaders.xml should have the following structure:
+shaders.xml 应当有如下结构：
 
 ```xml
 <shaders>
@@ -37,10 +37,10 @@ shaders.xml should have the following structure:
 
 where:
 
-*   `SHADER_NAME` is the shader name
-*   `PARAMETER_NAME` is the name of each custom parameter you want to pass from Lua
-*   `PARAMETER_TYPE` is one of the following: `float`, `vec2`, `vec3`, `vec4`
-*   `VERTEX_SHADER` is your vertex shader which should always include these attributes:
+*   `SHADER_NAME` 是你着色器的名称.
+*   `PARAMETER_NAME` 是你想从Lua传递的每个自定义参数的名称.
+*   `PARAMETER_TYPE` 是以下之一：`float`，`vec2`，`vec3`，`vec4`
+*   `VERTEX_SHADER` 是你的顶点着色器，应该始终包含这些属性:
 
 
 ```xml
@@ -54,7 +54,7 @@ uniform mat4 Transform;
 ...
 ```
 
-*   `FRAGMENT_SHADER` is your fragment shader which again should contain at least these:
+*   `FRAGMENT_SHADER` 是你的片段着色器，应该至少包含以下内容：
 
 ```xml
 varying lowp vec4 Color0;
@@ -64,14 +64,15 @@ varying lowp float ScaleOut;
 uniform sampler2D Texture0;
 ```
 
-`RenderData.xy` contains the window size, while `RenderData.zw` is the texture size.
+`RenderData.xy` 包括窗口大小，而 `RenderData.zw` 是纹理大小。
 
-`Scale` contains Isaac's room scale based on the window size. You can see the scale in action when you resize the window and the game keeps its content fixed for a certain amount of pixels then snaps to another zoom level.
+`Scale` 包含基于窗口大小的Isaac房间缩放比例。当你调整窗口大小时，你可以看到缩放的效果，游戏内容在一定像素范围内保持固定，然后跳转到另一个缩放级别。
 
-Because of engine limitation we can only pass data through the vertex shader.
+由于引擎限制，我们只能通过顶点着色器传递数据。
 
 ## Shader Example Code:
-An example of a shader with custom parameters that changes the color tint of the screen based on the player position and the ingame framecounter.
+
+一个带有自定义参数的着色器示例，它根据玩家位置和游戏内帧计数器改变屏幕的颜色色调。
 
 Code: [→ Download this example mod here ←](../customData/shader_example_mod.zip)
 <figure class="video_container">
@@ -136,7 +137,7 @@ Code: [→ Download this example mod here ←](../customData/shader_example_mod.
 </shaders>
 ```
 
-To pass the parameters we use the following Lua code:
+为了传递参数我们使用如下Lua代码：
 ```lua
 local mod = RegisterMod("ShaderMod", 1)
 function mod:GetShaderParams(shaderName)
