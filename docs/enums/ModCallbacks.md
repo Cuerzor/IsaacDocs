@@ -247,7 +247,7 @@ Return Type表示返回值的类型
 
 返回任何值都不会影响后续回调的执行。
 
-使用此回调来实现任何改变玩家属性、小精灵、飞行能力、武器等的功能。
+使用此回调来实现任何改变玩家属性、魂火跟班、飞行能力、攻击方式等的功能。
 
 自定义道具和饰品在“items.xml”文件中使用“cache”标签注释它们影响的特定属性。例如，一个增加眼泪射速和伤害的自定义被动道具应该在“items.xml”条目中包含类似以下的内容：
 
@@ -539,7 +539,7 @@ end
 
 ???+ bug
 
-    返回非整数或`nil`的值将导致游戏崩溃。
+    返回非整数或`nil`的值将导致游戏崩溃。返回一个无效的[Card](Card.md)值会在卡牌被拾起时导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1044,7 +1044,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 ???+ bug
 
-    返回非表或`nil`的值将导致游戏崩溃。
+    返回非[CollectibleType](CollectibleType.md)或`nil`的值将导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1056,7 +1056,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 |DLC|Value|Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|:--|:--|
-|[ ](#){: .alldlc .tooltip .badge }|62 |MC_PRE_GET_COLLECTIBLE {: .copyable } | ([ItemPoolType](ItemPoolType.md),<br>Decrease [bool],<br>Seed [int]) | - | int |
+|[ ](#){: .alldlc .tooltip .badge }|62 |MC_PRE_GET_COLLECTIBLE {: .copyable } | ([ItemPoolType](ItemPoolType.md),<br>Decrease [bool],<br>Seed [int]) | - | [CollectibleType](CollectibleType.md) |
 
 ### MC_POST_GET_COLLECTIBLE {: .copyable }
 
@@ -1074,7 +1074,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 ???+ bug
 
-    返回非表或`nil`的值将导致游戏崩溃。
+    返回非[CollectibleType](CollectibleType.md)或`nil`的值将导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1082,7 +1082,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 |DLC|Value|Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|:--|:--|
-|[ ](#){: .alldlc .tooltip .badge }|63 |MC_POST_GET_COLLECTIBLE {: .copyable } | (SelectedCollectible [[CollectibleType](CollectibleType.md)],<br>[ItemPoolType](ItemPoolType.md),<br>Decrease [bool],<br>Seed [int]) | - | table |
+|[ ](#){: .alldlc .tooltip .badge }|63 |MC_POST_GET_COLLECTIBLE {: .copyable } | (SelectedCollectible [[CollectibleType](CollectibleType.md)],<br>[ItemPoolType](ItemPoolType.md),<br>Decrease [bool],<br>Seed [int]) | - | [CollectibleType](CollectibleType.md) |
 
 ### MC_GET_PILL_COLOR {: .copyable }
 
@@ -1094,7 +1094,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 ???+ bug
 
-    返回非表或`nil`的值将导致游戏崩溃。
+    返回非整数或`nil`的值将导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1114,7 +1114,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 ???+ bug
 
-    返回非表或`nil`的值将导致游戏崩溃。
+    返回非整数或`nil`的值将导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1135,7 +1135,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 |DLC|Value|Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|:--|:--|
-|[ ](#){: .alldlc .tooltip .badge }|65 |MC_GET_PILL_EFFECT {: .copyable } | (SelectedPillEffect [[PillEffect](PillEffect.md)],<br>PillColor) | - | table |
+|[ ](#){: .alldlc .tooltip .badge }|65 |MC_GET_PILL_EFFECT {: .copyable } | (SelectedPillEffect [[PillEffect](PillEffect.md)],<br>PillColor) | - | [[PillEffect](PillEffect.md)] |
 
 ### MC_GET_TRINKET {: .copyable }
 
@@ -1147,7 +1147,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 ???+ bug
 
-    返回非表或`nil`的值将导致游戏崩溃。
+    返回非[TrinketType](TrinketType.md)或`nil`的值将导致游戏崩溃。
 
 ???+ warning "警告"
 
@@ -1155,7 +1155,7 @@ Will also be called if Delirium morphs into given EntityType.
 
 |DLC|Value|Name|Function Args|Optional Args|Return Type|
 |:--|:--|:--|:--|:--|:--|
-|[ ](#){: .alldlc .tooltip .badge }|66 |MC_GET_TRINKET {: .copyable } | (SelectedTrinket [[TrinketType](TrinketType.md)],<br>[RNG](../RNG.md)) | - | table |
+|[ ](#){: .alldlc .tooltip .badge }|66 |MC_GET_TRINKET {: .copyable } | (SelectedTrinket [[TrinketType](TrinketType.md)],<br>[RNG](../RNG.md)) | - | [[TrinketType](TrinketType.md)] |
 
 ### MC_POST_ENTITY_REMOVE {: .copyable }
 

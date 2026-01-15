@@ -279,10 +279,14 @@ ___
     ```
 ___
 ### Add·Velocity () {: aria-label='Functions' }
-[ ](#){: .alldlc .tooltip .badge }
+[ ](#){: .abp .tooltip .badge }
 #### void AddVelocity ( [Vector](Vector.md) Velocity ) {: .copyable aria-label='Functions' }
+[ ](#){: .reporplus .tooltip .badge }
+#### void AddVelocity ( [Vector](Vector.md) Velocity, boolean IgnoreTimeScale = false ) {: .copyable aria-label='Functions' }
 
 为实体添加速度。可用于使实体向特定方向移动（例如碰撞后的结果）
+
+- **IgnoreTimeScale** - 如果为true，则将TimeScale视为1.0，忽略否则会减慢或加速实体的效果（例如怀表）。
 ___
 ### Blood·Explode () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }

@@ -104,6 +104,8 @@ ___
 [ ](#){: .alldlc .tooltip .badge }
 #### int GridIndex  {: .copyable aria-label='Variables' }
 
+Describes the index of the room on the level grid (13 by 13 cells). The index is the cell number on the grid, when counting them row by row from left to right.
+
 - For a 1x1 room, this is equal to the 1x1 grid index of the room.
 - For a room bigger than a 1x1 room, this is equal to the top left 1x1 quadrant.
 - For `RoomType.ROOMSHAPE_LTL` rooms (i.e. rooms that look like a "J"), this is equal to the 1x1 quadrant where the gap in the room is. In other words, it is a 1x1 quadrant that is not actually contained within the room.
@@ -112,6 +114,27 @@ ___
 
 ???- note "Notes"
     ![Room Grid indices](images/infographics/RoomGridIndices.png)
+
+???- example "Get dimension example code"
+    A level can have multiple dimensions, which act as separate and independent level grids. Because of this, a room in dimension 1 can share the same grid index as a different room in dimension 2. Repentogon provides a GetDimension method, but if you don’t have access to it, you can use the following function to determine the dimension of a given room descriptor.
+
+    ```lua
+    -- requirements: a room that actually exists on the map, or one of the game's special rooms that exist outside the map
+    local function getDimension(roomDesc)
+      -- 0: main dimension
+      -- 1: secondary dimension, used by downpour mirror dimension and mines escape sequence
+      -- 2: death certificate dimension
+      for i = 0, 2 do
+        if GetPtrHash(roomDesc) == GetPtrHash(Game():GetLevel():GetRoomByIdx(roomDesc.SafeGridIndex, i)) then
+          return i
+        end
+      end
+      return -1
+    end
+
+    getDimension(Game():GetLevel():GetCurrentRoomDesc()) -- returns 0, 1, or 2 depending on where you're at
+    getDimension(Game():GetLevel():GetRoomByIdx(GridRooms.ROOM_DEVIL_IDX)) -- special rooms outside the map return 0
+    ```
 ___
 ### Has·Water {: aria-label='Variables' }
 [ ](#){: .alldlc .tooltip .badge }

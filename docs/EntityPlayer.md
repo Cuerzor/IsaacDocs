@@ -946,9 +946,12 @@ ___
 
 ___
 ### Get·Bomb·Flags () {: aria-label='Functions' }
-[ ](#){: .alldlc .tooltip .badge }
+[ ](#){: .abp .tooltip .badge }
 #### int GetBombFlags ( ) {: .copyable aria-label='Functions' }
+[ ](#){: .reporplus .tooltip .badge }
+#### int GetBombFlags ( boolean IsFetus = false ) {: .copyable aria-label='Functions' }
 
+**IsFetus**: 如果设置为true，某些炸弹道具会随机设置flags。
 ___
 ### Get·Bomb·Variant () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }

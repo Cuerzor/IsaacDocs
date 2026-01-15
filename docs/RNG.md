@@ -57,6 +57,37 @@ ___
 
 返回当前 RNG 对象的种子。
 
+???- example "获取Shift index引示例代码"
+    以撒的API没有提供获取Shift Index的方法。Repentogon可以，但如果你没有访问权限，那么你可以使用以下函数来查找游戏的默认的shift index值。
+
+    ```lua
+    local function getShiftIdx(rng)
+      local seed = rng:GetSeed()
+      local nexts = {}
+      -- 18 seems to be the magic number here so you don't get false positives
+      -- at 17, rng with seed=1,shiftIdx=53 returns a false positive of 52
+      for i = 1, 18 do
+        table.insert(nexts, rng:Next())
+      end
+      for i = 0, 80 do
+        local rng2 = RNG()
+        rng2:SetSeed(seed, i)
+        for j, v in ipairs(nexts) do
+          if v ~= rng2:Next() then
+            break
+          end
+          if j == #nexts then
+            -- reset the rng since it was modified with Next
+            rng:SetSeed(seed, i)
+            return i
+          end
+        end
+      end
+    end
+
+    print(getShiftIdx(Game():GetLevel():GetDevilAngelRoomRNG())) -- 打印： 2
+    ```
+
 ___
 ### Next () {: aria-label='Functions' }
 [ ](#){: .alldlc .tooltip .badge }
