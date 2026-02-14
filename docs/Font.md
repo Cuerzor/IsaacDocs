@@ -53,7 +53,7 @@ ___
 * 如果 `BoxWidth` **不为零**，且 `Center` 参数为 `true`，则文本会在 `BoxWidth` 范围内居中对齐.
 
 ???- bug "Bug"
-    如果调用此函数时 `String`  或 `RenderColor` 参数为 `nil` ，游戏会崩溃.
+    如果调用此函数时 `String` 或 `RenderColor` 参数为 `nil`，游戏会崩溃.
 
 ???- example "Example Code"
 
