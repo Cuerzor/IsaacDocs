@@ -74,7 +74,7 @@ ___
 ### Draw·String·Scaled () {: aria-label='Functions' }
 [ ](#){: .reporplus .tooltip .badge }
 #### void DrawStringScaled ( string String, float PositionX, float PositionY, float ScaleX, float ScaleY, [KColor](KColor.md) RenderColor, int BoxWidth = 0, boolean Center = false ) {: .copyable aria-label='Functions' }
-将 UTF8 转换为 UTF16，然后在屏幕上绘制字符串.
+将 UTF8 转换为 UTF16，然后在屏幕上绘制缩放后的字符串.
 
 ???- bug "Bug"
     如果调用此函数时 `String`  或 `RenderColor` 参数为 `nil` ，游戏会崩溃.
