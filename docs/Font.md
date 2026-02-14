@@ -6,7 +6,7 @@ tags:
 # Class "Font"
 
 ???+ info
-    这个个类是用来加载和渲染字体的。它可以通过以下方式访问:
+    这个类是用来加载和渲染字体的。它可以通过以下方式访问:
 
     * [Game.GetFont()](Game.md#getfont)
 
