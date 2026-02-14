@@ -6,7 +6,7 @@ tags:
 # Class "FontRenderSettings"
 
 ???+ info
-
+    
     此类在 Repentance+ 版本中新增，用于 [Font:DrawString()](Font.md#drawstring) 函数中定义文本渲染的特殊行为。
 
         可以通过其构造函数访问该类：
