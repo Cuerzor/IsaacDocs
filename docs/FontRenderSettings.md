@@ -6,13 +6,17 @@ tags:
 # Class "FontRenderSettings"
 
 ???+ info
-    This class was added with Repentance+ and is used in the [Font:DrawString()](Font.md#drawstring) function to define special behavior when rendering a text.
 
-    This class can be accessed by using its constructor:
+    此类在 Repentance+ 版本中新增，用于 [Font:DrawString()](Font.md#drawstring) 函数中定义文本渲染的特殊行为。
+
+        可以通过其构造函数访问该类：
 
     ???+ example "Example Code"
+
         ```lua
-        local settings = FontRenderSettings()
+
+            local settings = FontRenderSettings()
+
         ```
 
 ## Constructors
@@ -20,17 +24,21 @@ tags:
 [ ](#){: .repplus .tooltip .badge }
 #### [FontRenderSettings](FontRenderSettings.md) FontRenderSettings ( ) {: .copyable aria-label='Constructors' }
 
-Returns a Game object.
+返回一个 FontRenderSettings 对象。
 
 ???- example "Example Code"
+
     Example usage:
+
     ```lua
-    local settings = FontRenderSettings()
-    settings:EnableAutoWrap()
-    --returns true if the font settings have autowrap enabled
+
+        local settings = FontRenderSettings()
+        settings:EnableAutoWrap()
+        --returns true if the font settings have autowrap enabled
 
     ```
 ___
+
 ## Functions
 ### Enable·Auto·Wrap () {: aria-label='Functions' }
 [ ](#){: .repplus .tooltip .badge }
@@ -90,6 +98,6 @@ ___
 ### Set·Missing·Character·Override () {: aria-label='Functions' }
 [ ](#){: .repplus .tooltip .badge }
 #### void SetMissingCharacterOverride ( int character ) {: .copyable aria-label='Functions' }
-Sets the default character used when a character that needs to be rendered is missing. This overrides previous [Font:SetMissingCharacter()](Font.md#setmissingcharacter) settings.
+设置当需要渲染的字符缺失时所用的默认字符。此设置会覆盖之前的 [Font:SetMissingCharacter()](Font.md#setmissingcharacter) 配置.
 
 ___
